@@ -1,12 +1,26 @@
 ---
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
-
 @charset "utf-8";
 
-@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
-@import "minimal-mistakes"; // main partials
+/* 1. 구글 폰트 임포트 */
 @import url('https://fonts.googleapis.com/css?family=Nanum+Gothic');
 @import url('https://fonts.googleapis.com/css?family=Nanum+Pen+Script');
 @import url('https://fonts.googleapis.com/css?family=Gamja+Flower');
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap');
+
+/* 2. 변수 재정의(Override) - minimal-mistakes를 불러오기 전에 작성 */
+$body-font-family: "Noto Sans KR", sans-serif; // 바디 폰트 변경
+$body-font-size: 18px;                        // 기본 바디 글씨 크기
+$heading-font-family: "Nanum Gothic", sans-serif;  // 헤딩(제목) 폰트 변경
+$heading-font-weight: 700;                         // 헤딩 폰트 두께
+$heading-font-size-scale: 1.2;                     // 헤딩 크기 배율(기본값 1.25 등)
+
+/* 3. Minimal Mistakes 스킨과 메인 partial 불러오기 */
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
+@import "minimal-mistakes";
+
+/* 4. (선택 사항) 아래 부분에서 추가 스타일 지정 */
+.page__content {
+  line-height: 1.7; // 가독성 향상을 위해 줄간격도 늘릴 수 있음
+}
