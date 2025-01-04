@@ -1,0 +1,52 @@
+# main links
+main:
+  - title: "About Me"
+    url: /about/
+  - title: "Categories"
+    url: /categories/
+  - title: "Tags"
+    url: /tags/
+
+side:
+  - title: Computer Vision
+    children:
+      - title: "CS231n Summary"
+        url: /categories/CS231n/
+      - title: ""
+      - title: "Research"
+        url: /categories/Paper_Review/
+      - title: "Development Tip"
+        url: /categories/Computer_vision/
+  
+  - title: Robotics
+    children:
+      - title: "SLAM DUNK2 Summary"
+        url: /categories/Slam/
+      - title: "Research"
+        url: /categories/Research/
+      - title: "Development Tip"
+        url: /categories/SlamTip/
+  
+  - title: Mathematics
+    children:
+      - title: "Mathematics"
+        url: /categories/mathematics/
+  
+  - title: Programming
+    children:
+      - title: "Modern C++ 정리"
+        url: /categories/ddabessi/
+
+  - title: Tips
+    children:
+      - title: "Daily Tips"
+        url: /categories/dailytips/
+      - title: "Etc"
+        url: /categories/tips/
+  
+  # - title: "Sample Posts"
+  #   url: /year-archive/
+  # - title: "Sample Collections"
+  #   url: /collection-archive/
+  # - title: "Sitemap"
+  #   url: /sitemap/
