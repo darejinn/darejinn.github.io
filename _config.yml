@@ -27,8 +27,8 @@ repository               : "darejinn/darejinn.github.io"
 teaser                   : ""
 logo                     : #
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
-# breadcrumbs            : false # true, false (default)
-words_per_minute         : 200
+future                   : true # true, false (default)
+breadcrumbs              : true # true, false (default)words_per_minute         : 200
 comments:
   provider               : "utterances" # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
   disqus:
@@ -94,7 +94,7 @@ analytics:
 author:
   name             : "DaRe_jin"
   avatar           : "https://github.com/user-attachments/assets/b9d11a7a-8e27-4c9d-959b-a200897167d6"
-  bio              : ""
+  bio              : "내실 있는 낙관"
   # location         : "Seoul, South Korea"
   email            :
   links:
@@ -288,9 +288,10 @@ defaults:
       layout: single
       author_profile: true
       read_time: false
-      comments: false
+      comments: true
       share: true
-      related: false
+      related: true
+      mathjax: true
       sidebar:  
         nav: "side"
 
