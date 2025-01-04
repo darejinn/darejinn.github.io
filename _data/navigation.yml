@@ -8,41 +8,30 @@ main:
     url: /tags/
 
 side:
-  - title: Computer Vision
+  - title: AI
     children:
-      - title: "CS231n Summary"
-        url: /categories/CS231n/
-      - title: ""
-      - title: "Research"
-        url: /categories/Paper_Review/
-      - title: "Development Tip"
-        url: /categories/Computer_vision/
-  
-  - title: Robotics
-    children:
-      - title: "SLAM DUNK2 Summary"
-        url: /categories/Slam/
-      - title: "Research"
-        url: /categories/Research/
-      - title: "Development Tip"
-        url: /categories/SlamTip/
-  
-  - title: Mathematics
-    children:
-      - title: "Mathematics"
-        url: /categories/mathematics/
-  
-  - title: Programming
-    children:
-      - title: "Modern C++ 정리"
-        url: /categories/ddabessi/
+      - title: "Papers"
+        url: /categories/AI_Papers/
 
-  - title: Tips
+  
+  - title: Medical
     children:
-      - title: "Daily Tips"
-        url: /categories/dailytips/
-      - title: "Etc"
-        url: /categories/tips/
+      - title: "Papers"
+        url: /categories/Medical_Papers/
+      - title: "Medical Industry"
+        url: /categories/Medical_Industry/
+  
+  - title: Projects/Activities
+    children:
+      - title: "KAIST_WURF"
+        url: /categories/"KAIST_WURF/
+  
+  - title: Diary
+    children:
+      - title: "Finance"
+        url: /categories/Finance/
+      - title: "Thoughts"
+        url: /categories/Thoughts/
   
   # - title: "Sample Posts"
   #   url: /year-archive/

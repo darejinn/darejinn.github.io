@@ -5,27 +5,14 @@ layout: single
 
 ---
 
-## Hello, This is TaeYoung Kim! 🖐️
+## Hello, This is DaRe_jin
 
-Welcome to my Tech Blog!  
+의학과 인공지능에 관심이 있습니다.
 
-This is Taeyoung Kim, who wants to become a Robotics Perception engineer or SLAM / Localization engineer. I'm **self-motivated student**, also I like to grow up with my colleagues around me.
-
-I start my Tech blog to record and share what I have learned.  
-
-### If you want to know more about me, please see my [CV](https://github.com/Taeyoung96/TaeyoungKim_CV/blob/master/TaeyoungKim_CV.pdf).  
-
-## Research Interest  
-
-- SLAM  
-- Robotics  
-- Computer Vision  
-- Deep Learning
+생각의 교류를 환영합니다.
 
 ## Contacts  
 
-- [Github](https://github.com/Taeyoung96)  
-- [Facebook](https://www.facebook.com/profile.php?id=100015469002427)  
-- [LinkedIn](https://www.linkedin.com/in/tae-young-kim-595692139/)  
-- Gmail : tyoung960302@gmail.com  
+- [Github](https://github.com/darejinn)  
+- Gmail : yoonjincho25@yonsei.ac.kr  
 

@@ -16,11 +16,11 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "ko"
-title                    : "Yoonjin's Blog"
+title                    : "DaRe_jin's Blog"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : "Yoonjin Cho"
-description              : "윤진의 블로그입니다."
+name                     : "DaRe_jin"
+description              : "내실 있는 낙관"
 url                      : "https://darejinn.github.io"
 baseurl                  : ""
 repository               : "darejinn/darejinn.github.io"
@@ -92,8 +92,8 @@ analytics:
 
 # Site Author
 author:
-  name             : "Yoonjin Cho"
-  avatar           : "https://github.com/user-attachments/assets/8108d1e3-8d59-4df9-bda2-5577180b1243"
+  name             : "DaRe_jin"
+  avatar           : "https://github.com/user-attachments/assets/b9d11a7a-8e27-4c9d-959b-a200897167d6"
   bio              : ""
   # location         : "Seoul, South Korea"
   email            :
