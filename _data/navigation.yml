@@ -21,7 +21,7 @@ side:
       - title: "Medical Industry"
         url: /categories/Medical_Industry/
   
-  - title: Projects/Activities
+  - title: Projects
     children:
       - title: "KAIST_WURF"
         url: /categories/"KAIST_WURF/
