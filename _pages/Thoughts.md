@@ -1,9 +1,9 @@
 ---
-title: "AI Papers"
-permalink: /categories/AI_Papers/
+title: "Thoughts"
+permalink: /categories/Thoughts/
 layout: category
 author_profile: true
-taxonomy: AI_Papers
+taxonomy: Thoughts
 ---
 
-관심 있는 AI 연구를 정리합니다.
+생각을 기록합니다.

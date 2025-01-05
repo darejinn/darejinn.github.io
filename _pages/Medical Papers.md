@@ -6,4 +6,4 @@ author_profile: true
 taxonomy: Medical_Papers
 ---
 
-관심 있는 의학 연구를 정리합니다.
+의학 연구를 정리합니다.
