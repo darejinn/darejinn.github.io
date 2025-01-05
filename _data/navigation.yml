@@ -18,8 +18,7 @@ side:
     children:
       - title: "Papers"
         url: /categories/Medical_Papers/
-      - title: "Medical Industry"
-        url: /categories/Medical_Industry/
+
   
   - title: Projects
     children:

@@ -6,4 +6,4 @@ author_profile: true
 taxonomy: AI_Papers
 ---
 
-관심 있는 AI 연구를 정리합니다.
+AI 연구를 정리합니다.
