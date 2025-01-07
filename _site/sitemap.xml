@@ -2,7 +2,11 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://localhost:4000/thoughts/01.-%EC%82%AC%EB%9E%8C%EB%8B%A4%EC%9B%80/</loc>
-<lastmod>2025-01-05T00:00:00+09:00</lastmod>
+<lastmod>2025-01-06T00:00:00+09:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/finance/%EC%A3%BC%EC%8B%9D%ED%88%AC%EC%9E%90%EC%9D%98%EC%9B%90%EC%B9%99/</loc>
+<lastmod>2025-01-07T00:00:00+09:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/categories/AI_Papers/</loc>
