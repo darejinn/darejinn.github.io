@@ -23,7 +23,7 @@ side:
   - title: Projects
     children:
       - title: "KAIST_WURF"
-        url: /categories/"KAIST_WURF/
+        url: /categories/KAIST_WURF/
   
   - title: Diary
     children:
