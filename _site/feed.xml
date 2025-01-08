@@ -1,4 +1,198 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-01-08T10:51:39+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">DaRe_jin’s Blog</title><subtitle>내실 있는 낙관</subtitle><author><name>DaRe_jin</name></author><entry><title type="html">주식투자의 원칙</title><link href="http://localhost:4000/finance/%EC%A3%BC%EC%8B%9D%ED%88%AC%EC%9E%90%EC%9D%98%EC%9B%90%EC%B9%99/" rel="alternate" type="text/html" title="주식투자의 원칙" /><published>2025-01-06T00:00:00+09:00</published><updated>2025-01-07T00:00:00+09:00</updated><id>http://localhost:4000/finance/%EC%A3%BC%EC%8B%9D%ED%88%AC%EC%9E%90%EC%9D%98%EC%9B%90%EC%B9%99</id><content type="html" xml:base="http://localhost:4000/finance/%EC%A3%BC%EC%8B%9D%ED%88%AC%EC%9E%90%EC%9D%98%EC%9B%90%EC%B9%99/"><![CDATA[<hr />
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-01-08T12:39:39+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">DaRe_jin’s Blog</title><subtitle>내실 있는 낙관</subtitle><author><name>DaRe_jin</name></author><entry><title type="html">[KAIST_WURF]0108 카이스트 박종은 교수님</title><link href="http://localhost:4000/kaist_wurf/KAIST_WURF_-%EC%98%A4%EC%A0%84/" rel="alternate" type="text/html" title="[KAIST_WURF]0108 카이스트 박종은 교수님" /><published>2025-01-08T00:00:00+09:00</published><updated>2025-01-08T00:00:00+09:00</updated><id>http://localhost:4000/kaist_wurf/KAIST_WURF_%08%EC%98%A4%EC%A0%84</id><content type="html" xml:base="http://localhost:4000/kaist_wurf/KAIST_WURF_-%EC%98%A4%EC%A0%84/"><![CDATA[<hr />
+<p class="notice--info">원칙은 바뀔 수 있음이 원칙이다.</p>
+<h1 id="개요">개요</h1>
+
+<p>이 교수님의 연구의 아이디어를 정리한다.</p>
+
+<h1 id="personal-research-history">Personal Research History</h1>
+
+<p><img src="https://github.com/user-attachments/assets/b4948267-81a2-4505-8aee-48dd299f7077" alt="image" class="align-center" /></p>
+
+<p>enzyme &gt; cell biology &gt; tissue biology</p>
+
+<h2 id="sanger-연구소와-공동연구">Sanger 연구소와 공동연구</h2>
+
+<blockquote>
+  <p>내 연구가 언제든 다른 사람에 의해 먼저 발표될 수 있지 않을까?</p>
+  <ul>
+    <li>Human Cell Atlas에서 Imune cell development</li>
+    <li>여러 명이 하나의 가치를 추구하는 환경(경쟁이 아닌, 공동연구)
+카이스트 의과학대학원 또한, 비슷한 환경이다!</li>
+    <li>여러 연구실이 연결되어 있음.</li>
+  </ul>
+</blockquote>
+
+<h2 id="scaid">SCAID</h2>
+
+<p><br /></p>
+
+<h1 id="encoding-and-decoding-the-human-tissue-ecosystem">Encoding and decoding the Human tissue ecosystem</h1>
+
+<ul>
+  <li>evolution 과정을 통해서 encoding된 genome이 decoding된 결과</li>
+</ul>
+
+<blockquote>
+  <p>organism을 single-cell spatial multi-omics로 human Digital Twin으로 encoding, perturbation 과정으로 decoding해서, in vitro human body를 만들 것</p>
+</blockquote>
+
+<h1 id="human-cell-atlas의-현재--encoding">Human cell atlas의 현재 : Encoding</h1>
+<h2 id="human-digital-twin">Human digital twin</h2>
+
+<p>multiscale gene regulatory network</p>
+
+<ul>
+  <li>intracellular &gt; intercellular &gt; multiorgan의 multiscale</li>
+</ul>
+
+<h2 id="세포-단위의single-cell-기술">세포 단위의(single cell) 기술</h2>
+<ul>
+  <li>하나하나의 cell은 컴퓨터와 같다</li>
+  <li>intercellular : spatially resolved transcriptom을 single cell 단위에서 분석해서 데이터화할 수 있다, 그러나 데이터를 만드는 것에 돈이 많이 든다(cell 하나하나마다 rna seuencing을 해야 함)
+    <ul>
+      <li>교수님 : 우리는 data integration을 해야겠다!
+        <ul>
+          <li>toy example : ‘tumor’ =&gt; 장기마다 다양(heterogenety)
+            <ul>
+              <li>‘하나의 암에 대해 missi하게 분석하자’ =&gt; 췌장암 : immunotherapy가 되지 않는 이유는, cell 간의 interaction 때문이었다!
+                <blockquote>
+                  <p>is it generalizable to other cancer?</p>
+                </blockquote>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="co-occurrence-analysis--어떤-세포들이-같이-관찰되는가">Co-occurrence analysis : 어떤 세포들이 같이 관찰되는가?</h2>
+
+<p>https://www.nature.com/articles/s41467-024-48310-4</p>
+<ul>
+  <li>tumor에서만 나타나는 hot immune gene programs가 나타날 경우, 예후가 좋다</li>
+</ul>
+
+<h2 id="web-crawling-based-public-data-collection">web crawling based public data collection</h2>
+<ol>
+  <li>cell type를 annotation</li>
+  <li>피의 data를 clustering =&gt; 한 cluster에 모여 있는 질환을 보고, cell을 보면 =&gt; 해당 질환들이 공유하는 cell의 특징을 알 수 있지 않을까?, 치료제를 공유할 수 있지 않을까?</li>
+  <li>tissue phenotypes를 clustering =&gt; 다른 장기 간에도, 질환들이 공유하는 특징적 cell을 알 수 있지 않을까?</li>
+</ol>
+
+<h2 id="노가다">노가다</h2>
+<ol>
+  <li>논문을 읽어야 함</li>
+  <li>‘여기있는 사람들이 아무도 안할 것 같지만, 할 수 있겠는데?’
+    <blockquote>
+      <p>노가다를 통해서 얻은 정답지로 누구보다 빨리 좋은 모델을 만들 수 있다.</p>
+    </blockquote>
+  </li>
+</ol>
+
+<h1 id="ai">AI</h1>
+<ul>
+  <li>AI가 발달하는 시대에 우리가 왜 생물학을 연구해야하지?</li>
+  <li>AI에게 ‘단군’이 될 수 있지 않을까?</li>
+  <li>brain machine interface를</li>
+</ul>
+
+<h2 id="ai가-못하는-게-무엇일까">AI가 못하는 게 무엇일까?</h2>
+<ul>
+  <li>decoder : perturbation space !</li>
+</ul>
+
+<h1 id="perturbation-encodingai가-할-수-없는-것">Perturbation encoding(AI가 할 수 없는 것)</h1>
+<ul>
+  <li>Perturbation space를 mapping =&gt; combinatiorial screening is possible!</li>
+</ul>
+
+<h2 id="야마나카의-fibroblast를-재현해보자">야마나카의 fibroblast를 재현해보자</h2>
+<ul>
+  <li>transcription factor를 때려넣어서 fibroblast를 만들 수 있지 않을까?</li>
+</ul>
+
+<h2 id="사람의-몸을-어떻게-만들지">사람의 몸을 어떻게 만들지?</h2>
+<blockquote>
+  <p>developing human imune organoids</p>
+</blockquote>
+
+<ol>
+  <li>self growing database by AI</li>
+  <li>Immune organ을 구현하는 것!</li>
+</ol>
+
+<blockquote>
+  <p>메일을 보낼 떄 한번은 답장을 잘 안하고, 두번은 답장하신다~!!</p>
+</blockquote>]]></content><author><name>DaRe_jin</name></author><category term="[&quot;KAIST_WURF&quot;]" /><category term="일지" /></entry><entry><title type="html">[KAIST_WURF]카이스트 SURF/WURF 소개</title><link href="http://localhost:4000/kaist_wurf/KAIST_WURF_INTRO/" rel="alternate" type="text/html" title="[KAIST_WURF]카이스트 SURF/WURF 소개" /><published>2025-01-07T00:00:00+09:00</published><updated>2025-01-07T00:00:00+09:00</updated><id>http://localhost:4000/kaist_wurf/KAIST_WURF_INTRO</id><content type="html" xml:base="http://localhost:4000/kaist_wurf/KAIST_WURF_INTRO/"><![CDATA[<hr />
+
+<h1 id="introduction">Introduction</h1>
+
+<p><img src="https://github.com/user-attachments/assets/b4948267-81a2-4505-8aee-48dd299f7077" alt="image" class="align-center" /></p>
+
+<p>2025년 1월-2월, 약 4주 간 KAIST 의과학대학원의 동계 인턴십 프로그램인 WURF에 참여한다. 신청하고 알아볼 때 관련 정보가 거의 없어 애를 먹었던 지라, SURF(여름 인턴십) 혹은 WURF(겨울 인턴십)에 관심이 있는 누군가께 도움이 되는 것을 꿈꾸며 적는다. 다만, 교수님 혹은 동기 학우님들의 사적 정보는 최대한 제하였다.</p>
+
+<p><br /></p>
+
+<h1 id="신청-배경--과정">신청 배경 / 과정</h1>
+
+<p>카이스트에 다니는 가까운 사람의 추천으로 알게 되었고, 알게 된 시점이 마감 전날이었던지라 급하게 지원서를 작성해서 지원하였다. 지원서에 작성한 지원 동기를 가져와보았다.</p>
+
+<blockquote>
+  <p>소개 및 지원 동기
+저는 타인에게 제 생각을 설득하는 가장 멋있는 방법이 연구라고 생각합니다. 설득하는 과정의 정직함과, 설득의 결과가 가지는 무궁무진한 가능성이 정말 멋있습니다. 생명을 구하는 연구의 꿈을 갖고 의과대학에 입학한 이후 예과 2년동안, 본격적인 의학을 배우기 전 할 수 있는 모든 일을 해보고 싶었습니다. 통계와 딥러닝이라는 도구를 배울 수 있는 시기라고 생각하여 관련 공부와 연구 인턴십에 주로 참여하였습니다. 다른 과 학부생들과 긴 기간동안 직접 인지과학실험을 해보기도, 디지털 치료제 앱을 만들어보기도 하였습니다. 그러나 고등학교 때 꿈꾸었던, 의생명과학을 깊이 있게 공부하고 제 관심 분야를 찾고 싶다는 목마름이 점점 커졌습니다.
+그러던 와중, 본 프로그램을 접하였고, 학문과 연구에 대한 목마름을 해소할 수 있는 정말 소중한 기회라는 생각이 들어 지원서를 작성하게 되었습니다. 의생명연구의 정점에 있는 카이스트 의과학대학원의 연구실에서, 세상을 바꾸는 연구의 현장을 꼭 경험하고 공부하고 싶습니다.</p>
+</blockquote>
+
+<p>신청 과정은 간단하다.</p>
+
+<ol>
+  <li>구글 설문지를 통해 지원서 작성(구체적인 내용은, 따로 연락을 주실 경우 힘닿는 한 알려드리겠습니다.)</li>
+  <li>약 일주일 안에 선발 결과 메일 통보</li>
+</ol>
+
+<p>지원서를 얼마나 길고 자세히 정성스럽게 작성해야 하는지, 무엇을 하는 프로그램인지, 얼마나 많은 분들께서 관심이 있으신지 전혀 모르는 채로 지원하였다. OT 때 알려주신 바로는 경쟁률은 약 6:1이었다고 한다.(총 51명 선발)</p>
+
+<p><br /></p>
+
+<h1 id="프로그램-소개">프로그램 소개</h1>
+
+<h2 id="프로그램-구성">프로그램 구성</h2>
+<ul>
+  <li>Meet the professor 오전 강의(진로 탐색)</li>
+  <li>오후 연구 인턴십(연구활동 참여, 사전에 학생들에게 지망을 받고 배정함)</li>
+  <li>네트워킹
+    <ul>
+      <li>Tea time : 1회 예정</li>
+      <li>저녁식사 + 뒷풀이 : 2회 예정</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="대학원-소개">대학원 소개</h2>
+<ul>
+  <li>석박사 통합과정</li>
+  <li>의사과학자 과정 / 의과학자 과정은 전형일 뿐이지, 교육과 과정은 정확히 동일</li>
+  <li>4월 가을학기 입시, 7월 봄학기 입시, 온라인 입시 설명회 입시 접수 1개월 전</li>
+</ul>
+
+<h2 id="기타-공지">기타 공지</h2>
+<ul>
+  <li>Meet the professor 강의 출석률 80% 이상 시 수료</li>
+  <li>개별인턴십
+    <ul>
+      <li>관심 연구실 교수님들과 면담을 독려</li>
+      <li>개별 인턴십(연장 혹은 타 연구실) 희망 시 숙소(기숙사 등) 미리 알아보기
+        <ul>
+          <li>특이하게 다른 연구실에 관심을 가지는 것을 독려하시는 분위기였다. 다만 기숙사는 3주차 초 정도에 자리가 다 차, 결단을 빨리 내려야 한다고 한다.</li>
+          <li>면담 신청은 보통 이메일로</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>인건비는 교수님과 상의</li>
+</ul>]]></content><author><name>DaRe_jin</name></author><category term="[&quot;KAIST_WURF&quot;]" /><category term="일지" /></entry><entry><title type="html">주식투자의 원칙</title><link href="http://localhost:4000/finance/%EC%A3%BC%EC%8B%9D%ED%88%AC%EC%9E%90%EC%9D%98%EC%9B%90%EC%B9%99/" rel="alternate" type="text/html" title="주식투자의 원칙" /><published>2025-01-06T00:00:00+09:00</published><updated>2025-01-07T00:00:00+09:00</updated><id>http://localhost:4000/finance/%EC%A3%BC%EC%8B%9D%ED%88%AC%EC%9E%90%EC%9D%98%EC%9B%90%EC%B9%99</id><content type="html" xml:base="http://localhost:4000/finance/%EC%A3%BC%EC%8B%9D%ED%88%AC%EC%9E%90%EC%9D%98%EC%9B%90%EC%B9%99/"><![CDATA[<hr />
 
 <p class="notice--info">원칙은 바뀔 수 있음이 원칙이다.</p>
 

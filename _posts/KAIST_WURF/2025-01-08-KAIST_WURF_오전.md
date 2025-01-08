@@ -16,10 +16,11 @@ comments: true
 ---
 
 ---
-
+원칙은 바뀔 수 있음이 원칙이다.
+{: .notice--info}
 # 개요
 
-이 교수님의 연구의 아이디어를 정리한다
+이 교수님의 연구의 아이디어를 정리한다. 
 
 # Personal Research History
 
