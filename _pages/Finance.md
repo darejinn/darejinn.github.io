@@ -6,4 +6,4 @@ author_profile: true
 taxonomy: Finance
 ---
 
-돈을 관리하는 원칙을 기록합니다.
+돈에 관하여 기록합니다.

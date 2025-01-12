@@ -1,4 +1,79 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-01-09T01:05:31+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">DaRe_jin’s Blog</title><subtitle>내실 있는 낙관</subtitle><author><name>DaRe_jin</name></author><entry><title type="html">주식투자의 원칙</title><link href="http://localhost:4000/finance/%EC%A3%BC%EC%8B%9D%ED%88%AC%EC%9E%90%EC%9D%98%EC%9B%90%EC%B9%99/" rel="alternate" type="text/html" title="주식투자의 원칙" /><published>2025-01-06T00:00:00+09:00</published><updated>2025-01-07T00:00:00+09:00</updated><id>http://localhost:4000/finance/%EC%A3%BC%EC%8B%9D%ED%88%AC%EC%9E%90%EC%9D%98%EC%9B%90%EC%B9%99</id><content type="html" xml:base="http://localhost:4000/finance/%EC%A3%BC%EC%8B%9D%ED%88%AC%EC%9E%90%EC%9D%98%EC%9B%90%EC%B9%99/"><![CDATA[<hr />
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-01-12T23:59:19+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">DaRe_jin’s Blog</title><subtitle>내실 있는 낙관</subtitle><author><name>DaRe_jin</name></author><entry><title type="html">[KAIST_WURF]카이스트 SURF/WURF 소개</title><link href="http://localhost:4000/kaist_wurf/KAIST_WURF_INTRO/" rel="alternate" type="text/html" title="[KAIST_WURF]카이스트 SURF/WURF 소개" /><published>2025-01-07T00:00:00+09:00</published><updated>2025-01-07T00:00:00+09:00</updated><id>http://localhost:4000/kaist_wurf/KAIST_WURF_INTRO</id><content type="html" xml:base="http://localhost:4000/kaist_wurf/KAIST_WURF_INTRO/"><![CDATA[<hr />
+
+<h1 id="introduction">Introduction</h1>
+
+<p><img src="https://github.com/user-attachments/assets/b4948267-81a2-4505-8aee-48dd299f7077" alt="image" class="align-center" /></p>
+
+<p>2025년 1월-2월, 약 4주 간 진행되는 KAIST 의과학대학원의 동계 인턴십 프로그램인 WURF에 참여한다. 신청하고 알아볼 때 관련 정보가 거의 없어 애를 먹었던 지라, SURF(여름 인턴십) 혹은 WURF(겨울 인턴십)에 관심이 있는 누군가에게 도움이 되길 바라며 작성한다.</p>
+
+<p><br /></p>
+
+<h1 id="신청-배경--과정">신청 배경 / 과정</h1>
+
+<p>지원을 결심한 시점이 지원 마감 전날이었던지라 급하게 지원서를 작성해서 지원하였다.</p>
+
+<p>신청 과정은 간단하다.</p>
+
+<ol>
+  <li>구글 설문지를 통해 지원서 작성
+    <ul>
+      <li>소개 및 지원 동기</li>
+      <li>본인의 장점</li>
+      <li>장래 계획</li>
+      <li>희망사항(랩실 지망 순서, 배우고 싶은 내용)</li>
+    </ul>
+  </li>
+  <li>약 일주일 안에 선발 결과 메일 통보</li>
+</ol>
+
+<p>경쟁률은 약 6:1이었다고 한다.(총 51명 선발)</p>
+
+<h2 id="관련-추가-정보">관련 추가 정보</h2>
+<blockquote>
+  <ol>
+    <li>휴학생은 신청 불가능한가?
+홈페이지 안내에는 오직 재학생만 신청이 가능하다고 써져 있다. 본인은 WURF 시점에 휴학 처리된 상황이었고, 지원서에도 휴학중임을 작성하였지만 참여의 기회가 있었으며, 같이 WURF에 참여한 학생들 중에서도 휴학 중인 의과대학 학생이 종종 있었다. 다만, 시기적으로 의과대학 학생들은 거의 대부분 휴학한 상태이기에 상황을 감안해주신 것 같기도 하다. 재학생은 인턴기간 동안 소정의 인턴비를 지급받으나, 절차 상 휴학생은 지급받을 수 없다. 대신, 기숙사 비용을 지원해주셨다.</li>
+    <li>지내는 곳 / 방배정
+캠프 전 메일을 통하여 관련 정보(기숙사 신청 여부 확인, 기숙사 입소 날짜, 출입증, OT 일정 등)를 받았으며, 안내해주시는 선생님께서 굉장히 친절하게 모든 문의에 답해주신다. 카이스트 기숙사를 신청하여 배정받거나, 통학이 가능하다. 기숙사를 신청할 경우 2인 혹은 3인 1실로 WURF를 하는 학생끼리 배정받는다. 룸메이트는 따로 지정할 수는 없으나, 여담으로 친구 A는 신청할 때 구구절절 B와 같은 방을 쓰지 못하면 본인은 잠을 자지 못한다며… 찡찡거려 같은 방으로 배정받았다고 한다.</li>
+    <li>수료 기준 / 개인 일정
+오전 강의를 80% 이상 출석할 시 수료할 수 있으며, 오후 일정은 물론 교수님과 랩실 선생님들께 누가 되지 않는 선에서 양해를 구해야겠지만, 개인적인 일정을 유하게 고려해주신다. 본인도 대전에서 지내면서 수요일 저녁마다 서울에 다녀왔다. 전반적인 프로그램의 목적이, 학생들에게 고강도의 연구인턴을 경험하게 해주겠다기보다, 교수님의 연구들을 가볍게 접하고 학생들 간 네트워킹을 하는 것에 더 비중이 있는 것 같다. 굉장히 여유롭고 편안한 일정이다.</li>
+  </ol>
+</blockquote>
+
+<p><br /></p>
+
+<h1 id="프로그램-소개">프로그램 소개</h1>
+<h2 id="프로그램-구성">프로그램 구성</h2>
+<ol>
+  <li>Meet the professor 오전 강의(진로 탐색) : 매일 카이스트 의과학대학원 교수님게서 당신의 분야와, 삶에 대한 이야기를 1시간 가량</li>
+  <li>오후 연구 인턴십(연구활동 참여, 사전에 학생들에게 지망을 받고 배정함)</li>
+  <li>네트워킹
+    <ul>
+      <li>Tea time(이른 오후 시간) : 1회(공식)</li>
+      <li>저녁식사 + 뒷풀이 : 2회(공식)</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="카이스트-의과학-대학원-소개">카이스트 의과학 대학원 소개</h2>
+<p><img src="https://github.com/user-attachments/assets/7fb99289-1f70-4dff-aee6-e7bb0956379d" alt="image" class="align-center" /></p>
+
+<p>첫날 의과학대학원 소개 시간에, 구태윤 교수님께서 대학원에 관해 설명해주셨다. 자세한 내용은 입시설명회 혹은 관련 자료에서 확인할 수 있지만, 간단하게만 설명하겠다.</p>
+<ul>
+  <li>석박사 통합과정</li>
+  <li>의사과학자 과정 / 의과학자 과정은 전형일 뿐, 교육과정은 정확히 동일함을 강조하셨다.</li>
+  <li>4월 가을학기 입시, 7월 봄학기 입시로 봄학기 입시가 굉장히 빠른 편이라 미리 준비해야 한다. 온라인 입시 설명회 입시 접수 1개월 전</li>
+</ul>
+
+<h2 id="기타-공지개별인턴십">기타 공지(개별인턴십)</h2>
+<p>첫날 오티를 들으며, 특이하다고 느낀 것이 교수님께서 WURF 기간 이후 기존 연구실에서의 인턴십 연장, 혹은 타 연구실에서의 인턴십을 적극 추천하셨다. 카이스트 의과학대학원은 특히 학부생을 따로 받지 않는지라, 학부생을 귀찮아하지 않는 편이라고, 특히 SURF/WURF를 통해 들어온 학생의 경우에는 대부분 교수님께서 환영하신다고 한다.</p>
+
+<ul>
+  <li>meet the professor 시간에 강의하신 교수님의 연구실 중 관심 있는 연구실이 있다면, 메일로 면담신청을 해볼 것</li>
+  <li>개별 인턴십(연장 혹은 타 연구실) 희망 시 숙소(기숙사 등) 미리 알아볼 것</li>
+</ul>
+
+<p>위 두 가지를 말씀하셨다.</p>]]></content><author><name>DaRe_jin</name></author><category term="[&quot;KAIST_WURF&quot;]" /><category term="일지" /></entry><entry><title type="html">주식투자의 원칙</title><link href="http://localhost:4000/finance/%EC%A3%BC%EC%8B%9D%ED%88%AC%EC%9E%90%EC%9D%98%EC%9B%90%EC%B9%99/" rel="alternate" type="text/html" title="주식투자의 원칙" /><published>2025-01-06T00:00:00+09:00</published><updated>2025-01-07T00:00:00+09:00</updated><id>http://localhost:4000/finance/%EC%A3%BC%EC%8B%9D%ED%88%AC%EC%9E%90%EC%9D%98%EC%9B%90%EC%B9%99</id><content type="html" xml:base="http://localhost:4000/finance/%EC%A3%BC%EC%8B%9D%ED%88%AC%EC%9E%90%EC%9D%98%EC%9B%90%EC%B9%99/"><![CDATA[<hr />
 
 <p class="notice--info">원칙은 바뀔 수 있음이 원칙이다.</p>
 
