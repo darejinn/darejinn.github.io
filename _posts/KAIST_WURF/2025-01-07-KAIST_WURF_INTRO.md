@@ -1,5 +1,5 @@
 ---
-title:  "[KAIST_WURF]카이스트 SURF/WURF 소개" 
+title:  "[KAIST WURF]카이스트 SURF/WURF 소개" 
 excerpt: ""
 
 category:
@@ -54,7 +54,7 @@ comments: true
 
 # 2. 프로그램 소개
 ## 프로그램 구성
-1. Meet the professor 오전 강의(진로 탐색) : 매일 카이스트 의과학대학원 교수님게서 당신의 분야와, 삶에 대한 이야기를 1시간 가량 
+1. Meet the professor 오전 강의(진로 탐색) : 매일 카이스트 의과학대학원 교수님게서 교수님의 연구 분야와, 삶에 대한 이야기를 1시간 가량 강의
 2. 오후 연구 인턴십(연구활동 참여, 사전에 학생들에게 지망을 받고 배정함)
 3. 네트워킹
     - Tea time(이른 오후 시간) : 1회(공식)

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-01-13T00:03:48+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">DaRe_jin’s Blog</title><subtitle>내실 있는 낙관</subtitle><author><name>DaRe_jin</name></author><entry><title type="html">[KAIST_WURF]카이스트 SURF/WURF 소개</title><link href="http://localhost:4000/kaist_wurf/KAIST_WURF_INTRO/" rel="alternate" type="text/html" title="[KAIST_WURF]카이스트 SURF/WURF 소개" /><published>2025-01-07T00:00:00+09:00</published><updated>2025-01-07T00:00:00+09:00</updated><id>http://localhost:4000/kaist_wurf/KAIST_WURF_INTRO</id><content type="html" xml:base="http://localhost:4000/kaist_wurf/KAIST_WURF_INTRO/"><![CDATA[<hr />
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-01-13T00:13:03+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">DaRe_jin’s Blog</title><subtitle>내실 있는 낙관</subtitle><author><name>DaRe_jin</name></author><entry><title type="html">[KAIST WURF]카이스트 SURF/WURF 소개</title><link href="http://localhost:4000/kaist_wurf/KAIST_WURF_INTRO/" rel="alternate" type="text/html" title="[KAIST WURF]카이스트 SURF/WURF 소개" /><published>2025-01-07T00:00:00+09:00</published><updated>2025-01-07T00:00:00+09:00</updated><id>http://localhost:4000/kaist_wurf/KAIST_WURF_INTRO</id><content type="html" xml:base="http://localhost:4000/kaist_wurf/KAIST_WURF_INTRO/"><![CDATA[<hr />
 
 <h1 id="introduction">Introduction</h1>
 
@@ -45,7 +45,7 @@
 <h1 id="2-프로그램-소개">2. 프로그램 소개</h1>
 <h2 id="프로그램-구성">프로그램 구성</h2>
 <ol>
-  <li>Meet the professor 오전 강의(진로 탐색) : 매일 카이스트 의과학대학원 교수님게서 당신의 분야와, 삶에 대한 이야기를 1시간 가량</li>
+  <li>Meet the professor 오전 강의(진로 탐색) : 매일 카이스트 의과학대학원 교수님게서 교수님의 연구 분야와, 삶에 대한 이야기를 1시간 가량 강의</li>
   <li>오후 연구 인턴십(연구활동 참여, 사전에 학생들에게 지망을 받고 배정함)</li>
   <li>네트워킹
     <ul>
