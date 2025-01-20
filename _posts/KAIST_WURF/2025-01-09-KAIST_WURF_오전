@@ -24,6 +24,8 @@ comments: true
 - MD PHD
 - Sovargen(소바젠) CSO
 
+NGS , crisper , ASO
+
 # Somatic Mosaicism
 ## Somatic mutation in Human Body
 
@@ -49,7 +51,7 @@ HME 환자의 최초의 noncancer mosacism (Lee et al, Nat Gen 2012)을 찾은 �
 - Deep NGS, single cell
 2. 인과관계 증명
 - genome editing in mouse invivo, organoid
-3. therapeutic : target mrna에 binding해서 brain 세포 안으로 들어가는 깃ㄹ
+3. therapeutic : target mrna에 binding해서 brain 세포 안으로 들어가는 것
 - 국소뇌전증, 뇌종양, 자폐증, 조현병 등
 
 <br>

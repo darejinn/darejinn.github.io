@@ -20,41 +20,70 @@ comments: true
 {: .notice--info}
 # 개요
 
-신의철 교수님 : 바이러스 면역학자
-
+김지훈 교수님 : LADL - Light-Activated Dynamic Looping and its function 
+-안녕하세요 구독자 여러분 신정진,김지인입니다.~!
 <br>
 
-# Phenotypic and functional characteristics of sars-cov-2 vaccine-induced t cells
-## CD8 T cell
-- virus infected cell을 죽이는 killer cell : protection from severe disease는 가능하지만, infection 자체를 protect하기는 어려움.
-## sars cov-2 varients including omicron, escape from nAb
-- cov-2 varients hardly escape from vaccine-induced memory T cell (사람마다 t-cell epitope이 다르기 때문_
-- 일반적인 사람들은, low titers of NAbs, cannot escape from memory T cells
 
-# 1. Natural infection 
+# Condensin 1 and 2
+- 여러 개의 scaffold protein이 모여서 network를 이룬다!
+- condensin 1 and 2 : chromosome compaction에 영향을 미친다, transcription이 active하게 일어나는 부분에 binding한다! 그런데 mitosis에서 transcription은 일어나지 않는다.
 
-2020년 코로나 바이러스 시작 : '이걸 연구해도 될까? 얼떨결에 학생의 제의로 시작함.', 아주 빠른 속도로 RNA seq
+## Condensin 1의 long range interaction
+condensin과 같은 structure protein들이, gene과 enhancer가 가까워질 수 있도록 loop를 만든다.
 
-## Phenotype and functions of sars-cov-2 specific cd8 t cell
-- MHC multimer technique : 바이러스에 특이적인 T cell을 볼 수 있음.
-- pd1 expressing T cell은, T cell을 exhaustion시키는 것이 아니라 오히려 활성화시시킬 수 있다.
+### Epigenetic mechanisms in 3D
 
-## sars-cov-2 specific t cell memory가 얼마나 sustained되는가?
-- stem cell-like memory cells가 얼마나 있는지가, sustainability에 중요할 것
-- durability (MHC-I multimer cells at 6 months / MHC-I multimer cells at the peak)와 상관관계를 봄 : Tscm이 높을수록 높다 <= 젊을수록 높음
-- 젊은 사람과 나이 있는 사람의 naive cell이 다를까?
-- 발표하다가 메모하심
+- fiber => loop => TAD => compartment => chromosome => genome
+- top down 방식으로 분석
 
-# 2. Responses of vaccine-induced memory t cells to VOCs
-- CD8 t cell epitope가 기존과 얼마나 다른가? (실험하지 않고 분석)
-- t cell responses against omicron varients를 비교함.
+# 5C 분석법 (chromosome-conformation-capture-carbon-copy)
+1. restriction enzyme digest
+2. Sticky-end ligation이 이루어진 genome structure가 template 역할을 한다.
+3. 5C primer design해서, 2개의 primer를 ligation 
+- restriction enzyme 옆의 genomic sequence
+- universial tail
+4. 증폭시킨 후 5C sequencing
 
-## Tissue-resident memory cells : rapid recall response
+## Analysis step
+1. Binning is x axis, y axis : 칸을 만든다
+2. Assigning counts
+=> long range interaction을 하는 부분의 숫자가 더 높다!
 
-# 3. BA2에만 있는, 우환에는 없는 T cell 반응이 나오는 epitope를 발견함.
-=> mutation된 sequence를 발견함. 다음 varient에도 그 sequence가 유지된다. => 팬데믹이 엔데믹이 되어가는 과정
-***  T cell의 개수를 세는 게 아니라, response를 보아야 한다
+# Critical unknowns
+1. looping dynamics on short time scales
+2. causal role for looping on genome function : 인과관계가 불분명하다, 정확한 모델을 모름(loop extrustion, phase seperation)
+3. population heterogenety
 
-# 4. Spike-specific CD8 T cells after 3-4 immunization expansion capacity : imuune fatigue?
-- increase frequency, increased cytokine production
-- memory cell이 robust하게 늘어나는 것은 reduced된다 (expansion capacity), t cell이 노화가 된다
+# Aim : 짧은 시간에, 동시에 population에 loop을 만들고, 풀 수 있는 기술
+## CRY2 and CIB1 : 빛을 비추면 oligomerize된다
+
+## 3개의 key components
+1. Anchor : genome에서 binding할 수 있는 binding site CIBN+deepcas9
+2. Target : guide RNA
+3. Bridge : CRY1
+
+## Zip462의 loop를 형성
+- engineered looping
+- endogeneous looping을 줄였다.
+
+## Target gene의 transcription
+single molecule RNA FISH
+- LADL에서 target gene의 transcription을 높인다.
+
+# Expanding loop engineering to domain
+## Fragile X syndrom : 환자 샘플에서 도메인이 완전히 사라지고, compartment가 뒤바뀐다
+### 문제점 : Domain이 어떻게 생겼는지 모름
+- domain을 유도해보면 어떨까? Domain은 compartment를 의미??
+
+
+# Science
+## Viral genome integration into host (chromosome을 hiC해서, viral genome integration을 했을 때 domain이 변화된다)
+- plaid pattern
+- 단백질이 아닌 곳의 
+
+## Cell cycle에서 genome structure가 어떻게 변화되는지
+- degron knockdown을 했을 때, structure protein의 genome binding에 영향을 미치지 않을까?
+
+- enhancer의 한쪽에 2개 anchor
+- 
