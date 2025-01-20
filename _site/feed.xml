@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-01-20T14:02:52+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">DaRe_jin’s Blog</title><subtitle>내실 있는 낙관</subtitle><author><name>DaRe_jin</name></author><entry><title type="html">[KAIST_WURF]0116 카이스트 구태윤 교수님</title><link href="http://localhost:4000/kaist_wurf/KAIST_WURF_-%EC%98%A4%EC%A0%84/" rel="alternate" type="text/html" title="[KAIST_WURF]0116 카이스트 구태윤 교수님" /><published>2025-01-16T00:00:00+09:00</published><updated>2025-01-16T00:00:00+09:00</updated><id>http://localhost:4000/kaist_wurf/KAIST_WURF_%08%EC%98%A4%EC%A0%84</id><content type="html" xml:base="http://localhost:4000/kaist_wurf/KAIST_WURF_-%EC%98%A4%EC%A0%84/"><![CDATA[<hr />
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-01-20T14:08:38+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">DaRe_jin’s Blog</title><subtitle>내실 있는 낙관</subtitle><author><name>DaRe_jin</name></author><entry><title type="html">[KAIST_WURF]0116 카이스트 구태윤 교수님</title><link href="http://localhost:4000/kaist_wurf/KAIST_WURF_-%EC%98%A4%EC%A0%84/" rel="alternate" type="text/html" title="[KAIST_WURF]0116 카이스트 구태윤 교수님" /><published>2025-01-16T00:00:00+09:00</published><updated>2025-01-16T00:00:00+09:00</updated><id>http://localhost:4000/kaist_wurf/KAIST_WURF_%08%EC%98%A4%EC%A0%84</id><content type="html" xml:base="http://localhost:4000/kaist_wurf/KAIST_WURF_-%EC%98%A4%EC%A0%84/"><![CDATA[<hr />
 <p class="notice--info">카이스트 구태윤 교수님의 WURF meet the professor 강연을 정리하였습니다.</p>
 <hr />
 
@@ -70,10 +70,12 @@ ExM은 이 한계를 <strong>‘샘플을 확장(expansion)해서, 기존 현미
 
 <ol>
   <li>잘 으깨지지 않아, 큰 인체 조직 시료의 탄성화가 가능하게 한다</li>
-  <li>항체 시약을 조직 속에 전달하는 데에 걸리는 시간(샘플이 두꺼울수록 오래 걸린다)
+  <li>항체 시약을 조직 속에 전달하는 데에 걸리는 시간을 줄이기 위하여
     <ul>
       <li>전하를 띄게 하거나, 항체를 작게 하거나, 소용돌이를 일으키거나…의 기존 기술 대신,</li>
-      <li>탄성화 조직을 일시적으로 얇게 만들어서, 초고속으로 염색할 수 있다!</li>
+      <li><strong>두께가 줄어들면 염색 시간이 줄어든다</strong>는 가장 기본적인 생각으로 돌아가, 탄성화 조직을 일시적으로 얇게 만들어서, 초고속으로 염색할 수 있다!</li>
+    </ul>
+    <ul>
       <li>늘리고 고정하고(stretch) 물을 condense시켜 가로세로의 길이는 유지된 채 두께를 혁신적으로 얇게 만든다.
 <br />
 <br /></li>
@@ -100,7 +102,7 @@ ExM은 이 한계를 <strong>‘샘플을 확장(expansion)해서, 기존 현미
 
 <h3 id="opto-connectomics-kaisr-ibil"><span style="font-size:90%">Opto-connectomics @KAISR iBIL</span></h3>
 
-<p>목표: 약 1개월 정도의 기간 내에, 개별 연구실 규모에서도 마우스 뇌의 신경망을 해독할 수 있는 기술 개발.
+<p>목표: 약 1개월 정도의 기간 내에, 개별 연구실 규모에서도 마우스 뇌의 신경망을 해독할 수 있는 기술 개발을 목표로 하고 계시다. 신경망을 전자현미경으로 해독하는 기존 기술의 패러다임을 바꾸는 것!
 가능해진다면 뇌 조직 전체가 <strong>‘tissue 샘플’</strong>이 아닌 <strong>‘connectomic data’</strong>로 전환되어, 뇌 과학 연구의 양상 자체가 바뀔 수 있다.</p>
 
 <h2 id="다기능-정밀의료영상-원천기술-개발"><span style="font-size:90%">다기능 정밀의료영상 원천기술 개발</span></h2>
