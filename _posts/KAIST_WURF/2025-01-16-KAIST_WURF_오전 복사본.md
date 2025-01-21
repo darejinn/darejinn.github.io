@@ -29,88 +29,86 @@ comments: true
 
 2. High fructose diet를 했을 때, Fructose에서 만들어진 F1-P는 PKM2 tetramer를 monomer로 바꾼다. 이 monomer은 hypoxic cell이 덜 죽게 만들어, 흡수하는 면적을 높인다.
 
+Diet control을 할 때 일반적으로 줄어드는 것은 fat mass가 아니라 muscle mass이다.
 
-Diet control를 권장하지 않는다. 줄어드는 것은 fat mass가 아니라 muscle mass이다
 <br>
 <br>
 
-# <span style="background-color:LightBlue; font-size:110%">1. Calosie restriction as an intervention in ageing
+# <span style="background-color:LightBlue; font-size:110%">1. Calorie restriction as an intervention in ageing
 
-현미경 해상도의 한계를 넘어서는 세포 구조
-일반적으로 200um 정도의 해상도인 광학현미경으로는 대부분의 세포 구조를 관찰할 수 없다. 영상기법(하드웨어)는 꾸준히 발전하고 있으나, 미세한 세포구조를 관찰하는 것은 여전히 요원하다. 
-> 일반적으로는 더 강력한 현미경(또는 영상 장비)을 개발함으로써 해상도를 높이려 노력한다. **영상 기법(하드웨어)의 발전을 기다리지 말고, 잘 관찰할 수 있는 샘플을 만드는 것은 어떨까?**
+설치류 모델에서 칼로리 제한이 수명 연장에서 효과적인 것은 의심할 여지가 없다, 100년 전부터 연구되어 왔던 것!
 
-'관찰 방법'이 아닌, '관찰 대상'을 바꾸자는 아이디어에서 출발한 것이 **Expansion microscopy(ExM)**이다.
+> Primates(monky)를 대상으로 30%를 적게 먹이는 calorie restriction 실험을 진행했다(Wisconsin study)
 
-**Expansion Microscopy(ExM)**는 2015년 MIT의 Edward S. Boyden 연구실에서 처음 발표한 혁신적인 개념이다. 보통 광학 현미경의 해상도는 ~200nm 수준으로, 이보다 더 작은 세포 구조나 분자를 볼 수 없다는 물리적 제약(회절 한계)이 존재한다.
-ExM은 이 한계를 **‘샘플을 확장(expansion)해서, 기존 현미경으로도 미세 구조를 관찰 가능하게 만든다’**는 발상의 전환으로 극복한다.
+## <span style="font-size:90%">Wisconsin study 결과
 
-## <span style="font-size:90%">MAP 기술(2세대 초고해상도 현미경) : Magnified analysis of proteome technology
+30% calorie restriction을 실시한 원숭이의 survival이 더 좋고, age related disease가 현저히 낮은 breakthrough한 결과가 나왔다.
 
-ExM의 계보를 잇는 2세대 초고해상도 현미경 샘플 처리 기술 중 하나로, 조직에 하이드로젤 모노머를 주입하고, 고정·중합 과정을 거친 후 **물에 넣어 ‘확장’**함으로써 세포 내 단백질이나 분자의 위치 정보를 고해상도로 확인할 수 있게 한다.
-하이드로젤 폴리머 구조가 음이온을 띠고, 물이 투입되면서 양이온이 빠져나가 음이온 간 척력으로 샘플이 팽창하는 원리를 이용한다.
+같은 연구를 NIA study에서 진행하였을 때, survival에 크게 차이가 없었다, 그러나 두 그룹은 공통적으로 age related disease(대사질병)는 현저히 낮았다.
+
 <br>
 <br>
 
-# <span style="background-color:LightBlue; font-size:110%">2. 투명 뇌 기술 : 조직 투명화(tissue clearing)
-## <span style="font-size:90%">Tissue Clearing
+## <span style="font-size:90%"> Pros and cons of CR
+### <span style="font-size:80%"> CR의 benefits
 
-조직은 대부분 빛을 산란·흡수하는 성분(지질, 단백질 등)으로 이루어져 있다. 그러다 보니 시료가 두꺼울수록 빛이 내부로 잘 통과하지 못해, 심부 구조를 관찰하기 어렵다. 조직 투명화(Tissue Clearing) 기법은 이런 문제를 해결하기 위해 고안되었다. 조직 투명화 기법은, 아래 세 가지의 방식으로 심부 구조를 관찰하기 어려운 문제를 해결한다.
-- 빛이 산란되어서(랜덤하게 꺾여서) 깊이/투과도가 깊어질수록 관찰이 어려움. => 산란시키는 물질을 제거(지질 추출)
-- 빛이 굴절되어서(빛이 미세하게 꺾여서) 초점/선명도가 낮아짐. => 굴절률 균일화 (투명화 용액)
-- 조직 시료에서 'contrast'를 만들어야 관찰을 할 수 있다.
+유전자의 expression에는 epigenome에 영향을 받는데, 이는 환경적 요인과 크게 관련 있다. 
+1. brain health(CR increases BDNF, lowering alzheimer)
+2. cancer
+  - CR reduces the incidence and progression of spontaneous tumors
+3. Anti-aging
+4. Surgical stress
 
-  => option 1 : 유전자 조작을 통한 형광 단백질 발현
+### <span style="font-size:80%"> CR의 deficiency
+1. Nutritional insufficiencies
+2. Loss of lean bondy mass
+3. Bone health
+4. Wound healing
+5. Infection
 
-  => option 2 : 염색 (항체 염색)
+> 내 몸의 shape가 중요하지, 체중계의 몸무게가 중요한 것이 아니다.
 
-## <span style="font-size:90%">투명화 분야의 난제
+## <span style="font-size:90%"> Intermittent fasting
+1일 1식은 추천하지 않으신다, 매일 급격하게 혈당이 올라가는 hyper insulin이 일어난다.
 
-1. 두꺼운 시료의 항체 염색이 어려움 => 항체와 같은 고분자가 염색될 수 있도록 재질의 낮은 밀도(큰 공극)이 필요함.
-2. 기계적 안정성(투명화시키는 과정에서 쉽게 망가짐) => 기계적 스트레스에 대한 저항성이 필요함
+intermittent fasting은 muscle mass의 감소가 일어나지 않는다! 
 
-> **'조직 탄성화'**가 해결할 수 있지 않을까? : 질기고 잡아당겨지는 entagled hydrogel을 이용한다!
+1. Alternate-day fasting : 정상식이를 하는 날에 충분한 protein uptake
 
-## <span style="font-size:90%">ELAST(조직 탄성화 기반 혁신 기술)
+2. Periodic fasting : 일주일에 2번, 평소 칼로리의 25%만 섭취
 
-1. 잘 으깨지지 않아, 큰 인체 조직 시료의 탄성화가 가능하게 한다
-2. 항체 시약을 조직 속에 전달하는 데에 걸리는 시간을 줄이기 위하여
-  - 전하를 띄게 하거나, 항체를 작게 하거나, 소용돌이를 일으키거나...의 기존 기술 대신,
-  - **두께가 줄어들면 염색 시간이 줄어든다**는 가장 기본적인 생각으로 돌아가, 탄성화 조직을 일시적으로 얇게 만들어서, 초고속으로 염색할 수 있다!
-    - 늘리고 고정하고(stretch) 물을 condense시켜 가로세로의 길이는 유지된 채 두께를 혁신적으로 얇게 만든다.
-<br>
-<br>
+3. Time-restricted feeding : 24시간 중 16시간 공복 유지 (아침부터 12시까지와, 저녁 8시 이후에 완전한 공복을 유지)
+  - Optimal time to initiate TRF(time restriction feeding)
+    늦은 밤에 window period를 가지는 것보다, 이른 아침에 window period를 가지는 것이 더 좋다. 
+    완벽한 fasting period를 유지하는 것이 중요하다. 저녁 먹은 뒤 야식을 먹지 않는 것만으로도 크게 문제가 없다!
 
-# <span style="background-color:LightBlue; font-size:110%">3. 공간오믹스(spatial-omics)의 신기술 개발
----
-조직이나 세포를 단순히 ‘형태적 구조’만 보는 것을 넘어, 그 공간적 위치에서 어떤 분자적·생물학적 기능을 수행하는지를 함께 파악하려는 노력은 점차 활발해지고 있다. 이를 **‘공간 오믹스(spatial-omics)’**라 부르며, 크게 세 가지 축으로 나눌 수 있다.
-1. Connectomics(신경망 지도화)
-2. Spatial transcriptomics(유전자 발현 지도화)
-3. Functional radiomics(기능적 영상화 기반 대사·활성 연구)
 
-## <span style="font-size:90%">Connectome(완전한 신경망 정보) : 뇌가 가지는 궁극의 정보는 망(네트워크)이다
+### Dietary lipid
+팜유, 코코넛유의 포화지방이 무지 높다.
 
-- 뇌는 네트워크(연결)의 집합체이다. 뉴런 간 연결 전체를 관찰하고 분석하면, 뇌 기능과 의식을 해석하는 핵심 정보를 얻을 수 있다. 
-- 현재까지 완전한 Connectome이 구축된 생물은 선충(2종), 그리고 2024년에 완성된 초파리, 총 3종이 유일하다.
-- 마우스 뇌의 connectome 전체를 전자현미경으로만 해독하려면 시간(최소 1000년 이상)과 막대한 자원이 필요하다. 이 때문에 전 세계 여러 연구소가 컨소시엄 형태로 도전하고 있다.
+## <span style="font-size:90%"> CR mimetics : Sirtuins
+- CR를 mimic하는 약물을 개발할 수 있지 않을까?
+- French paradox : 와인의 성분이 sirtuin을 유도한다? 하루에 700-800잔을 먹어야 함.
 
-### <span style="font-size:90%">Opto-connectomics @KAISR iBIL
+1. Polyphenols : High dose가 필요
+2. Metformin : low dose로도 sirtuin 유도 가능
+3. Rapamysin : side effect가 있다.
 
-목표: 약 1개월 정도의 기간 내에, 개별 연구실 규모에서도 마우스 뇌의 신경망을 해독할 수 있는 기술 개발을 목표로 하고 계시다. 신경망을 전자현미경으로 해독하는 기존 기술의 패러다임을 바꾸는 것!
-가능해진다면 뇌 조직 전체가 **‘tissue 샘플’**이 아닌 **‘connectomic data’**로 전환되어, 뇌 과학 연구의 양상 자체가 바뀔 수 있다.
+- Sirtuin의 순기능 : Nature comm 연구 : Sirt6 attenuates chondrocyte senescence and osteoarthritis progression
 
-## <span style="font-size:90%">다기능 정밀의료영상 원천기술 개발
 
-단순한 해부학적 구조(해상도) 파악에 그치지 않고, 대사 과정, 에너지 공급, 세포 기능 등 뇌(또는 다른 조직)의 ‘기능적 면모’를 정밀하게 관찰할 수 있는 영상화 기술.
-- 예: 혈류 유입률, 유출률, 에너지 변환 효율, 산소 교환 능력, 분자 차원의 반응 속도 등.
+# <span style="background-color:LightBlue; font-size:110%">2. Ketogenesis and ketolysis
+## <span style="font-size:90%"> Adaptation response to statrvation
+- 병리학적 측면이 아니라, physiology level에서 keton body는 glucose의 alrernative한 에너지원으로 사용된다.
+cf) 2~3주를 굶어도, brain의 glucose 공급은 억제되지 않는다
 
-이러한 고차원 영상 데이터를 바탕으로, 개인 맞춤형 진단·치료가 가능한 정밀 의료로의 발전이 기대된다.
-<br>
-<br>
+- ketone body가 에너지원으로 사용되는 시기, glucose는 적당히 낮게 유지된다, 인슐린 레벨은 감소한다.
+## <span style="font-size:90%"> PAK4 단백질의 억제
+- 일반적으로 oncoprotein(암을 일으키고, 항암을 저해)으로 알려짐.
+- PAK4를 억제하면, 간에서 ketone body를 많이 생성하는 메커니즘을 규명
+  => improvement of weight gain!
 
-# <span style="background-color:LightBlue; font-size:110%">4. 생각
----
-구태윤 교수님께서는 기존의 기술을 담습하지 않고 새로운 생각을 도입하여, 생명과학연구의 근본이 되는 '연구방법' 자체를 바꾸는 연구를 목표하신다고 말씀하셨다. 
-대부분의 task를 사람보다 컴퓨터가 더 잘하는 시대에, 우리는 어떤 존재가 되어야 하는지 고민하였을 때, 있는 데이터를 학습하여 성능을 내는 인공지능과 다른 우리의 가장 큰 특징은 **없던 생각을 해내는 능력**이라고 생각한다. 그리고 연구는 내가 가진 창발적 생각을 비약, 회유, 속임 없이 세상에 설득하는 가장 정직한 방법이라고 생각한다.
 
-끊임없이 질문을 던지고, 없던 생각을 하는 삶을 살고 싶다. 그 과정에서 사람을 사랑하는 마음과, 내 분야에 대한 깊이 있는 지식이 합쳐진다면, 언젠가 내 생각이 선한 가치를 만들어낼 수 있지 않을까.
+# 정리
+- 기회는 준비된 자에게 온다.
+- 폼 나게 살자 :))
