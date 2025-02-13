@@ -1,5 +1,5 @@
 ---
-title:  "[KAIST_WURF]0115 카이스트 신의철 교수님" 
+title:  "[KAIST_WURF]0115 카이스트 김지훈 교수님" 
 excerpt: ""
 
 category:
