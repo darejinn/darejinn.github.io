@@ -21,7 +21,6 @@ comments: true
 # 개요
 
 김지훈 교수님 : LADL - Light-Activated Dynamic Looping and its function 
--안녕하세요 구독자 여러분 신정진,김지인입니다.~!
 <br>
 
 

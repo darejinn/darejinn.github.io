@@ -22,7 +22,13 @@ comments: true
 
 
 # <span style="background-color:LightBlue; font-size:110%">Introduction
-> 비만율의 증가는, fructose에서 비롯한다!
+
+| ![Image](https://github.com/user-attachments/assets/b230c457-04bf-4cc9-b459-a66d56424906) | 
+|:--:| 
+| 박병현교수님 lab site ([사이트 링크](https://sites.google.com/view/bhparklab/home)) |
+
+
+> 인류가 진화적으로 '굶는 시기' 없이, 풍족한 영양을 섭취할 수 있게 된 것은 얼마 되지 않았다. 비만율의 증가는, fructose에서 비롯한다!
 
 ## <span style="font-size:90%">Fructose metabolism
 1. Glucose가 대사되는 과정에서, 3번의 regulatory mechanism이 있어, 효소에 의해 정교하게 조절한다. 그러나 Fructose의 대사는 우리 몸의 주 대사가 아니므로 negative feedback inhibition이 잘 일어나지 않고, 정교한 대사가 어렵다.

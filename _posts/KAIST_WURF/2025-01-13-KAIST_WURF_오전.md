@@ -57,7 +57,6 @@ Human immunology
 - virtual memory T cell
 - 항원의 자극을 받지 않았지만 memory phenotype를 발현하는 T cell : protection에 큰 역할 할 수 있음.
 - memory t cell 연구를 하다, virtual memory T cell임을 알게 됨... 
-
 ### Alopecia Areata
 - T(vt)의 새로운 population을 발견 : CD44 s-hi cell(질병을 일으킬 가능성이 높은 cell)
 - s-hi cell의 기원이 virtual memory t cell임을 형광물질을 tracking하여 밝힘.
