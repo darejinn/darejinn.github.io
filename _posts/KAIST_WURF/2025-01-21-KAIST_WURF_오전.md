@@ -23,8 +23,7 @@ comments: true
 
 # <span style="background-color:LightBlue; font-size:110%">Introduction
 
-| ![Image](https://github.com/user-attachments/assets/b230c457-04bf-4cc9-b459-a66d56424906) | 
-|:--:| 
+
 | 박병현교수님 lab site ([사이트 링크](https://sites.google.com/view/bhparklab/home)) |
 
 

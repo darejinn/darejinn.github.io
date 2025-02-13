@@ -23,8 +23,6 @@ comments: true
 
 # <span style="background-color:LightBlue; font-size:110%">Introduction : Genome in 4-dimentional world
 
-| ![Image](https://lh6.googleusercontent.com/xM-nAWrFYw7hLRiDAA5XqjcxtoOxEYDN1REyNGYIfEQPCYmi07Zb0-pRukeiPGPSEr-0FPhMCt55a72kaOT0mFgq8QDQSbBwB4Uk5OR5Q5nIoyyedLYJLMOEHhHZZ9uR8w=w1280) | 
-|:--:| 
 | 김지훈교수님 lab site ([사이트 링크](https://jihunkim.kaist.ac.kr/)) |
 {: .center}
 

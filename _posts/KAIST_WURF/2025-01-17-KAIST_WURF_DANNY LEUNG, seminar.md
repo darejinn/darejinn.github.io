@@ -73,9 +73,8 @@ cov-19 환자의 placentra(connects mather and fetus)를 포함한 maternal feta
 
 # 3. HBV- HEpatocellulat carcinoma를 조절하는 retrovirus induced transcriptimic changes
 
-## GPC3 SUPER ENHANCER ON, non-methylation of CpG region ; 둘 다 만족했을 때만 활성을 보임.
-
-## retrotransposons의 changes가 HCC에서 특이적으로 보임.(loss of methylation을 유도하여, 특정 DNA의 overexpression을 보임)
+- GPC3 SUPER ENHANCER ON, non-methylation of CpG region ; 둘 다 만족했을 때만 활성을 보임.
+- retrotransposons의 changes가 HCC에서 특이적으로 보임.(loss of methylation을 유도하여, 특정 DNA의 overexpression을 보임)
 High HERV-E expression은 환자의 survival과 양의 연관 (b.c. better response in immunotherapy)
 crisperi knockdown of herve do subtle role in DNA expression
 

@@ -1,5 +1,5 @@
 ---
-title:  "[KAIST_WURF]0120 김하일 교수님" 
+title:  "[KAIST_WURF]0120 카이스트 김하일 교수님" 
 excerpt: ""
 
 category:
