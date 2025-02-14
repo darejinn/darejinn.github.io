@@ -1,5 +1,5 @@
 ---
-title:  "[KAIST WURF]0108 Meet the Professer : 박종은 교수님" 
+title:  "[KAIST WURF]0108 카이스트 박종은 교수님" 
 excerpt: ""
 
 category:
