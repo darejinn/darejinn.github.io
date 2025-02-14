@@ -26,10 +26,6 @@ comments: true
 - 유튜브 sk 최종현 학술원에 기록된 내용
 
 
-| ![Image](https://lh6.googleusercontent.com/xM-nAWrFYw7hLRiDAA5XqjcxtoOxEYDN1REyNGYIfEQPCYmi07Zb0-pRukeiPGPSEr-0FPhMCt55a72kaOT0mFgq8QDQSbBwB4Uk5OR5Q5nIoyyedLYJLMOEHhHZZ9uR8w=w1280) | 
-|:--:| 
-| 김지훈교수님 lab site ([사이트 링크](https://jihunkim.kaist.ac.kr/)) |
-
 ## Project Stargate : 유전체 데이터를 분석할 수 있는 사람이 앞으로 할 일이 많을 것이다
 
 ## 유전체 : 디지털 데이터
