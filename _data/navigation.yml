@@ -10,14 +10,17 @@ main:
 side:
   - title: AI
     children:
-      - title: "Papers"
-        url: /categories/AI_Papers/
+      - title: "NLP"
+        url: /categories/NLP/
 
   
   - title: Medical
     children:
-      - title: "Papers"
-        url: /categories/Medical_Papers/
+      - title: "HiC"
+        url: /categories/HiC/
+    children:
+      - title: "Bioinformatics"
+        url: /categories/Bioinformatics/
 
   
   - title: Projects
