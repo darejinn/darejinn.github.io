@@ -19,10 +19,11 @@ comments: true
 {: .notice--info}
 
 # Introduction
-
+<div style="text-align: center;">
 | ![Image](https://github.com/user-attachments/assets/361eb182-9360-4d07-ba46-230a9b08825a) | 
 |:--:| 
 | 박종은교수님 lab site ([사이트 링크](https://sites.google.com/view/scmglkaist)) |
+</div>
 
 카이스트 의과학대학원 박종은 교수님의 연구실은 single-cell 데이터를 바탕으로 각 세포의 유전체 및 상호작용을 심층적으로 분석하여, 궁극적으로 인간이라는 복잡한 시스템을 이해하고자 하는 비전을 갖고 있다. 연구는 다음과 같은 세 가지 큰 주제를 중심으로 진행된다.
 
