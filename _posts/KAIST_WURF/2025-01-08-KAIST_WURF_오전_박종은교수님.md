@@ -60,10 +60,10 @@ comments: true
 
 이미 전 세계적으로 Human Cell Atlas 프로젝트가 진행 중이며, 다양한 유형의 single-cell 데이터가 축적되고 있다. 연구실에서는 이러한 데이터를 효율적으로 통합·분석하기 위한 data integration 방법론을 개발하고 적용하는 데 집중하고 있다.
 
-    ex. web crawling 기반 data collection 방법론
-    1. Cell type annotation: 다양한 공개 데이터베이스에 산재한 single-cell 데이터를 모아서, 세포 타입 정보를 일관성 있게 주석(annotate) 처리한다.
-    2. 질환별 데이터 클러스터링: 특정 클러스터에 모여 있는 질환들이 공유하는 특징적인 세포 유형(cell)을 발굴하여 공통된 치료 전략을 도출할 가능성을 모색한다.
-    3. 장기(tissue) 단위 클러스터링: 서로 다른 장기에서도 질환들이 공유하는 특징적 세포가 있는지를 파악한다.
+  ex. web crawling 기반 data collection 방법론
+  1. Cell type annotation: 다양한 공개 데이터베이스에 산재한 single-cell 데이터를 모아서, 세포 타입 정보를 일관성 있게 주석(annotate) 처리한다.
+  2. 질환별 데이터 클러스터링: 특정 클러스터에 모여 있는 질환들이 공유하는 특징적인 세포 유형(cell)을 발굴하여 공통된 치료 전략을 도출할 가능성을 모색한다.
+  3. 장기(tissue) 단위 클러스터링: 서로 다른 장기에서도 질환들이 공유하는 특징적 세포가 있는지를 파악한다.
 
 ## Decoding
 > 인코딩된 정보를, perturbation(세포에 인위적으로 변화를 가하고 인과관계를 찾는 것) 과정으로 디코딩하여 목적하는 organism을 생성
