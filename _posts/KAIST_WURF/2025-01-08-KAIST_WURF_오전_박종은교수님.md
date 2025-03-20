@@ -19,7 +19,7 @@ comments: true
 {: .notice--info}
 
 # Introduction
-<div style="text-align: center;">
+<div align="center">
 | ![Image](https://github.com/user-attachments/assets/361eb182-9360-4d07-ba46-230a9b08825a) | 
 |:--:| 
 | 박종은교수님 lab site ([사이트 링크](https://sites.google.com/view/scmglkaist)) |
