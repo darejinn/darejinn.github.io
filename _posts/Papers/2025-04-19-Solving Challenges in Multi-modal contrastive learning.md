@@ -9,11 +9,13 @@ tags:
   - Contrastive Learning
 toc: true
 toc_sticky: true
+
 comments: true
 ---
----
-# Introduction
 
+---
+
+# Introduction
 ‘다른 modality’는, 단순히 ‘다른 내용’을 의미하지 않는다. 내용뿐만 아니라 담긴 정보의 수준과 층위가 아예 다르기 때문이다. 가령, ‘예쁜 강아지’라는 글에서의 ‘강아지’가 갖는 해석 가능성이 다양하고 포괄적인 정보와, 강아지 사진에서 ‘강아지’의 확정적인 생김새가 주는 정보를 상상하면 직관적으로 이해가 될 것이다.
 
 따라서, 다른 modality의 정보 사이의 유사성을 비교하는 contrastive learning의 과정에서는 individual modality의 정보가 손실되는 등의, 제대로 align하지 않아 생기는 여러 문제가 존재한다. 
@@ -32,7 +34,6 @@ comments: true
 
 멀티모달 데이터에서 서로 다른 modality는 서로 다른 의미/표현 수준의 정보를 전달한다.
 <p align="center"><img src="https://github.com/user-attachments/assets/a5163cf8-4d8f-4ae6-ba0e-cfe9d0a0630a" width="600"/><br><em>이미지와 텍스트의 추상화 레벨 불일치</em></p>
-![image](){: .align-center}
 
 예컨대 오른쪽 강아지 이미지의 경우, 해당 이미지는 "웃고 있는 개"라는 상위 개념뿐만 아니라 품종, 털 색상, 크기, 형태 등 다양한 하위 수준의 속성을 포함하고 있다. 반면, "잔디밭에서 웃고 있는 개"라는 텍스트 설명은 일반적으로 더 추상적이고 압축된 정보만 담고 있다. 이러한 불일치는 멀티모달 대조 학습 과정에서 서로 다른 수준의 의미를 동등하게 맵핑하기 어렵게 만든다. 특히 시각적으로 표현된 하위 속성(예: 털의 질감, 표정 등)이 텍스트 캡션에서 직접 언급되지 않으면, 대응되는 의미를 찾지 못해 학습이 불안정해질 수 있다.
 
@@ -151,9 +152,9 @@ CLIP(Contrastive Language-Image Pre-training)과 같은 초기 모델들은 이�
 
 FDT를 이용해서 두 modality의 granuality를 맞추어 contrasive learning을 수행하는 방법은 위 모식과 같다. FDT(Finite Discrete Tokens)는, 왼쪽 가운데에 표현된 노란색 토큰들의 집합이다. 이 토큰들을, 사전의 단어들이라고 생각할 수 있다. Image의 FDT based Feature를 구하는 것은, 결국 이 동적 사전의 단어들의 가중합으로 이미지를 표현하는 것을 의미한다. 방식은 아래와 같다.
 
-1. 먼저, 패치와 FDT 간의 내적 계산으로 N개의 패치가 FDT들과 얼마나 유사한지 나타내는 attention matrix가 구해진다.(오른쪽 가운데 회색 matrix) 이때 각 패치를 query, FDT를 key라고 볼 수 있겠다. 
-2. Max pooling을 통하여, C개의 FDT 각각이 이미지와 얼마나 유사한지의 유사도를 구한다.
-3. FDT의 토큰들을 앞서 구한 유사도를 가중합하여 최종적으로 FDT based Feature를 구한다. 
+a. 먼저, 패치와 FDT 간의 내적 계산으로 N개의 패치가 FDT들과 얼마나 유사한지 나타내는 attention matrix가 구해진다.(오른쪽 가운데 회색 matrix) 이때 각 패치를 query, FDT를 key라고 볼 수 있겠다. 
+b. Max pooling을 통하여, C개의 FDT 각각이 이미지와 얼마나 유사한지의 유사도를 구한다.
+c. FDT의 토큰들을 앞서 구한 유사도를 가중합하여 최종적으로 FDT based Feature를 구한다. 
 
 이렇게 구해진 FDT based image Feature, FDT based text Feature간 contrasive learning을 수행한다.
 
@@ -181,7 +182,7 @@ FDT는 각 이미지 패치와, 텍스트 토큰이 의미를 알려주는 prior
 <p align="center"><img src="https://github.com/user-attachments/assets/e13866ea-b5dd-4b5a-973a-1c1a1d32d974" width="600"/><br><em>전체 framework</em></p>
 
 
-1. **Two-level Architecture**
+**a. Two-level Architecture**
     - *Modality-specific Base Encoders*를 이용해 각 모달리티와 complete-modality를 고정 차원의 intermediate representation으로 변환한다. (위 그림의 f)
     - 이후, *Shared Projection Head*를 거쳐 모든 모달리티를 공통의 latent representation space로 매핑한다. (위 그림의 g)
 
