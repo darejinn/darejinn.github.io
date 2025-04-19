@@ -1,6 +1,6 @@
 ---
 title: "[KAIST_WURF] 0109 카이스트 이정호 교수님"  
-excerpt: "이정호 교수님의 연구와 비전: 체세포 모자이시즘과 치료법 개발"  
+# excerpt: "이정호 교수님의 연구와 비전: 체세포 모자이시즘과 치료법 개발"  
 
 category:  
   - KAIST_WURF  

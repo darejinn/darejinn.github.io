@@ -17,7 +17,7 @@ comments: true
 {: .notice--info}
 ---
 
-# <span style="background-color:LightBlue; font-size:110%">Introduction : Genome in a 4-Dimensional World</span>
+# Introduction : Genome in a 4-Dimensional World</span>
 
 | 김지훈 교수님 랩 사이트 👉 [사이트 바로가기](https://jihunkim.kaist.ac.kr/) |
 {: .center}
@@ -38,7 +38,7 @@ comments: true
 
 # 3차원 후성유전학 (3D Epigenetics)
 
-## 🧬 계층적 구조
+##계층적 구조
 > fiber → looping interactions → sub-TAD → TADs → Compartments → Chromosome territories
 - **Paulson et al., 1977 Cell**: 히스톤 단백질 제거 후에도 유지되는 mitotic scaffold 발견 → condensin 1, 2, Topo2 등의 구조 단백질이 scaffold를 형성함.
 
@@ -47,12 +47,12 @@ comments: true
   - 멀리 떨어진 enhancer와 gene이 **loop**을 통해 가까워지며 상호작용.
   - **CTCF**는 cohesin의 통과를 막아 loop boundary 형성.
 
-## 🔬 Hi-C 기술 개요
+## Hi-C 기술 개요
 
 - genome 전체의 구조적 interaction을 측정할 수 있는 기술.
 - 3차원 구조를 2차원 matrix로 변환하여 분석한다.
 
-### 🧪 실험 과정 요약
+### 실험 과정 요약
 
 1. 포름알데하이드로 고정
 2. Restriction enzyme으로 절단 → sticky end 생성
@@ -104,7 +104,7 @@ comments: true
 
 ---
 
-# 정리 및 생각
+# Additional Comments
 
 김지훈 교수님의 연구는 3차원 유전체 구조의 **정적 상태뿐만 아니라, 동적 변화**에 주목한다. 시간, 구조, 발현이라는 3축을 아우르며, 궁극적으로 유전체 기능과 질병의 연결고리를 이해하고자 한다.
 

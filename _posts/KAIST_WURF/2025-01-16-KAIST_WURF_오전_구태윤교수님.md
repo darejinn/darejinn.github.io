@@ -21,7 +21,7 @@ comments: true
 ---
 
 
-# <span style="background-color:LightBlue; font-size:110%">Introduction
+# Introduction
 > 연구 분야는 급작스럽게 바뀔 수도, 바꿀 수도 있지만 어떤 연구자가 될 것인지는 오랜 시간에 걸쳐서 스스로 만들어나가는 것이다.
 
 ## <span style="font-size:90%">어떤 연구를 해야 하는가
@@ -34,7 +34,7 @@ comments: true
 <br>
 <br>
 
-# <span style="background-color:LightBlue; font-size:110%">1. Expansion microscopy
+# 1. Expansion microscopy
 
 현미경 해상도의 한계를 넘어서는 세포 구조
 일반적으로 200um 정도의 해상도인 광학현미경으로는 대부분의 세포 구조를 관찰할 수 없다. 영상기법(하드웨어)는 꾸준히 발전하고 있으나, 미세한 세포구조를 관찰하는 것은 여전히 요원하다. 
@@ -52,7 +52,7 @@ ExM의 계보를 잇는 2세대 초고해상도 현미경 샘플 처리 기술 �
 <br>
 <br>
 
-# <span style="background-color:LightBlue; font-size:110%">2. 투명 뇌 기술 : 조직 투명화(tissue clearing)
+# 2. 투명 뇌 기술 : 조직 투명화(tissue clearing)
 ## <span style="font-size:90%">Tissue Clearing
 
 조직은 대부분 빛을 산란·흡수하는 성분(지질, 단백질 등)으로 이루어져 있다. 그러다 보니 시료가 두꺼울수록 빛이 내부로 잘 통과하지 못해, 심부 구조를 관찰하기 어렵다. 조직 투명화(Tissue Clearing) 기법은 이런 문제를 해결하기 위해 고안되었다. 조직 투명화 기법은, 아래 세 가지의 방식으로 심부 구조를 관찰하기 어려운 문제를 해결한다.
@@ -81,7 +81,7 @@ ExM의 계보를 잇는 2세대 초고해상도 현미경 샘플 처리 기술 �
 <br>
 <br>
 
-# <span style="background-color:LightBlue; font-size:110%">3. 공간오믹스(spatial-omics)의 신기술 개발
+# 3. 공간오믹스(spatial-omics)의 신기술 개발
 ---
 조직이나 세포를 단순히 ‘형태적 구조’만 보는 것을 넘어, 그 공간적 위치에서 어떤 분자적·생물학적 기능을 수행하는지를 함께 파악하려는 노력은 점차 활발해지고 있다. 이를 **‘공간 오믹스(spatial-omics)’**라 부르며, 크게 세 가지 축으로 나눌 수 있다.
 1. Connectomics(신경망 지도화)
@@ -108,7 +108,7 @@ ExM의 계보를 잇는 2세대 초고해상도 현미경 샘플 처리 기술 �
 <br>
 <br>
 
-# <span style="background-color:LightBlue; font-size:110%">4. 생각
+# 4. Additional Comments
 ---
 구태윤 교수님께서는 기존의 기술을 담습하지 않고 새로운 생각을 도입하여, 생명과학연구의 근본이 되는 '연구방법' 자체를 바꾸는 연구를 목표하신다고 말씀하셨다. 
 대부분의 task를 사람보다 컴퓨터가 더 잘하는 시대에, 우리는 어떤 존재가 되어야 하는지 고민하였을 때, 있는 데이터를 학습하여 성능을 내는 인공지능과 다른 우리의 가장 큰 특징은 **없던 생각을 해내는 능력**이라고 생각한다. 그리고 연구는 내가 가진 창발적 생각을 비약, 회유, 속임 없이 세상에 설득하는 가장 정직한 방법이라고 생각한다.
