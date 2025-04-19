@@ -38,12 +38,10 @@ comments: true
 
 # 3차원 후성유전학 (3D Epigenetics)
 
-##계층적 구조
+## 계층적 구조
 > fiber → looping interactions → sub-TAD → TADs → Compartments → Chromosome territories
-- **Paulson et al., 1977 Cell**: 히스톤 단백질 제거 후에도 유지되는 mitotic scaffold 발견 → condensin 1, 2, Topo2 등의 구조 단백질이 scaffold를 형성함.
 
 - Loop Extrusion Model
-
   - 멀리 떨어진 enhancer와 gene이 **loop**을 통해 가까워지며 상호작용.
   - **CTCF**는 cohesin의 통과를 막아 loop boundary 형성.
 
