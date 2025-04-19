@@ -13,6 +13,7 @@ toc_sticky: true
 date: 2025-01-13
 last_modified_at: 2025-01-13
 comments: true
+published : false
 ---
 김필한 교수님의 WURF Meet the Professer 강의를 바탕으로 정리하였습니다.
 {: .notice--info} 
