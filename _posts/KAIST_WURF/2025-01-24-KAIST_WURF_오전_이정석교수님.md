@@ -15,8 +15,6 @@ comments: true
 
 카이스트 이정석 교수님의 WURF meet the professor 강연을 정리하였습니다.
 {: .notice--info}
----
-
 # Introduction
 
 본 세션은 **이노크라스(Inocras Inc.) / Genome Insight** 공동창업자가 SK 최종현 학술원 유튜브 강연에서 발표한 ‘유전체 데이터 바이오헬스 AI를 위한 인프라’ 내용을 요약·정리한 것이라고 말씀하셨다. 핵심 메시지는 **유전체 데이터가 곧 디지털 자산**이며, 이를 빠르고 정확하게 해석할 **AI 인프라 구축**이 국가 경쟁력의 관건이 된다는 점이다.
