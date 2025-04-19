@@ -31,14 +31,13 @@ comments: true
 ### **1.1. 추상화 레벨의 불일치(granuality mismatch)**
 
 멀티모달 데이터에서 서로 다른 modality는 서로 다른 의미/표현 수준의 정보를 전달한다.
-
-![image](https://github.com/user-attachments/assets/a5163cf8-4d8f-4ae6-ba0e-cfe9d0a0630a){: .align-center}
+<p align="center"><img src="https://github.com/user-attachments/assets/a5163cf8-4d8f-4ae6-ba0e-cfe9d0a0630a" width="600"/><br><em>이미지와 텍스트의 추상화 레벨 불일치</em></p>
+![image](){: .align-center}
 
 예컨대 오른쪽 강아지 이미지의 경우, 해당 이미지는 "웃고 있는 개"라는 상위 개념뿐만 아니라 품종, 털 색상, 크기, 형태 등 다양한 하위 수준의 속성을 포함하고 있다. 반면, "잔디밭에서 웃고 있는 개"라는 텍스트 설명은 일반적으로 더 추상적이고 압축된 정보만 담고 있다. 이러한 불일치는 멀티모달 대조 학습 과정에서 서로 다른 수준의 의미를 동등하게 맵핑하기 어렵게 만든다. 특히 시각적으로 표현된 하위 속성(예: 털의 질감, 표정 등)이 텍스트 캡션에서 직접 언급되지 않으면, 대응되는 의미를 찾지 못해 학습이 불안정해질 수 있다.
 
 ### **1.2. 구조적 이질성**
-
-![> gpt generated image](https://github.com/user-attachments/assets/bd264feb-149f-47ea-b62f-af6f9798f03a)
+<p align="center"><img src="https://github.com/user-attachments/assets/bd264feb-149f-47ea-b62f-af6f9798f03a" width="600"/><br><em>이미지와 텍스트의 처리 방식</em></p>
 이미지를 작은 패치 단위로 나누어 특징을 추출하는 방식과, 텍스트를 토큰(단어·문장 등) 단위로 나누는 방식 간에는 불가피한 구조적 차이가 존재한다. 
 
 - 합성곱 신경망(CNN)이나 비전 트랜스포머(ViT)를 통해 처리되는 패치는 픽셀 값의 2D 그리드로 구성되어 있으며, 공간적 관계와 질감 정보를 포함한다.
@@ -108,10 +107,10 @@ CLIP(Contrastive Language-Image Pre-training)과 같은 초기 모델들은 이�
     > **Momentum Contrast(MoCo)**
     > Xinlei Chen, Haoqi Fan, Ross B. Girshick, and Kaiming He. Improved baselines with momentum contrastive learning.
     > <p align="center"><img src="https://github.com/user-attachments/assets/d0640ca8-66e2-4fad-a89f-7a5b97be6d09" width="600"/><br><em>MOCO</em></p>
+    > 
     > 이미지는 각 픽셀이 연관되어 있고, 고차원이기에 tokenized word dictionary와 같이 구조화된 dictionary를 만들 수 없다. 따라서 dynamic dictionary (동적사전)가 필요한데, MoCo는 이 사전을 <크고, 안정적으로> 만드는 방법으로 제안되었다.
     > - key는 데이터(이미지, patch 등)에서 sampling을 한 후 momentum encoder를 통해 표현이 된다.
-        
-        ‘momentum encoder’이라고 이름붙여진 이유는 다음과 같다.  key를 만들어내는 encoder가 빠르게 학습이 되면 representation이 빠르게 바뀌기 때문에 이전에 dictionary의 key들이 다 소용이 없어지게 된다. 그렇기 때문에 momentum을 이용해 조금씩 변화를 주어서 한번에 큰 변경이 없게 만들어 학습을 안정적으로 진행한다.
+    >   - ‘momentum encoder’이라고 이름붙여진 이유는 다음과 같다.  key를 만들어내는 encoder가 빠르게 학습이 되면 representation이 빠르게 바뀌기 때문에 이전에 dictionary의 key들이 다 소용이 없어지게 된다. 그렇기 때문에 momentum을 이용해 조금씩 변화를 주어서 한번에 큰 변경이 없게 만들어 학습을 안정적으로 진행한다.
     > - query encoder는 momentum encoder과 달리 적극적으로 학습된다. query는 matching 되는 key와 가깝고, 다른 key와는 다르게 constrasive learning이 이루어진다.
  
     
@@ -130,22 +129,14 @@ CLIP(Contrastive Language-Image Pre-training)과 같은 초기 모델들은 이�
 
 > [CVPR2023] Revisiting Multimodal Representation in Contrastive Learning: From Patch and Token Embeddings to Finite Discrete Tokens
 
-<aside>
-💡
-
-**핵심 아이디어
-Finite Discrete Tokens (FDT):**
+💡**핵심 아이디어 : Finite Discrete Tokens (FDT):**
 
 - 학습 가능한 일정 수의 discrete tokens를 사전의 단어들마냥 도입하고, 이미지와 텍스트 모두를 동일한 FDT 집합의 sparse attention-based aggregation으로 표현한다.
 - 기존 [이미지 패치의 가중합]과 [단어 토큰의 가중합]의 유사도 비교 대신 [FDT의 가중합 1]과 [FDT의 가중합 2]의 유사도 비교를 함으로써
-
-**1) FDT라는 같은 granuality에서의 비교
-1) 두 모달리티의 진정한 의미론적 비교**
+  1) FDT라는 같은 granuality에서의 비교
+  2) 두 모달리티의 진정한 의미론적 비교
+  를 가능하게 한다.
     
-    
-    를 가능하게 한다.
-    
-</aside>
 
 ### 2.1. Objective
 <p align="center"><img src="https://github.com/user-attachments/assets/d3e1a253-7590-4858-983d-b7811a7bc1df" width="600"/><br><em>오른쪽이 논문의 방법이다.</em></p>
@@ -174,12 +165,7 @@ FDT는 각 이미지 패치와, 텍스트 토큰이 의미를 알려주는 prior
 
 > [ICML 2022] Geometric Multimodal Contrastive Representation Learning
 
-<aside>
-💡
-
-**핵심 아이디어**
-
-**Geometric Multimodal Contrastive Loss**
+💡 **핵심 아이디어 : Geometric Multimodal Contrastive Loss**
 
 - 전체 모달리티가 존재하는 **complete observation**과, **결측(modality missing)된 상황의 representation을 서로 가까이 정렬**하도록 기하학적으로 학습하는 novel한 loss를 설계하였다.
 </aside>
@@ -194,9 +180,7 @@ FDT는 각 이미지 패치와, 텍스트 토큰이 의미를 알려주는 prior
 
 ### 3.2. Method
 <p align="center"><img src="https://github.com/user-attachments/assets/e13866ea-b5dd-4b5a-973a-1c1a1d32d974" width="600"/><br><em>전체 framework</em></p>
-![]()
 
-전체 framework
 
 1. **Two-level Architecture**
     - *Modality-specific Base Encoders*를 이용해 각 모달리티와 complete-modality를 고정 차원의 intermediate representation으로 변환한다. (위 그림의 f)
