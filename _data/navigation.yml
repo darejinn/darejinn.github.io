@@ -10,8 +10,8 @@ main:
 side:
   - title: AI
     children:
-      - title: "NLP"
-        url: /categories/NLP/
+      - title: "Papers"
+        url: /categories/Papers/
 
   
   - title: Medical
