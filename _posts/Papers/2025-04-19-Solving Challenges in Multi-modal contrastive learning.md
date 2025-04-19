@@ -168,7 +168,6 @@ FDT는 각 이미지 패치와, 텍스트 토큰이 의미를 알려주는 prior
 💡 **핵심 아이디어 : Geometric Multimodal Contrastive Loss**
 
 - 전체 모달리티가 존재하는 **complete observation**과, **결측(modality missing)된 상황의 representation을 서로 가까이 정렬**하도록 기하학적으로 학습하는 novel한 loss를 설계하였다.
-</aside>
 
 ### 3.1. Objective
 <p align="center"><img src="https://github.com/user-attachments/assets/2ff01865-2532-4fc9-9cce-5a38b4ac5b8d" width="600"/><br><em>가운데의 Z1:2가 complete modality representation이다.</em></p>
