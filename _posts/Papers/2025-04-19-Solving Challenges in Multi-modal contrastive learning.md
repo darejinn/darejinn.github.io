@@ -1,6 +1,5 @@
 ---
-title: >-
-  Solving Challenges in Multi-modal Contrastive Learning
+title: Solving Challenges in Multi-modal Contrastive Learning
 date: 2025-04-19
 last_modified_at: 2025-04-19
 category:
@@ -11,6 +10,7 @@ tags:
 toc: true
 toc_sticky: true
 comments: true
+---
 ---
 # Introduction
 
@@ -32,7 +32,7 @@ comments: true
 
 멀티모달 데이터에서 서로 다른 modality는 서로 다른 의미/표현 수준의 정보를 전달한다.
 
-![> gpt generated image](https://github.com/user-attachments/assets/a5163cf8-4d8f-4ae6-ba0e-cfe9d0a0630a)
+![image](https://github.com/user-attachments/assets/a5163cf8-4d8f-4ae6-ba0e-cfe9d0a0630a)
 
 예컨대 오른쪽 강아지 이미지의 경우, 해당 이미지는 "웃고 있는 개"라는 상위 개념뿐만 아니라 품종, 털 색상, 크기, 형태 등 다양한 하위 수준의 속성을 포함하고 있다. 반면, "잔디밭에서 웃고 있는 개"라는 텍스트 설명은 일반적으로 더 추상적이고 압축된 정보만 담고 있다. 이러한 불일치는 멀티모달 대조 학습 과정에서 서로 다른 수준의 의미를 동등하게 맵핑하기 어렵게 만든다. 특히 시각적으로 표현된 하위 속성(예: 털의 질감, 표정 등)이 텍스트 캡션에서 직접 언급되지 않으면, 대응되는 의미를 찾지 못해 학습이 불안정해질 수 있다.
 
@@ -197,7 +197,7 @@ FDT는 각 이미지 패치와, 텍스트 토큰이 의미를 알려주는 prior
 
 ### 3.2. Method
 
-![전체 framework](https://github.com/user-attachments/assets/f8685772-3f6a-426f-bb57-7938a36e4e22)
+![전체 framework](attachment:bcdbb28f-7da0-428f-ac5f-a10b4536a284:image.png)
 
 전체 framework
 
