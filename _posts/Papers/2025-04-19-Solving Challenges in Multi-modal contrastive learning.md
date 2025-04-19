@@ -22,6 +22,9 @@ comments: true
 
 이에, CLIP loss가 제안된 이후 multi modal contrastive learning의 문제점들과, 이를 해결하고자 등장한 방법론 3개를 정리하고자 한다. 구체적인 evaluation 과정보다는, 논문의 아이디어를 중심으로 전개하겠다.
 
+<br>
+<br>
+
 # Remaining Challenges
 
 ## 1. Heterogeneity Gap
@@ -61,6 +64,9 @@ CLIP(Contrastive Language-Image Pre-training)과 같은 초기 모델들은 이�
 **학습 시에는 모든 모달리티 정보를 이용할 수 있으나, 추론 과정에서는 특정 모달리티가 결측되는 현상(train-inference discrepancy)은 모델의 일반화 성능을 크게 저하시킬 수 있다.**
 
 "[CVPR 2020] Gradient-Blending: Learning Modalities with Varying Rates"의 내용을 바탕으로살펴보면, 학습된 모델은 특정 모달리티(특히 많은 정보가 있는 모달리티)에 의존하는 편향을 보일 수 있으며, 이러한 편향은 해당 모달리티가 결측되었을 때 성능이 급격히 저하되는 현상으로 이어진다. 해당 논문에서는 일부 멀티모달 모델은 단일 모달리티 입력 시 성능이 무작위 추측 수준으로 떨어지는 현상을 관찰하였다. 
+
+<br>
+<br>
 
 # Solving Challenges in Multi-Modal Contrastive Learning
 
@@ -194,6 +200,9 @@ FDT는 각 이미지 패치와, 텍스트 토큰이 의미를 알려주는 prior
 이러한 geometric alignment는, 각 modality가 스스로 complete representation과 의미관계가 가까워지도록 학습하기 때문에, **결측 modality가 존재해도 남은 modality만으로도 충분히 전체 의미를 유추할 수 있는 표현을 생성할 수 있게 된다.**
 
 또한, modality의 fusion이 강제되는 기존 방식과 달리, 각 modality가 독립적으로 학습되어 전체 의미공간으로 연결되므로, modality의 종류/개수가 자유롭다는 점도 위 두 논문과의 차이점이다.
+
+<br>
+<br>
 
 # To sum up…
 
