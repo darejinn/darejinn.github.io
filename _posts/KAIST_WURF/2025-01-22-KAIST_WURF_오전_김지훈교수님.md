@@ -1,6 +1,6 @@
 ---
 title:  "[KAIST_WURF]0122 카이스트 김지훈 교수님"
-excerpt: "3차원 유전체 구조 연구의 현재와 미래"
+# excerpt: "3차원 유전체 구조 연구의 현재와 미래"
 category:
   - KAIST_WURF
 tag:
