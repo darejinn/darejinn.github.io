@@ -66,16 +66,6 @@ comments: true
 
 ---
 
-# Case Study: Sox2 Looping
-
-- ES → NPC → iPSC 재프로그래밍: **loop는 복원되었지만 Sox2의 발현은 일어나지 않음**
-- → loop와 transcription 사이에는 관련은 있지만, 동치가 아님을 의미.
-
-> Beagan et al. (2020, *Nature Neuroscience*): loop는 transcription에 앞서 존재하고, loop 소멸 이후에도 일정 시간 transcription 유지됨.
-
----
-
-
 # 교수님 연구 :  Loop Engineering 시도: LADL (Light-Activated Dynamic Looping)
 
 - 빛을 이용해 loop을 형성/해제할 수 있는 기술 개발
@@ -92,23 +82,17 @@ comments: true
 
 ---
 
-# 🧩 확장 연구: 도메인 형성 실험
+## 확장 연구
+1. 도메인 형성 관련 인자 실험
+   - Fragile X 환자 샘플: domain 완전 소실, compartment 혼란
+   - **Domain은 무엇으로 구성되는가? Compartment와 같은 개념인가?**
 
-- Fragile X 환자 샘플: domain 완전 소실, compartment 혼란
-- **Domain은 무엇으로 구성되는가? Compartment와 같은 개념인가?**
+2. 바이러스 유전체 통합 시의 구조 변화
+   - 바이러스 integration → domain 재구성
+   - Hi-C를 통해 integration에 따른 genome 구조 변화 관찰 (plaid pattern 등)
 
----
-
-# 바이러스 유전체 통합 시의 구조 변화
-
-- 바이러스 integration → domain 재구성
-- Hi-C를 통해 integration에 따른 genome 구조 변화 관찰 (plaid pattern 등)
-
----
-
-# Cell Cycle과 Genome Structure
-
-- degron 시스템을 이용한 구조 단백질 knockdown → genome 구조에 미치는 영향 분석
+3. Cell Cycle과 Genome Structure
+   - degron 시스템을 이용한 구조 단백질 knockdown → genome 구조에 미치는 영향 분석
 
 ---
 
@@ -120,8 +104,8 @@ comments: true
 
 ---
 
-# 💡 결론
+# 정리 및 생각
 
 김지훈 교수님의 연구는 3차원 유전체 구조의 **정적 상태뿐만 아니라, 동적 변화**에 주목한다. 시간, 구조, 발현이라는 3축을 아우르며, 궁극적으로 유전체 기능과 질병의 연결고리를 이해하고자 한다.
 
-구조를 ‘보는 것’을 넘어, 구조를 ‘만드는 것’으로 나아가는 연구를 목표하신다.
+구조를 ‘보는 것’을 넘어, 구조를 ‘만드는 것’으로 나아가는 연구를 목표하신다. 단순히 1차원 서열의 나열이 발현을 결정하는 것이 아니라, 삼차원 상호작용과 변동성을 고려하여 유전체의 구조를 재정의하는 것이 흥미로워, 이 분야를 더 공부하고 싶다는 확신이 들었다.

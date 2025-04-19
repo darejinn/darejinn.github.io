@@ -13,67 +13,82 @@ toc_sticky: true
 date: 2025-01-13
 last_modified_at: 2025-01-13
 comments: true
-published : false
 
 ---
-
+박수형 교수님의 WURF Meet the Professer 강의를 바탕으로 정리하였습니다.
+{: .notice--info} 
 ---
-원칙은 바뀔 수 있음이 원칙이다.
-{: .notice--info}
+title: "[KAIST_WURF] Meet the Professor — Prof. Suh‑Young Park"
+date: 2025-04-19
+categories: [KAIST_WURF]
+tags: [세미나 정리, Human Immunology, Immuno‑Oncology, Infectious Diseases]
+toc: true
+toc_sticky: true
+---
+
 # Introduction
+
 ## 박수형 교수님 소개
-- 카이스트에 13번째로 부임하신 교수님
-- 기초와 임상의 중간 정도의 연구를 희망
-- 비슷한 연구를 하는 교수님들이 같은 Lab으로 모이는 것이 의과학대학원의 특징
+- KAIST 의과학대학원 **13번째** 교수 부임
+- **기초 ↔ 임상** 중간 지점을 연결하는 연구 지향
+- 유사 연구 그룹이 **Lab Cluster**를 형성하는 것이 의과학대학원의 강점
 
-## 연구 분야: Human Immunology
-1. Immuno-Oncology
-2. Emerging Infectious Diseases
-3. Other Immune-Related Diseases
+## 연구 분야: *Human Immunology*
+1. **Immuno‑Oncology**
+2. **Emerging Infectious Diseases**
+3. **Other Immune‑Related Diseases**
 
+---
 
-# 내용
+# 1. Immuno‑Oncology
 
-## 1. Immuno-Oncology
-- T cell response가 유도되었음에도 불구하고(염증 반응이 일어났음에도), 항원이 없어지지 않는 상황:
-  - 우리 몸에서는 T cell function을 억제하는 negative response가 발생하여 T cell exhaustion이 일어난다.
-  - 이는 가역적이다. (자동차가 엑셀과 브레이크를 동시에 밟는 상황: PD1) 
-  - PD1을 억제(anti-PD1 therapy)하면 T cell이 다시 역할을 할 수 있게 된다.
-- Tumor 환경의 heterogeneous한 특성 => PD1을 높게 발현하는 exhausted t cell이 더 효과가 좋다, 특히 4-1BB가 활성화된 cell
-- PD-L1과 4-1BB의 combination therapy / bi-specific targeting
-  => 4-1BB와 PD-L1이 동시에 있어야만 활성화되어, 기존의 부작용이었던 간독성이 오히려 없어졌다!
-- Tumor환경에서 존재하는 Treg cell을 선택적으로 억제하는 CEACAM1을 억제하는 therapy
+- 항원·염증 신호에도 **T cell exhaustion**가 발생 → 가역적 (PD‑1 브레이크)
+- **Anti‑PD‑1 therapy**로 기능 회복 가능
+- 종양 미세환경(TME)은 **이질적**: PD‑1<sup>high</sup>/4‑1BB<sup>+</sup> exhausted T cell이 치료 반응 ↑
+- **Bi‑specific antibody** (PD‑L1 × 4‑1BB)  
+  → 두 표적 동시 존재 시에만 활성화 → 기존 **간독성** 사라짐
+- **CEACAM1** 억제 → TME Treg 세포 선택적 제어
 
-## 2. Emerging infectious diseases
-- 중증열성혈소판감소증후군(SFTSV) 백신 개발
-- MERS의 사망률 결정 바이오마커 발견 연구
-> 시퀀싱 분석의 경우, 내가 직접 할 수 있는 것이 큰 도움이 된다. : 
-> '어떻게 시퀀싱 테크닉을 익힐 수 있지?'
-- sars-cov-2 specific B cell in covid 19 : 의료진의 혈액 샘플을 체취해서, priming, boosting되는 상태를 모니터링할 수 있다
+---
 
-## 3. Other immune-related diseases
-- covid-19과 파킨슨병의 연관성
+# 2. Emerging Infectious Diseases
 
-## 4. 원형탈모 (CD8 T Virtual Memory Cell)
-- Virtual Memory T Cell:
-  - 항원의 자극을 받지 않았지만 memory phenotype을 발현하는 T cell로, protection에 큰 역할을 할 수 있음.
-  - Memory T cell 연구 중 Virtual Memory T Cell임을 발견.
+- **SFTSV(중증열성혈소판감소증)** 백신 개발 중
+- **MERS** 사망률 결정 **바이오마커** 규명
+- **SARS‑CoV‑2 특이 B cell** 동태 추적 (의료진 코호트 × 프라이밍·부스팅 모니터링)
+- 시퀀싱 분석 능력 자체 보유 → 연구 속도 극대화
 
-### Alopecia Areata
-- T(vt)의 새로운 population 발견: CD44 s-hi cell (질병을 일으킬 가능성이 높은 cell)
-- s-hi cell의 기원이 Virtual Memory T Cell임을 형광물질로 추적하여 밝힘.
-- IL-12, 15, 18 cytokine이 자극하여 s-hi cell을 생성.
-- s-hi cell이 AA를 발현하는 기작:
-  - NKG2D expression을 높여 hair particle을 공격.
+---
 
-### 후속 연구 : 분자 기전
-- T vm cell로부터 s-hi cell로 분화되는 전사인자를 밝힘.
-- 골수이식한 환자(모든 면역세포가 초기화된)를 보며 Tvm marker를 찾을 수 있지 않을까?
-- central memory t-cell과, vertual memory t-cell은 무엇이 다를까?
-- AA mice에 lung에 특이적으로 s-hi cell이 많이 존재한다. => s-hi cell이 lung infection에 대해서 어떤 role을 할까? : 오히려 protective한 role을 가진다.(infected된 cell을 공격하는 cytotoxic modecules를 발현하는 것으로 추측한다)
+# 3. Other Immune‑Related Diseases
 
+- **COVID‑19 ↔ 파킨슨병** 연관성 탐구
 
+---
+
+# 4. 원형탈모 (Alopecia Areata) & *Virtual Memory* T Cell
+
+## Virtual Memory T Cell
+- **항원 자극 없이** memory phenotype (
+  CD44<sup>hi</sup>) 형성
+- 보호 면역에서 중요한 역할 가능
+
+## Alopecia Areata 연구 하이라이트
+- 새로운 **CD44 s‑hi** population → 질병 유발 가능성 ↑
+- 형광 추적 → 기원이 **T<sub>VM</sub>**임을 규명
+- **IL‑12/15/18** 자극 → s‑hi cell 분화 유도
+- **NKG2D ↑** → 모낭 공격
+
+### 후속 과제
+- **전사인자** 규명: T<sub>VM</sub> → s‑hi cell 전환
+- **골수이식** 환자 관찰 → 인간 T<sub>VM</sub> marker 탐색
+- **Central Memory vs Virtual Memory** T cell 비교
+- **AA 마우스 폐 조직**에서 s‑hi cell 다수 발견 → 폐 감염 방어적 역할 가설
+
+---
 
 # Conclusion
-- 질병을 target으로 하는 lab
-- 질병은 모두 엮여 있다-!
+- **질병 중심 Translational Lab**: 암·감염병·자가면역을 망라
+- 질병 간 **면역 메커니즘 연결성**을 통합적으로 탐구
+
+---

@@ -46,7 +46,7 @@ comments: true
 
 교수님은 간세포가 신경전달물질을 생성하고, 저장하며, 흡수할 수 있다는 가설을 제기하셨다. 연구 결과, glutamate가 간에서 신경전달물질과 유사한 기능을 수행한다는 사실이 밝혀졌다. 알코올 섭취 시 glutamate가 축적되고, 고용량 섭취 시 방출된다는 점은 간성상세포, 쿠퍼세포, 면역세포가 receptor를 통해 이를 감지할 수 있음을 보여준다.
 
-# To Sum Up
+# Additional Comment
 
 간은 단순한 대사 기관이 아니라 신경학적 기관이다. 간의 neurological signaling은 대사와 면역을 조절한다. 기존에는 간이 중추신경계에 의해 관리된다고 여겨졌으나, hepatocyte가 glutamate를 방출하여 다른 세포의 metabolic synapse와 연결되는 "glutamatergic signaling pathways"가 간 질환의 핵심 조절 메커니즘임이 밝혀졌다. 이를 이해하는 것이 간 질환 치료의 새로운 돌파구가 될 것이라고 말씀하시며 강의를 마치셨다.
 

@@ -13,13 +13,10 @@ toc_sticky: true
 date: 2025-01-15
 last_modified_at: 2025-01-15
 comments: true
-published : false
 
 ---
-
----
-원칙은 바뀔 수 있음이 원칙이다.
-{: .notice--info}
+신의철 교수님의 WURF Meet the Professer 강의를 바탕으로 정리하였습니다.
+{: .notice--info} 
 # 개요
 
 신의철 교수님 : 바이러스 면역학자로 본인을 정의하셨다

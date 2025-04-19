@@ -14,106 +14,110 @@ date: 2025-01-21
 last_modified_at: 2025-01-21
 comments: true
 ---
-
----
 카이스트 박병현 교수님의 WURF meet the professor 강연을 정리하였습니다.
 {: .notice--info}
+
+
+# Introduction
+
+박병현 교수님는 KAIST 의과학대학원에서 **대사 질환**과 **노화**를 분자 수준에서 연구한다. 이번 WURF *Meet the Professor* 강연에서는 △ **Fructose 대사**, △ **칼로리 제한(Calorie Restriction, CR)**, △ **간헐적 단식(Intermittent Fasting, IF)**, △ **CR mimetics**, △ **케토제닉 대사 전환**을 중심으로 ‘건강 수명(Lifespan vs Healthspan)’을 연장할 수 있는 전략을 소개하셨다.
+
+## Speaker & Lab
+- **박병현 교수 (Prof. Byeong‑Hyun Park)**  
+  [Lab website](https://sites.google.com/view/bhparklab/home)
+
 ---
 
+# 1. Why Fructose Matters
 
-# <span style="background-color:LightBlue; font-size:110%">Introduction
+> “인류가 **굶주림 없는 시대**를 맞이한 지 오래되지 않았다. **비만율 급증**의 주범은 *과도한 Fructose 섭취*에 있다.”
 
+| Glucose 대사 | Fructose 대사 |
+|--------------|---------------|
+| 세 단계의 **정교한 조절**(Hexokinase → PFK → PK)을 거친다 | 거의 **피드백 억제가 없고**, 간에서 비선형적으로 처리된다 |
 
-| 박병현교수님 lab site ([사이트 링크](https://sites.google.com/view/bhparklab/home)) |
+- **High‑Fructose Diet** → *Fructose‑1‑Phosphate (F1‑P)* 축적  
+  → **PKM2** tetramer → monomer 전환  
+  → 저산소(hypoxic) 환경에서 세포 생존성 ↑, **장 흡수 면적** ↑
+- 체중 감량 시 **fat mass**보다 **muscle mass**가 먼저 줄어들 수 있어 주의가 필요하다.
 
+---
 
-> 인류가 진화적으로 '굶는 시기' 없이, 풍족한 영양을 섭취할 수 있게 된 것은 얼마 되지 않았다. 비만율의 증가는, fructose에서 비롯한다!
+# 2. Calorie Restriction (CR) — 오래된 노화 개입법
 
-## <span style="font-size:90%">Fructose metabolism
-1. Glucose가 대사되는 과정에서, 3번의 regulatory mechanism이 있어, 효소에 의해 정교하게 조절한다. 그러나 Fructose의 대사는 우리 몸의 주 대사가 아니므로 negative feedback inhibition이 잘 일어나지 않고, 정교한 대사가 어렵다.
+### 역사적 배경
+- 설치류 모델에서 CR의 **수명 연장 효과**는 1930년대부터 보고됨.
+- **Wisconsin Rhesus Monkey Study**(∼30% CR)  
+  → **생존율** 상승, **Age‑related Disease** 감소
+- **NIA Monkey Study**  
+  → 생존율 차이는 미미했으나 두 연구 모두 **대사 질환** 발생률은 현저히 낮음.
 
-2. High fructose diet를 했을 때, Fructose에서 만들어진 F1-P는 PKM2 tetramer를 monomer로 바꾼다. 이 monomer은 hypoxic cell이 덜 죽게 만들어, 흡수하는 면적을 높인다.
+## Pros vs Cons of CR
 
-Diet control을 할 때 일반적으로 줄어드는 것은 fat mass가 아니라 muscle mass이다.
+| Benefits | Limitations |
+|----------|-------------|
+| *Brain health* (BDNF↑, Alzheimer risk↓)  | 영양소 결핍 (Nutritional insufficiency) |
+| 암 발생·진행 감소 | 근육량 & 골밀도 감소 |
+| Anti‑aging markers | 상처 치유 ↓, 감염 위험 ↑ |
+| 수술 스트레스 내성 ↑ | |
 
-<br>
-<br>
+> **체중계 숫자보다 ‘체성분(body composition)’이 중요하다.**
 
-# <span style="background-color:LightBlue; font-size:110%">1. Calorie restriction as an intervention in ageing
+---
 
-설치류 모델에서 칼로리 제한이 수명 연장에서 효과적인 것은 의심할 여지가 없다, 100년 전부터 연구되어 왔던 것!
+# 3. Intermittent Fasting (IF)
 
-> Primates(monky)를 대상으로 30%를 적게 먹이는 calorie restriction 실험을 진행했다(Wisconsin study)
+- **근손실** 없이 대사 건강을 개선할 수 있는 전략
 
-## <span style="font-size:90%">Wisconsin study 결과
+| Protocol | Key Notes |
+|----------|-----------|
+| **Alternate‑Day Fasting** | ‘정상식’ 날에는 **충분한 단백질** 섭취 필수 |
+| **Periodic Fasting** | 주 2회, 평소 칼로리의 ≈25%만 섭취 |
+| **Time‑Restricted Feeding (TRF)** | 24 h 中 **16 h 공복** 유지  
+  ▸ **이른 아침**에 식사 window를 두는 편이 효과적  
+  ▸ 야식 금지만으로도 큰 이득 |
 
-30% calorie restriction을 실시한 원숭이의 survival이 더 좋고, age related disease가 현저히 낮은 breakthrough한 결과가 나왔다.
+---
 
-같은 연구를 NIA study에서 진행하였을 때, survival에 크게 차이가 없었다, 그러나 두 그룹은 공통적으로 age related disease(대사질병)는 현저히 낮았다.
+# 4. Dietary Lipids — 지방의 질이 관건
 
-<br>
-<br>
+- *Palm oil*, *Coconut oil* → **포화지방(saturated fat)** 함량이 매우 높음 → 과다 섭취 주의.
 
-## <span style="font-size:90%"> Pros and cons of CR
-### <span style="font-size:80%"> CR의 benefits
+---
 
-유전자의 expression에는 epigenome에 영향을 받는데, 이는 환경적 요인과 크게 관련 있다. 
-1. brain health(CR increases BDNF, lowering alzheimer)
-2. cancer
-  - CR reduces the incidence and progression of spontaneous tumors
-3. Anti-aging
-4. Surgical stress
+# 5. CR Mimetics — Sirtuin 활성화 약물
 
-### <span style="font-size:80%"> CR의 deficiency
-1. Nutritional insufficiencies
-2. Loss of lean bondy mass
-3. Bone health
-4. Wound healing
-5. Infection
+> “CR 효과를 **약물로 모사**할 수 있을까?”
 
-> 내 몸의 shape가 중요하지, 체중계의 몸무게가 중요한 것이 아니다.
+| Candidate | 장점 | 한계 |
+|-----------|------|------|
+| **Polyphenols** (Resveratrol 등) | 천연 물질 | **고용량** 필요 (→ ‘French Paradox’의 맹점) |
+| **Metformin** | 저용량으로도 **Sirtuin 활성** | 장기 복용 관련 연구 진행 중 |
+| **Rapamycin** | 강력한 효과 | 면역억제 등 **부작용** |
 
-## <span style="font-size:90%"> Intermittent fasting
-1일 1식은 추천하지 않으신다, 매일 급격하게 혈당이 올라가는 hyper insulin이 일어난다.
+* 참고: **Sirt6**가 연골 세포 노화·골관절염을 완화(Nature Communications).
 
-intermittent fasting은 muscle mass의 감소가 일어나지 않는다! 
+---
 
-1. Alternate-day fasting : 정상식이를 하는 날에 충분한 protein uptake
+# 6. Ketogenesis & Ketolysis
 
-2. Periodic fasting : 일주일에 2번, 평소 칼로리의 25%만 섭취
+## 기아 적응(Starvation Adaptation)
+- 2‑3주 단식에도 뇌의 **포도당 공급**은 유지.
+- **Ketone body**는 말초 조직의 대체 에너지원으로 기능하며, 인슐린 감소 상황에서 유리.
 
-3. Time-restricted feeding : 24시간 중 16시간 공복 유지 (아침부터 12시까지와, 저녁 8시 이후에 완전한 공복을 유지)
-  - Optimal time to initiate TRF(time restriction feeding)
-    늦은 밤에 window period를 가지는 것보다, 이른 아침에 window period를 가지는 것이 더 좋다. 
-    완벽한 fasting period를 유지하는 것이 중요하다. 저녁 먹은 뒤 야식을 먹지 않는 것만으로도 크게 문제가 없다!
+## PAK4 억제 연구
+- **PAK4**: 전통적 *oncoprotein*·항암 저항성 인자
+- **간 PAK4 억제** → **Ketone production 증가** → 체중 증가 억제
 
+---
 
-### Dietary lipid
-팜유, 코코넛유의 포화지방이 무지 높다.
+# Key Takeaways
 
-## <span style="font-size:90%"> CR mimetics : Sirtuins
-- CR를 mimic하는 약물을 개발할 수 있지 않을까?
-- French paradox : 와인의 성분이 sirtuin을 유도한다? 하루에 700-800잔을 먹어야 함.
+1. **Fructose 대사**의 비정교함이 비만·대사 질환의 핵심 원인.
+2. **칼로리 제한**은 확실히 노화를 늦추지만, *영양 결핍*·*근손실* 리스크 관리가 관건.
+3. **간헐적 단식**은 CR의 장점을 살리면서 근육량을 보존할 수 있는 현실적 대안.
+4. **CR mimetics**와 **Ketogenic 전략**이 약물·식단 측면에서 활발히 연구 중.
+5. ‘몸무게’보다 **체성분과 대사 건강**에 주목하라.
 
-1. Polyphenols : High dose가 필요
-2. Metformin : low dose로도 sirtuin 유도 가능
-3. Rapamysin : side effect가 있다.
+---
 
-- Sirtuin의 순기능 : Nature comm 연구 : Sirt6 attenuates chondrocyte senescence and osteoarthritis progression
-
-
-# <span style="background-color:LightBlue; font-size:110%">2. Ketogenesis and ketolysis
-## <span style="font-size:90%"> Adaptation response to statrvation
-- 병리학적 측면이 아니라, physiology level에서 keton body는 glucose의 alrernative한 에너지원으로 사용된다.
-cf) 2~3주를 굶어도, brain의 glucose 공급은 억제되지 않는다
-
-- ketone body가 에너지원으로 사용되는 시기, glucose는 적당히 낮게 유지된다, 인슐린 레벨은 감소한다.
-## <span style="font-size:90%"> PAK4 단백질의 억제
-- 일반적으로 oncoprotein(암을 일으키고, 항암을 저해)으로 알려짐.
-- PAK4를 억제하면, 간에서 ketone body를 많이 생성하는 메커니즘을 규명
-  => improvement of weight gain!
-
-
-# 정리
-- 기회는 준비된 자에게 온다.
-- 폼 나게 살자 :))

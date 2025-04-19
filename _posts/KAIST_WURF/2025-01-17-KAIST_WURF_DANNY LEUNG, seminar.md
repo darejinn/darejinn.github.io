@@ -15,7 +15,6 @@ last_modified_at: 2025-01-17
 comments: true
 ---
 
----
 'Deciphering the epigrnomic impacts of repetitive elements : How do retroviruses control our genes?'를 주제로 Danny Leung professor께서 강의하신 내용을 정리하였다.
 {: .notice--info}
 
@@ -78,4 +77,3 @@ cov-19 환자의 placentra(connects mather and fetus)를 포함한 maternal feta
 High HERV-E expression은 환자의 survival과 양의 연관 (b.c. better response in immunotherapy)
 crisperi knockdown of herve do subtle role in DNA expression
 
-> 자동화 ?
