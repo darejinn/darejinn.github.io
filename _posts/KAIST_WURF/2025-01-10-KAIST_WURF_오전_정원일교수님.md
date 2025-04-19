@@ -16,8 +16,8 @@ comments: true
 ---
 
 ---
-원칙은 바뀔 수 있음이 원칙이다.
-{: .notice--info}
+정원일 교수님의 WURF Meet the Professer 강의를 바탕으로 정리하였습니다.
+{: .notice--info} 
 
 # 개요
 정원일 교수님은 D.V.M, Ph.D. 학위를 보유하셨으며, 간 연구 분야에서 새로운 패러다임을 제시하고 계시다.

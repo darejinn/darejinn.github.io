@@ -16,11 +16,10 @@ comments: true
 ---
 
 ---
-원칙은 바뀔 수 있음이 원칙이다.
-{: .notice--info}
+김필한 교수님의 WURF Meet the Professer 강의를 바탕으로 정리하였습니다.
+{: .notice--info} 
 
-# 개요
-
+# Introduction
 **김필한 교수님**  
 생체현미경 기반 생체 내(in vivo) 세포 수준 영상 및 진단기술 개발  
 - CEO / CTO: IVIM Technology  

@@ -18,13 +18,12 @@ comments: true
 ---
 이정호 교수님의 WURF Meet the Professer 강의를 바탕으로 정리하였습니다.
 {: .notice--info} 
-# 개요  
-
+# Introduction
 이정호 교수님  
 - MD, PhD  
 - Sovargen(소바젠) CSO  
 
-전문 분야는 NGS, CRISPR, ASO이다.  
+전문 분야는 NGS, CRISPR, ASO이시다.  
 
 # Somatic Mosaicism  
 ## 체세포 돌연변이와 인간 신체  

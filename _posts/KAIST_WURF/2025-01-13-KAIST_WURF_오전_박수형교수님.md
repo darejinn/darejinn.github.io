@@ -13,15 +13,16 @@ toc_sticky: true
 date: 2025-01-13
 last_modified_at: 2025-01-13
 comments: true
+published : false
+
 ---
 
 ---
 원칙은 바뀔 수 있음이 원칙이다.
 {: .notice--info}
-# 개요
-
+# Introduction
 ## 박수형 교수님 소개
-- 13번째 교수님
+- 카이스트에 13번째로 부임하신 교수님
 - 기초와 임상의 중간 정도의 연구를 희망
 - 비슷한 연구를 하는 교수님들이 같은 Lab으로 모이는 것이 의과학대학원의 특징
 

@@ -1,15 +1,12 @@
 ---
-title:  "[KAIST_WURF]0122 카이스트 김지훈 교수님" 
-excerpt: ""
-
+title:  "[KAIST_WURF]0122 카이스트 김지훈 교수님"
+excerpt: "3차원 유전체 구조 연구의 현재와 미래"
 category:
   - KAIST_WURF
-tag :
+tag:
   - [일지]
-
 toc: true
 toc_sticky: true
- 
 date: 2025-01-22
 last_modified_at: 2025-01-22
 comments: true
@@ -20,72 +17,111 @@ comments: true
 {: .notice--info}
 ---
 
+# <span style="background-color:LightBlue; font-size:110%">Introduction : Genome in a 4-Dimensional World</span>
 
-# <span style="background-color:LightBlue; font-size:110%">Introduction : Genome in 4-dimentional world
-
-| 김지훈교수님 lab site ([사이트 링크](https://jihunkim.kaist.ac.kr/)) |
+| 김지훈 교수님 랩 사이트 👉 [사이트 바로가기](https://jihunkim.kaist.ac.kr/) |
 {: .center}
 
+> 3차원 공간의 genome structure뿐만 아니라 시간 축(4D)을 함께 고려하는 연구를 수행하는 랩이다. 세포 주기(cell cycle) 및 질병의 진행 상황에 따라 genome structure가 어떻게 달라지는지를 연구한다.
 
-> 3차원 공간의 genome structure을 연구하는 연구실이다! 3차원 공간 + 시간
+---
 
-## <span style="font-size:90%">Time axis
-- Cell cycle, 질병의 진행에 따라서 어떻게 달라지는지
+# What Does a Ph.D. Mean?
 
-<br>
-<br>
+**Ph.D. = Doctor of Philosophy = 생각의 끝에 도달한 사람**
 
-# What does Ph.D means?
-Doctor of Philosophy : 생각하는 끝에 있는 사람
-박사학위의 목적 : Advise 없이 independent researcher가 될 수 있게 training을 받는 것이 Ph.D이다
-- Communication의 정점이 Publication이다(계단식으로 감)
+- 박사과정의 핵심 목표는: **조언 없이도 독립적으로 연구할 수 있는 사람으로 성장**하는 것이다.
+- 커뮤니케이션의 정점은 **Publication**이며, 이는 계단식으로 축적된다.
 
-## Tip of Iceberg
-- 사람에 대한 실패, 연구에 대한 실패, 부모님에 대한 실수, 교수님에 대한 실수
-- 어떤 실패이든, persistence를 갖고 정진하는 것이 중요하다
 
-# 3차원 후성유전학
-## 3D epigenetic mechanisms
-계층적 구조를 이룬다.
-fiber > looping interactions > sub-TAD > TADs > Compartments > Chromosome territories
+---
 
-Paulson et al 1977 Cell : 화학적인 방식으로 히스톤 단백질을 제거하자, chromosome의 fiber들이 다 헝클어졌지만, 그럼에도 mitotic scaffold를 유지하더라
-=> 다양한 단백질들이 network를 이루는 scaffold이더라! (condensin 1, condensin 2, Topo2...) : interphase에서도 기능하는, 구조를 만드는 protein이다
+# 3차원 후성유전학 (3D Epigenetics)
 
-## loop extrusion model
-IGB, UCSC genome browser => 일자로 펼쳐져 있는 genome, 그러나 멀리 떨어져 있는(500bp 이상) gene과 enhancer이 loop를 이루면서 가까이 interaction을 한다.
-> Job Dekker
-cohesin cannot pass CTCF : structure protein binds => loop가 뭉쳐지면서 domain이 만들어진다
+## 🧬 계층적 구조
+> fiber → looping interactions → sub-TAD → TADs → Compartments → Chromosome territories
+- **Paulson et al., 1977 Cell**: 히스톤 단백질 제거 후에도 유지되는 mitotic scaffold 발견 → condensin 1, 2, Topo2 등의 구조 단백질이 scaffold를 형성함.
 
-## Hi-C
-Chromosome-conformation -capture-carbon-copy(5C)... => 특정 protein으로 organize되는 양상을 관찰
-- 5C는, 내가 원하는 sequence를 high resolution으로 볼 수 있다.
-- hiC는 whole genome으로 볼 수 있다.
+- Loop Extrusion Model
 
-## Hi-C 실험 과정
-0. 포름알데하이드로 고정
-1. Restriction enzyme digest, 각 fragment에 stiky end가 존재하게 된다
-2. 다시 digest한 아이를 ligase하여, long-range interaction하고 있는 gene과 enhancer가 붙게 된다 => 5C template이 된다.
-3. 5c primer : restriction enzyme을 바라보는 방향으로 Universal tail(각각의 프라이머가 공통으로 갖고 있는 시퀀스 T7 primer, T5 primer)+genomic sequence(restriction enzyme 근처 서열)
-4. ligase된 100bp 정도의 서열을 amplify시키면, ligase된 부분이 enrich된다
-5. 데이터 분석 : 3차원 구조를 이차원의 matrix를 만든다
+  - 멀리 떨어진 enhancer와 gene이 **loop**을 통해 가까워지며 상호작용.
+  - **CTCF**는 cohesin의 통과를 막아 loop boundary 형성.
 
-## Analysis 과정
-1. Binning(보통 4bp로) : 칸이 있는 2차원의 matrix를 만든다.
-2. 센 숫자들을 쓴다 => diagonal은 가장 높은 숫자를 가질 수밖에 없다, 대칭적 구조이다, 대각선이 아닌 다른 곳에 높은 숫자를 갖는 곳이 interaction을 하는 부위이다
-3. Hi-C는 특정 region을 선택적으로 enrich하지 않고, whole genome을 sequencing한다
+## 🔬 Hi-C 기술 개요
 
-4가지 야마나카 factor 중 하나인 Sox2 : loop가 만들어지는 whole marker
-ES cells => NPC => iPSC로 다시 reproduce를 하자, Sox2-Enhancer Interaction은 다시 돌아옴. 그러나 Sox2 Expression은 일어나지 않음.(transcription과 loop 사이의 관계는 있으나 반드시 동치인 건 아니다)
-> Beagan et al 2020 Nature Neuroscience : 시간이 지남에 따라서 loop가 생성되다가, 사라짐 => transcription이 이루어지는 데에 시간이 걸림
+- genome 전체의 구조적 interaction을 측정할 수 있는 기술.
+- 3차원 구조를 2차원 matrix로 변환하여 분석한다.
 
-> Gibcus and Damejima st al 2018 Science : condensin이 mitosis에서 작용할 때, 2는 항상 genome에 binding, 1은 mitosis 시기에 작은 loop를 만든다
-Bill Earnshaw at Kaist [link] https://www.youtube.com/watch?v=qjfIe1BA3xs
+### 🧪 실험 과정 요약
 
-## loop를 engineering할 수 없을까?
-1. ahchor L deepCas9, CIBN L : forms the base of the loop
-2. Target : specific genomic fragments
-3. Bridge
+1. 포름알데하이드로 고정
+2. Restriction enzyme으로 절단 → sticky end 생성
+3. ligation → 물리적으로 가까운 서열이 연결됨
+4. primer 설계 (universal tail + genomic sequence)
+5. 증폭 및 시퀀싱
+6. matrix 형태로 분석
 
-https://starlibrary.org/research/laboratoryDetail?mngNo=384
+> diagonal(대각선)은 자기 자신과의 interaction으로 가장 강함.  
+> diagonal이 아닌 곳의 high count는 long-range interaction을 의미한다.
 
+---
+
+# Case Study: Sox2 Looping
+
+- ES → NPC → iPSC 재프로그래밍: **loop는 복원되었지만 Sox2의 발현은 일어나지 않음**
+- → loop와 transcription 사이에는 관련은 있지만, 동치가 아님을 의미.
+
+> Beagan et al. (2020, *Nature Neuroscience*): loop는 transcription에 앞서 존재하고, loop 소멸 이후에도 일정 시간 transcription 유지됨.
+
+---
+
+
+# 교수님 연구 :  Loop Engineering 시도: LADL (Light-Activated Dynamic Looping)
+
+- 빛을 이용해 loop을 형성/해제할 수 있는 기술 개발
+
+## 핵심 구성 요소 3가지
+
+| 역할     | 구성 요소 |
+|----------|-----------|
+| Anchor   | CIBN + dCas9 |
+| Target   | guide RNA |
+| Bridge   | CRY1 (빛에 반응하여 oligomerize됨) |
+
+- 실제 Zip462 locus에서 engineered loop을 유도하여 gene 발현 증가 확인 (RNA FISH)
+
+---
+
+# 🧩 확장 연구: 도메인 형성 실험
+
+- Fragile X 환자 샘플: domain 완전 소실, compartment 혼란
+- **Domain은 무엇으로 구성되는가? Compartment와 같은 개념인가?**
+
+---
+
+# 바이러스 유전체 통합 시의 구조 변화
+
+- 바이러스 integration → domain 재구성
+- Hi-C를 통해 integration에 따른 genome 구조 변화 관찰 (plaid pattern 등)
+
+---
+
+# Cell Cycle과 Genome Structure
+
+- degron 시스템을 이용한 구조 단백질 knockdown → genome 구조에 미치는 영향 분석
+
+---
+
+# Critical Unknowns
+
+1. Loop 형성의 짧은 시간 내 dynamics
+2. Looping과 genome function 간의 **인과 관계**
+3. 세포 집단 내 **이질성 (heterogeneity)**
+
+---
+
+# 💡 결론
+
+김지훈 교수님의 연구는 3차원 유전체 구조의 **정적 상태뿐만 아니라, 동적 변화**에 주목한다. 시간, 구조, 발현이라는 3축을 아우르며, 궁극적으로 유전체 기능과 질병의 연결고리를 이해하고자 한다.
+
+구조를 ‘보는 것’을 넘어, 구조를 ‘만드는 것’으로 나아가는 연구를 목표하신다.
