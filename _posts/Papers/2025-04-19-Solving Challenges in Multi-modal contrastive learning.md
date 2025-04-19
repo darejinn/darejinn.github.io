@@ -32,7 +32,7 @@ comments: true
 
 멀티모달 데이터에서 서로 다른 modality는 서로 다른 의미/표현 수준의 정보를 전달한다.
 
-![image](https://github.com/user-attachments/assets/a5163cf8-4d8f-4ae6-ba0e-cfe9d0a0630a)
+![image](https://github.com/user-attachments/assets/a5163cf8-4d8f-4ae6-ba0e-cfe9d0a0630a){: .align-center}
 
 예컨대 오른쪽 강아지 이미지의 경우, 해당 이미지는 "웃고 있는 개"라는 상위 개념뿐만 아니라 품종, 털 색상, 크기, 형태 등 다양한 하위 수준의 속성을 포함하고 있다. 반면, "잔디밭에서 웃고 있는 개"라는 텍스트 설명은 일반적으로 더 추상적이고 압축된 정보만 담고 있다. 이러한 불일치는 멀티모달 대조 학습 과정에서 서로 다른 수준의 의미를 동등하게 맵핑하기 어렵게 만든다. 특히 시각적으로 표현된 하위 속성(예: 털의 질감, 표정 등)이 텍스트 캡션에서 직접 언급되지 않으면, 대응되는 의미를 찾지 못해 학습이 불안정해질 수 있다.
 
@@ -73,46 +73,47 @@ CLIP(Contrastive Language-Image Pre-training)과 같은 초기 모델들은 이�
 > [ICML 2022] Multimodal Contrastive Training for Visual Representation Learning
 > 
 
-<aside>
-💡
 
-**핵심 아이디어
-통합 학습 프레임워크(Unified Training Framework):**
+💡**핵심 아이디어 : 통합 학습 프레임워크(Unified Training Framework):**
 
 - *Intra-modal Training Path*를 통해 각 모달리티 내에서 data augmentation에 의한 self-supervised 학습을 수행하며, intrinsic data properties를 최대한 보존한다.
 - *Inter-modal Training Scheme*를 통해 이미지와 텍스트 등 서로 다른 모달리티 간의 cross-modal interactions를 강화하여, 공통 semantic space 내에서 유사도를 보존하도록 학습한다.
-</aside>
+
 
 ### 1.1. Objective
 
 본 논문에서는, 이미지와 텍스트 데이터를 바탕으로, visual representation을 학습하는 것을 목표한다. 논문에서 강조하는 점은 cross-modal correlation을 배우는 것을 넘어서서 각 modality의 intrinsic data property를 unified framework로 최대한 끌어낸다는 것이다. (저자들은 similarity preservation이라고 표현한다.)
 
-![(d)가 논문의 방법으로, 2번/3번과 같은 modality 안 학습과, 4번/5번과 같은 modality 사이 학습을 동시에 진행한다.](https://github.com/user-attachments/assets/39bcfe24-3340-4ba4-939f-d6e7148e6f20)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/39bcfe24-3340-4ba4-939f-d6e7148e6f20" width="600"/>
+  <br>
+  <em>(d)가 논문의 방법으로, 2번/3번과 같은 modality 안 학습과, 4번/5번과 같은 modality 사이 학습을 동시에 진행한다.</em>
+</p>
 
-(d)가 논문의 방법으로, 2번/3번과 같은 modality 안 학습과, 4번/5번과 같은 modality 사이 학습을 동시에 진행한다.
 
 ### 1.2. Method
-
-![image.png](https://github.com/user-attachments/assets/ed297e33-d92b-4819-8140-3999234764da)
-
-위 그림에서, 주황색과 초록색이 modality 내 학습을, 노란색과 초록색이 modality 간 학습을 의미하며, 각각 다른 constrasive loss를 사용한다. 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/ed297e33-d92b-4819-8140-3999234764da" width="600"/>
+  <br>
+  <em>위 그림에서, 주황색과 초록색이 modality 내 학습을, 노란색과 초록색이 modality 간 학습을 의미하며, 각각 다른 constrasive loss를 사용한다.</em>
+</p>
 
 1. **Modality 내 학습 : MoCo-v2 framework**
     
     본 논문에서는, modality 내의 unsupervised visual representation learning을 위해 **Momentum Contrast(MoCo)**라는 방법을 차용한다. 
     
-    <aside>
+
 
     
     > **Momentum Contrast(MoCo)**
     > Xinlei Chen, Haoqi Fan, Ross B. Girshick, and Kaiming He. Improved baselines with momentum contrastive learning.
-    > ![MoCo https://arxiv.org/pdf/1911.05722](https://github.com/user-attachments/assets/d0640ca8-66e2-4fad-a89f-7a5b97be6d09)
+    > <p align="center"><img src="https://github.com/user-attachments/assets/d0640ca8-66e2-4fad-a89f-7a5b97be6d09" width="600"/><br><em>MOCO</em></p>
     > 이미지는 각 픽셀이 연관되어 있고, 고차원이기에 tokenized word dictionary와 같이 구조화된 dictionary를 만들 수 없다. 따라서 dynamic dictionary (동적사전)가 필요한데, MoCo는 이 사전을 <크고, 안정적으로> 만드는 방법으로 제안되었다.
     > - key는 데이터(이미지, patch 등)에서 sampling을 한 후 momentum encoder를 통해 표현이 된다.
         
         ‘momentum encoder’이라고 이름붙여진 이유는 다음과 같다.  key를 만들어내는 encoder가 빠르게 학습이 되면 representation이 빠르게 바뀌기 때문에 이전에 dictionary의 key들이 다 소용이 없어지게 된다. 그렇기 때문에 momentum을 이용해 조금씩 변화를 주어서 한번에 큰 변경이 없게 만들어 학습을 안정적으로 진행한다.
     > - query encoder는 momentum encoder과 달리 적극적으로 학습된다. query는 matching 되는 key와 가깝고, 다른 key와는 다르게 constrasive learning이 이루어진다.
-    </aside>
+ 
     
     저자들은 기존 MoCo에서 text encoder/text momentum encoder를 추가로 도입하고, tag information을 loss에 추가하여 high-level concept의 pattern도 학습하게 하였다.
     
@@ -147,18 +148,15 @@ Finite Discrete Tokens (FDT):**
 </aside>
 
 ### 2.1. Objective
+<p align="center"><img src="https://github.com/user-attachments/assets/d3e1a253-7590-4858-983d-b7811a7bc1df" width="600"/><br><em>오른쪽이 논문의 방법이다.</em></p>
 
-![오른쪽이 논문의 방법이다.](https://github.com/user-attachments/assets/d3e1a253-7590-4858-983d-b7811a7bc1df)
-
-오른쪽이 논문의 방법이다.
 
 저자들은, CLIP 기반 모델에서, cross-modal information을 두개의 독립적 인코더로 인코딩한 뒤 바로 similarity를 비교하는 방식의 한계를 지적한다. 두 representation의 granualities(세밀한 정도)가 다르기 때문이다. 저자들은 같은 level의 granuarity를 가지는 정보 간 contrasive learning을 수행하는 것을 목표한다. 이를 위하여 본 논문은 두 information의 정보들을 각각 FDT라는 공통된 토큰집합을 매개로 표현한 뒤 학습을 수행한다.
 
 ### 2.2. Method
+<p align="center"><img src="https://github.com/user-attachments/assets/82da74c5-b3bb-4c16-abf9-f16e18538c7e" width="600"/><br><em>전체 framework(왼), FDT based Feature generation 방법(오)</em></p>
 
-![전체 framework(왼), FDT based Feature generation 방법(오)](https://github.com/user-attachments/assets/82da74c5-b3bb-4c16-abf9-f16e18538c7e)
 
-전체 framework(왼), FDT based Feature generation 방법(오)
 
 FDT를 이용해서 두 modality의 granuality를 맞추어 contrasive learning을 수행하는 방법은 위 모식과 같다. FDT(Finite Discrete Tokens)는, 왼쪽 가운데에 표현된 노란색 토큰들의 집합이다. 이 토큰들을, 사전의 단어들이라고 생각할 수 있다. Image의 FDT based Feature를 구하는 것은, 결국 이 동적 사전의 단어들의 가중합으로 이미지를 표현하는 것을 의미한다. 방식은 아래와 같다.
 
@@ -187,17 +185,16 @@ FDT는 각 이미지 패치와, 텍스트 토큰이 의미를 알려주는 prior
 </aside>
 
 ### 3.1. Objective
+<p align="center"><img src="https://github.com/user-attachments/assets/2ff01865-2532-4fc9-9cce-5a38b4ac5b8d" width="600"/><br><em>가운데의 Z1:2가 complete modality representation이다.</em></p>
 
-![가운데의 Z1:2가 complete modality representation이다.](https://github.com/user-attachments/assets/2ff01865-2532-4fc9-9cce-5a38b4ac5b8d)
-가운데의 Z1:2가 complete modality representation이다.
 
 해당 논문은, modality의 종류나 개수를 한정짓지 않는 새로운 프레임워크를 제안한다. 저자들은 **1) modality 간 hetrogenity gap 2) missing modality 문제를 동시에 해결하는 것을 목표**한다.
 
 이를 위하여 모달리티 특이적 encoding만을 진행하는 기존 방법과 달리 모든 모달리티가 통합된 **complete modality representation을  추가로 도입하여, 공통 공간에서 align한다.**
 
 ### 3.2. Method
-
-![전체 framework](attachment:bcdbb28f-7da0-428f-ac5f-a10b4536a284:image.png)
+<p align="center"><img src="https://github.com/user-attachments/assets/e13866ea-b5dd-4b5a-973a-1c1a1d32d974" width="600"/><br><em>전체 framework</em></p>
+![]()
 
 전체 framework
 
