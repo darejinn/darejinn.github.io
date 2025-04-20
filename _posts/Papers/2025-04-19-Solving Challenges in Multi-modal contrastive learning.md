@@ -45,7 +45,7 @@ comments: true
 이미지를 작은 패치 단위로 나누어 특징을 추출하는 방식과, 텍스트를 토큰(단어·문장 등) 단위로 나누는 방식 간에는 불가피한 구조적 차이가 존재한다. 
 
 - 합성곱 신경망(CNN)이나 비전 트랜스포머(ViT)를 통해 처리되는 패치는 픽셀 값의 2D 그리드로 구성되어 있으며, 공간적 관계와 질감 정보를 포함한다.
-- 텍스트는 BERT나 GPT와 같은 언어 모델로 처리되는 순차적인 토큰은, 문법적 구조와 의미론적 관계를 포함한다.
+- 텍스트에서 BERT나 GPT와 같은 언어 모델로 처리되는 순차적인 토큰은, 문법적 구조와 의미론적 관계를 포함한다.
 
 CLIP(Contrastive Language-Image Pre-training)과 같은 초기 모델들은 이미지와 텍스트를 매칭하여 관계를 학습하나, 이러한 모델들은 시각적 패치와 텍스트 토큰을 집계하여 표현할 뿐, 동일한 세밀도 수준에서 시각적 및 의미적 개념을 명시적으로 정렬하지 않는다. 이를 단순 병렬로 처리하거나 동일 차원으로 맞추는 것만으로는 세밀한 의미 정렬이 보장되지 않는다. 
 
@@ -158,9 +158,11 @@ CLIP(Contrastive Language-Image Pre-training)과 같은 초기 모델들은 이�
 
 FDT를 이용해서 두 modality의 granuality를 맞추어 contrasive learning을 수행하는 방법은 위 모식과 같다. FDT(Finite Discrete Tokens)는, 왼쪽 가운데에 표현된 노란색 토큰들의 집합이다. 이 토큰들을, 사전의 단어들이라고 생각할 수 있다. Image의 FDT based Feature를 구하는 것은, 결국 이 동적 사전의 단어들의 가중합으로 이미지를 표현하는 것을 의미한다. 방식은 아래와 같다.
 
-a. 먼저, 패치와 FDT 간의 내적 계산으로 N개의 패치가 FDT들과 얼마나 유사한지 나타내는 attention matrix가 구해진다.(오른쪽 가운데 회색 matrix) 이때 각 패치를 query, FDT를 key라고 볼 수 있겠다. 
-b. Max pooling을 통하여, C개의 FDT 각각이 이미지와 얼마나 유사한지의 유사도를 구한다.
-c. FDT의 토큰들을 앞서 구한 유사도를 가중합하여 최종적으로 FDT based Feature를 구한다. 
+  a. 먼저, 패치와 FDT 간의 내적 계산으로 N개의 패치가 FDT들과 얼마나 유사한지 나타내는 attention matrix가 구해진다.(오른쪽 가운데 회색 matrix) 이때 각 패치를 query, FDT를 key라고 볼 수 있겠다. 
+
+  b. Max pooling을 통하여, C개의 FDT 각각이 이미지와 얼마나 유사한지의 유사도를 구한다.
+
+  c. FDT의 토큰들을 앞서 구한 유사도를 가중합하여 최종적으로 FDT based Feature를 구한다. 
 
 이렇게 구해진 FDT based image Feature, FDT based text Feature간 contrasive learning을 수행한다.
 

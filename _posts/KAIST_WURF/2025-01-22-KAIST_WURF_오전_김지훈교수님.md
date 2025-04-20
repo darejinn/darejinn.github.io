@@ -10,12 +10,14 @@ toc_sticky: true
 date: 2025-01-22
 last_modified_at: 2025-01-22
 comments: true
+published : false
+
 ---
 ---
 카이스트 김지훈 교수님의 WURF meet the professor 강연을 정리하였습니다.
 {: .notice--info}
 ---
-# Introduction : Genome in a 4-Dimensional World</span>
+# Introduction : Genome in a 4-Dimensional World
 
 | 김지훈 교수님 랩 사이트 👉 [사이트 바로가기](https://jihunkim.kaist.ac.kr/) |
 {: .center}
