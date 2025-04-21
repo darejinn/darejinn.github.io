@@ -13,6 +13,8 @@ toc_sticky: true
 date: 2025-01-21
 last_modified_at: 2025-01-21
 comments: true
+published : false
+
 ---
 카이스트 박병현 교수님의 WURF meet the professor 강연을 정리하였습니다.
 {: .notice--info}
