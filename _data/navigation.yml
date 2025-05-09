@@ -34,6 +34,8 @@ side:
         url: /categories/Finance/
       - title: "Thoughts"
         url: /categories/Thoughts/
+      - title: "Bridges"
+        url: /categories/Bridges/
   
   # - title: "Sample Posts"
   #   url: /year-archive/

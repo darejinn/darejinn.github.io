@@ -63,7 +63,7 @@ CLIP(Contrastive Language-Image Pre-training)과 같은 초기 모델들은 이�
 
 **학습 시에는 모든 모달리티 정보를 이용할 수 있으나, 추론 과정에서는 특정 모달리티가 결측되는 현상(train-inference discrepancy)은 모델의 일반화 성능을 크게 저하시킬 수 있다.**
 
-"[CVPR 2020] Gradient-Blending: Learning Modalities with Varying Rates"의 내용을 바탕으로살펴보면, 학습된 모델은 특정 모달리티(특히 많은 정보가 있는 모달리티)에 의존하는 편향을 보일 수 있으며, 이러한 편향은 해당 모달리티가 결측되었을 때 성능이 급격히 저하되는 현상으로 이어진다. 해당 논문에서는 일부 멀티모달 모델은 단일 모달리티 입력 시 성능이 무작위 추측 수준으로 떨어지는 현상을 관찰하였다. 
+"[CVPR 2020] Gradient-Blending: Learning Modalities with Varying Rates"의 내용을 바탕으로 살펴보면, 학습된 모델은 특정 모달리티(특히 많은 정보가 있는 모달리티)에 의존하는 편향을 보일 수 있으며, 이러한 편향은 해당 모달리티가 결측되었을 때 성능이 급격히 저하되는 현상으로 이어진다. 해당 논문에서는 일부 멀티모달 모델은 단일 모달리티 입력 시 성능이 무작위 추측 수준으로 떨어지는 현상을 관찰하였다. 
 
 <br>
 <br>
