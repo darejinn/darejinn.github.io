@@ -364,7 +364,7 @@
         
         <ul>
           
-            <li><a href="/categories/NLP/">NLP</a></li>
+            <li><a href="/categories/Papers/">Papers</a></li>
           
         </ul>
         
@@ -410,6 +410,8 @@
           
             <li><a href="/categories/Thoughts/">Thoughts</a></li>
           
+            <li><a href="/categories/Bridges/">Bridges</a></li>
+          
         </ul>
         
       </li>
@@ -444,108 +446,204 @@
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
               <ul class="toc__menu">
-  <li><a href="#유전체-데이터-바이오헬스-ai를-위한-인프라">유전체 데이터 바이오헬스 AI를 위한 인프라</a>
+  <li><a href="#introduction">Introduction</a>
     <ul>
-      <li><a href="#project-stargate--유전체-데이터를-분석할-수-있는-사람이-앞으로-할-일이-많을-것이다">Project Stargate : 유전체 데이터를 분석할 수 있는 사람이 앞으로 할 일이 많을 것이다</a></li>
-      <li><a href="#유전체--디지털-데이터">유전체 : 디지털 데이터</a></li>
-      <li><a href="#유전체-변이--타고난-변이germline-variant-획득한-변이somatic-mutaion">유전체 변이 : 타고난 변이(germline variant), 획득한 변이(somatic mutaion)</a></li>
-      <li><a href="#유전체-데이터와-정밀-의료">유전체 데이터와 정밀 의료</a></li>
+      <li><a href="#이정석-교수님">이정석 교수님</a></li>
     </ul>
   </li>
-  <li><a href="#2-현재의-표적-유전체-암-치료">2. 현재의 표적 유전체 암 치료</a>
+  <li><a href="#1-projectstargate--why-genome-analysts-will-matter">1. Project Stargate — Why Genome Analysts Will Matter</a></li>
+  <li><a href="#2-genomedigitaldata">2. Genome = Digital Data</a>
     <ul>
-      <li><a href="#example">Example</a></li>
+      <li><a href="#varianttypes">Variant Types</a></li>
     </ul>
   </li>
-  <li><a href="#3-현재의-우리">3. 현재의 우리</a></li>
+  <li><a href="#3-precisionmedicine--유전체ai">3. Precision Medicine &amp; 유전체 AI</a>
+    <ul>
+      <li><a href="#기술변곡점">기술 변곡점</a></li>
+    </ul>
+  </li>
+  <li><a href="#4-targetedcancertherapy--wgs시대">4. Targeted Cancer Therapy — WGS 시대</a>
+    <ul>
+      <li><a href="#패널엑솜wholegenome">패널 → 엑솜 → Whole Genome</a></li>
+      <li><a href="#clinical-example">Clinical Example</a></li>
+    </ul>
+  </li>
+  <li><a href="#5-global-landscape--were-near-the-end-of-data-landgrab">5. Global Landscape — We’re Near the End of Data Land‑Grab</a>
+    <ul>
+      <li><a href="#대한민국의-기회">대한민국의 기회</a></li>
+    </ul>
+  </li>
+  <li><a href="#key-takeaways">Key Takeaways</a></li>
 </ul>
 
             </nav>
           </aside>
         
-        <hr />
-<p class="notice--info">카이스트 이정석 교수님의 WURF meet the professor 강연을 정리하였습니다.</p>
+        <p class="notice--info">카이스트 이정석 교수님의 WURF meet the professor 강연을 정리하였습니다.</p>
+<h1 id="introduction">Introduction</h1>
+
+<p>본 세션은 <strong>이노크라스(Inocras Inc.) / Genome Insight</strong> 공동창업자가 SK 최종현 학술원 유튜브 강연에서 발표한 ‘유전체 데이터 바이오헬스 AI를 위한 인프라’ 내용을 요약·정리한 것이라고 말씀하셨다. 핵심 메시지는 <strong>유전체 데이터가 곧 디지털 자산</strong>이며, 이를 빠르고 정확하게 해석할 <strong>AI 인프라 구축</strong>이 국가 경쟁력의 관건이 된다는 점이다.</p>
+
+<h2 id="이정석-교수님">이정석 교수님</h2>
+<ul>
+  <li><strong>공동창업자, Project Stargate 리드</strong><br />
+(Inocras Inc. / Genome Insight)</li>
+  <li>데이터 규모: 사내 <strong>WGS 데이터 10 PB</strong> 이상 보유</li>
+  <li>발표 영상: <em>SK 최종현 학술원</em> YouTube 채널</li>
+</ul>
+
 <hr />
 
-<h1 id="유전체-데이터-바이오헬스-ai를-위한-인프라"><span style="background-color:LightBlue; font-size:110%">유전체 데이터 바이오헬스 AI를 위한 인프라</span></h1>
-<ul>
-  <li>Inocras Inc(genome insight) 공동창업자</li>
-  <li>유튜브 sk 최종현 학술원에 기록된 내용</li>
-</ul>
+<h1 id="1-projectstargate--why-genome-analysts-will-matter">1. Project Stargate — Why Genome Analysts Will Matter</h1>
 
-<h2 id="project-stargate--유전체-데이터를-분석할-수-있는-사람이-앞으로-할-일이-많을-것이다">Project Stargate : 유전체 데이터를 분석할 수 있는 사람이 앞으로 할 일이 많을 것이다</h2>
+<table>
+  <thead>
+    <tr>
+      <th> Key Point </th>
+      <th> Detail </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>미래 수요</strong></td>
+      <td>유전체 데이터를 이해·해석할 전문가는 폭발적으로 필요해질 전망</td>
+    </tr>
+    <tr>
+      <td><strong>Mission</strong></td>
+      <td>방대한 서열 정보를 <em>분석 → 임상·산업 가치</em>로 전환</td>
+    </tr>
+  </tbody>
+</table>
 
-<h2 id="유전체--디지털-데이터">유전체 : 디지털 데이터</h2>
-<ul>
-  <li>사람의 서열 : 30억개 염기쌍(3기가)</li>
-  <li>시퀀싱 데이터 : 한 서열을 30번씩 읽어서 90기가
-    <ol>
-      <li>방대하지만 유한하다</li>
-      <li>디지털 데이터이다 (4진법)</li>
-    </ol>
-  </li>
-</ul>
+<blockquote>
+  <p>“시퀀싱 원가 하락으로 <strong>데이터 생산 독점</strong>은 끝났다. 이제 <strong>해석의 시대</strong>다.”</p>
+</blockquote>
 
-<h2 id="유전체-변이--타고난-변이germline-variant-획득한-변이somatic-mutaion">유전체 변이 : 타고난 변이(germline variant), 획득한 변이(somatic mutaion)</h2>
-<ul>
-  <li>개인 내 세포간 차이(개인이 살면서 획득한 돌연변이) : 암 발생, 항암제 감수성, 수명 등에 영향을 미침
-기본적으로 암은, 반복되는 세포분열을 통해 누적되는 변이이므로 나이에 비례해서 증가한다</li>
-  <li>개인별 차이(타고난 소인) : 희귀질환, 당뇨병, 자폐질환, 가족성 암, 치매 예측 등</li>
-</ul>
+<hr />
 
-<h2 id="유전체-데이터와-정밀-의료">유전체 데이터와 정밀 의료</h2>
-<ul>
-  <li>시퀀싱 생산 독점시대 종료, 경쟁으로 생산가격 급감, AI와 genome data의 결합이 앞으로 시대를 바꿀 것이다
-    <blockquote>
-      <p>‘어느 데이터에 집중해야 하는가’가 중요하지 않을까?</p>
-    </blockquote>
-  </li>
-  <li>정밀의료 : 사람들의 개인 간 차이를 고려하여 질병의 예방과 치료 기술 개발을 위한 의료적 접근법</li>
-  <li>통계 기반의 의료 접근법이 올은가? 사람마다 다르지 않은가?
-| (사람은 모두 같다, evidence based medicine) | 정밀의료(사람은 모두 같지 않다) |
-| 부작용, 효과 없음 동반 | 안전하고 효과적 |
-| 높은 비용 | 경제적(효용이 높다, 공공복리 측면에서 적은 예산으로 운용 가능, 효율적인 신약 개발을 가능하게 한다) |</li>
-</ul>
+<h1 id="2-genomedigitaldata">2. Genome = Digital Data</h1>
 
-<h1 id="2-현재의-표적-유전체-암-치료">2. 현재의 표적 유전체 암 치료</h1>
-<ul>
-  <li>whole genome squencing
-1세대 targeted panel &gt; 2세대 exome &gt; 3세대 whole genome
-    <ol>
-      <li>sequencing이 비쌈</li>
-      <li>데이터 분석이 어려움 (현재 지놈인사이트의 데이터는 10페타바이트)</li>
-    </ol>
-  </li>
-</ul>
-
-<h2 id="example">Example</h2>
-<ul>
-  <li>HER-2 focal amplication과 HER-2 broad amplication은 치료 양상이 다르다, whole genome sequencing을 통해 후자가 가능해진다</li>
-  <li>질병의 재정의(기존 8개 림프종을 더 세분화해서)</li>
-</ul>
-
-<h1 id="3-현재의-우리">3. 현재의 우리</h1>
-<ul>
-  <li>유전체 빅데이터를 확보하기 위한 경쟁은, 이제 거의 끝나간다</li>
-  <li>리제너른 사례 : 인간 엑솜 데이터를 전 세계에서 모름.</li>
-</ul>
+<table>
+  <thead>
+    <tr>
+      <th> 항목 </th>
+      <th> 규모 </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>인간 게놈 길이</strong></td>
+      <td>≈3 Gb (30억 bp)</td>
+    </tr>
+    <tr>
+      <td><strong>WGS Raw Reads</strong></td>
+      <td>30× 커버리지 → ~90 GB/sample</td>
+    </tr>
+  </tbody>
+</table>
 
 <ol>
-  <li>소프트파워의 주도권 : 산업-의료용 유전체 데이터 처리 시스템 필요 (하드파워에서, 소프트파워 즉 데이터 해석과 활용)의 시대로 변화
+  <li><strong>방대하지만 유한(Limited yet Huge)</strong>: 저장·계산 인프라로 관리 가능</li>
+  <li><strong>완전한 디지털 정보</strong>: 4진법(ATCG) → 컴퓨팅 친화적</li>
+</ol>
+
+<h2 id="varianttypes">Variant Types</h2>
+<ul>
+  <li><strong>Germline Variants</strong>: 희귀질환, 가족성 암, 만성질환 예측</li>
+  <li><strong>Somatic Mutations</strong>: 암 발생·진행, 항암제 감수성, 노화 연관</li>
+</ul>
+
+<blockquote>
+  <p>암은 세포분열 누적 변이 ∝ <em>Age</em> — 정밀한 변이 지도 필요.</p>
+</blockquote>
+
+<hr />
+
+<h1 id="3-precisionmedicine--유전체ai">3. Precision Medicine &amp; 유전체 AI</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th> 기존 의학 </th>
+      <th> 정밀의료 </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Evidence‑Based</strong> (집단 평균)</td>
+      <td><strong>Individualized</strong> (개인 차이)</td>
+    </tr>
+    <tr>
+      <td>효과·부작용 편차 ↑</td>
+      <td>안전성·효용 ↑</td>
+    </tr>
+    <tr>
+      <td>비용 낭비 가능</td>
+      <td>예산 효율, 신약 개발 가속</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="기술변곡점">기술 변곡점</h2>
+<ul>
+  <li><strong>시퀀싱 단가 급락</strong> → 누구나 데이터 생산 가능</li>
+  <li><strong>AI + Genome</strong> → 패턴 추출·임상 연계 속도 혁신</li>
+</ul>
+
+<hr />
+
+<h1 id="4-targetedcancertherapy--wgs시대">4. Targeted Cancer Therapy — WGS 시대</h1>
+
+<h2 id="패널엑솜wholegenome">패널 → 엑솜 → Whole Genome</h2>
+<ol>
+  <li><strong>Sequencing Cost</strong> 여전히 부담</li>
+  <li><strong>데이터 분석</strong> 병목 (10 PB 규모 관리·해석)</li>
+</ol>
+
+<h2 id="clinical-example">Clinical Example</h2>
+<ul>
+  <li><strong>HER2 증폭</strong>
     <ul>
-      <li>산업, 의료용 대용량 데이터 처리 시스템(망을 만드는 것)이 필요함.</li>
-      <li>데이터, 알고리즘으로 방대한 유전체 정보의 빠른 해석 가능한 시스템이 필요</li>
-      <li>실험도 로봇이 다 할 것인데 왜 하는가? 이제 데이터를 처리하는 시대이다</li>
+      <li><em>Focal amplification</em> vs <em>Broad amplification</em> → 치료 전략 달라짐</li>
+      <li>WGS로만 후자 정의 가능</li>
     </ul>
   </li>
-  <li>외우는 것이 제일 바보</li>
-  <li>실험하는 것은 뒤쳐졌다</li>
-  <li>데이터 탄생의 요람 : 대한민국 의료의 힘 (앞으로는 사실 없어질 것)</li>
-  <li>1만례 이상의 의료정보, WGS 빅데이터 확보</li>
-  <li>우수한 의사/과학자 융합 인재</li>
-  <li>유전체 AI 탄생의 조건은 우리가 갖고 있다
-  하드파워, 소프트파워의 시대를 넘어서 인프라 구축을 만드는 것에 투자해야한다</li>
+  <li><strong>림프종 재정의</strong>: 기존 8개 subtype → 세분화된 분자 분류</li>
+</ul>
+
+<hr />
+
+<h1 id="5-global-landscape--were-near-the-end-of-data-landgrab">5. Global Landscape — We’re Near the End of Data Land‑Grab</h1>
+
+<ul>
+  <li><strong>Exome Megaprojects</strong> (e.g., Regeneron) → 전 세계 <strong>인간 엑솜</strong> 수백만 건 확보 경쟁</li>
+  <li>이후 경쟁력은 <strong>데이터 해석·활용 소프트파워</strong>로 이동</li>
+</ul>
+
+<h2 id="대한민국의-기회">대한민국의 기회</h2>
+<ol>
+  <li><strong>의료 데이터 탄탄</strong>: 대형 병원 EMR + WGS 코호트 구축 진행</li>
+  <li><strong>융합 인재</strong>: 의사·과학자의 AI 역량 상승 중</li>
+  <li><strong>필요 투자</strong>: 대용량 <strong>데이터 파이프라인 &amp; 해석 알고리즘 인프라</strong></li>
 </ol>
+
+<blockquote>
+  <p>“실험 자동화(로봇)는 표준화될 것. <em>의미 해석</em>이 승부처.”</p>
+</blockquote>
+
+<hr />
+
+<h1 id="key-takeaways">Key Takeaways</h1>
+
+<ol>
+  <li><strong>Genome Data = 디지털 자원</strong>: 저장·컴퓨팅 인프라가 핵심.</li>
+  <li><strong>WGS → 임상 통합</strong>: 암·희귀질환 정밀 진단이 가속화될 것.</li>
+  <li><strong>데이터 해석</strong>이 새로운 경쟁력: 하드웨어가 아닌 <strong>알고리즘·소프트파워</strong>.</li>
+  <li><strong>한국</strong>은 의료 데이터·인재 풀을 바탕으로 <strong>글로벌 허브</strong>가 될 잠재력.</li>
+  <li>인프라 구축과 AI 역량 확보에 <strong>지금 투자</strong>해야 한다.</li>
+</ol>
+
+<hr />
 
         
       
@@ -630,7 +728,7 @@
       
   <nav class="pagination">
     
-      <a href="/kaist_wurf/KAIST_WURF_-%EC%98%A4%EC%A0%84_%EA%B9%80%EC%A7%80%ED%9B%88%EA%B5%90%EC%88%98%EB%8B%98/" class="pagination--pager" title="[KAIST_WURF]0122 카이스트 김지훈 교수님
+      <a href="/kaist_wurf/KAIST_WURF_%EC%98%A4%EC%A0%84_%EA%B9%80%ED%95%98%EC%9D%BC%EA%B5%90%EC%88%98%EB%8B%98/" class="pagination--pager" title="[KAIST_WURF]0120 카이스트 김하일 교수님
 ">이전</a>
     
     
@@ -663,7 +761,7 @@
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/thoughts/03/" rel="permalink">삶의 의미
+        <a href="/bridges/Contrarian%EC%9D%84-%EC%9D%91%EC%9B%90%ED%95%98%EB%A9%B0/" rel="permalink">Contrarian을 응원하며
 </a>
       
     </h2>
@@ -675,7 +773,7 @@
   -->
   
 
-<p class="page__meta"><i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i> March 09 2025</p>
+<p class="page__meta"><i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i> May 09 2025</p>
 
     <p class="archive__item-excerpt" itemprop="description">
 </p>
@@ -696,7 +794,7 @@
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/thoughts/03/" rel="permalink">삶의 의미
+        <a href="/papers/Solving-Challenges-in-Multi-modal-contrastive-learning/" rel="permalink">Solving Challenges in Multi-modal Contrastive Learning
 </a>
       
     </h2>
@@ -708,7 +806,41 @@
   -->
   
 
-<p class="page__meta"><i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i> March 09 2025</p>
+<p class="page__meta"><i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i> April 19 2025</p>
+
+    <p class="archive__item-excerpt" itemprop="description">
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="" alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/thoughts/04.-%EB%AA%85%EB%B6%84%EA%B3%BC-%EC%8B%A4%EB%A6%AC/" rel="permalink">명분과 실리
+</a>
+      
+    </h2>
+  <!--
+    devinlife comments :
+        아키이브 싱글 페이지(ex. 카테고리)에 각 포스트 제목 밑에 Updated 시간 표기
+        기존에는 read_time이 표기. read_time -> date 변경
+    
+  -->
+  
+
+<p class="page__meta"><i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i> March 24 2025</p>
 
     <p class="archive__item-excerpt" itemprop="description">
 </p>
@@ -729,7 +861,7 @@
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/thoughts/02.-%ED%83%80%EC%9D%B8%EC%97%90-%EA%B4%80%ED%95%98%EC%97%AC/" rel="permalink">타인에 관하여
+        <a href="/thoughts/03.-%EA%B0%80%EB%A7%8C%ED%9E%88-%EC%9E%88%EC%A7%80-%EC%95%8A%EB%8A%94%EB%8B%A4%EB%8A%94-%EA%B2%83/" rel="permalink">가만히 있지 않는다는 것
 </a>
       
     </h2>
@@ -741,40 +873,7 @@
   -->
   
 
-<p class="page__meta"><i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i> February 22 2025</p>
-
-    <p class="archive__item-excerpt" itemprop="description">
-</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="" alt="">
-      </div>
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/thoughts/02.-%ED%83%80%EC%9D%B8%EC%97%90-%EA%B4%80%ED%95%98%EC%97%AC/" rel="permalink">타인에 관하여
-</a>
-      
-    </h2>
-  <!--
-    devinlife comments :
-        아키이브 싱글 페이지(ex. 카테고리)에 각 포스트 제목 밑에 Updated 시간 표기
-        기존에는 read_time이 표기. read_time -> date 변경
-    
-  -->
-  
-
-<p class="page__meta"><i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i> February 22 2025</p>
+<p class="page__meta"><i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i> March 23 2025</p>
 
     <p class="archive__item-excerpt" itemprop="description">
 </p>
