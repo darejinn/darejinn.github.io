@@ -72,7 +72,7 @@ var store = [{
         "teaser": "http://localhost:4000/"
       },{
         "title": "명분과 실리",
-        "excerpt":"  원칙은 바뀔 수 있음이 원칙이다.   세상의 많은 일에는, ‘어떻게 보여지는가’가 관여하며   가진 것이 많은 사람일수록 이러한 측정 불가능한 가치가 중요해진다.   좋은 지도자는, 강한 자의 명분을 지켜주며 약한 자의 실리를 추구해야 한다.s  ","categories": ["Thoughts"],
+        "excerpt":"  원칙은 바뀔 수 있음이 원칙이다.   세상의 많은 일에는, ‘어떻게 보여지는가’가 관여하며   가진 것이 많은 사람일수록 이러한 측정 불가능한 가치가 중요해진다.   좋은 지도자는, 강한 자의 명분을 지켜주며 약한 자의 실리를 추구해야 한다.  ","categories": ["Thoughts"],
         "tags": ["에세이"],
         "url": "http://localhost:4000/thoughts/04.-%EB%AA%85%EB%B6%84%EA%B3%BC-%EC%8B%A4%EB%A6%AC/",
         "teaser": "http://localhost:4000/"
