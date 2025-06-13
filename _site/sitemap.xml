@@ -75,7 +75,7 @@
 <loc>http://localhost:4000/categories/AI_Papers/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/categories/Bioinformatics</loc>
+<loc>http://localhost:4000/categories/Bioinformatics/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/categories/Bridges/</loc>
@@ -87,7 +87,7 @@
 <loc>http://localhost:4000/categories/KAIST_WURF/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/categories/Projects</loc>
+<loc>http://localhost:4000/categories/Projects/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/categories/Thoughts/</loc>
