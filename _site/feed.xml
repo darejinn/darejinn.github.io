@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-06-13T22:47:53+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">DaRe_jin’s Blog</title><subtitle>내실 있는 낙관</subtitle><author><name>DaRe_jin</name></author><entry><title type="html">Multi-Omics-Based Drug Sensitivity Estimation</title><link href="http://localhost:4000/projects/MOUM/" rel="alternate" type="text/html" title="Multi-Omics-Based Drug Sensitivity Estimation" /><published>2025-06-13T00:00:00+09:00</published><updated>2025-06-13T00:00:00+09:00</updated><id>http://localhost:4000/projects/MOUM</id><content type="html" xml:base="http://localhost:4000/projects/MOUM/"><![CDATA[<hr />
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-06-13T23:00:48+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">DaRe_jin’s Blog</title><subtitle>내실 있는 낙관</subtitle><author><name>DaRe_jin</name></author><entry><title type="html">Multi-Omics-Based Drug Sensitivity Estimation</title><link href="http://localhost:4000/projects/MOUM/" rel="alternate" type="text/html" title="Multi-Omics-Based Drug Sensitivity Estimation" /><published>2025-06-13T00:00:00+09:00</published><updated>2025-06-13T00:00:00+09:00</updated><id>http://localhost:4000/projects/MOUM</id><content type="html" xml:base="http://localhost:4000/projects/MOUM/"><![CDATA[<hr />
 
 <p class="notice--info">This project was completed as Team MOUM, in collaboration with my colleagues for the 6th YAI-CON.</p>
 
@@ -183,7 +183,28 @@ For every cell line × pathway, compute statistical separation between “in-pat
 
 <p>You can find the full names of all MOUM team members on GitHub: <a href="https://github.com/Omics-based-Drug-sensitivity-Estimation">Code Link</a>.</p>
 
-<hr />]]></content><author><name>DaRe_jin</name></author><category term="[&quot;Projects&quot;]" /><category term="Multi-Omics" /></entry><entry><title type="html">재미와 사랑이 양립할 때</title><link href="http://localhost:4000/thoughts/06.-%EC%9E%AC%EB%AF%B8%EC%99%80-%EC%82%AC%EB%9E%91%EC%9D%B4-%EC%96%91%EB%A6%BD%ED%95%A0-%EB%95%8C/" rel="alternate" type="text/html" title="재미와 사랑이 양립할 때" /><published>2025-06-03T00:00:00+09:00</published><updated>2025-06-03T00:00:00+09:00</updated><id>http://localhost:4000/thoughts/06.%20%EC%9E%AC%EB%AF%B8%EC%99%80%20%EC%82%AC%EB%9E%91%EC%9D%B4%20%EC%96%91%EB%A6%BD%ED%95%A0%20%EB%95%8C</id><content type="html" xml:base="http://localhost:4000/thoughts/06.-%EC%9E%AC%EB%AF%B8%EC%99%80-%EC%82%AC%EB%9E%91%EC%9D%B4-%EC%96%91%EB%A6%BD%ED%95%A0-%EB%95%8C/"><![CDATA[<hr />
+<hr />]]></content><author><name>DaRe_jin</name></author><category term="[&quot;Projects&quot;]" /><category term="Multi-Omics" /></entry><entry><title type="html">Game-based Shadow-induced Forgetting</title><link href="http://localhost:4000/projects/Soothing/" rel="alternate" type="text/html" title="Game-based Shadow-induced Forgetting" /><published>2025-06-12T00:00:00+09:00</published><updated>2025-06-12T00:00:00+09:00</updated><id>http://localhost:4000/projects/Soothing</id><content type="html" xml:base="http://localhost:4000/projects/Soothing/"><![CDATA[<hr />
+
+<p class="notice--info">This project was completed as Team Soothing.</p>
+
+<h1 id="game-based-shadow-induced-forgetting---effects-of-consciousness-emotional-valence-and-temporal-dynamics-on-memory-suppression">Game-based Shadow-induced Forgetting - Effects of Consciousness, Emotional Valence, and Temporal Dynamics on Memory Suppression</h1>
+
+<h2 id="preprint-link"><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5178790">Preprint Link</a></h2>
+<h2 id="abstract">Abstract</h2>
+<h3 id="background">Background:</h3>
+<p>Intentional suppression of specific memories disrupts hippocampal function, leading to amnesia of unrelated memories within a brief temporal window—a phenomenon termed the “amnesic shadow”. However, the mechanisms underlying shadow-induced forgetting (ShIF) and its modulation by conscious versus unconscious processing and emotional valence remain unclear.</p>
+
+<h3 id="methods">Methods:</h3>
+<p>This study examined variations in ShIF by manipulating image exposure conditions (conscious vs. unconscious) and emotional valence (positive vs. negative) across short- and long-term retention periods. A novel game-based approach was developed, where participants’ habitual motor responses were disrupted via reversed game controls, thereby inducing an amnesic shadow. Electroencephalography (EEG) was used to assess neural activity related to memory suppression.</p>
+
+<h3 id="findings">Findings:</h3>
+<p>Short-term ShIF was significant for consciously cued negative images, as evidenced by reduced memory performance immediately after the intervention. EEG analyses revealed increased inhibitory neural activity during the suppression of negative memories. Over time, the ShIF effect for consciously cued images diminished, whereas a delayed effect emerged for unconsciously cued images, suggesting distinct neural mechanisms underlying conscious versus unconscious forgetting.</p>
+
+<h3 id="interpretation">Interpretation:</h3>
+<p>These findings indicate that ShIF operates more effectively for negative and consciously accessed memories, highlighting the role of inhibitory control in memory suppression. Furthermore, the results underscore the potential of game-based interventions in facilitating intentional forgetting. Understanding ShIF mechanisms could contribute to therapeutic applications, particularly in conditions like posttraumatic stress disorder (PTSD) and obsessive-compulsive disorder (OCD).</p>
+
+<h3 id="keywords">Keywords:</h3>
+<p>shadow-induced forgetting, game-based treatment, intentional suppression, electroencephalography, hippocampus</p>]]></content><author><name>DaRe_jin</name></author><category term="[&quot;Projects&quot;]" /><category term="Cognition" /></entry><entry><title type="html">재미와 사랑이 양립할 때</title><link href="http://localhost:4000/thoughts/06.-%EC%9E%AC%EB%AF%B8%EC%99%80-%EC%82%AC%EB%9E%91%EC%9D%B4-%EC%96%91%EB%A6%BD%ED%95%A0-%EB%95%8C/" rel="alternate" type="text/html" title="재미와 사랑이 양립할 때" /><published>2025-06-03T00:00:00+09:00</published><updated>2025-06-03T00:00:00+09:00</updated><id>http://localhost:4000/thoughts/06.%20%EC%9E%AC%EB%AF%B8%EC%99%80%20%EC%82%AC%EB%9E%91%EC%9D%B4%20%EC%96%91%EB%A6%BD%ED%95%A0%20%EB%95%8C</id><content type="html" xml:base="http://localhost:4000/thoughts/06.-%EC%9E%AC%EB%AF%B8%EC%99%80-%EC%82%AC%EB%9E%91%EC%9D%B4-%EC%96%91%EB%A6%BD%ED%95%A0-%EB%95%8C/"><![CDATA[<hr />
 
 <p class="notice--info">원칙은 바뀔 수 있음이 원칙이다.</p>
 <h2 id="introduction">Introduction</h2>
@@ -226,65 +247,7 @@ For every cell line × pathway, compute statistical separation between “in-pat
 
 <p>나의 치열한 고민은, 함께를 이야기하는 순간부터 타인을 위하는 일이 되기도 하는구나.</p>
 
-<p>재미와 사랑이 양립하는 시간들로 한정적인 삶의 순간들을 한껏 채우고 싶다.</p>]]></content><author><name>DaRe_jin</name></author><category term="[&quot;Thoughts&quot;]" /><category term="에세이" /></entry><entry><title type="html">Contrarian을 응원하며</title><link href="http://localhost:4000/bridges/Contrarian%EC%9D%84-%EC%9D%91%EC%9B%90%ED%95%98%EB%A9%B0/" rel="alternate" type="text/html" title="Contrarian을 응원하며" /><published>2025-05-09T00:00:00+09:00</published><updated>2025-05-09T00:00:00+09:00</updated><id>http://localhost:4000/bridges/Contrarian%EC%9D%84%20%EC%9D%91%EC%9B%90%ED%95%98%EB%A9%B0</id><content type="html" xml:base="http://localhost:4000/bridges/Contrarian%EC%9D%84-%EC%9D%91%EC%9B%90%ED%95%98%EB%A9%B0/"><![CDATA[<hr />
-
-<p class="notice--info">‘가만히 있지 않는다는 것’의 답글입니다.</p>
-
-<h3 id="1">1.</h3>
-<ul>
-  <li>동물의 제 1 목표는 생존임.</li>
-  <li>인간은 체력, 방어력, 감각능력 등 신체 능력은 다른 개체에 비해 열등한 동물임.</li>
-  <li>인간은 다른 개체 대비 우월한 사회적 협력과 조직화 능력을 보유하고 있음.</li>
-  <li>이로 인해 인간은 불리한 신체 조건에도 불구하고 생태계를 지배하는 유일한 종이 되었음.</li>
-  <li>즉, 인간에게 조직은 개인보다 목표 달성을 위한 우월한 구조임.</li>
-</ul>
-
-<h3 id="2">2.</h3>
-<ul>
-  <li>현대 사회에서 생존이라는 본능은 다양한 사회적 목표로 분화됨.</li>
-  <li>좋은 조직은 나의 목표와 조직의 목표의 방향이 일치하는 조직임.</li>
-  <li>이 경우, 조직을 위하는 것이 곧 나를 위하는 것이 됨.</li>
-  <li>그렇지 못한 조직은 개인과 조직에게 모두 들어가지 않는 것이 최선, 빨리 나오는 것이 차선임.</li>
-</ul>
-
-<h3 id="3">3.</h3>
-<ul>
-  <li>관성은 운동 상태의 변화를 거부하는 저항의 성질임.</li>
-  <li>조직이 방향을 갖고 움직이기 시작하면 해당 방향을 유지하려는 관성이 형성됨.</li>
-  <li>따라서 조직의 방향을 바꾸려면 관성이라는 저항을 이겨내야 함.</li>
-</ul>
-
-<h3 id="4">4.</h3>
-<ul>
-  <li>관성을 줄이는 방법은 질량을 줄이는 것임.</li>
-  <li>즉, 기존의 방향에 대한 판단을 유보하거나, 옳다고 믿던 구성원의 수를 줄여야 함.</li>
-  <li>따라서 그들에 대한 설득의 과정이 필요할 것임.</li>
-</ul>
-
-<h3 id="5">5.</h3>
-<ul>
-  <li>방향 전환에 대한 설득을 위해서는 조직의 목표가 무엇인지 재정립이 필요함.</li>
-  <li>그리고 방향 전환이 조직의 목표를 달성할 수 있는 더 우월한 방법임을 설명할 수 있어야 함.</li>
-  <li>즉, 목표 달성 차원에서 기존 방향이 열등한 이유를 설명할 수 있거나, 더 나은 대안을 제시할 수 있어야 함.</li>
-  <li>위 2가지가 이루어지지 않은 반박은 무의미하고 해로움.</li>
-</ul>
-
-<h3 id="6">6.</h3>
-<ul>
-  <li>조직에게 무의미하고 해로운 영향은 조직의 목표 달성 확률을 떨어뜨림.</li>
-  <li>이는, 나의 목표 달성 확률을 낮추는 일임.</li>
-  <li>그러나, 위 2가지가 이루어진 반대의 의견은 조직의 목표 달성 확률을 매우 높임.</li>
-  <li>이는, 나의 목표 달성 확률을 높이는 일임.</li>
-</ul>
-
-<h3 id="7">7.</h3>
-<ul>
-  <li>나는 이루고 싶은 목표가 있는가? 나는 조직의 필요성을 인지하고 있는가? 나는 좋은 조직에 속해 있는가?</li>
-  <li>그렇다면, 내가 속한 조직은 위와 같은 선순환이 가능한 조직일 것임.</li>
-  <li>그렇다면, 내가 속한 조직은 Contrarian이 필요하며, 준비된 반박은 조직과 나를 위하는 일임.</li>
-  <li>그렇지 않다면, 가만히 있는 것이 반이라도 갈 수 있는 방법임.</li>
-  <li>그러나, 조직의 방향에 동의가 되지 않음에도 가만히 있어야 반을 갈 수 있는 조직에서 목표를 이루는 것은 불가능함.</li>
-</ul>]]></content><author><name>DaRe_jin</name></author><category term="[&quot;Bridges&quot;]" /><category term="에세이" /></entry><entry><title type="html">희소함의 역할</title><link href="http://localhost:4000/thoughts/05.-%ED%9D%AC%EC%86%8C%ED%95%A8%EC%9D%98-%EC%97%AD%ED%95%A0-copy/" rel="alternate" type="text/html" title="희소함의 역할" /><published>2025-05-09T00:00:00+09:00</published><updated>2025-05-12T00:00:00+09:00</updated><id>http://localhost:4000/thoughts/05.%20%ED%9D%AC%EC%86%8C%ED%95%A8%EC%9D%98%20%EC%97%AD%ED%95%A0%20copy</id><content type="html" xml:base="http://localhost:4000/thoughts/05.-%ED%9D%AC%EC%86%8C%ED%95%A8%EC%9D%98-%EC%97%AD%ED%95%A0-copy/"><![CDATA[<hr />
+<p>재미와 사랑이 양립하는 시간들로 한정적인 삶의 순간들을 한껏 채우고 싶다.</p>]]></content><author><name>DaRe_jin</name></author><category term="[&quot;Thoughts&quot;]" /><category term="에세이" /></entry><entry><title type="html">희소함의 역할</title><link href="http://localhost:4000/thoughts/05.-%ED%9D%AC%EC%86%8C%ED%95%A8%EC%9D%98-%EC%97%AD%ED%95%A0-copy/" rel="alternate" type="text/html" title="희소함의 역할" /><published>2025-05-09T00:00:00+09:00</published><updated>2025-05-12T00:00:00+09:00</updated><id>http://localhost:4000/thoughts/05.%20%ED%9D%AC%EC%86%8C%ED%95%A8%EC%9D%98%20%EC%97%AD%ED%95%A0%20copy</id><content type="html" xml:base="http://localhost:4000/thoughts/05.-%ED%9D%AC%EC%86%8C%ED%95%A8%EC%9D%98-%EC%97%AD%ED%95%A0-copy/"><![CDATA[<hr />
 
 <p class="notice--info">원칙은 바뀔 수 있음이 원칙이다.</p>
 
@@ -347,7 +310,65 @@ For every cell line × pathway, compute statistical separation between “in-pat
 
 <p>삶의 순간들에서도, 나의 rationale을 찾아야 한다.</p>
 
-<p>희소함이라는 도구는 사용하는 것이지, 휘둘리는 것이 아니다.</p>]]></content><author><name>DaRe_jin</name></author><category term="[&quot;Thoughts&quot;]" /><category term="에세이" /></entry><entry><title type="html">Solving Challenges in Multi-modal Contrastive Learning</title><link href="http://localhost:4000/papers/Solving-Challenges-in-Multi-modal-contrastive-learning/" rel="alternate" type="text/html" title="Solving Challenges in Multi-modal Contrastive Learning" /><published>2025-04-19T00:00:00+09:00</published><updated>2025-04-19T00:00:00+09:00</updated><id>http://localhost:4000/papers/Solving%20Challenges%20in%20Multi-modal%20contrastive%20learning</id><content type="html" xml:base="http://localhost:4000/papers/Solving-Challenges-in-Multi-modal-contrastive-learning/"><![CDATA[<hr />
+<p>희소함이라는 도구는 사용하는 것이지, 휘둘리는 것이 아니다.</p>]]></content><author><name>DaRe_jin</name></author><category term="[&quot;Thoughts&quot;]" /><category term="에세이" /></entry><entry><title type="html">Contrarian을 응원하며</title><link href="http://localhost:4000/bridges/Contrarian%EC%9D%84-%EC%9D%91%EC%9B%90%ED%95%98%EB%A9%B0/" rel="alternate" type="text/html" title="Contrarian을 응원하며" /><published>2025-05-09T00:00:00+09:00</published><updated>2025-05-09T00:00:00+09:00</updated><id>http://localhost:4000/bridges/Contrarian%EC%9D%84%20%EC%9D%91%EC%9B%90%ED%95%98%EB%A9%B0</id><content type="html" xml:base="http://localhost:4000/bridges/Contrarian%EC%9D%84-%EC%9D%91%EC%9B%90%ED%95%98%EB%A9%B0/"><![CDATA[<hr />
+
+<p class="notice--info">‘가만히 있지 않는다는 것’의 답글입니다.</p>
+
+<h3 id="1">1.</h3>
+<ul>
+  <li>동물의 제 1 목표는 생존임.</li>
+  <li>인간은 체력, 방어력, 감각능력 등 신체 능력은 다른 개체에 비해 열등한 동물임.</li>
+  <li>인간은 다른 개체 대비 우월한 사회적 협력과 조직화 능력을 보유하고 있음.</li>
+  <li>이로 인해 인간은 불리한 신체 조건에도 불구하고 생태계를 지배하는 유일한 종이 되었음.</li>
+  <li>즉, 인간에게 조직은 개인보다 목표 달성을 위한 우월한 구조임.</li>
+</ul>
+
+<h3 id="2">2.</h3>
+<ul>
+  <li>현대 사회에서 생존이라는 본능은 다양한 사회적 목표로 분화됨.</li>
+  <li>좋은 조직은 나의 목표와 조직의 목표의 방향이 일치하는 조직임.</li>
+  <li>이 경우, 조직을 위하는 것이 곧 나를 위하는 것이 됨.</li>
+  <li>그렇지 못한 조직은 개인과 조직에게 모두 들어가지 않는 것이 최선, 빨리 나오는 것이 차선임.</li>
+</ul>
+
+<h3 id="3">3.</h3>
+<ul>
+  <li>관성은 운동 상태의 변화를 거부하는 저항의 성질임.</li>
+  <li>조직이 방향을 갖고 움직이기 시작하면 해당 방향을 유지하려는 관성이 형성됨.</li>
+  <li>따라서 조직의 방향을 바꾸려면 관성이라는 저항을 이겨내야 함.</li>
+</ul>
+
+<h3 id="4">4.</h3>
+<ul>
+  <li>관성을 줄이는 방법은 질량을 줄이는 것임.</li>
+  <li>즉, 기존의 방향에 대한 판단을 유보하거나, 옳다고 믿던 구성원의 수를 줄여야 함.</li>
+  <li>따라서 그들에 대한 설득의 과정이 필요할 것임.</li>
+</ul>
+
+<h3 id="5">5.</h3>
+<ul>
+  <li>방향 전환에 대한 설득을 위해서는 조직의 목표가 무엇인지 재정립이 필요함.</li>
+  <li>그리고 방향 전환이 조직의 목표를 달성할 수 있는 더 우월한 방법임을 설명할 수 있어야 함.</li>
+  <li>즉, 목표 달성 차원에서 기존 방향이 열등한 이유를 설명할 수 있거나, 더 나은 대안을 제시할 수 있어야 함.</li>
+  <li>위 2가지가 이루어지지 않은 반박은 무의미하고 해로움.</li>
+</ul>
+
+<h3 id="6">6.</h3>
+<ul>
+  <li>조직에게 무의미하고 해로운 영향은 조직의 목표 달성 확률을 떨어뜨림.</li>
+  <li>이는, 나의 목표 달성 확률을 낮추는 일임.</li>
+  <li>그러나, 위 2가지가 이루어진 반대의 의견은 조직의 목표 달성 확률을 매우 높임.</li>
+  <li>이는, 나의 목표 달성 확률을 높이는 일임.</li>
+</ul>
+
+<h3 id="7">7.</h3>
+<ul>
+  <li>나는 이루고 싶은 목표가 있는가? 나는 조직의 필요성을 인지하고 있는가? 나는 좋은 조직에 속해 있는가?</li>
+  <li>그렇다면, 내가 속한 조직은 위와 같은 선순환이 가능한 조직일 것임.</li>
+  <li>그렇다면, 내가 속한 조직은 Contrarian이 필요하며, 준비된 반박은 조직과 나를 위하는 일임.</li>
+  <li>그렇지 않다면, 가만히 있는 것이 반이라도 갈 수 있는 방법임.</li>
+  <li>그러나, 조직의 방향에 동의가 되지 않음에도 가만히 있어야 반을 갈 수 있는 조직에서 목표를 이루는 것은 불가능함.</li>
+</ul>]]></content><author><name>DaRe_jin</name></author><category term="[&quot;Bridges&quot;]" /><category term="에세이" /></entry><entry><title type="html">Solving Challenges in Multi-modal Contrastive Learning</title><link href="http://localhost:4000/papers/Solving-Challenges-in-Multi-modal-contrastive-learning/" rel="alternate" type="text/html" title="Solving Challenges in Multi-modal Contrastive Learning" /><published>2025-04-19T00:00:00+09:00</published><updated>2025-04-19T00:00:00+09:00</updated><id>http://localhost:4000/papers/Solving%20Challenges%20in%20Multi-modal%20contrastive%20learning</id><content type="html" xml:base="http://localhost:4000/papers/Solving-Challenges-in-Multi-modal-contrastive-learning/"><![CDATA[<hr />
 
 <h1 id="introduction">Introduction</h1>
 <p>‘다른 modality’는, 단순히 ‘다른 내용’을 의미하지 않는다. 내용뿐만 아니라 담긴 정보의 수준과 층위가 아예 다르기 때문이다. 가령, ‘예쁜 강아지’라는 글에서의 ‘강아지’가 갖는 해석 가능성이 다양하고 포괄적인 정보와, 강아지 사진에서 ‘강아지’의 확정적인 생김새가 주는 정보를 상상하면 직관적으로 이해가 될 것이다.</p>
@@ -825,38 +846,4 @@ Xinlei Chen, Haoqi Fan, Ross B. Girshick, and Kaiming He. Improved baselines wit
   <li>인프라 구축과 AI 역량 확보에 <strong>지금 투자</strong>해야 한다.</li>
 </ol>
 
-<hr />]]></content><author><name>DaRe_jin</name></author><category term="[&quot;KAIST_WURF&quot;]" /><category term="일지" /></entry><entry><title type="html">[KAIST_WURF]0120 카이스트 김하일 교수님</title><link href="http://localhost:4000/kaist_wurf/KAIST_WURF_%EC%98%A4%EC%A0%84_%EA%B9%80%ED%95%98%EC%9D%BC%EA%B5%90%EC%88%98%EB%8B%98/" rel="alternate" type="text/html" title="[KAIST_WURF]0120 카이스트 김하일 교수님" /><published>2025-01-20T00:00:00+09:00</published><updated>2025-01-20T00:00:00+09:00</updated><id>http://localhost:4000/kaist_wurf/KAIST_WURF_%EC%98%A4%EC%A0%84_%EA%B9%80%ED%95%98%EC%9D%BC%EA%B5%90%EC%88%98%EB%8B%98</id><content type="html" xml:base="http://localhost:4000/kaist_wurf/KAIST_WURF_%EC%98%A4%EC%A0%84_%EA%B9%80%ED%95%98%EC%9D%BC%EA%B5%90%EC%88%98%EB%8B%98/"><![CDATA[<p class="notice--info">김하일 교수님의 ‘의과학의 현재와 미래 의사과학자 양성’을 주제로 한 강연을 정리하였다. 지난 6월까지 학과장이셨다!</p>
-
-<h1 id="introduction">Introduction</h1>
-<blockquote>
-  <p>나는 누구인가?
-들어보고 혹하는 연구는, 사기일 가능성이 농후하다…!
-교수님의 연구를 설명해주시기보다, 교수님의 이야기를 해주시고 싶으시다.</p>
-</blockquote>
-
-<h2 id="나는-어디로-가고-있는가">나는 어디로 가고 있는가?</h2>
-<p>처음부터 과학자가 되고 싶었던 것은 아니다. 재미있어서 어찌저찌 하다보니 이 길을 걷게 되었다. 연구를 하는 가장 저면의 욕구는 재미있기 때문이다.
-의대(안맞았다) &gt; molecular biology &gt; 모교에서 3년 교수하시다, 미국으로 가 post doc(mouse로 당뇨병 연구)&gt; 당뇨병 환자들에게 도움이 되는 연구를 하겠다, 논문을 쓰기 위한 연구를 하지 않겠다 &gt; 2016년부터 computational biology를 도입하여, 과거의 tool로 보지 못했던 것을 보게 되었다</p>
-
-<p>나이가 들면 진폭이 점점 좁아지며, 평생동안 할 수 있는 일의 방향성을 찾게 된다. 나는 우연히 이 일을 하게 되었는데, 이 길이 교수님께 맞아서 행복한 삶을 살고 있다.
-운이 좋아서, 아등바등 안해도 연구를 하고 논문이 나오는 삶을 살았다.</p>
-
-<h2 id="교수님의-성장과정에서-만난-사람들">교수님의 성장과정에서 만난 사람들</h2>
-<ul>
-  <li>의과학대학원을 처음 만드신 허갑범 담임반 교수님, 논문을 쓰는 게 중요한 게 아니라 얼마나 환자를 생각하는지가 중요함</li>
-  <li>카이스트 이정호교수, 주영석교수 : 생물정보학이 필요함을 꺠달음, 젊은 사람들을 support해야겠다</li>
-  <li>살아가면서 여러 사람을 만나는데, 누가 어떤 영향을 줄지 모른다. 사람을 많이 만나야 한다.</li>
-</ul>
-
-<h2 id="과학이란">과학이란</h2>
-<blockquote>
-  <p>방금 당신을 그리는 데 걸린 시간은 단 몇분밖에 되지 않았지만, 당신을 이렇게 그릴 수 있게 되기까지 40년이 걸렸습니다.</p>
-</blockquote>
-
-<p>과학은, 당연한 사실을, 있지만 꺠닫지 못하는 것을 찾고 증명해내는 것.
-오랫동안 훈련된 직관(너는 남자이다)을 증명하는 것, 내가 무엇을 모르는지 아는 것이다.</p>
-
-<h1 id="정리">정리</h1>
-<p>교수님께서는 지방간이 병임을 증명하는 연구를 하고 계신다. 지방간 &gt; 간경화 &gt; 간암이 되는 과정에 초점을 맞추어, 대사성 질환을 진단받기 전에 어떤 pre-disease의 과정을 거치는지에 관심이 있으시다고 한다. 
-강연 전반에 거쳐서 교수님의 연구에 관한 학문적 이야기보다는, 삶을 살아가는 태도에 대한 이야기를 주로 하셨다. 어떤 길을 걸어갈 것인지 생각하고 고민하는 것은 중요하나, 내일을 위해 오늘을 쓰지는 말라고 말씀하셨다. 또한 정답이 없는 세상에서 생각을 말하는 것을 겁먹지 말라고 말씀하셨다.
-공감이 가는 말씀들이 많았다. 미래에 대해서 그리고 내 선택에 대해서 고민이 많은 요즈음, 어떤 선택을 하더라도, 그 선택을 하는 과정이 잘 쌓인다면 결과가 어떻든 헤쳐나갈 수 있을 것이라는 말씀이 잔잔한 위로가 되었다.</p>]]></content><author><name>DaRe_jin</name></author><category term="[&quot;KAIST_WURF&quot;]" /><category term="일지" /></entry></feed>
+<hr />]]></content><author><name>DaRe_jin</name></author><category term="[&quot;KAIST_WURF&quot;]" /><category term="일지" /></entry></feed>
