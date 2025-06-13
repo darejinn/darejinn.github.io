@@ -1,6 +1,6 @@
 ---
 title: "Bioinformatics"
-permalink: /categories/Bioinformatics
+permalink: /categories/Bioinformatics/
 layout: category
 author_profile: true
 taxonomy: Bioinformatics
