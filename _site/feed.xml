@@ -1,4 +1,216 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-06-03T17:42:24+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">DaRe_jin’s Blog</title><subtitle>내실 있는 낙관</subtitle><author><name>DaRe_jin</name></author><entry><title type="html">재미와 사랑이 양립할 때</title><link href="http://localhost:4000/thoughts/06.-%EC%9E%AC%EB%AF%B8%EC%99%80-%EC%82%AC%EB%9E%91%EC%9D%B4-%EC%96%91%EB%A6%BD%ED%95%A0-%EB%95%8C/" rel="alternate" type="text/html" title="재미와 사랑이 양립할 때" /><published>2025-06-03T00:00:00+09:00</published><updated>2025-06-03T00:00:00+09:00</updated><id>http://localhost:4000/thoughts/06.%20%EC%9E%AC%EB%AF%B8%EC%99%80%20%EC%82%AC%EB%9E%91%EC%9D%B4%20%EC%96%91%EB%A6%BD%ED%95%A0%20%EB%95%8C</id><content type="html" xml:base="http://localhost:4000/thoughts/06.-%EC%9E%AC%EB%AF%B8%EC%99%80-%EC%82%AC%EB%9E%91%EC%9D%B4-%EC%96%91%EB%A6%BD%ED%95%A0-%EB%95%8C/"><![CDATA[<hr />
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-06-13T21:53:10+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">DaRe_jin’s Blog</title><subtitle>내실 있는 낙관</subtitle><author><name>DaRe_jin</name></author><entry><title type="html">Multi-Omics-Based Drug Sensitivity Estimation</title><link href="http://localhost:4000/projects/MOUM/" rel="alternate" type="text/html" title="Multi-Omics-Based Drug Sensitivity Estimation" /><published>2025-06-13T00:00:00+09:00</published><updated>2025-06-13T00:00:00+09:00</updated><id>http://localhost:4000/projects/MOUM</id><content type="html" xml:base="http://localhost:4000/projects/MOUM/"><![CDATA[<hr />
+
+<p class="notice--info">This project was completed as Team MOUM, in collaboration with my colleagues for the 6th YAI-CON.<br /> You can find the full list of team members at the bottom of this page.</p>
+
+<h1 id="-multi-omics-based-drug-sensitivity-estimation">💊 Multi-Omics-Based Drug Sensitivity Estimation</h1>
+<p><em>6th YAICON — Spring 2025 · <strong>Second Prize</strong></em>
+<a href="https://github.com/Omics-based-Drug-sensitivity-Estimation">Code Link</a></p>
+
+<hr />
+
+<h2 id="-overview">📌 Overview</h2>
+<p>Accurately predicting how a cancer cell line responds to a drug (IC-50) remains an open challenge: the outcome depends not only on the drug’s chemistry but also on the cell’s intricate molecular profile.<br />
+We present an end-to-end deep-learning pipeline that <strong>fuses three omics layers (GEP, MUT, CNV)</strong> with advanced <strong>drug-embedding models (ChemBERTa &amp; graph-based GNN)</strong> and a <strong>bi-directional cross-attention mechanism</strong>. Our approach improves upon the 2025 paper <a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1012905"><em>“Anticancer drug response prediction integrating multi-omics pathway-based difference features and multiple deep-learning techniques.”</em></a></p>
+
+<hr />
+
+<h2 id="-why-we-built-this">🌱 Why we built this</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Baseline limitation</th>
+      <th>Our upgrade</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Drug representation lacks structural cues</strong> (only SMILES RNN)</td>
+      <td><strong>Two interchangeable drug encoders</strong><br />• <em>ChemBERTa</em> — language-style SMILES embedding<br />• <em>BGD</em> — graph transformer on molecular graphs</td>
+    </tr>
+    <tr>
+      <td><strong>Shallow “context attention”</strong> can’t model complex drug-omics interplay</td>
+      <td><strong>Deep, bi-directional cross-attention</strong> (drug ↔ each omics) giving <strong>6 interaction maps</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="-data">🔬 Data</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Source</th>
+      <th>Entities</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>CCLE</strong></td>
+      <td>688 cell lines</td>
+      <td>GEP (log₂ TPM + 1), MUT (0/1/2), CNV (log₂ discrete)</td>
+    </tr>
+    <tr>
+      <td><strong>GDSC2</strong></td>
+      <td>233 drugs</td>
+      <td>Matched IC-50 ground-truth</td>
+    </tr>
+    <tr>
+      <td><strong>MSigDB – 619 KEGG pathways</strong></td>
+      <td>–</td>
+      <td>Used to derive pathway-difference statistics (Mann-Whitney U / χ²-G)</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="-methodology">🛠 Methodology</h2>
+<ol>
+  <li>
+    <p><strong>Omics pathway features</strong><br />
+For every cell line × pathway, compute statistical separation between “in-pathway” and “out-pathway” genes → 3 feature matrices of size 1 × 619 (GEP, MUT, CNV).</p>
+  </li>
+  <li>
+    <p><strong>Drug embeddings</strong><br />
+<em>Choose one encoder at training time</em></p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Encoder</th>
+          <th>Key idea</th>
+          <th>Output shape</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>ChemBERTa</strong></td>
+          <td>Tokenise SMILES, pad to 256, take final hidden CLS</td>
+          <td>1 × 384</td>
+        </tr>
+        <tr>
+          <td><strong>BGD</strong></td>
+          <td>Graph transformer over atoms/bonds + DeepChem node feats</td>
+          <td>1 × 256</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <p><strong>Cross-attention block</strong><br />
+• Drug (Q) ↔ Omics (K,V) for each omics type, <strong>two directions</strong> (drug→omics, omics→drug) → 6 attention layers in total.<br />
+• Concatenate pooled outputs → stacked MLP → IC-50 regression.</p>
+  </li>
+</ol>
+
+<p align="center">
+  <img width="721" alt="Image" src="https://github.com/user-attachments/assets/41ab2228-32ab-4d2f-b0c4-82d408cc3f87" />
+<br /><em>Implementation diagram above: original (top) vs. modified cross-attention (bottom).</em>
+</p>
+
+<hr />
+
+<h2 id="-code--repos">📂 Code &amp; Repos</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Repository</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong><a href="https://github.com/Omics-based-Drug-sensitivity-Estimation/Drug-Sensitivity-Prediction-Pipeline">Drug-Sensitivity-Prediction-Pipeline</a></strong></td>
+      <td>Main training pipeline, model zoo, experiment scripts</td>
+    </tr>
+    <tr>
+      <td><strong><a href="https://github.com/Omics-based-Drug-sensitivity-Estimation/DGL-Life-sci">DGL-Life-sci</a></strong></td>
+      <td>Custom extensions for graph-based drug encoders</td>
+    </tr>
+  </tbody>
+</table>
+
+<details>
+<summary>Model zoo snapshots</summary>
+
+1. ChemBERTa Drug Embedding
+
+<p align="center">
+  <img width="333" alt="ChemBERTa" src="https://github.com/user-attachments/assets/9166787e-d33f-40ba-bce8-c465a705064e" />
+</p>
+
+2. Graph-Transformer Drug Embedding
+
+<p align="center">
+  <img width="305" alt="Graph" src="https://github.com/user-attachments/assets/f474ddbb-45e1-4ad6-bc99-8ab0bfc1fc74" />
+</p>
+
+</details>
+
+<hr />
+
+<h2 id="-results">📊 Results</h2>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/62b4dbd0-f510-4b20-95e9-4789627cb7c5" width="425" alt="Figure 1" />
+  <br /><em>Figure 1. Drug embedding comparison (Original vs. Modified attention)</em>
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/5f28a37e-4e18-4b83-8b3f-da5945e02404" width="425" alt="Figure 2" />
+  <br /><em>Figure 2. Cross-attention variant performance</em>
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/a4b6bc42-3e90-4d4f-80c2-3668d2330e41" width="700" alt="Figure 3" />
+  <br /><em>Figure 3. Pearson r on cell-blinded split (scatter)</em>
+</p>
+
+<blockquote>
+  <p>Key takeaway : Improvement over the baseline when switching to ChemBERTa/BGD-Model + cross-attention. Full metrics in <code class="language-plaintext highlighter-rouge">/results/</code>.</p>
+</blockquote>
+
+<hr />
+
+<h2 id="-team">👥 Team</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>GitHub</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Yoonjin Cho (Lead)</strong></td>
+      <td><a href="https://github.com/darejinn">@darejinn</a></td>
+    </tr>
+    <tr>
+      <td><strong>Gyungdeok Bae (Presenter)</strong></td>
+      <td><a href="https://github.com/bgduck33">@bgduck33</a></td>
+    </tr>
+    <tr>
+      <td><strong>Junseo Ha</strong></td>
+      <td><a href="https://github.com/Carolyn-Ha">@Carolyn-Ha</a></td>
+    </tr>
+    <tr>
+      <td><strong>Yoonju Cho</strong></td>
+      <td><a href="https://github.com/whdsbwn">@whdsbwn</a></td>
+    </tr>
+    <tr>
+      <td><strong>Daeseong Kim</strong></td>
+      <td><a href="https://github.com/lemonardo1">@lemonardo1</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />]]></content><author><name>DaRe_jin</name></author><category term="[&quot;Projects&quot;]" /><category term="Multi-Omics" /></entry><entry><title type="html">재미와 사랑이 양립할 때</title><link href="http://localhost:4000/thoughts/06.-%EC%9E%AC%EB%AF%B8%EC%99%80-%EC%82%AC%EB%9E%91%EC%9D%B4-%EC%96%91%EB%A6%BD%ED%95%A0-%EB%95%8C/" rel="alternate" type="text/html" title="재미와 사랑이 양립할 때" /><published>2025-06-03T00:00:00+09:00</published><updated>2025-06-03T00:00:00+09:00</updated><id>http://localhost:4000/thoughts/06.%20%EC%9E%AC%EB%AF%B8%EC%99%80%20%EC%82%AC%EB%9E%91%EC%9D%B4%20%EC%96%91%EB%A6%BD%ED%95%A0%20%EB%95%8C</id><content type="html" xml:base="http://localhost:4000/thoughts/06.-%EC%9E%AC%EB%AF%B8%EC%99%80-%EC%82%AC%EB%9E%91%EC%9D%B4-%EC%96%91%EB%A6%BD%ED%95%A0-%EB%95%8C/"><![CDATA[<hr />
 
 <p class="notice--info">원칙은 바뀔 수 있음이 원칙이다.</p>
 <h2 id="introduction">Introduction</h2>
@@ -11,7 +223,7 @@
 
 <p>두 마음은 삶의 많은 일들의 강력하고 근본적인 원동력이다.</p>
 
-<p>재미있는 일에 몰입하고, 사랑하는 누군가의 행복을 기대하며, 우리는 시간이라는 절대적인 가치를 아깝지 않게 지불한다.</p>
+<p>재미있는 일에 몰입하고, 사랑하는 누군가의 행복을 기대하며, 우리는 시간이라는 무거운 가치를 아깝지 않게 지불한다.</p>
 
 <p>주로 재미는 자신을 위하는 마음에서, 사랑은 타인을 위하는 마음에서 비롯하기에</p>
 
@@ -674,127 +886,4 @@ Xinlei Chen, Haoqi Fan, Ross B. Girshick, and Kaiming He. Improved baselines wit
 <h1 id="정리">정리</h1>
 <p>교수님께서는 지방간이 병임을 증명하는 연구를 하고 계신다. 지방간 &gt; 간경화 &gt; 간암이 되는 과정에 초점을 맞추어, 대사성 질환을 진단받기 전에 어떤 pre-disease의 과정을 거치는지에 관심이 있으시다고 한다. 
 강연 전반에 거쳐서 교수님의 연구에 관한 학문적 이야기보다는, 삶을 살아가는 태도에 대한 이야기를 주로 하셨다. 어떤 길을 걸어갈 것인지 생각하고 고민하는 것은 중요하나, 내일을 위해 오늘을 쓰지는 말라고 말씀하셨다. 또한 정답이 없는 세상에서 생각을 말하는 것을 겁먹지 말라고 말씀하셨다.
-공감이 가는 말씀들이 많았다. 미래에 대해서 그리고 내 선택에 대해서 고민이 많은 요즈음, 어떤 선택을 하더라도, 그 선택을 하는 과정이 잘 쌓인다면 결과가 어떻든 헤쳐나갈 수 있을 것이라는 말씀이 잔잔한 위로가 되었다.</p>]]></content><author><name>DaRe_jin</name></author><category term="[&quot;KAIST_WURF&quot;]" /><category term="일지" /></entry><entry><title type="html">[KAIST_WURF]0116 카이스트 구태윤 교수님</title><link href="http://localhost:4000/kaist_wurf/KAIST_WURF_-%EC%98%A4%EC%A0%84_%EA%B5%AC%ED%83%9C%EC%9C%A4%EA%B5%90%EC%88%98%EB%8B%98/" rel="alternate" type="text/html" title="[KAIST_WURF]0116 카이스트 구태윤 교수님" /><published>2025-01-16T00:00:00+09:00</published><updated>2025-01-16T00:00:00+09:00</updated><id>http://localhost:4000/kaist_wurf/KAIST_WURF_%08%EC%98%A4%EC%A0%84_%EA%B5%AC%ED%83%9C%EC%9C%A4%EA%B5%90%EC%88%98%EB%8B%98</id><content type="html" xml:base="http://localhost:4000/kaist_wurf/KAIST_WURF_-%EC%98%A4%EC%A0%84_%EA%B5%AC%ED%83%9C%EC%9C%A4%EA%B5%90%EC%88%98%EB%8B%98/"><![CDATA[<hr />
-<p class="notice--info">카이스트 구태윤 교수님의 WURF meet the professor 강연을 정리하였습니다.</p>
-<hr />
-
-<h1 id="introduction">Introduction</h1>
-<blockquote>
-  <p>연구 분야는 급작스럽게 바뀔 수도, 바꿀 수도 있지만 어떤 연구자가 될 것인지는 오랜 시간에 걸쳐서 스스로 만들어나가는 것이다.</p>
-</blockquote>
-
-<h2 id="어떤-연구를-해야-하는가"><span style="font-size:90%">어떤 연구를 해야 하는가</span></h2>
-<p>연구는 크게 세 가지 종류가 있다.</p>
-<ul>
-  <li>‘이건 조금만 기다리면 나오겠네, 누군가 하고 있겠네’</li>
-  <li>‘세상 사람들보다 내가 먼저 하겠네’</li>
-  <li>‘이건 내가 안하면 아무도 안하겠네’</li>
-</ul>
-
-<p>이중 교수님께서는 세번째 방향의 연구를 추구한다고 하셨다. 또한, 의학과 의과학의 background가 되는 <strong>‘생명공학기술(연구방법론)’</strong>을 연구함으로써 새로운 연구의 패러다임을 만드는 것을 목표하신다.
-<br />
-<br /></p>
-
-<h1 id="1-expansion-microscopy">1. Expansion microscopy</h1>
-
-<p>현미경 해상도의 한계를 넘어서는 세포 구조
-일반적으로 200um 정도의 해상도인 광학현미경으로는 대부분의 세포 구조를 관찰할 수 없다. 영상기법(하드웨어)는 꾸준히 발전하고 있으나, 미세한 세포구조를 관찰하는 것은 여전히 요원하다.</p>
-<blockquote>
-  <p>일반적으로는 더 강력한 현미경(또는 영상 장비)을 개발함으로써 해상도를 높이려 노력한다. <strong>영상 기법(하드웨어)의 발전을 기다리지 말고, 잘 관찰할 수 있는 샘플을 만드는 것은 어떨까?</strong></p>
-</blockquote>
-
-<p>‘관찰 방법’이 아닌, ‘관찰 대상’을 바꾸자는 아이디어에서 출발한 것이 <strong>Expansion microscopy(ExM)</strong>이다.</p>
-
-<p><strong>Expansion Microscopy(ExM)</strong>는 2015년 MIT의 Edward S. Boyden 연구실에서 처음 발표한 혁신적인 개념이다. 보통 광학 현미경의 해상도는 ~200nm 수준으로, 이보다 더 작은 세포 구조나 분자를 볼 수 없다는 물리적 제약(회절 한계)이 존재한다.
-ExM은 이 한계를 <strong>‘샘플을 확장(expansion)해서, 기존 현미경으로도 미세 구조를 관찰 가능하게 만든다’</strong>는 발상의 전환으로 극복한다.</p>
-
-<h2 id="map-기술2세대-초고해상도-현미경--magnified-analysis-of-proteome-technology"><span style="font-size:90%">MAP 기술(2세대 초고해상도 현미경) : Magnified analysis of proteome technology</span></h2>
-
-<p>ExM의 계보를 잇는 2세대 초고해상도 현미경 샘플 처리 기술 중 하나로, 조직에 하이드로젤 모노머를 주입하고, 고정·중합 과정을 거친 후 <strong>물에 넣어 ‘확장’</strong>함으로써 세포 내 단백질이나 분자의 위치 정보를 고해상도로 확인할 수 있게 한다.
-하이드로젤 폴리머 구조가 음이온을 띠고, 물이 투입되면서 양이온이 빠져나가 음이온 간 척력으로 샘플이 팽창하는 원리를 이용한다.
-<br />
-<br /></p>
-
-<h1 id="2-투명-뇌-기술--조직-투명화tissue-clearing">2. 투명 뇌 기술 : 조직 투명화(tissue clearing)</h1>
-<h2 id="tissue-clearing"><span style="font-size:90%">Tissue Clearing</span></h2>
-
-<p>조직은 대부분 빛을 산란·흡수하는 성분(지질, 단백질 등)으로 이루어져 있다. 그러다 보니 시료가 두꺼울수록 빛이 내부로 잘 통과하지 못해, 심부 구조를 관찰하기 어렵다. 조직 투명화(Tissue Clearing) 기법은 이런 문제를 해결하기 위해 고안되었다. 조직 투명화 기법은, 아래 세 가지의 방식으로 심부 구조를 관찰하기 어려운 문제를 해결한다.</p>
-<ul>
-  <li>빛이 산란되어서(랜덤하게 꺾여서) 깊이/투과도가 깊어질수록 관찰이 어려움. =&gt; 산란시키는 물질을 제거(지질 추출)</li>
-  <li>빛이 굴절되어서(빛이 미세하게 꺾여서) 초점/선명도가 낮아짐. =&gt; 굴절률 균일화 (투명화 용액)</li>
-  <li>
-    <p>조직 시료에서 ‘contrast’를 만들어야 관찰을 할 수 있다.</p>
-
-    <p>=&gt; option 1 : 유전자 조작을 통한 형광 단백질 발현</p>
-
-    <p>=&gt; option 2 : 염색 (항체 염색)</p>
-  </li>
-</ul>
-
-<h2 id="투명화-분야의-난제"><span style="font-size:90%">투명화 분야의 난제</span></h2>
-
-<ol>
-  <li>두꺼운 시료의 항체 염색이 어려움 =&gt; 항체와 같은 고분자가 염색될 수 있도록 재질의 낮은 밀도(큰 공극)이 필요함.</li>
-  <li>기계적 안정성(투명화시키는 과정에서 쉽게 망가짐) =&gt; 기계적 스트레스에 대한 저항성이 필요함</li>
-</ol>
-
-<blockquote>
-  <p><strong>‘조직 탄성화’</strong>가 해결할 수 있지 않을까? : 질기고 잡아당겨지는 entagled hydrogel을 이용한다!</p>
-</blockquote>
-
-<h2 id="elast조직-탄성화-기반-혁신-기술"><span style="font-size:90%">ELAST(조직 탄성화 기반 혁신 기술)</span></h2>
-
-<ol>
-  <li>잘 으깨지지 않아, 큰 인체 조직 시료의 탄성화가 가능하게 한다</li>
-  <li>항체 시약을 조직 속에 전달하는 데에 걸리는 시간을 줄이기 위하여
-    <ul>
-      <li>전하를 띄게 하거나, 항체를 작게 하거나, 소용돌이를 일으키거나…의 기존 기술 대신,</li>
-      <li><strong>두께가 줄어들면 염색 시간이 줄어든다</strong>는 가장 기본적인 생각으로 돌아가, 탄성화 조직을 일시적으로 얇게 만들어서, 초고속으로 염색할 수 있다!</li>
-    </ul>
-    <ul>
-      <li>늘리고 고정하고(stretch) 물을 condense시켜 가로세로의 길이는 유지된 채 두께를 혁신적으로 얇게 만든다.
-<br />
-<br /></li>
-    </ul>
-  </li>
-</ol>
-
-<h1 id="3-공간오믹스spatial-omics의-신기술-개발">3. 공간오믹스(spatial-omics)의 신기술 개발</h1>
-<hr />
-<p>조직이나 세포를 단순히 ‘형태적 구조’만 보는 것을 넘어, 그 공간적 위치에서 어떤 분자적·생물학적 기능을 수행하는지를 함께 파악하려는 노력은 점차 활발해지고 있다. 이를 <strong>‘공간 오믹스(spatial-omics)’</strong>라 부르며, 크게 세 가지 축으로 나눌 수 있다.</p>
-<ol>
-  <li>Connectomics(신경망 지도화)</li>
-  <li>Spatial transcriptomics(유전자 발현 지도화)</li>
-  <li>Functional radiomics(기능적 영상화 기반 대사·활성 연구)</li>
-</ol>
-
-<h2 id="connectome완전한-신경망-정보--뇌가-가지는-궁극의-정보는-망네트워크이다"><span style="font-size:90%">Connectome(완전한 신경망 정보) : 뇌가 가지는 궁극의 정보는 망(네트워크)이다</span></h2>
-
-<ul>
-  <li>뇌는 네트워크(연결)의 집합체이다. 뉴런 간 연결 전체를 관찰하고 분석하면, 뇌 기능과 의식을 해석하는 핵심 정보를 얻을 수 있다.</li>
-  <li>현재까지 완전한 Connectome이 구축된 생물은 선충(2종), 그리고 2024년에 완성된 초파리, 총 3종이 유일하다.</li>
-  <li>마우스 뇌의 connectome 전체를 전자현미경으로만 해독하려면 시간(최소 1000년 이상)과 막대한 자원이 필요하다. 이 때문에 전 세계 여러 연구소가 컨소시엄 형태로 도전하고 있다.</li>
-</ul>
-
-<h3 id="opto-connectomics-kaisr-ibil"><span style="font-size:90%">Opto-connectomics @KAISR iBIL</span></h3>
-
-<p>목표: 약 1개월 정도의 기간 내에, 개별 연구실 규모에서도 마우스 뇌의 신경망을 해독할 수 있는 기술 개발을 목표로 하고 계시다. 신경망을 전자현미경으로 해독하는 기존 기술의 패러다임을 바꾸는 것!
-가능해진다면 뇌 조직 전체가 <strong>‘tissue 샘플’</strong>이 아닌 <strong>‘connectomic data’</strong>로 전환되어, 뇌 과학 연구의 양상 자체가 바뀔 수 있다.</p>
-
-<h2 id="다기능-정밀의료영상-원천기술-개발"><span style="font-size:90%">다기능 정밀의료영상 원천기술 개발</span></h2>
-
-<p>단순한 해부학적 구조(해상도) 파악에 그치지 않고, 대사 과정, 에너지 공급, 세포 기능 등 뇌(또는 다른 조직)의 ‘기능적 면모’를 정밀하게 관찰할 수 있는 영상화 기술.</p>
-<ul>
-  <li>예: 혈류 유입률, 유출률, 에너지 변환 효율, 산소 교환 능력, 분자 차원의 반응 속도 등.</li>
-</ul>
-
-<p>이러한 고차원 영상 데이터를 바탕으로, 개인 맞춤형 진단·치료가 가능한 정밀 의료로의 발전이 기대된다.
-<br />
-<br /></p>
-
-<h1 id="4-additional-comments">4. Additional Comments</h1>
-<hr />
-<p>구태윤 교수님께서는 기존의 기술을 담습하지 않고 새로운 생각을 도입하여, 생명과학연구의 근본이 되는 ‘연구방법’ 자체를 바꾸는 연구를 목표하신다고 말씀하셨다. 
-대부분의 task를 사람보다 컴퓨터가 더 잘하는 시대에, 우리는 어떤 존재가 되어야 하는지 고민하였을 때, 있는 데이터를 학습하여 성능을 내는 인공지능과 다른 우리의 가장 큰 특징은 <strong>없던 생각을 해내는 능력</strong>이라고 생각한다. 그리고 연구는 내가 가진 창발적 생각을 비약, 회유, 속임 없이 세상에 설득하는 가장 정직한 방법이라고 생각한다.</p>
-
-<p>끊임없이 질문을 던지고, 없던 생각을 하는 삶을 살고 싶다. 그 과정에서 사람을 사랑하는 마음과, 내 분야에 대한 깊이 있는 지식이 합쳐진다면, 언젠가 내 생각이 선한 가치를 만들어낼 수 있지 않을까.</p>]]></content><author><name>DaRe_jin</name></author><category term="[&quot;KAIST_WURF&quot;]" /><category term="일지" /></entry></feed>
+공감이 가는 말씀들이 많았다. 미래에 대해서 그리고 내 선택에 대해서 고민이 많은 요즈음, 어떤 선택을 하더라도, 그 선택을 하는 과정이 잘 쌓인다면 결과가 어떻든 헤쳐나갈 수 있을 것이라는 말씀이 잔잔한 위로가 되었다.</p>]]></content><author><name>DaRe_jin</name></author><category term="[&quot;KAIST_WURF&quot;]" /><category term="일지" /></entry></feed>
