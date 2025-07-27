@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
 Sitemap: https://darejinn.github.io/sitemap.xml
