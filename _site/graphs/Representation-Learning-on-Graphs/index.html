@@ -648,8 +648,7 @@
 
     <p><strong>복원된 유사도 $\text{DEC}(z_i, z_j)$와 원래 유사도 $s_G(v_i, v_j)$ 간의 차이를 최소화하는 손실 함수이다.</strong></p>
 
-    <p>\(\ell : \mathbb{R} \times \mathbb{R} \rightarrow \mathbb{R}\)
-에 대해, 전체 학습 손실은 다음과 같이 정의된다.</p>
+    <p>손실함수 \(\ell : \mathbb{R} \times \mathbb{R} \rightarrow \mathbb{R}\) 는 복원된 유사도와 실제 유사도 간의 차이를 측정하며, 전체 학습 손실은 다음과 같이 정의된다:, 전체 학습 손실은 다음과 같이 정의된다.</p>
 
 \[\mathcal{L} = \sum_{(v_i, v_j) \in \mathcal{D}} \ell\left(\text{DEC}(z_i, z_j), s_G(v_i, v_j)\right)\]
 
