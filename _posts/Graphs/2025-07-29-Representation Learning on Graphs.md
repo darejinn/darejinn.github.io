@@ -1,5 +1,5 @@
 ---
-title: Oveview on Representation Learning on Graphs
+title: Oveview on Graph Representation Learning
 date: 2025-07-30
 last_modified_at: 2025-07-30
 category:
