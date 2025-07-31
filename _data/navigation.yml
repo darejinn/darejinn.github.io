@@ -25,10 +25,12 @@ side:
   
   - title: Diary
     children:
-      - title: "KAIST_WURF"
-        url: /categories/KAIST_WURF/
+     # - title: "KAIST_WURF"
+     #   url: /categories/KAIST_WURF/
       - title: "Thoughts"
         url: /categories/Thoughts/
+      - title: "Finance"
+        url: /categories/Finance/
       - title: "Bridges"
         url: /categories/Bridges/
   

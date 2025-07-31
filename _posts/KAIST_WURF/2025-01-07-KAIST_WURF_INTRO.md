@@ -3,7 +3,7 @@ title:  "[KAIST WURF]카이스트 SURF/WURF 소개"
 excerpt: ""
 
 category:
-  - KAIST_WURF
+  - Projects
 tag :
   - [일지]
 

@@ -11,6 +11,8 @@ toc_sticky: true
 date: 2025-01-24
 last_modified_at: 2025-01-24
 comments: true
+published : false
+
 ---
 
 카이스트 이정석 교수님의 WURF meet the professor 강연을 정리하였습니다.
