@@ -1,0 +1,1058 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.19.1 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="ko" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Oveview on Representation Learning on Graphs - DaRe_jin’s Blog</title>
+<meta name="description" content="  ">
+
+
+  <meta name="author" content="DaRe_jin">
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ko">
+<meta property="og:site_name" content="DaRe_jin's Blog">
+<meta property="og:title" content="Oveview on Representation Learning on Graphs">
+<meta property="og:url" content="http://localhost:4000/graphs/Representation-Learning-on-Graphs/">
+
+
+  <meta property="og:description" content="  ">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2025-07-30T00:00:00+09:00">
+
+
+
+  <meta property="article:modified_time" content="2025-07-30T00:00:00+09:00">
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/graphs/Representation-Learning-on-Graphs/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "DaRe_jin",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+  <meta name="google-site-verification" content="google6dd9f38f264894e0.html" />
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="DaRe_jin's Blog Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+<script type="text/javascript"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+    <!-- start custom head snippets -->
+<script data-ad-client="ca-pub-3886880548487088" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/logo.ico/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/assets/logo.ico/favicon-96x96.png">
+<link rel="mask-icon" href="/assets/logo.ico/favicon.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+<!-- end custom head snippets -->
+
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        TeX: {
+          equationNumbers: {
+            autoNumber: "AMS"
+          }
+        },
+        tex2jax: {
+        inlineMath: [ ['$', '$'] ],
+        displayMath: [ ['$$', '$$'] ],
+        processEscapes: true,
+      }
+    });
+    MathJax.Hub.Register.MessageHook("Math Processing Error",function (message) {
+          alert("Math Processing Error: "+message[1]);
+        });
+    MathJax.Hub.Register.MessageHook("TeX Jax - parse error",function (message) {
+          alert("Math Processing Error: "+message[1]);
+        });
+    </script>
+    <script type="text/javascript" async
+      src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          DaRe_jin's Blog
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/about/">About Me</a>
+            </li><li class="masthead__menu-item">
+              <a href="/categories/">Categories</a>
+            </li><li class="masthead__menu-item">
+              <a href="/tags/">Tags</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">토글 메뉴</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+  
+    
+
+
+
+<nav class="breadcrumbs">
+  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="http://localhost:4000/" itemprop="item"><span itemprop="name">Home</span></a>
+          <meta itemprop="position" content="1" />
+        </li>
+        <span class="sep">/</span>
+      
+      
+        
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/categories/#graphs" itemprop="item"><span itemprop="name">Graphs</span></a>
+          <meta itemprop="position" content="2" />
+        </li>
+        <span class="sep">/</span>
+      
+    
+      
+      
+        <li class="current">Oveview on Representation Learning on Graphs</li>
+      
+    
+  </ol>
+</nav>
+
+  
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="https://github.com/user-attachments/assets/b9d11a7a-8e27-4c9d-959b-a200897167d6" alt="DaRe_jin" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">DaRe_jin</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>내실 있는 낙관</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">팔로우</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            <li><a href="https://github.com/darejinn" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">토글 메뉴</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">AI</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/categories/Papers/">Papers</a></li>
+          
+            <li><a href="/categories/Graphs/">Graphs</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Medical</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/categories/Projects/">Projects</a></li>
+          
+            <li><a href="/categories/Bioinformatics/">Bioinformatics</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Diary</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/categories/KAIST_WURF/">KAIST_WURF</a></li>
+          
+            <li><a href="/categories/Thoughts/">Thoughts</a></li>
+          
+            <li><a href="/categories/Bridges/">Bridges</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Oveview on Representation Learning on Graphs">
+    <meta itemprop="description" content="">
+    <meta itemprop="datePublished" content="2025-07-30T00:00:00+09:00">
+    <meta itemprop="dateModified" content="2025-07-30T00:00:00+09:00">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Oveview on Representation Learning on Graphs
+</h1>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
+              <ul class="toc__menu">
+  <li><a href="#introduction">Introduction</a></li>
+  <li><a href="#graph-representation-learning이-무엇인가">Graph Representation Learning이 무엇인가</a>
+    <ul>
+      <li><a href="#-graph의-용어들"> Graph의 용어들</a></li>
+      <li><a href="#-learning의-목표는-그래프의-구조적-정보를-보존하는-것이다"> Learning의 목표는 그래프의 구조적 정보를 보존하는 것이다.</a></li>
+      <li><a href="#-구조적-정보는-유사도로-표현할-수-있다"> 구조적 정보는 유사도로 표현할 수 있다.</a></li>
+    </ul>
+  </li>
+  <li><a href="#learning-framework">Learning Framework</a>
+    <ul>
+      <li><a href="#-1유사도의-정의"> 1.유사도의 정의</a></li>
+      <li><a href="#-2learning의-과정"> 2.Learning의 과정</a></li>
+    </ul>
+  </li>
+  <li><a href="#정리하면">정리하면</a></li>
+</ul>
+
+            </nav>
+          </aside>
+        
+        <hr />
+
+<h1 id="introduction">Introduction</h1>
+<hr />
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/022b334c-5d69-4f4f-b3fe-4935350a043f" width="600" />
+</p>
+<p align="center">  <em>Graph(왼쪽)과 Euclidean structured data(오른쪽) (출처: <a href="https://web.stanford.edu/class/cs224w/">CS224w)</a></em>
+</p>
+<p>이미지, 문장과 같이 2D grid나 1D sequence로 성분의 순서와 구조가 정형화된 euclidean structured data와 달리, 세상의 많은 요소들은 요소 사이의 순서와 arrangement rule이 고정되어 있지 않은 non-euclidean space에 존재한다. 이러한 non-euclidean space, 기존의 traditional deep learning method들이 그대로 적용되기 어렵다. 단적인 예로, CNN의 convolution filter은, 특정 성분을 중심으로 n*n의 격자 kernel을 정의하지만, 상하좌우, 앞뒤 관계가 분명하지 않은 데이터, 가령 사람과 사람 사이의 네트워크 정보 등에서는, 같은 kernel을 정의하는 것이 불명확해진다.</p>
+
+<p>이러한 non-euclidean space 상의 요소들은, ‘Graph Struture’을 정의함으로써 다룰 수 있다. Node 와 node를 연결하는 edge로 정의되는 그래프는 node 사이의 관계가 euclidian space에 한정되지 않고 자유도가 높다는 장점과 더불어, node feature과 edge weight으로 자유롭게 요소의 정보를 추가할 수 있다는 점에서 매력적이다.</p>
+
+<p>하지만 데이터의 자유도가 큰만큼, graph를 분석하는 방법론 역시 다양하고 방대하다.</p>
+
+<p>그래프를 공부하며, GNN, random walk, message passing, subgraph sampling, graph kernel, graph signal processing, graph structure learning, graph embedding, graph mining 등 끝없이 등장하는 용어들이 어느 층위에서 어떻게 다른 용어들과 연결되는 것인지 명확히 정리되지 않아 혼란함을 느꼈다. 나의 이해를 가시화해나가는 과정을 통해서 더 깊은 이해가 가능해지길, 또 글이 나와 비슷한 고민을 하는 누군가에게 조금이라도 도움이 되길 기대한다.</p>
+
+<p>본 글에서는, graph representation의 framework를 개괄한다.
+<br />
+<br />
+<br /></p>
+<h1 id="graph-representation-learning이-무엇인가">Graph Representation Learning이 무엇인가</h1>
+<hr />
+<h2 id="-graph의-용어들"><span style="font-size:90%"> <em>Graph의 용어들</em></span></h2>
+<p>Graph는 정보 unit(nodes)와, 사이의 연결관계(edge)로 이루어진, 나이브한 구조의 정보이다.</p>
+
+<p>2차원으로 flattening된 이미지나, 해석 가능한 단어들의 조합으로 정렬된 언어와 달리, graph stucture의 high dimensional, non-euclidian information은 직관적인 해석이 불가하다. 따라서, 그래프에서 필요에 맞는 <strong>유용한 정보를 extract</strong>하는 방법은 오래전부터, 많은 분야에서 다루어져왔다.</p>
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/42c6fd72-8baf-4029-8e2b-feec7395f4e4" width="600" />
+</p>
+<p align="center">  <em>Graph (출처: <a href="https://web.stanford.edu/class/cs224w/">CS224w)</a></em>
+</p>
+
+<p>일반적으로 그래프 $G$는 $G = (V, E)$의 tuple로 표현된다.</p>
+
+<ul>
+  <li>이때, $V = {v_1, v_2, \ldots, v_n}$ 는 $n$개의 노드 집합을 의미한다.</li>
+  <li>$E = {e_1, e_2, \ldots, e_m} \subseteq V \times V$ 는 $m$개의 edge (노드와 노드를 연결하는 링크)를 의미한다.</li>
+  <li>각 노드는 특성을 가질 수 있으며 <em>(예: 노드가 사람일 경우, 성별이라는 특성이 각 노드에 정의될 수 있다)</em> $k$ 종류의 특성이 있을 경우, 노드 특성 행렬 
+\(\mathbf{X} \in \mathbb{R}^{k \times |V|}\)
+로 표현된다.</li>
+  <li>이렇게 정의된 그래프에서 edge의 양상은 인접행렬 (Adjacency Matrix) 
+\(\mathbf{A} \in \mathbb{R}^{|V| \times |V|}\)
+로 표현되며 만약 $(v_i, v_j) \in E$이면 $A_{ij} = 1$, 그렇지 않으면 $A_{ij} = 0$이다.</li>
+</ul>
+
+<h2 id="-learning의-목표는-그래프의-구조적-정보를-보존하는-것이다"><span style="font-size:90%"> <em>Learning의 목표는 그래프의 구조적 정보를 보존하는 것이다.</em></span></h2>
+
+<p>그래프를 활용하기 위해서는, 그래프와 그 구성 요소들(예: 노드 및 엣지)을 다룰 수 있는 numerical features로 표현할 필요가 있다. 물론 위에 설명한 인접 행렬 $\mathbf{A}$ 자체도 그래프를 표현하는 방법이다. 그러나 인접 행렬은 크기가 $|V| \times |V|$이므로 매우 큰 그래프를 표현하기에는 소모적이며, 그래프의 중요한 정보를 보존하되 차원을 줄이는 feature extraction이 필요하다.</p>
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/fe1e52bd-efee-41d4-aad0-e25074455606" width="600" />
+</p>
+<p align="center">  <em>Graph Representation Learning (출처: <a href="https://web.stanford.edu/class/cs224w/">CS224w)</a></em>
+</p>
+<ul>
+  <li>고전적인 방법들은, 그래프에서 사전에 정의된 알고리즘으로 그래프에서 정보를 extract한다. Graph statistics(degrees, clustering coefficients), kernel functions 등이 이에 해당한다.  이러한 hand-engineered feature들은 산출 방법이 정해져 있는 ‘processing’이며, inflexible하다. 이러한 방법들은, 어느 정도 graph property를 반영하긴 하나, 오직 그래프를 정해진 방법으로 가공한 것이므로 feature의 깊이에 한계가 있다.</li>
+  <li><strong>Graph Represenation Learning</strong>은, 이와 달리 그래프의 구조적 정보를 잘 보존하도록 embedding을 ‘learning’한다. ‘learning’한다는 것은, 설정된 ‘goal’에 가까워지게 최적화하는 것을 의미한다. Graph Representation Learning의 ‘goal’이 ‘그래프의 구조적 정보를 잘 보존하는 것’이 되는 셈이다.</li>
+</ul>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/8c27c743-919c-4676-89a6-67c2055032f4" width="600" />
+</p>
+<p align="center"><em>Node Embedding</em></p>
+
+<ul>
+  <li>위 그림의 그래프 $G = (V, E)$를 예로 들어 살펴보자.
+    <ul>
+      <li>
+        <p>그래프 구조에 대하서 설명하자면, 5개의 node($v_1, … , v_5$)와 6개의 연결된 edge로 이루어진 그래프는 왼쪽 아래의 인접행렬 $A$로 표현되며 붉게 표시된 $v_4$와 연결된 3개의 node ${v_2, v_3, v_5}$의 연결은 성분 1로 표현된다. 인접행렬의 대각성분은 자기 자신과의 연결은 정의하지 않으므로 0이며, (i,j) 연결과 (j,i) 연결은 undirected graph에서는 구분되지 않으므로 대칭행렬이다.</p>
+      </li>
+      <li>
+        <p>$|V| = 5$인 이 그래프에서, 각 노드 $v_i$를 차원 4의 저차원 벡터로 인코딩하는 mapping function $f : v_i \rightarrow \mathbb{R}^4$ 
+  을 학습하여, 그래프의 구조적 정보를 잘 보존하는 node embedding을 구하는 것이 바로 Graph Representation Learning인 것이다.</p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+
+  <p>그렇다면, learning의 goal인, <strong>그래프의 구조적 정보를 잘 보존함</strong>을 판단하는 기준은 무엇인가?</p>
+
+</blockquote>
+
+<h2 id="-구조적-정보는-유사도로-표현할-수-있다"><span style="font-size:90%"> <em>구조적 정보는 유사도로 표현할 수 있다.</em></span></h2>
+
+<p>위 질문에 대한 답이, Graph Representation Learning의 핵심을 담는다. 직관적으로 생각할 때, ‘그래프의 구조적 정보’에 대한 gold label이 존재한다면 그 gold label에 가깝게 f를 learning하면 될 것이다. 하지만, 일반적으로 graph representaton learning 자체가 gold label이 없는 복잡한 자료구조에서 최대한 원래의 정보를 보존하는 representation을 구해내는 것에 의의를 두기에, 일반적으로 learning은 외부에서 주어지는 정답지가 없는, unsupervised learning의 형태로 이루어진다.</p>
+
+<p>Learing의 핵심적인 아이디어는, 아래와 같다.</p>
+<blockquote>
+
+  <p>Embedding에서 node 간의 <strong><em>유사도(proximity)</em></strong> 가 원래 그래프와 비슷하게 보존된다면, 간접적으로 <strong><em>그래프의 중요한 구조 정보가 보존</em></strong>된다고 볼 수 있다.</p>
+
+</blockquote>
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/42cfae28-12ef-47d4-bfe0-d43ac91a608b" width="600" />
+</p>
+<p align="center"><em>유사도가 '거리'로 정의되는 상황</em></p>
+
+<p>예를 들어보겠다. 지구에 살고 있는 영이($v_1$), 영희($v_2$), Mike($v_3$)를, 극좌표계의 단위벡터로 표현한다고 생각해보자. 훌륭한 representation이 되기 위해서는, <strong>사람들 간의 유사도가, 극좌표계 상에서도 보존되어야 한다.</strong> 이 task를 단순명료화하기 위해서 아래와 같은 두 전제를 할 수 있다.</p>
+
+<ol>
+  <li><strong>전제 1</strong> - ‘사람들 사이의 유사도’는 사람들 간의 ‘거주하는 지역 간의 거리’가 가까울수록 크다.</li>
+  <li><strong>전제 2</strong> - 극좌표계에서 ‘벡터들 간의 유사도’는 벡터 사이의 각도가 작을수록 크다.</li>
+</ol>
+
+<p>위 두 전제가 만족할 때, 지구에서 영이와 영희가 옆집에 살고, Mike는 혼자 먼 섬나라에 산다는 것을 반영했을 때, 극좌표계 상에서 표현된 (영이, 영희) 사이의 각도가 좁고, (영희, Mike), (영이, Mike)의 각도가 큼은 합리적이다.
+혹 지구에서 사람들 간의 ‘거주하는 지역 간의 거리’ 정보가, 극좌표계 상의 벡터 간 사잇각 정보로 reconstruct되었다고 볼 수 있다. 이는 ‘거리 정보’가 보존된다는 점에서 훌륭한 representation이다.</p>
+
+<p>하지만, 위의 두 전제에 관해 드는 의문이 있다.</p>
+<ol>
+  <li><strong>전제 1 - Node 간 유사도에 대한 의문</strong> : 사람은 셀 수 없이 많은 각기 다른 특성들을 갖고 있다. 머리모양에서부터 목소리, 옷, 성별, 나이, 인종… 이 많은 특성들을 깡그리 무시하고 <strong>‘거주하는 지역 간의 거리’가 ‘사람들 사이의 유사도’를 나타낸다고 가정하는 것이 합리적인가?</strong></li>
+  <li><strong>전제 2 - embedding space에서 보존되는 유사도 대한 의문</strong> : 비슷한 맥락으로, <strong>극좌표계의 두 임베딩 벡터 $z_i, z_j$의 유사도를 사잇각으로 정의하는 것이 합리적인가?</strong></li>
+</ol>
+
+<p><br />
+<br /></p>
+
+<h1 id="learning-framework">Learning Framework</h1>
+<hr />
+<p>결론부터 이야기하면, 위의 두 전제, 즉 Representation Learning에서 <strong>유사도의 정의</strong>는 연구자의 의도, 혹은 downstream task에 따라 달라진다. 따라서 representation 학습은 본질적으로, <strong>어떤 그래프 상의 유사도를 어떤 방식으로 보존할 것인가</strong>에 대한 설계와 그 구현을 포함하는 과정이다.</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/dabdcbcd-1a20-48f9-8233-25e5a208a8ba" width="600" />
+</p>
+<p align="center"><em>Learning Scheme</em></p>
+
+<p>위에서 다룬 그래프 $G = (V, E)$를 다시 갖고 와, 지금까지 설명한 내용을 수식으로 살펴보자.</p>
+
+<h2 id="-1유사도의-정의"><span style="font-size:90%"> <em>1.유사도의 정의</em></span></h2>
+<blockquote>
+  <p>연구자는 두 가지 유사도를 정의한다. 하나는 <strong>그래프 상의 유사도</strong>이며, 다른 하나는 <strong>embedding space 상의 유사도</strong>이다.</p>
+</blockquote>
+
+<ul>
+  <li>
+    <p><strong>Pairwise Similarity Function(노랑)</strong></p>
+
+    <p><strong>그래프 $G = (V, E)$ 위에서 정의되는, 노드 간의 유사도를 나타내는 함수이며 아래와 같이 표현된다.</strong></p>
+
+\[s_G : V \times V \rightarrow \mathbb{R}^+\]
+
+    <p>이 함수는 노드 $v_i$와 $v_j$ 사이의 <strong>그래프 기반 유사도</strong>를 정의한다. 
+예를 들어,</p>
+
+    <ul>
+      <li>$s_G(v_i, v_j) = A_{ij}$일 경우, 유사도 자체는  노드 간 인접 여부 (adjacency matrix)를 의미한다.</li>
+      <li>Random walk 기반 representation learning에서 $s_G(v_i, v_j)$는 random walk에서의 공출현 확률로 정의될 수 있다.</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Decoder Function(초록)</strong></p>
+
+    <p><strong>두 임베딩 벡터 $z_i, z_j$의 유사도를 계산하는 함수이며 아래와 같이 표현된다.</strong></p>
+
+\[\text{DEC} : \mathbb{R}^d \times \mathbb{R}^d \rightarrow \mathbb{R}^+\]
+
+    <p>일반적으로 학습 parameter를 가지지 않으며 단순한  형태이다. 예를 들어,</p>
+
+    <ul>
+      <li>$\text{DEC}(z_i, z_j) = z_i^\top z_j$일 경우, 두 벡터 간 inner product를 의미한다.</li>
+      <li>$\text{DEC}(z_i, z_j) = -|z_i - z_j|^2$일 경우, 두 벡터 간 euclidean distance를 의미한다.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="-2learning의-과정"><span style="font-size:90%"> <em>2.Learning의 과정</em></span></h2>
+
+<blockquote>
+  <p><strong>최적화되는 대상은 Encoder function</strong>이며, <strong>학습의 목적은 Loss Function을 최소화하는 것</strong>이다.</p>
+</blockquote>
+
+<ul>
+  <li>
+    <p><strong>Encoder Function</strong></p>
+
+    <p><strong>그래프 상의 노드 $v_i \in V$를 $d$차원 벡터로 임베딩하는 함수이며 아래와 같이 표현된다.</strong></p>
+
+\[\text{ENC} : V \rightarrow \mathbb{R}^d\]
+
+    <p>즉, 노드 $v_i$는 임베딩 벡터 $z_i = \text{ENC}(v_i)$로 매핑된다. 이 함수는 학습 가능한 파라미터를 가지며, 학습 과정에서 최적화된다.</p>
+  </li>
+  <li>
+    <p><strong>Loss Function</strong></p>
+
+    <p><strong>복원된 유사도 $\text{DEC}(z_i, z_j)$와 원래 유사도 $s_G(v_i, v_j)$ 간의 차이를 최소화하는 손실 함수이다.</strong></p>
+
+    <p>\(\ell : \mathbb{R} \times \mathbb{R} \rightarrow \mathbb{R}\)
+에 대해, 전체 학습 손실은 다음과 같이 정의된다.</p>
+
+\[\mathcal{L} = \sum_{(v_i, v_j) \in \mathcal{D}} \ell\left(\text{DEC}(z_i, z_j), s_G(v_i, v_j)\right)\]
+
+    <p>여기서 $\mathcal{D}$는 학습에 사용되는 노드 쌍들의 집합이다.</p>
+  </li>
+</ul>
+
+<p><br />
+<br /></p>
+
+<hr />
+
+<h1 id="정리하면">정리하면</h1>
+
+<p>위 프레임워크를 공통적인 틀로 가지는 Graph Representation Learning은 결국 아래의 두 요소가 본질이다.</p>
+
+<blockquote>
+
+  <ol>
+    <li><strong>유사도 설정 : $s_G$(그래프 상의 유사도)와 Decoder(Decoding한 유사도)를 어떻게 정의하는가?</strong></li>
+    <li><strong>Learning의 과정 : 어떤 구조의 encoder를 사용하는가?, loss 함수는 어떻게 정의하는가?</strong></li>
+  </ol>
+
+</blockquote>
+
+<p>위 요소의 차이에 따라 Graph Representation Learning의 Method의 세부 분류가 나누어진다.</p>
+
+<p>사실, 스탠포드 CS224w의 강의자이시자 위 프레임워크를 제안하신 Jure Leskovec 교수님께서 지적하셨듯, GRL 방법들은 다양한 벤치마크와 모델 개념들이 산발적으로 존재하여 이론적 통일성이 결여되어 있다. 각기 다른 하위 분야에서 독립적으로 연구되어 온 GRL의 task 중심 평가에서 벗어나, 본질적으로 우리가 어떤 graph 구조를 representation에 담고자 하는지, 어떻게 그것을 encoding해야 하는지, latent space에 어떤 제약을 둘 것인지에 대한 체계화된 개념론적 논의가 더 활발히 이루어지길 소망한다.</p>
+
+<p>그리고 나 또한 그 논의에 티스푼만큼이라도 기여하는 연구자가 되길 소망한다.</p>
+
+<hr />
+
+<p><em>참고문헌</em></p>
+<ol>
+  <li>Khoshraftar, Shima, and Aijun An. “A survey on graph representation learning methods.” ACM Transactions on Intelligent Systems and Technology 15.1 (2024): 1-55.</li>
+  <li>Ju, Wei, et al. “A comprehensive survey on deep graph representation learning.” Neural Networks 173 (2024): 106207.</li>
+  <li>Hamilton, William L., Rex Ying, and Jure Leskovec. “Representation learning on graphs: Methods and applications.” arXiv preprint arXiv:1709.05584 (2017).</li>
+</ol>
+
+        
+      
+        <!-- 포스팅 후 광고 넣기 , 출처 : https://shryu8902.github.io/jekyll/adsense/ -->
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- gpage.taeyoung96 -->
+        <div align="center" style="margin: 1em 0;">
+          <ins class="adsbygoogle"
+              style="display:block"
+              data-ad-client="ca-pub-3886880548487088"
+              data-ad-slot="7487712129"
+              data-ad-format="auto"
+              data-full-width-responsive="true"></ins>
+        </div>
+        <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> 태그: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#contrastive-learning" class="page__taxonomy-item" rel="tag">Contrastive Learning</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#multimodal-ai" class="page__taxonomy-item" rel="tag">Multimodal AI</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> 카테고리: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#graphs" class="page__taxonomy-item" rel="tag">Graphs</a>
+    
+    </span>
+  </p>
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time datetime="2025-07-30">July 30, 2025</time></p>
+        
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">공유하기</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Oveview+on+Representation+Learning+on+Graphs%20http%3A%2F%2Flocalhost%3A4000%2Fgraphs%2FRepresentation-Learning-on-Graphs%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fgraphs%2FRepresentation-Learning-on-Graphs%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fgraphs%2FRepresentation-Learning-on-Graphs%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/projects/MOUM/" class="pagination--pager" title="[Competition] Multi-Omics-Based Drug Sensitivity Estimation
+">이전</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">다음</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">최근 포스팅 목록</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="" alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/projects/MOUM/" rel="permalink">[Competition] Multi-Omics-Based Drug Sensitivity Estimation
+</a>
+      
+    </h2>
+  <!--
+    devinlife comments :
+        아키이브 싱글 페이지(ex. 카테고리)에 각 포스트 제목 밑에 Updated 시간 표기
+        기존에는 read_time이 표기. read_time -> date 변경
+    
+  -->
+  
+
+<p class="page__meta"><i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i> June 13 2025</p>
+
+    <p class="archive__item-excerpt" itemprop="description">
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="" alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/projects/Soothing/" rel="permalink">[Research] Game-based Shadow-induced Forgetting
+</a>
+      
+    </h2>
+  <!--
+    devinlife comments :
+        아키이브 싱글 페이지(ex. 카테고리)에 각 포스트 제목 밑에 Updated 시간 표기
+        기존에는 read_time이 표기. read_time -> date 변경
+    
+  -->
+  
+
+<p class="page__meta"><i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i> June 12 2025</p>
+
+    <p class="archive__item-excerpt" itemprop="description">
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="" alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/thoughts/06.-%EC%9E%AC%EB%AF%B8%EC%99%80-%EC%82%AC%EB%9E%91%EC%9D%B4-%EC%96%91%EB%A6%BD%ED%95%A0-%EB%95%8C/" rel="permalink">재미와 사랑이 양립할 때
+</a>
+      
+    </h2>
+  <!--
+    devinlife comments :
+        아키이브 싱글 페이지(ex. 카테고리)에 각 포스트 제목 밑에 Updated 시간 표기
+        기존에는 read_time이 표기. read_time -> date 변경
+    
+  -->
+  
+
+<p class="page__meta"><i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i> June 03 2025</p>
+
+    <p class="archive__item-excerpt" itemprop="description">
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="" alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/thoughts/05.-%ED%9D%AC%EC%86%8C%ED%95%A8%EC%9D%98-%EC%97%AD%ED%95%A0-copy/" rel="permalink">희소함의 역할
+</a>
+      
+    </h2>
+  <!--
+    devinlife comments :
+        아키이브 싱글 페이지(ex. 카테고리)에 각 포스트 제목 밑에 Updated 시간 표기
+        기존에는 read_time이 표기. read_time -> date 변경
+    
+  -->
+  
+
+<p class="page__meta"><i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i> May 09 2025</p>
+
+    <p class="archive__item-excerpt" itemprop="description">
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="검색어를 입력하세요..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- gpage.taeyoung96 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3886880548487088"
+     data-ad-slot="7487712129"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>팔로우:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+          <li><a href="https://github.com/darejinn" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> 피드</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2025 DaRe_jin. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+    <script>
+  'use strict';
+
+  (function() {
+    var commentContainer = document.querySelector('#utterances-comments');
+
+    if (!commentContainer) {
+      return;
+    }
+
+    var script = document.createElement('script');
+    script.setAttribute('src', 'https://utteranc.es/client.js');
+    script.setAttribute('repo', 'darejinn/darejinn.github.io');
+    script.setAttribute('issue-term', 'pathname');
+    script.setAttribute('theme', 'github-light');
+    script.setAttribute('crossorigin', 'anonymous');
+
+    commentContainer.appendChild(script);
+  })();
+</script>
+
+  
+
+
+
+
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML">
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+      extensions: ["tex2jax.js"],
+      jax: ["input/TeX", "output/HTML-CSS"],
+      tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+      processEscapes: true
+      },
+      "HTML-CSS": { availableFonts: ["TeX"] }
+  });
+</script>
+
+  </body>
+</html>

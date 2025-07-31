@@ -12,7 +12,8 @@ side:
     children:
       - title: "Papers"
         url: /categories/Papers/
-
+      - title: "Graphs"
+        url: /categories/Graphs/
   
   - title: Medical
     children:

@@ -80,7 +80,7 @@ CLIP(Contrastive Language-Image Pre-training)과 같은 초기 모델들은 이�
 > 
 
 
-💡**핵심 아이디어 : 통합 학습 프레임워크(Unified Training Framework):**
+💡**아이디어 : 통합 학습 프레임워크(Unified Training Framework):**
 
 - *Intra-modal Training Path*를 통해 각 모달리티 내에서 data augmentation에 의한 self-supervised 학습을 수행하며, intrinsic data properties를 최대한 보존한다.
 - *Inter-modal Training Scheme*를 통해 이미지와 텍스트 등 서로 다른 모달리티 간의 cross-modal interactions를 강화하여, 공통 semantic space 내에서 유사도를 보존하도록 학습한다.
@@ -136,7 +136,7 @@ CLIP(Contrastive Language-Image Pre-training)과 같은 초기 모델들은 이�
 
 > [CVPR2023] Revisiting Multimodal Representation in Contrastive Learning: From Patch and Token Embeddings to Finite Discrete Tokens
 
-💡**핵심 아이디어 : Finite Discrete Tokens (FDT):**
+💡**아이디어 : Finite Discrete Tokens (FDT):**
 
 - 학습 가능한 일정 수의 discrete tokens를 사전의 단어들마냥 도입하고, 이미지와 텍스트 모두를 동일한 FDT 집합의 sparse attention-based aggregation으로 표현한다.
 - 기존 [이미지 패치의 가중합]과 [단어 토큰의 가중합]의 유사도 비교 대신 [FDT의 가중합 1]과 [FDT의 가중합 2]의 유사도 비교를 함으로써
@@ -174,7 +174,7 @@ FDT는 각 이미지 패치와, 텍스트 토큰이 의미를 알려주는 prior
 
 > [ICML 2022] Geometric Multimodal Contrastive Representation Learning
 
-💡 **핵심 아이디어 : Geometric Multimodal Contrastive Loss**
+💡 **아이디어 : Geometric Multimodal Contrastive Loss**
 
 - 전체 모달리티가 존재하는 **complete observation**과, **결측(modality missing)된 상황의 representation을 서로 가까이 정렬**하도록 기하학적으로 학습하는 novel한 loss를 설계하였다.
 
@@ -199,7 +199,7 @@ FDT는 각 이미지 패치와, 텍스트 토큰이 의미를 알려주는 prior
 - contrastive learning은, 위 그림의 공통된 임베딩공간(점선 박스)에서 수행된다.
 - 각 modality의 표현 $z_m$이 동일한 샘플의 complete representation인 $z_{1:M}$과는 가깝도록(위 그림의 빨강/파랑 실선), 다른 샘플의 표현들과는 멀어지도록(위 그림의 점선) 학습한다.
 
-이러한 geometric alignment는, 각 modality가 스스로 complete representation과 의미관계가 가까워지도록 학습하기 때문에, **결측 modality가 존재해도 남은 modality만으로도 충분히 전체 의미를 유추할 수 있는 표현을 생성할 수 있게 된다.**
+이러한 geometric alignment는, 각 modality가 스스로 complete representation과 의미관계가 가까워지도록 학습하기 때문에, 결측 modality가 존재해도 남은 modality만으로도 충분히 전체 의미를 유추할 수 있는 표현을 생성할 수 있게 된다.
 
 또한, modality의 fusion이 강제되는 기존 방식과 달리, 각 modality가 독립적으로 학습되어 전체 의미공간으로 연결되므로, modality의 종류/개수가 자유롭다는 점도 위 두 논문과의 차이점이다.
 
@@ -208,11 +208,11 @@ FDT는 각 이미지 패치와, 텍스트 토큰이 의미를 알려주는 prior
 
 # To sum up…
 
-본 글에서는 멀티모달 모델에서 modality 간 이질성(heterogeneity gap)과 **결측(modality missing)** 문제에 대응하고자 제안된 세 가지 방법론을 살펴보았다.
+본 글에서는 멀티모달 모델에서 modality 간 이질성(heterogeneity gap)과 결측(modality missing) 문제에 대응하고자 제안된 세 가지 방법론을 살펴보았다.
 
-- 첫 번째로 소개한 **Unified Multimodal Training**은 intra-modal과 inter-modal 학습 경로를 동시에 학습하는 통합 프레임워크를 통해, modality별 intrinsic property를 보존하면서도 공통 표현 공간에서의 정렬을 유도한다.
+- 첫 번째로 소개한 Unified Multimodal Training은 intra-modal과 inter-modal 학습 경로를 동시에 학습하는 통합 프레임워크를 통해, modality별 intrinsic property를 보존하면서도 공통 표현 공간에서의 정렬을 유도한다.
 - 두 번째 방법인 Finite Discrete Tokens (FDT)는 이미지와 텍스트의 표현 granularity 차이를 해결하고자, 양 modality 모두를 학습 가능한 고정된 토큰 집합(FDT)으로 표현하여 더 정밀한 의미 수준에서의 정렬을 가능하게 한다.
-- 마지막으로 Geometric Multimodal Contrastive (GMC는 complete modality representation과 partial modality representation 간의 기하학적 정렬을 통해, modality 수나 조합, 결측상황에 구애받지 않는 유연성을 제공한다.
+- 마지막으로 Geometric Multimodal Contrastive (GMC)는 complete modality representation과 partial modality representation 간의 기하학적 정렬을 통해, modality 수나 조합, 결측상황에 구애받지 않는 유연성을 제공한다.
 
 이들 방법론은 모두 기존 contrastive learning의 개념을 유지하면서도, align하는 대상과 방법울 다르게 하여 견고한 멀티모달 representation learning을 목표하였다는 점에서 특징적이다.  앞으로의 멀티모달모델이 더욱 다양한 입력 조건과 복잡한 의미 관계를 다루게 될 것을 고려할 때, 이와 같은 새로운 방법론은 더욱 중요한 연구 방향이 될 것으로 기대한다.
 
