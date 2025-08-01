@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-07-31T19:50:06+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">DaRe_jin’s Blog</title><subtitle>내실 있는 낙관</subtitle><author><name>DaRe_jin</name></author><entry><title type="html">Oveview on Graph Representation Learning</title><link href="http://localhost:4000/graphs/Representation-Learning-on-Graphs/" rel="alternate" type="text/html" title="Oveview on Graph Representation Learning" /><published>2025-07-30T00:00:00+09:00</published><updated>2025-07-30T00:00:00+09:00</updated><id>http://localhost:4000/graphs/Representation%20Learning%20on%20Graphs</id><content type="html" xml:base="http://localhost:4000/graphs/Representation-Learning-on-Graphs/"><![CDATA[<hr />
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-08-01T06:06:29+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">DaRe_jin’s Blog</title><subtitle>내실 있는 낙관</subtitle><author><name>DaRe_jin</name></author><entry><title type="html">Oveview on Graph Representation Learning</title><link href="http://localhost:4000/graphs/Representation-Learning-on-Graphs/" rel="alternate" type="text/html" title="Oveview on Graph Representation Learning" /><published>2025-07-30T00:00:00+09:00</published><updated>2025-07-30T00:00:00+09:00</updated><id>http://localhost:4000/graphs/Representation%20Learning%20on%20Graphs</id><content type="html" xml:base="http://localhost:4000/graphs/Representation-Learning-on-Graphs/"><![CDATA[<hr />
 
 <h1 id="introduction">Introduction</h1>
 <hr />
@@ -48,7 +48,7 @@
 
 <p>그래프를 활용하기 위해서는, 그래프와 그 구성 요소들(예: 노드 및 엣지)을 다룰 수 있는 numerical features로 표현할 필요가 있다. 물론 위에 설명한 인접 행렬 $\mathbf{A}$ 자체도 그래프를 표현하는 방법이다. 그러나 인접 행렬은 크기가 $|V| \times |V|$이므로 매우 큰 그래프를 표현하기에는 소모적이며, 그래프의 중요한 정보를 보존하되 차원을 줄이는 feature extraction이 필요하다.</p>
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/fe1e52bd-efee-41d4-aad0-e25074455606" width="600" />
+  <img src="https://github.com/user-attachments/assets/fe1e52bd-efee-41d4-aad0-e25074455606" width="800" />
 </p>
 <p align="center">  <em>Graph Representation Learning (출처: <a href="https://web.stanford.edu/class/cs224w/">CS224w)</a></em>
 </p>
@@ -58,7 +58,7 @@
 </ul>
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/8c27c743-919c-4676-89a6-67c2055032f4" width="600" />
+  <img src="https://github.com/user-attachments/assets/8c27c743-919c-4676-89a6-67c2055032f4" width="800" />
 </p>
 <p align="center"><em>Node Embedding</em></p>
 
@@ -93,7 +93,7 @@
 
 </blockquote>
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/42cfae28-12ef-47d4-bfe0-d43ac91a608b" width="600" />
+  <img src="https://github.com/user-attachments/assets/42cfae28-12ef-47d4-bfe0-d43ac91a608b" width="800" />
 </p>
 <p align="center"><em>유사도가 '거리'로 정의되는 상황</em></p>
 
@@ -121,7 +121,7 @@
 <p>결론부터 이야기하면, 위의 두 전제, 즉 Representation Learning에서 <strong>유사도의 정의</strong>는 연구자의 의도, 혹은 downstream task에 따라 달라진다. 따라서 representation 학습은 본질적으로, <strong>어떤 그래프 상의 유사도를 어떤 방식으로 보존할 것인가</strong>에 대한 설계와 그 구현을 포함하는 과정이다.</p>
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/dabdcbcd-1a20-48f9-8233-25e5a208a8ba" width="600" />
+  <img src="https://github.com/user-attachments/assets/dabdcbcd-1a20-48f9-8233-25e5a208a8ba" width="800" />
 </p>
 <p align="center"><em>Learning Scheme</em></p>
 

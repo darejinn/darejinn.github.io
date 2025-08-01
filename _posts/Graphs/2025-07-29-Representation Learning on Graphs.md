@@ -60,7 +60,7 @@ Graph는 정보 unit(nodes)와, 사이의 연결관계(edge)로 이루어진, �
 
 그래프를 활용하기 위해서는, 그래프와 그 구성 요소들(예: 노드 및 엣지)을 다룰 수 있는 numerical features로 표현할 필요가 있다. 물론 위에 설명한 인접 행렬 $\mathbf{A}$ 자체도 그래프를 표현하는 방법이다. 그러나 인접 행렬은 크기가 $|V| \times |V|$이므로 매우 큰 그래프를 표현하기에는 소모적이며, 그래프의 중요한 정보를 보존하되 차원을 줄이는 feature extraction이 필요하다. 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/fe1e52bd-efee-41d4-aad0-e25074455606" width="600"/>
+  <img src="https://github.com/user-attachments/assets/fe1e52bd-efee-41d4-aad0-e25074455606" width="800"/>
 </p>
 <p align="center">  <em>Graph Representation Learning (출처: <a href="https://web.stanford.edu/class/cs224w/">CS224w)</a></em>
 </p>
@@ -69,7 +69,7 @@ Graph는 정보 unit(nodes)와, 사이의 연결관계(edge)로 이루어진, �
   
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/8c27c743-919c-4676-89a6-67c2055032f4" width="600"/>
+  <img src="https://github.com/user-attachments/assets/8c27c743-919c-4676-89a6-67c2055032f4" width="800"/>
 </p>
 <p align="center"><em>Node Embedding</em></p>
 
@@ -92,7 +92,7 @@ Learing의 핵심적인 아이디어는, 아래와 같다.
 > Embedding에서 node 간의 ***유사도(proximity)*** 가 원래 그래프와 비슷하게 보존된다면, 간접적으로 ***그래프의 중요한 구조 정보가 보존***된다고 볼 수 있다.
 >
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/42cfae28-12ef-47d4-bfe0-d43ac91a608b" width="600"/>
+  <img src="https://github.com/user-attachments/assets/42cfae28-12ef-47d4-bfe0-d43ac91a608b" width="800"/>
 </p><p align="center"><em>유사도가 '거리'로 정의되는 상황</em></p>
 
 예를 들어보겠다. 지구에 살고 있는 영이($v_1$), 영희($v_2$), Mike($v_3$)를, 극좌표계의 단위벡터로 표현한다고 생각해보자. 훌륭한 representation이 되기 위해서는, **사람들 간의 유사도가, 극좌표계 상에서도 보존되어야 한다.** 이 task를 단순명료화하기 위해서 아래와 같은 두 전제를 할 수 있다.
@@ -117,7 +117,7 @@ Learing의 핵심적인 아이디어는, 아래와 같다.
 
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/dabdcbcd-1a20-48f9-8233-25e5a208a8ba" width="600"/>
+  <img src="https://github.com/user-attachments/assets/dabdcbcd-1a20-48f9-8233-25e5a208a8ba" width="800"/>
 </p>
 <p align="center"><em>Learning Scheme</em></p>
 
