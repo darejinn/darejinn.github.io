@@ -175,7 +175,7 @@ Learing의 핵심적인 아이디어는, 아래와 같다.
 
   손실함수 $$
   \ell : \mathbb{R} \times \mathbb{R} \rightarrow \mathbb{R}
-  $$ 는 복원된 유사도와 실제 유사도 간의 차이를 측정하며, 전체 학습 손실은 다음과 같이 정의된다:, 전체 학습 손실은 다음과 같이 정의된다.
+  $$ 는 복원된 유사도와 실제 유사도 간의 차이를 측정하며, 전체 학습 손실은 다음과 같이 정의된다.
 
   $$
   \mathcal{L} = \sum_{(v_i, v_j) \in \mathcal{D}} \ell\left(\text{DEC}(z_i, z_j), s_G(v_i, v_j)\right)

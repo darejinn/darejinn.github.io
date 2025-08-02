@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-08-03T02:51:42+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">DaRe_jin’s Blog</title><subtitle>내실 있는 낙관</subtitle><author><name>DaRe_jin</name></author><entry><title type="html">믿음의 영역</title><link href="http://localhost:4000/thoughts/07.-%EB%AF%BF%EC%9D%8C%EC%9D%98-%EC%98%81%EC%97%AD/" rel="alternate" type="text/html" title="믿음의 영역" /><published>2025-08-03T00:00:00+09:00</published><updated>2025-08-03T00:00:00+09:00</updated><id>http://localhost:4000/thoughts/07.%20%EB%AF%BF%EC%9D%8C%EC%9D%98%20%EC%98%81%EC%97%AD</id><content type="html" xml:base="http://localhost:4000/thoughts/07.-%EB%AF%BF%EC%9D%8C%EC%9D%98-%EC%98%81%EC%97%AD/"><![CDATA[<hr />
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-08-03T07:29:41+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">DaRe_jin’s Blog</title><subtitle>내실 있는 낙관</subtitle><author><name>DaRe_jin</name></author><entry><title type="html">믿음의 영역</title><link href="http://localhost:4000/thoughts/07.-%EB%AF%BF%EC%9D%8C%EC%9D%98-%EC%98%81%EC%97%AD/" rel="alternate" type="text/html" title="믿음의 영역" /><published>2025-08-03T00:00:00+09:00</published><updated>2025-08-03T00:00:00+09:00</updated><id>http://localhost:4000/thoughts/07.%20%EB%AF%BF%EC%9D%8C%EC%9D%98%20%EC%98%81%EC%97%AD</id><content type="html" xml:base="http://localhost:4000/thoughts/07.-%EB%AF%BF%EC%9D%8C%EC%9D%98-%EC%98%81%EC%97%AD/"><![CDATA[<hr />
 
 <p class="notice--info">원칙은 바뀔 수 있음이 원칙이다.</p>
 <p><br /></p>
@@ -247,7 +247,7 @@
 </ol>
 
 <p>위 두 전제 하에 지구에서 영이와 영희가 옆집에 살고, Mike는 혼자 먼 섬나라에 산다는 것을 반영하면, 극좌표계 상에서 표현된 (영이, 영희) 사이의 각도가 좁고, (영희, Mike), (영이, Mike)의 각도가 큼은 합리적이다.
-혹 지구에서 사람들 간의 ‘거주하는 지역 간의 거리’ 정보가, 극좌표계 상의 벡터 간 사잇각 정보로 reconstruct되었다고 볼 수 있다. 이는 ‘거리 정보’가 보존된다는 점에서 훌륭한 representation이다.</p>
+즉 지구에서 사람들 간의 ‘거주하는 지역 간의 거리’ 정보가, 극좌표계 상의 벡터 간 사잇각 정보로 reconstruct되었다고 볼 수 있다. 이는 ‘거리 정보’가 보존된다는 점에서 훌륭한 representation이다.</p>
 
 <p>하지만, 위의 두 전제에 관해 드는 의문이 있다.</p>
 <ol>
@@ -327,7 +327,7 @@
 
     <p><strong>복원된 유사도 $\text{DEC}(z_i, z_j)$와 원래 유사도 $s_G(v_i, v_j)$ 간의 차이를 최소화하는 손실 함수이다.</strong></p>
 
-    <p>손실함수 \(\ell : \mathbb{R} \times \mathbb{R} \rightarrow \mathbb{R}\) 는 복원된 유사도와 실제 유사도 간의 차이를 측정하며, 전체 학습 손실은 다음과 같이 정의된다:, 전체 학습 손실은 다음과 같이 정의된다.</p>
+    <p>손실함수 \(\ell : \mathbb{R} \times \mathbb{R} \rightarrow \mathbb{R}\) 는 복원된 유사도와 실제 유사도 간의 차이를 측정하며, 전체 학습 손실은 다음과 같이 정의된다.</p>
 
 \[\mathcal{L} = \sum_{(v_i, v_j) \in \mathcal{D}} \ell\left(\text{DEC}(z_i, z_j), s_G(v_i, v_j)\right)\]
 
