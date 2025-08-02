@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-08-03T00:31:06+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">DaRe_jin’s Blog</title><subtitle>내실 있는 낙관</subtitle><author><name>DaRe_jin</name></author><entry><title type="html">투자의 목적</title><link href="http://localhost:4000/finance/%ED%88%AC%EC%9E%90%EC%9D%98-%EB%AA%A9%EC%A0%81/" rel="alternate" type="text/html" title="투자의 목적" /><published>2025-08-02T00:00:00+09:00</published><updated>2025-08-02T00:00:00+09:00</updated><id>http://localhost:4000/finance/%ED%88%AC%EC%9E%90%EC%9D%98%20%EB%AA%A9%EC%A0%81</id><content type="html" xml:base="http://localhost:4000/finance/%ED%88%AC%EC%9E%90%EC%9D%98-%EB%AA%A9%EC%A0%81/"><![CDATA[<hr />
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-08-03T00:34:03+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">DaRe_jin’s Blog</title><subtitle>내실 있는 낙관</subtitle><author><name>DaRe_jin</name></author><entry><title type="html">투자의 목적</title><link href="http://localhost:4000/finance/%ED%88%AC%EC%9E%90%EC%9D%98-%EB%AA%A9%EC%A0%81/" rel="alternate" type="text/html" title="투자의 목적" /><published>2025-08-02T00:00:00+09:00</published><updated>2025-08-02T00:00:00+09:00</updated><id>http://localhost:4000/finance/%ED%88%AC%EC%9E%90%EC%9D%98%20%EB%AA%A9%EC%A0%81</id><content type="html" xml:base="http://localhost:4000/finance/%ED%88%AC%EC%9E%90%EC%9D%98-%EB%AA%A9%EC%A0%81/"><![CDATA[<hr />
 
 <p class="notice--info">원칙은 바뀔 수 있음이 원칙이다.</p>
 
@@ -69,10 +69,9 @@
 <br /></p>
 
 <hr />
-<p><br />
-<br /></p>
-<h1 id="1-매수">1. 매수</h1>
 
+<h1 id="1-매수">1. 매수</h1>
+<hr />
 <ul>
   <li>대상
     <ol>
@@ -94,8 +93,9 @@
   </li>
 </ul>
 
+<p><br /></p>
 <h1 id="2매도">2.매도</h1>
-
+<hr />
 <ul>
   <li>대상
     <ol>
@@ -106,14 +106,13 @@
   <li>방식
     <ol>
       <li>7개 지표 중 2개 이상 깨졌을 경우 : 전량 분할 매도</li>
-      <li>7개 지표 중 1개가 깨졌을 경우 : 절반 분할 매도</li>
+      <li>7개 지표 중 1개가 깨졌을 경우 : 절반 분할 매도
+<br />
+        <h1 id="3분배">3.분배</h1>
+        <hr />
+      </li>
     </ol>
   </li>
-</ul>
-
-<h1 id="3분배">3.분배</h1>
-
-<ul>
   <li>현금은 10% 보유</li>
   <li>안정적인 기업 / 도전적인 기업에 분산투자하고자 한다. 투자에 조금 더 경험과 확신이 생기면, 가치가 확실한 기업에 집중투자하는 방식으로 바꾸어나가야겠다.</li>
 </ul>]]></content><author><name>DaRe_jin</name></author><category term="[&quot;Finance&quot;]" /><category term="에세이" /></entry><entry><title type="html">Oveview on Graph Representation Learning</title><link href="http://localhost:4000/graphs/Representation-Learning-on-Graphs/" rel="alternate" type="text/html" title="Oveview on Graph Representation Learning" /><published>2025-07-30T00:00:00+09:00</published><updated>2025-07-30T00:00:00+09:00</updated><id>http://localhost:4000/graphs/Representation%20Learning%20on%20Graphs</id><content type="html" xml:base="http://localhost:4000/graphs/Representation-Learning-on-Graphs/"><![CDATA[<hr />
