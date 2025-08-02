@@ -4,6 +4,38 @@
         xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
     <url>
+        <loc>http://localhost:4000/finance/%ED%88%AC%EC%9E%90%EC%9D%98-%EB%AA%A9%EC%A0%81/</loc>
+        
+        <lastmod>2025-08-02T00:00:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/finance/%EB%A7%A4%EC%88%98%EB%A7%A4%EB%8F%84%EA%B7%9C%EC%B9%99/</loc>
+        
+        <lastmod>2025-07-31T00:00:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
+    </url>
+    
+    <url>
         <loc>http://localhost:4000/graphs/Representation-Learning-on-Graphs/</loc>
         
         <lastmod>2025-07-30T00:00:00+09:00</lastmod>
@@ -180,23 +212,7 @@
     </url>
     
     <url>
-        <loc>http://localhost:4000/finance/%EC%A3%BC%EC%8B%9D%ED%88%AC%EC%9E%90%EC%9D%98%EC%9B%90%EC%B9%99/</loc>
-        
-        <lastmod>2025-01-06T00:00:00+09:00</lastmod>
-        
-
-        
-        <changefreq>weekly</changefreq>
-        
-
-        
-        <priority>0.5</priority>
-        
-
-    </url>
-    
-    <url>
-        <loc>http://localhost:4000/finance/%ED%88%AC%EC%9E%90%EC%9D%98-%EB%A7%88%EC%9D%8C%EA%B0%80%EC%A7%90/</loc>
+        <loc>http://localhost:4000/finance/%EC%A3%BC%EC%8B%9D%EC%9D%84-%EB%8C%80%ED%95%98%EB%8A%94-%EB%A7%88%EC%9D%8C%EA%B0%80%EC%A7%90/</loc>
         
         <lastmod>2025-01-06T00:00:00+09:00</lastmod>
         

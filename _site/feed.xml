@@ -1,4 +1,122 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-08-01T06:06:29+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">DaRe_jin’s Blog</title><subtitle>내실 있는 낙관</subtitle><author><name>DaRe_jin</name></author><entry><title type="html">Oveview on Graph Representation Learning</title><link href="http://localhost:4000/graphs/Representation-Learning-on-Graphs/" rel="alternate" type="text/html" title="Oveview on Graph Representation Learning" /><published>2025-07-30T00:00:00+09:00</published><updated>2025-07-30T00:00:00+09:00</updated><id>http://localhost:4000/graphs/Representation%20Learning%20on%20Graphs</id><content type="html" xml:base="http://localhost:4000/graphs/Representation-Learning-on-Graphs/"><![CDATA[<hr />
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-08-03T00:31:06+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">DaRe_jin’s Blog</title><subtitle>내실 있는 낙관</subtitle><author><name>DaRe_jin</name></author><entry><title type="html">투자의 목적</title><link href="http://localhost:4000/finance/%ED%88%AC%EC%9E%90%EC%9D%98-%EB%AA%A9%EC%A0%81/" rel="alternate" type="text/html" title="투자의 목적" /><published>2025-08-02T00:00:00+09:00</published><updated>2025-08-02T00:00:00+09:00</updated><id>http://localhost:4000/finance/%ED%88%AC%EC%9E%90%EC%9D%98%20%EB%AA%A9%EC%A0%81</id><content type="html" xml:base="http://localhost:4000/finance/%ED%88%AC%EC%9E%90%EC%9D%98-%EB%AA%A9%EC%A0%81/"><![CDATA[<hr />
+
+<p class="notice--info">원칙은 바뀔 수 있음이 원칙이다.</p>
+
+<h1 id="introduction">Introduction</h1>
+<hr />
+<p>자산을 갖고 있는 한, 투자는 필연적이다. 아무 것도 하지 않고 예금에 나의 돈을 넣어둔다면, 이 또한 한국의 원화라는 가치에 돈을 투자하고 있는 셈이다. 나의 자산을 어디에 어떻게 배분할 것인지에 대한 고민의 과정을 정리한다.
+<br />
+<br /></p>
+
+<h1 id="1-투자의-목적">1. 투자의 목적</h1>
+<hr />
+<p>무엇이든, 잘하기 위해서는 노력과 시간이 필요하다.</p>
+
+<p>투자 역시 마찬가지이다.</p>
+
+<p>단기투자를 잘하기 위해서는 미시적인 사람의 심리와 단기적인 이벤트, 차트의 흐름을 공부하고 살펴야 한다.</p>
+
+<p>장기투자를 잘하기 위해서는 거시적인 세상의 흐름을 예민하게 살펴야 한다.</p>
+
+<p>인생은 짧고 젊음은 더 짧기에, 지금 시기의 나의 노력과 시간을 어디에 얼마나 배분해야 할지 고민할 필요가 있었고</p>
+
+<p>고민의 결론은, 20대 초반에서 중반을 향하고 있는 지금 시점에는, 세상의 가치를 살피기보다 나의 가치를 키우는 데에 집중하고 싶다는 것이었다.</p>
+
+<p><strong>그래서 지금 나의 투자의 목적은, 최소한의 노력을 들여 적어도 나의 가치를 키우는 것에 방해되지 않는 선에서 자산을 운용하는 데에 있다.</strong></p>
+
+<p>조금 더 구체적으로 말하면, 공부하는 와중 먹고 싶은 것을 먹고, 가끔 놀러가고 싶을 때 갈 수 있고, 소중한 주변 사람들을 챙길 수 있을 정도로 현명하게 자산을 관리하는 것이 목표이다.</p>
+
+<p>타인이 실현할 가치를 예측하고 투자하여 10억을 만드는 것보다,</p>
+
+<p>나의 잠재력을 키워, 내가 실현하는 가치에 투자자가 10억을 아깝지 않게 지불하게 만드는 것이</p>
+
+<p>적어도 내 인생에 있어서는 내가 나아가고 싶은 방향이다.</p>
+
+<p><br />
+<br /></p>
+
+<h1 id="2-어떻게-투자할-것인가">2. 어떻게 투자할 것인가</h1>
+<hr />
+<p>그래서 가만히 있겠다는 것이냐, 그럴 수는 없다.</p>
+
+<p>권력자가 돈을 찍어낼 수 있는 사회구조 상 현금은 가치 하락이 예견된 자산이다. 투자를 달리기에 비유한다면, 속도에서의 완급조절은 자유이지만 올바른 방향 설정은 필요하다고 생각한다.</p>
+
+<p>아래는 내가 고민한 어떻게 투자할 것인가에 대한 나의 방향성이다.</p>
+
+<ol>
+  <li>자산의 가치는 사람들의 기대를 반영한다. ‘사람들이 곧 기대할, 그러나 지금은 저평가된’ 가치 있는 기업을 찾는다.
+  그러나 기업을 찾는 데에 있어서 거인의 어깨에 올라서는 것을 주저하지 않는다.</li>
+  <li>1.에서 찾은 후보에 대해서 기술적 분석으로 매수/매도 시점을 정한다.
+그러나 정확한 타이밍을 예측하려 하기보다, 추세를 확인하고 분할매매한다.
+구체적으로, 상승추세의 눌림목에서 매수하고, 하락추세에 진입했을 때 매도한다.</li>
+  <li>포트폴리오를 관리하는 데에 시간적, 감정적 소모를 최소화한다.
+    <ul>
+      <li>장이 열리는 시각에 오르고 내리는 차트를 들여다보지 않는다. 후보 기업과 주가의 추세를 가시화하여, 정한 시점에 확인한다.</li>
+      <li>차트의 오르내림에 감정을 소모하지 않고 정한 규칙에 따라 매수, 매도한다.</li>
+    </ul>
+  </li>
+</ol>]]></content><author><name>DaRe_jin</name></author><category term="[&quot;Finance&quot;]" /><category term="에세이" /></entry><entry><title type="html">매수 매도 규칙</title><link href="http://localhost:4000/finance/%EB%A7%A4%EC%88%98%EB%A7%A4%EB%8F%84%EA%B7%9C%EC%B9%99/" rel="alternate" type="text/html" title="매수 매도 규칙" /><published>2025-07-31T00:00:00+09:00</published><updated>2025-07-31T00:00:00+09:00</updated><id>http://localhost:4000/finance/%EB%A7%A4%EC%88%98%EB%A7%A4%EB%8F%84%EA%B7%9C%EC%B9%99</id><content type="html" xml:base="http://localhost:4000/finance/%EB%A7%A4%EC%88%98%EB%A7%A4%EB%8F%84%EA%B7%9C%EC%B9%99/"><![CDATA[<hr />
+
+<p class="notice--info">원칙은 바뀔 수 있음이 원칙이다.</p>
+
+<h1 id="introduction">Introduction</h1>
+
+<p>성장하는 자본주의 시스템에서 통화량의 상승과 통화가치의 하락은 자연스러운 수순이다. 따라서 현금을 갖고 있기보다 현물 자산으로 바꾸어 갖고 있는 것이 현명한데, 기업의 가치를 반영하는 주식에 투자하는 방식은 그 중 하나이다.</p>
+
+<p>그러나 파는 사람과 사는 사람이 항상 같이 존재하는 주식시장에서, 누군가가 수익을 얻는다면 동시에 누군가는 손실을 입기 마련이고, 기업 가치에 대한 정보의 열위에 있는 일반투자자는 후자에 속할 확률이 높다. 특히 이익을 확정짓고 싶어하고 손실을 기피하는 사람의 심리는 예측 가능하기에 감정적인 일반투자자는 더욱 세력의 이익실현에 휘둘리기 쉽다. 매수와 매도의 기준이 명확해야 하는 이유이다.</p>
+
+<p>조금 더 개인적인 이야기를 해보자면, 나에게는 지금 순간의 나의 행복이 꽤 중요한 가치이다. 차트의 단기적 오르내림에 나의 행복도가 흔들리지 않기 위해서는 ‘내가 맞게 투자하고 있다.’는 믿음이 있어야 하더라. 믿음의 영역에 정답은 없고 죽기 전까지 주식이 떨어지기만 하더라도 언젠간 오른다는 믿음이 있다면 행복하기야 하겠지만… 그래도 이왕이면 믿는대로 이루어지면 더 좋으니 시장의 원리를 바탕으로 나의 매수, 매도 규칙을 정하고자 한다.
+<br /></p>
+
+<hr />
+<p><br />
+<br /></p>
+<h1 id="1-매수">1. 매수</h1>
+
+<ul>
+  <li>대상
+    <ol>
+      <li>내가 관심이 있고, 장기적인 상승의 근거가 명확한 분야의 회사</li>
+      <li>단기적인 이벤트로 주가 상승이 예측되는 회사 (다만 높은 비중으로 투자하지는 말자)
+        <ul>
+          <li>임상 승인</li>
+          <li>관세 / 정책의 변화</li>
+          <li>단기적이고 비합리적인 하락 (다시 오를 것이 확실할 때)</li>
+        </ul>
+      </li>
+    </ol>
+  </li>
+  <li>조건 : 상승 추세의 눌림목일 때 구매
+    <ol>
+      <li>상승 추세는 binary wave 7개 지표로 기계적으로 판단</li>
+      <li>최근 급격한 상승이 이미 이루어졌다면, 관심을 갖되 당장 매입하지는 말자</li>
+    </ol>
+  </li>
+</ul>
+
+<h1 id="2매도">2.매도</h1>
+
+<ul>
+  <li>대상
+    <ol>
+      <li>상승추세가 깨진 경우</li>
+      <li>급격한 상승으로 조정이 예상될 때 혹은 너무 매력적인 다른 종목이 생겼을 때</li>
+    </ol>
+  </li>
+  <li>방식
+    <ol>
+      <li>7개 지표 중 2개 이상 깨졌을 경우 : 전량 분할 매도</li>
+      <li>7개 지표 중 1개가 깨졌을 경우 : 절반 분할 매도</li>
+    </ol>
+  </li>
+</ul>
+
+<h1 id="3분배">3.분배</h1>
+
+<ul>
+  <li>현금은 10% 보유</li>
+  <li>안정적인 기업 / 도전적인 기업에 분산투자하고자 한다. 투자에 조금 더 경험과 확신이 생기면, 가치가 확실한 기업에 집중투자하는 방식으로 바꾸어나가야겠다.</li>
+</ul>]]></content><author><name>DaRe_jin</name></author><category term="[&quot;Finance&quot;]" /><category term="에세이" /></entry><entry><title type="html">Oveview on Graph Representation Learning</title><link href="http://localhost:4000/graphs/Representation-Learning-on-Graphs/" rel="alternate" type="text/html" title="Oveview on Graph Representation Learning" /><published>2025-07-30T00:00:00+09:00</published><updated>2025-07-30T00:00:00+09:00</updated><id>http://localhost:4000/graphs/Representation%20Learning%20on%20Graphs</id><content type="html" xml:base="http://localhost:4000/graphs/Representation-Learning-on-Graphs/"><![CDATA[<hr />
 
 <h1 id="introduction">Introduction</h1>
 <hr />
@@ -824,86 +942,4 @@ Xinlei Chen, Haoqi Fan, Ross B. Girshick, and Kaiming He. Improved baselines wit
 
 <p>가진 것이 많은 사람일수록 이러한 측정 불가능한 가치가 중요해진다.</p>
 
-<p>좋은 지도자는, 강한 자의 명분을 지켜주며 약한 자의 실리를 추구해야 한다.</p>]]></content><author><name>DaRe_jin</name></author><category term="[&quot;Thoughts&quot;]" /><category term="에세이" /></entry><entry><title type="html">가만히 있지 않는다는 것</title><link href="http://localhost:4000/thoughts/03.-%EA%B0%80%EB%A7%8C%ED%9E%88-%EC%9E%88%EC%A7%80-%EC%95%8A%EB%8A%94%EB%8B%A4%EB%8A%94-%EA%B2%83/" rel="alternate" type="text/html" title="가만히 있지 않는다는 것" /><published>2025-03-23T00:00:00+09:00</published><updated>2025-03-23T00:00:00+09:00</updated><id>http://localhost:4000/thoughts/03.%20%EA%B0%80%EB%A7%8C%ED%9E%88%20%EC%9E%88%EC%A7%80%20%EC%95%8A%EB%8A%94%EB%8B%A4%EB%8A%94%20%EA%B2%83</id><content type="html" xml:base="http://localhost:4000/thoughts/03.-%EA%B0%80%EB%A7%8C%ED%9E%88-%EC%9E%88%EC%A7%80-%EC%95%8A%EB%8A%94%EB%8B%A4%EB%8A%94-%EA%B2%83/"><![CDATA[<hr />
-
-<p class="notice--info">원칙은 바뀔 수 있음이 원칙이다.</p>
-
-<h1 id="introduction--가만히-있으면-반이라도-간다">Introduction : 가만히 있으면 반이라도 간다.</h1>
-
-<p>가만히 있는 것은 실로 매력적인 선택지이다. 오죽하면 ‘가만히 있으면 반이라도 간다.’, ‘말할까 말까 할 때는 말하지 말라’라는 이야기가 나왔겠는가.</p>
-
-<p>나의 ‘가만히 있지 않음’에 타인과의 상호작용이 관여할 때 고려해야 할 것들은 더 많아진다.</p>
-
-<p>절대적인 선과 악이 없는 모호한 세상에서, 나의 선이 누군가에게는 악이 될 수 있으며
-내가 가벼이 여긴 타인의 이야기가 당사자에게는 다른 무게와 깊이일 수 있다.</p>
-
-<p>가만히 있지 않는다는 것은 곧 그 시점의 나의 일부를 타인에게 표현하는 일이기에 누군가는 그 일부로써 나를 정의할 것이다.</p>
-
-<p>그러나 이 많은 머리아픈 일들을 감수하며 말하고 행동할 때, 세상은 움직이고 관계는 변화한다.</p>
-
-<p><br /></p>
-
-<h1 id="반은-가겠지만-가는-방향을-바꿀-수-없다">반은 가겠지만, 가는 방향을 바꿀 수 없다.</h1>
-
-<p>가만히 있음은 멈춤을 의미하지 않는다. 이 잠깐 사이에도 지구가 도는 속도로 돌고 있는 것처럼, 세상의 많은 흐름들에 속하는 우리는 그 흐름대로 끊임없이 가는 중이다.</p>
-
-<p>같은 방향으로 흐르는 주변인들과 관계를 맺고 마음을 나누기에, 집단 속에서 가만히 집단의 방향대로 흐르는 것은 더욱 안정적이다.</p>
-
-<p>그러나 누군가는 이 흐름의 키를 잡고 있겠지, 맞는 방향으로 조정하고 있겠지, 하는 생각이 안일한 안주였음은 보통 무작정 흐르다 도착한 벼랑의 끝에서 드러난다.</p>
-
-<p>집단의 방향을 바꾸는 것에는 세 번의 큰 노력이 필요하다. 당장의 안정감에서 벗어나 ‘이 방향이 맞아?’라는 의구심을 가지는 것에 한 번, 또 이 의구심을 대책과 함께 세심하게 제시하는 것에 한 번, 마지막으로 내가 바꾼 방향이 향하는 곳을 끝까지 살피는 것에 한 번.</p>
-
-<p>모든 과정이 쉽지 않지만, 특히 세번째 과정이 수반하는 책임감이 어마어마하다고 생각하였다. 예측 불가능한 결과를 책임져야 한다는 부담은, 때로는 의구심을 제기하는 대신 아예 집단에 속하지 않는 것을 선택하게 만들었다.</p>
-
-<p>그러나 예측 불가능함은 곧, 생각하지 못한 더 좋은 방향으로 나아갈 가능성을 의미하기도 한다. 건강한 토의가 서로의 불완전한 생각을 보완한다.</p>
-
-<p>소중한 내 주변인이 나의 서툶을 보듬어줄 이들임을 신뢰하고자 한다. 그렇기에 가만히 있지 않고 ‘이 방향이 맞아?’라고 용기내어 말해보고자 한다.</p>]]></content><author><name>DaRe_jin</name></author><category term="[&quot;Thoughts&quot;]" /><category term="에세이" /></entry><entry><title type="html">타인에 관하여</title><link href="http://localhost:4000/thoughts/02.-%ED%83%80%EC%9D%B8%EC%97%90-%EA%B4%80%ED%95%98%EC%97%AC/" rel="alternate" type="text/html" title="타인에 관하여" /><published>2025-02-22T00:00:00+09:00</published><updated>2025-02-22T00:00:00+09:00</updated><id>http://localhost:4000/thoughts/02.%20%ED%83%80%EC%9D%B8%EC%97%90%20%EA%B4%80%ED%95%98%EC%97%AC</id><content type="html" xml:base="http://localhost:4000/thoughts/02.-%ED%83%80%EC%9D%B8%EC%97%90-%EA%B4%80%ED%95%98%EC%97%AC/"><![CDATA[<hr />
-
-<p class="notice--info">원칙은 바뀔 수 있음이 원칙이다.</p>
-
-<h1 id="introduction--우리는-모두-다르지만">Introduction : 우리는 모두 다르지만</h1>
-
-<p>타인을 아는 것은 불가능하다. 설령 같은 경험을 하고 같은 세상을 보더라도, 우리는 다르게 느끼고 다르게 생각한다. ‘나라면 이렇게 할텐데’하며 실망하지 않고, 내가 감히 알 수 없는 감정의 크기를 함부로 재지 않고, 온전히 존중하는 것은 다른 사람이 나와 다르다는 것을 앎에서 시작한다.</p>
-
-<p>상대를 예단하지 않겠다고 생각했다. 또한 조금 타인을 덜 신경써도 되겠다고 생각했다. 어차피 내가 알 수 없는 영역이니, 최소한의 사회적으로 통용되는 도리를 지키며 그 외적인 것들은 조금 더 마음 편하게 해도 되겠구나 싶었다.</p>
-
-<p>그러나 일련의 경험들을 통해 서로를 온전히 알 수 없다고 하더라도, 알아가려는 노력의 가치가 없어지는 것이 아님을 깨달았다. 타인에 대하여, 함께 사는 세상에 대하여 생각을 정리한다.</p>
-
-<p><br /></p>
-
-<h1 id="함께-사는-세상">함께 사는 세상</h1>
-
-<p>주변의 누군가에게 따스함을 느끼는 경험을 많이 하는 요즈음이다. 나의 행복은 나의 안녕에서 비롯하는 줄 알았는데, 누군가의 말 한마디가, 관심과 웃음이, 세심한 배려가, 공유하는 이야기가 가져다주는 행복을 경험하니, 나 또한 이런 따뜻함을 주는 사람이 되고 싶다는 생각이 들었다.</p>
-
-<p>말하기 부담일 수 있는 것들은 먼저 묻지 않는 것,</p>
-
-<p>상대가 공감하기 어려운 이야기를 화두로 올리지 않는 것,</p>
-
-<p>누군가가 사준 음식을 맛있게 먹는 것,</p>
-
-<p>먼저 밝게 인사하고 안부을 묻는 것,</p>
-
-<p>친구의 연락에 답장을 미루지 않고 좋아함을 표현하는 것,</p>
-
-<p>고마운 일에 고맙다고 이야기하는 것,</p>
-
-<p>상대가 ‘갚아야겠다’는 부담을 느끼지 않도록 선을 넘지 않으며 은은하게 배려하는 것.</p>
-
-<p>상대방이 조금 더 행복하지 않을까 고민하고 상상하는 과정이 내게도 행복을 줌을 알았다.</p>
-
-<p>그러나 배려는 ‘상대방은 이럴 거야’라고 생각함으로써 이루어지는, 타자성에 반하는 행위이기도 하다. 그렇기에 아래의 것들을 더욱 주의하고자 한다.</p>
-
-<h2 id="1-배려의-목적은-상대의-안녕이다">1. 배려의 목적은 상대의 안녕이다.</h2>
-
-<p>세심한 누군가에게 내가 좋은 사람으로 보이길 바라며 배려를 행하는 것은, 자기포장에 불과하다. 나를 포장하는 일도 분명 때때로 필요하며, 나를 표현하는 도구가 될 수 있다. 그러나 다른 사람에게 어떻게 보일지를 고려하게 되는 순간, 상대의 안녕보다는 보이는 나의 모습이 더 중요해지며 본래의 가치를 온전하게 느끼지 못하게 되더라.</p>
-
-<p>또한, 나의 배려는 오직 나의 판단에서 비롯했기에, 상대에게는 고마워할 의무도 비슷한 배려를 해야 할 책임도 없다. 오히려 나의 배려가 상대에게 부담이 되었거나, 예상하지 못한 안좋은 영향을 미친 것은 아닌지 살펴야 하는 책임은 나에게 있다. 상대방이 고마워하고 알아주길 바라며 행하는 행동은 나도, 상대도 힘들게 만들 뿐이다.</p>
-
-<p>나의 행동으로 누군가가 안녕해진다면, 그것으로 충분하다. 원래의 목적을 잃은 배려는 상대를 위한 것이 아니다.</p>
-
-<h2 id="2-모든-것에-앞서서-나를-잃지-말아야-한다">2. 모든 것에 앞서서, 나를 잃지 말아야 한다.</h2>
-
-<p>나를 잃으면서까지 누군가를 배려한다면, 어쩔 수 없이 내가 내어준 것이 크게 보이기 마련이다. 
-대가 없이 상대의 안녕을 바랄 수 있는 예쁜 마음은, 내가 줄 수 있는 단단함을 갖추었을 때 생기더라.</p>
-
-<p>다른 사람을 안을 수 있는 품을 갖춘 사람이 되고 싶다.</p>]]></content><author><name>DaRe_jin</name></author><category term="[&quot;Thoughts&quot;]" /><category term="에세이" /></entry></feed>
+<p>좋은 지도자는, 강한 자의 명분을 지켜주며 약한 자의 실리를 추구해야 한다.</p>]]></content><author><name>DaRe_jin</name></author><category term="[&quot;Thoughts&quot;]" /><category term="에세이" /></entry></feed>
