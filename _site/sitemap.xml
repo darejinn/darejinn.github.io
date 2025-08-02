@@ -4,6 +4,22 @@
         xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
     <url>
+        <loc>http://localhost:4000/thoughts/07.-%EB%AF%BF%EC%9D%8C%EC%9D%98-%EC%98%81%EC%97%AD/</loc>
+        
+        <lastmod>2025-08-03T00:00:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
+    </url>
+    
+    <url>
         <loc>http://localhost:4000/finance/%ED%88%AC%EC%9E%90%EC%9D%98-%EB%AA%A9%EC%A0%81/</loc>
         
         <lastmod>2025-08-02T00:00:00+09:00</lastmod>
