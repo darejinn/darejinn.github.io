@@ -1,4 +1,21 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-08-03T01:14:50+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">DaRe_jin’s Blog</title><subtitle>내실 있는 낙관</subtitle><author><name>DaRe_jin</name></author><entry><title type="html">투자의 목적</title><link href="http://localhost:4000/finance/%ED%88%AC%EC%9E%90%EC%9D%98-%EB%AA%A9%EC%A0%81/" rel="alternate" type="text/html" title="투자의 목적" /><published>2025-08-02T00:00:00+09:00</published><updated>2025-08-02T00:00:00+09:00</updated><id>http://localhost:4000/finance/%ED%88%AC%EC%9E%90%EC%9D%98%20%EB%AA%A9%EC%A0%81</id><content type="html" xml:base="http://localhost:4000/finance/%ED%88%AC%EC%9E%90%EC%9D%98-%EB%AA%A9%EC%A0%81/"><![CDATA[<hr />
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-08-03T02:25:15+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">DaRe_jin’s Blog</title><subtitle>내실 있는 낙관</subtitle><author><name>DaRe_jin</name></author><entry><title type="html">믿음의 영역</title><link href="http://localhost:4000/thoughts/07.-%EB%AF%BF%EC%9D%8C%EC%9D%98-%EC%98%81%EC%97%AD/" rel="alternate" type="text/html" title="믿음의 영역" /><published>2025-08-03T00:00:00+09:00</published><updated>2025-08-03T00:00:00+09:00</updated><id>http://localhost:4000/thoughts/07.%20%EB%AF%BF%EC%9D%8C%EC%9D%98%20%EC%98%81%EC%97%AD</id><content type="html" xml:base="http://localhost:4000/thoughts/07.-%EB%AF%BF%EC%9D%8C%EC%9D%98-%EC%98%81%EC%97%AD/"><![CDATA[<hr />
+
+<p class="notice--info">원칙은 바뀔 수 있음이 원칙이다.</p>
+
+<blockquote>
+  <p>지식이 믿음에 대해서 우위를 보이는 요소인 객관적 사실성과 보편성은 판단과 결정을 통한 행위의 영향력과 관련해서 의외로 짧은 유효거리를 가질 뿐이다. 다소간의 확실한 요소들이 유입될 뿐인 미래의 전개는 언제 나 우연성과 불확실성을 포함한다. 반면에 믿음은 다양한 삶의 연관 안에 서 형성된 개인적 출발점의 확신을 통해 지식이 달성할 수 없는 총체적인 실재 전체와의 연관을 실현해 내고 인간을 고무하고 희망을 주는 힘이다.
+양대종. “지식과 믿음의 연관에 대한 고찰.” 철학연구 (2023): 119-145. 중.</p>
+</blockquote>
+
+<p>내 삶이 거시적으로 좋은 방향으로 흘러가고 있다는 믿음은, 예측하지 못한 변수를 회피하지 않고 마주할 수 있게 만들며</p>
+
+<p>나의 노력이 어떤 순간에 내게 돌아올 것이라는 믿음은, 결과의 불확실함에 흔들리지 않고 최선을 다할 수 있게 만든다.</p>
+
+<p>내가 하고 있는 일이 옳고 선하다는 믿음은, 누군가의 비난에 상처받지 않고 당당할 수 있는 힘을 주며</p>
+
+<p>타인의 선의와 사랑에 대한 믿음은, 함께 사는 세상에서 행복의 근원에 가깝다고 생각한다.</p>
+
+<p>‘그냥’이라는 근거 없는 믿음에 기반한 이유는 비논리적이지만 역설적으로 그러해서 반박불가하며 강력하다.</p>]]></content><author><name>DaRe_jin</name></author><category term="[&quot;Thoughts&quot;]" /><category term="에세이" /></entry><entry><title type="html">투자의 목적</title><link href="http://localhost:4000/finance/%ED%88%AC%EC%9E%90%EC%9D%98-%EB%AA%A9%EC%A0%81/" rel="alternate" type="text/html" title="투자의 목적" /><published>2025-08-02T00:00:00+09:00</published><updated>2025-08-02T00:00:00+09:00</updated><id>http://localhost:4000/finance/%ED%88%AC%EC%9E%90%EC%9D%98%20%EB%AA%A9%EC%A0%81</id><content type="html" xml:base="http://localhost:4000/finance/%ED%88%AC%EC%9E%90%EC%9D%98-%EB%AA%A9%EC%A0%81/"><![CDATA[<hr />
 
 <p class="notice--info">원칙은 바뀔 수 있음이 원칙이다.</p>
 
@@ -937,12 +954,4 @@ Xinlei Chen, Haoqi Fan, Ross B. Girshick, and Kaiming He. Improved baselines wit
 
 <p>이들 방법론은 모두 기존 contrastive learning의 개념을 유지하면서도, align하는 대상과 방법울 다르게 하여 견고한 멀티모달 representation learning을 목표하였다는 점에서 특징적이다.  앞으로의 멀티모달모델이 더욱 다양한 입력 조건과 복잡한 의미 관계를 다루게 될 것을 고려할 때, 이와 같은 새로운 방법론은 더욱 중요한 연구 방향이 될 것으로 기대한다.</p>
 
-<p><a href="https://www.notion.so/1d50175a0e2d8074963efe10e8ab1b6f?pvs=21">정리</a></p>]]></content><author><name>DaRe_jin</name></author><category term="[&quot;Papers&quot;]" /><category term="Multimodal AI" /><category term="Contrastive Learning" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">명분과 실리</title><link href="http://localhost:4000/thoughts/04.-%EB%AA%85%EB%B6%84%EA%B3%BC-%EC%8B%A4%EB%A6%AC/" rel="alternate" type="text/html" title="명분과 실리" /><published>2025-03-24T00:00:00+09:00</published><updated>2025-03-24T00:00:00+09:00</updated><id>http://localhost:4000/thoughts/04.%20%EB%AA%85%EB%B6%84%EA%B3%BC%20%EC%8B%A4%EB%A6%AC</id><content type="html" xml:base="http://localhost:4000/thoughts/04.-%EB%AA%85%EB%B6%84%EA%B3%BC-%EC%8B%A4%EB%A6%AC/"><![CDATA[<hr />
-
-<p class="notice--info">원칙은 바뀔 수 있음이 원칙이다.</p>
-
-<p>세상의 많은 일에는, ‘어떻게 보여지는가’가 관여하며</p>
-
-<p>가진 것이 많은 사람일수록 이러한 측정 불가능한 가치가 중요해진다.</p>
-
-<p>좋은 지도자는, 강한 자의 명분을 지켜주며 약한 자의 실리를 추구해야 한다.</p>]]></content><author><name>DaRe_jin</name></author><category term="[&quot;Thoughts&quot;]" /><category term="에세이" /></entry></feed>
+<p><a href="https://www.notion.so/1d50175a0e2d8074963efe10e8ab1b6f?pvs=21">정리</a></p>]]></content><author><name>DaRe_jin</name></author><category term="[&quot;Papers&quot;]" /><category term="Multimodal AI" /><category term="Contrastive Learning" /><summary type="html"><![CDATA[]]></summary></entry></feed>
