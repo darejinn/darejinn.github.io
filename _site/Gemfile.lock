@@ -101,6 +101,7 @@ PLATFORMS
 
 DEPENDENCIES
   jekyll (~> 3.5)
+  jekyll-sitemap
   kramdown-parser-gfm
   minimal-mistakes-jekyll
   tzinfo

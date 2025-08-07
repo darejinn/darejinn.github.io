@@ -9,7 +9,7 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>[Competition] Multi-Omics-Based Drug Sensitivity Estimation  - DaRe_jin’s Blog</title>
+<!-- begin _includes/seo.html --><title>우연 속의 필연 - DaRe_jin’s Blog</title>
 <meta name="description" content="내실 있는 낙관 ">
 
 
@@ -19,8 +19,8 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko">
 <meta property="og:site_name" content="DaRe_jin's Blog">
-<meta property="og:title" content="[Competition] Multi-Omics-Based Drug Sensitivity Estimation">
-<meta property="og:url" content="http://localhost:4000/projects/MOUM/">
+<meta property="og:title" content="우연 속의 필연">
+<meta property="og:url" content="http://localhost:4000/thoughts/08.-%EC%9A%B0%EC%97%B0-%EC%86%8D%EC%9D%98-%ED%95%84%EC%97%B0/">
 
 
   <meta property="og:description" content="내실 있는 낙관 ">
@@ -31,11 +31,11 @@
 
 
 
-  <meta property="article:published_time" content="2025-06-13T00:00:00+09:00">
+  <meta property="article:published_time" content="2025-08-06T00:00:00+09:00">
 
 
 
-  <meta property="article:modified_time" content="2025-06-13T00:00:00+09:00">
+  <meta property="article:modified_time" content="2025-08-06T00:00:00+09:00">
 
 
 
@@ -44,7 +44,7 @@
   
 
 
-<link rel="canonical" href="http://localhost:4000/projects/MOUM/">
+<link rel="canonical" href="http://localhost:4000/thoughts/08.-%EC%9A%B0%EC%97%B0-%EC%86%8D%EC%9D%98-%ED%95%84%EC%97%B0/">
 
 
 
@@ -218,7 +218,7 @@
       
         
         <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-          <a href="/categories/#projects" itemprop="item"><span itemprop="name">Projects</span></a>
+          <a href="/categories/#thoughts" itemprop="item"><span itemprop="name">Thoughts</span></a>
           <meta itemprop="position" content="2" />
         </li>
         <span class="sep">/</span>
@@ -226,7 +226,7 @@
     
       
       
-        <li class="current">[Competition] Multi-Omics-Based Drug Sensitivity Estimation </li>
+        <li class="current">우연 속의 필연</li>
       
     
   </ol>
@@ -421,15 +421,15 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="[Competition] Multi-Omics-Based Drug Sensitivity Estimation">
+    <meta itemprop="headline" content="우연 속의 필연">
     <meta itemprop="description" content="">
-    <meta itemprop="datePublished" content="2025-06-13T00:00:00+09:00">
-    <meta itemprop="dateModified" content="2025-06-13T00:00:00+09:00">
+    <meta itemprop="datePublished" content="2025-08-06T00:00:00+09:00">
+    <meta itemprop="dateModified" content="2025-08-06T00:00:00+09:00">
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">[Competition] Multi-Omics-Based Drug Sensitivity Estimation
+          <h1 id="page-title" class="page__title" itemprop="headline">우연 속의 필연
 </h1>
           
         </header>
@@ -441,17 +441,10 @@
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
               <ul class="toc__menu">
-  <li><a href="#-multi-omics-based-drug-sensitivity-estimation">💊 Multi-Omics-Based Drug Sensitivity Estimation</a>
-    <ul>
-      <li><a href="#-overview">📌 Overview</a></li>
-      <li><a href="#-why-we-built-this">🌱 Why we built this</a></li>
-      <li><a href="#-data">🔬 Data</a></li>
-      <li><a href="#-methodology">🛠 Methodology</a></li>
-      <li><a href="#-code--repos">📂 Code &amp; Repos</a></li>
-      <li><a href="#-results">📊 Results</a></li>
-      <li><a href="#-contributors--acknowledgments">👥 Contributors &amp; Acknowledgments</a></li>
-    </ul>
-  </li>
+  <li><a href="#introduction">Introduction</a></li>
+  <li><a href="#불확실함을-인정하며-불안하지-않을-수-있는가">불확실함을 인정하며 불안하지 않을 수 있는가</a></li>
+  <li><a href="#행복한-시지푸스">행복한 시지푸스</a></li>
+  <li><a href="#우연-속의-필연">우연 속의 필연</a></li>
 </ul>
 
             </nav>
@@ -459,190 +452,73 @@
         
         <hr />
 
-<p class="notice--info">This project was completed as Team MOUM, in collaboration with my colleagues for the 6th YAI-CON.</p>
+<p class="notice--info">원칙은 바뀔 수 있음이 원칙이다.</p>
 
-<h1 id="-multi-omics-based-drug-sensitivity-estimation">💊 Multi-Omics-Based Drug Sensitivity Estimation</h1>
-<p><em>6th YAICON — Spring 2025 · <strong>Second Prize</strong></em>
-<a href="https://github.com/Omics-based-Drug-sensitivity-Estimation">Code Link</a></p>
-
+<h1 id="introduction">Introduction</h1>
 <hr />
+<p>세상은 대체로 모호하다.</p>
 
-<h2 id="-overview">📌 Overview</h2>
-<p>Accurately predicting how a cancer cell line responds to a drug (IC-50) remains an open challenge: the outcome depends not only on the drug’s chemistry but also on the cell’s intricate molecular profile.<br />
-We present an end-to-end deep-learning pipeline that <strong>fuses three omics layers (GEP, MUT, CNV)</strong> with advanced <strong>drug-embedding models (ChemBERTa &amp; graph-based GNN)</strong> and a <strong>bi-directional cross-attention mechanism</strong>. Our approach improves upon the 2025 paper <a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1012905"><em>“Anticancer drug response prediction integrating multi-omics pathway-based difference features and multiple deep-learning techniques.”</em></a></p>
+<ul>
+  <li>
+    <p>정책은 정의로움과 부당함의 속성을 동시에 가진다.</p>
+  </li>
+  <li>
+    <p>객체는 상태의 중첩에 놓여 있으며 입자성과 파동성을 동시에 가진다.</p>
+  </li>
+  <li>
+    <p>가설 검증에서 채택되는 가설은 언제나 오류를 범할 확률을 동반한다.</p>
+  </li>
+</ul>
 
+<p>세상은 흑과 백이 아닌 ‘덜 회색’과 ‘더 회색’에 가깝고, 벌어지는 일들은 예외 없는 인과가 아닌 상관성과 확률에 기반한다.</p>
+
+<p>완전무결함은 사람이 쌓아 올린 믿음이 영역이 아닌 실재의 영역에서는 찾아보기 어렵다.</p>
+
+<p><br /></p>
+
+<h1 id="불확실함을-인정하며-불안하지-않을-수-있는가">불확실함을 인정하며 불안하지 않을 수 있는가</h1>
 <hr />
+<p>하지만 우리는 대체로 완전무결함을 추구한다. 0과 1의 명확한 구분에서 안정감을 느끼며 확실한 미래를 예측하고 싶어한다. 끊임없이 선택해야 하는 인간의 조건을 고려할 때 이는 자연스러운 속성이다.</p>
 
-<h2 id="-why-we-built-this">🌱 Why we built this</h2>
+<p>그러나 불확실함을 부정하며 완전무결함을 추구하는 것은 종종 부작용을 낳는다. 부정하는 과정에서 무시한 - 주로 크기가 작은 - 속성들이 사실은 중요했거나, 시간이 지남에 따라 중요해지기도 하기 때문이다.</p>
 
-<table>
-  <thead>
-    <tr>
-      <th>Baseline limitation</th>
-      <th>Our upgrade</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><strong>Drug representation lacks structural cues</strong> (only SMILES RNN)</td>
-      <td><strong>Two interchangeable drug encoders</strong><br />• <em>ChemBERTa</em> — language-style SMILES embedding<br />• <em>BGD</em> — graph transformer on molecular graphs</td>
-    </tr>
-    <tr>
-      <td><strong>Shallow “context attention”</strong> can’t model complex drug-omics interplay</td>
-      <td><strong>Deep, bi-directional cross-attention</strong> (drug ↔ each omics) giving <strong>6 interaction maps</strong></td>
-    </tr>
-  </tbody>
-</table>
+<p>불확실함을 부정하는 믿음은 독단으로 변모하기 쉽다.</p>
 
+<p><br /></p>
+
+<h1 id="행복한-시지푸스">행복한 시지푸스</h1>
 <hr />
+<p>철학자 알베르 카뮈는 돌이 굴러 떨어질 것을 앎에도 끊임없이 돌을 밀어올리며 삶의 의미를 찾는 ‘행복한 시지푸스’를 이야기한다.</p>
 
-<h2 id="-data">🔬 Data</h2>
+<p>카뮈가 제시하는 삶의 태도는 다음 두 가지와는 구별된다:</p>
 
-<table>
-  <thead>
-    <tr>
-      <th>Source</th>
-      <th>Entities</th>
-      <th>Notes</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><strong>CCLE</strong></td>
-      <td>688 cell lines</td>
-      <td>GEP (log₂ TPM + 1), MUT (0/1/2), CNV (log₂ discrete)</td>
-    </tr>
-    <tr>
-      <td><strong>GDSC2</strong></td>
-      <td>233 drugs</td>
-      <td>Matched IC-50 ground-truth</td>
-    </tr>
-    <tr>
-      <td><strong>MSigDB – 619 KEGG pathways</strong></td>
-      <td>–</td>
-      <td>Used to derive pathway-difference statistics (Mann-Whitney U / χ²-G)</td>
-    </tr>
-  </tbody>
-</table>
-
-<hr />
-
-<h2 id="-methodology">🛠 Methodology</h2>
 <ol>
-  <li>
-    <p><strong>Omics pathway features</strong><br />
-For every cell line × pathway, compute statistical separation between “in-pathway” and “out-pathway” genes → 3 feature matrices of size 1 × 619 (GEP, MUT, CNV).</p>
-  </li>
-  <li>
-    <p><strong>Drug embeddings</strong><br />
-<em>Choose one encoder at training time</em></p>
-
-    <table>
-      <thead>
-        <tr>
-          <th>Encoder</th>
-          <th>Key idea</th>
-          <th>Output shape</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><strong>ChemBERTa</strong></td>
-          <td>Tokenise SMILES, pad to 256, take final hidden CLS</td>
-          <td>1 × 384</td>
-        </tr>
-        <tr>
-          <td><strong>BGD</strong></td>
-          <td>Graph transformer over atoms/bonds + DeepChem node feats</td>
-          <td>1 × 256</td>
-        </tr>
-      </tbody>
-    </table>
-  </li>
-  <li>
-    <p><strong>Cross-attention block</strong><br />
-• Drug (Q) ↔ Omics (K,V) for each omics type, <strong>two directions</strong> (drug→omics, omics→drug) → 6 attention layers in total.<br />
-• Concatenate pooled outputs → stacked MLP → IC-50 regression.</p>
-  </li>
+  <li>부정적 낙관주의: 돌이 떨어지는 것을 부정하며 행복하게 돌을 밀어올리는 삶</li>
+  <li>허무주의: 돌이 떨어지는 것을 알고 아예 돌을 밀어올리지 않는 삶</li>
 </ol>
 
-<p align="center">
-  <img width="721" alt="Image" src="https://github.com/user-attachments/assets/41ab2228-32ab-4d2f-b0c4-82d408cc3f87" />
-<br /><em>Implementation diagram above: original (left) vs. modified cross-attention (right).</em>
-</p>
+<p>카뮈는 이 둘이 아닌, 돌이 떨어지는 것을 앎에도 행복하게 돌을 밀어올리는 삶을 살아야 한다고 말한다.</p>
+
+<p>삶의 이유를 한참 고민하던 예과 2학년 시기, 나는 시지푸스의 행복이 이해가 되지 않았었다. 어떻게 행복할 수 있지 싶었다.</p>
+
+<p><br /></p>
+
+<h1 id="우연-속의-필연">우연 속의 필연</h1>
+<hr />
+<p>그러나 생각해보면, 사실 우리는 누구나 시지푸스와 같은 처지이다.</p>
+
+<p>우리는 스스로가 어떤 우연으로 지금 당장, 혹은 언제든 삶을 마감할 수 있음을 안다. 관계가 영원하지 않을 수 있음도 안다. 하지만 몇 시간 뒤에, 혹은 내일 당장 기막힌 확률로 세상을 떠날 것을 걱정하며 사는 사람은 거의 없다.
+우리는 불안함 없이 죽음의 위험을 유보하며 삶에 충실하게 살아간다. 영원을 약속하고 사랑하며 살아간다.</p>
 
 <hr />
 
-<h2 id="-code--repos">📂 Code &amp; Repos</h2>
+<p>이러한 태도는 다른 차원의 불확실함에도 적용될 수 있다고 생각한다.</p>
 
-<table>
-  <thead>
-    <tr>
-      <th>Repository</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><strong><a href="https://github.com/Omics-based-Drug-sensitivity-Estimation/Drug-Sensitivity-Prediction-Pipeline">Drug-Sensitivity-Prediction-Pipeline</a></strong></td>
-      <td>Main training pipeline, model zoo, experiment scripts</td>
-    </tr>
-    <tr>
-      <td><strong><a href="https://github.com/Omics-based-Drug-sensitivity-Estimation/DGL-Life-sci">DGL-Life-sci</a></strong></td>
-      <td>Custom extensions for graph-based drug encoders</td>
-    </tr>
-  </tbody>
-</table>
+<p>내가 꿈꾸는 미래가 불친절한 변수로 인해 이루어지지 않을 수 있음을 알면서도, 내가 틀릴 수 있는 가능성을 인정하면서도,</p>
 
-<details>
-<summary>Model zoo snapshots</summary>
+<p>불확실함을 부정하지도, 그것에 압도되지도 않으면서, 현재의 선택과 행동에 온전히 투신하는 삶을 살고 싶다.</p>
 
-1. ChemBERTa Drug Embedding
-
-<p align="center">
-  <img width="333" alt="ChemBERTa" src="https://github.com/user-attachments/assets/9166787e-d33f-40ba-bce8-c465a705064e" />
-</p>
-
-2. Graph-Transformer Drug Embedding
-
-<p align="center">
-  <img width="305" alt="Graph" src="https://github.com/user-attachments/assets/f474ddbb-45e1-4ad6-bc99-8ab0bfc1fc74" />
-</p>
-
-</details>
-
-<hr />
-
-<h2 id="-results">📊 Results</h2>
-
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/62b4dbd0-f510-4b20-95e9-4789627cb7c5" width="425" alt="Figure 1" />
-  <br /><em>Figure 1. Drug embedding comparison (Original vs. Modified attention)</em>
-</p>
-
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/5f28a37e-4e18-4b83-8b3f-da5945e02404" width="425" alt="Figure 2" />
-  <br /><em>Figure 2. Cross-attention variant performance</em>
-</p>
-
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/a4b6bc42-3e90-4d4f-80c2-3668d2330e41" width="700" alt="Figure 3" />
-  <br /><em>Figure 3. Pearson r on cell-blinded split (scatter)</em>
-</p>
-
-<blockquote>
-  <p>Key takeaway : Improvement over the baseline when switching to ChemBERTa/BGD-Model + cross-attention. Full metrics in <code class="language-plaintext highlighter-rouge">/results/</code>.</p>
-</blockquote>
-
-<hr />
-
-<h2 id="-contributors--acknowledgments">👥 Contributors &amp; Acknowledgments</h2>
-
-<p>With gratitude to <a href="https://github.com/yumin-c">@yumin-c</a>, I’m distilling this work into a focused, application-driven research project in collaboration with several colleagues, including  my original MOUM team members: <a href="https://github.com/bgduck33">@bgduck33</a> and <a href="https://github.com/whdsbwn">@whdsbwn</a>.</p>
-
-<p>You can find the full names of all MOUM team members on GitHub: <a href="https://github.com/Omics-based-Drug-sensitivity-Estimation">Code Link</a>.</p>
-
-<hr />
+<p>우연을 앎에도 필연을 믿는 삶을 살고 싶다.</p>
 
         
       
@@ -679,7 +555,7 @@ For every cell line × pathway, compute statistical separation between “in-pat
     
       
       
-      <a href="/tags/#multi-omics" class="page__taxonomy-item" rel="tag">Multi-Omics</a>
+      <a href="/tags/#%EC%97%90%EC%84%B8%EC%9D%B4" class="page__taxonomy-item" rel="tag">에세이</a>
     
     </span>
   </p>
@@ -700,14 +576,14 @@ For every cell line × pathway, compute statistical separation between “in-pat
     
       
       
-      <a href="/categories/#projects" class="page__taxonomy-item" rel="tag">Projects</a>
+      <a href="/categories/#thoughts" class="page__taxonomy-item" rel="tag">Thoughts</a>
     
     </span>
   </p>
 
 
         
-          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time datetime="2025-06-13">June 13, 2025</time></p>
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time datetime="2025-08-06">August 6, 2025</time></p>
         
       </footer>
 
@@ -716,23 +592,22 @@ For every cell line × pathway, compute statistical separation between “in-pat
     <h4 class="page__share-title">공유하기</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=%5BCompetition%5D+Multi-Omics-Based+Drug+Sensitivity+Estimation+%20http%3A%2F%2Flocalhost%3A4000%2Fprojects%2FMOUM%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=%EC%9A%B0%EC%97%B0+%EC%86%8D%EC%9D%98+%ED%95%84%EC%97%B0%20http%3A%2F%2Flocalhost%3A4000%2Fthoughts%2F08.-%25EC%259A%25B0%25EC%2597%25B0-%25EC%2586%258D%25EC%259D%2598-%25ED%2595%2584%25EC%2597%25B0%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fprojects%2FMOUM%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fthoughts%2F08.-%25EC%259A%25B0%25EC%2597%25B0-%25EC%2586%258D%25EC%259D%2598-%25ED%2595%2584%25EC%2597%25B0%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fprojects%2FMOUM%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fthoughts%2F08.-%25EC%259A%25B0%25EC%2597%25B0-%25EC%2586%258D%25EC%259D%2598-%25ED%2595%2584%25EC%2597%25B0%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/projects/Soothing/" class="pagination--pager" title="[Research] Game-based Shadow-induced Forgetting
+      <a href="/thoughts/07.-%EB%AF%BF%EC%9D%8C%EC%9D%98-%EC%98%81%EC%97%AD/" class="pagination--pager" title="믿음의 영역
 ">이전</a>
     
     
-      <a href="/graphs/Representation-Learning-on-Graphs/" class="pagination--pager" title="Oveview on Graph Representation Learning
-">다음</a>
+      <a href="#" class="pagination--pager disabled">다음</a>
     
   </nav>
 
@@ -746,39 +621,6 @@ For every cell line × pathway, compute statistical separation between “in-pat
     <div class="page__related">
       <h4 class="page__related-title">최근 포스팅 목록</h4>
       <div class="grid__wrapper">
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="" alt="">
-      </div>
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/thoughts/08.-%EC%9A%B0%EC%97%B0-%EC%86%8D%EC%9D%98-%ED%95%84%EC%97%B0/" rel="permalink">우연 속의 필연
-</a>
-      
-    </h2>
-  <!--
-    devinlife comments :
-        아키이브 싱글 페이지(ex. 카테고리)에 각 포스트 제목 밑에 Updated 시간 표기
-        기존에는 read_time이 표기. read_time -> date 변경
-    
-  -->
-  
-
-<p class="page__meta"><i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i> August 06 2025</p>
-
-    <p class="archive__item-excerpt" itemprop="description">
-</p>
-  </article>
-</div>
-
         
           
 
@@ -874,6 +716,40 @@ For every cell line × pathway, compute statistical separation between “in-pat
 <p class="page__meta"><i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i> July 31 2025</p>
 
     <p class="archive__item-excerpt" itemprop="description">
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="" alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/graphs/Representation-Learning-on-Graphs/" rel="permalink">Oveview on Graph Representation Learning
+</a>
+      
+    </h2>
+  <!--
+    devinlife comments :
+        아키이브 싱글 페이지(ex. 카테고리)에 각 포스트 제목 밑에 Updated 시간 표기
+        기존에는 read_time이 표기. read_time -> date 변경
+    
+  -->
+  
+
+<p class="page__meta"><i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i> July 30 2025</p>
+
+    <p class="archive__item-excerpt" itemprop="description">
+
 </p>
   </article>
 </div>
