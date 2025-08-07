@@ -21,7 +21,7 @@ comments: true
 </p>
 <p align="center">  <em>Graph(왼쪽)과 Euclidean structured data(오른쪽) (출처: <a href="https://web.stanford.edu/class/cs224w/">CS224w)</a></em>
 </p>
-이미지, 문장과 같이 2D grid나 1D sequence로 성분의 순서와 구조가 정형화된 euclidean structured data와 달리, 세상의 많은 요소들은 요소 사이의 순서와 arrangement rule이 고정되어 있지 않은 non-euclidean space에 존재한다. 이러한 non-euclidean space, 기존의 traditional deep learning method들이 그대로 적용되기 어렵다. 단적인 예로, CNN의 convolution filter은, 특정 성분을 중심으로 n*n의 격자 kernel을 정의하지만, 상하좌우, 앞뒤 관계가 분명하지 않은 데이터, 가령 사람과 사람 사이의 네트워크 정보 등에서는, 같은 kernel을 정의하는 것이 불명확해진다. 
+이미지, 문장과 같이 2D grid나 1D sequence로 성분의 순서와 구조가 정형화된 euclidean structured data와 달리, 세상의 많은 요소들은 요소 사이의 순서와 arrangement rule이 고정되어 있지 않은 non-euclidean space에 존재한다. 이러한 non-euclidean space에서는, 기존의 traditional deep learning method들이 그대로 적용되기 어렵다. 단적인 예로, CNN의 convolution filter은, 특정 성분을 중심으로 n*n의 격자 kernel을 정의하지만, 상하좌우, 앞뒤 관계가 분명하지 않은 데이터, 가령 사람과 사람 사이의 네트워크 정보 등에서는, 같은 kernel을 정의하는 것이 불명확해진다. 
 
 이러한 non-euclidean space 상의 요소들은, ‘Graph Struture’을 정의함으로써 다룰 수 있다. Node 와 node를 연결하는 edge로 정의되는 그래프는 node 사이의 관계가 euclidian space에 한정되지 않고 자유도가 높다는 장점과 더불어, node feature과 edge weight으로 자유롭게 요소의 정보를 추가할 수 있다는 점에서 매력적이다.
 
