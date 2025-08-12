@@ -1,5 +1,5 @@
 ---
-title: Two approaches of embedding nodes - Shallow / NN-based
+title: Two Node Embedding Approaches - Shallow and NN-based
 
 date: 2025-08-11
 last_modified_at: 2025-08-11
@@ -79,7 +79,7 @@ $s_G$를 어떻게 정의할지(무엇을 ‘유사’로 볼지), $\mathrm{DEC}
 <br>
 <br>
 
-# Two approaches of embedding nodes
+#  Two Node Embedding Approaches
 ---
 위와 같은 $\mathrm{ENC}$–$s_G$–$\mathrm{DEC}$ 프레임워크 안에서, **학습이 일어나는 층위**에 따라 접근을 두 가지로 나눌 수 있다.
 
