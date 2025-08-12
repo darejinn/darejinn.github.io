@@ -1,269 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-08-12T17:35:33+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">DaRe_jin’s Blog</title><subtitle>내실 있는 낙관</subtitle><author><name>DaRe_jin</name></author><entry><title type="html">Two approaches of embedding nodes</title><link href="http://localhost:4000/graphs/Two-approaches-of-embedding-nodes-Shallow-embedding-and-NN-based-embedding/" rel="alternate" type="text/html" title="Two approaches of embedding nodes" /><published>2025-08-11T00:00:00+09:00</published><updated>2025-08-11T00:00:00+09:00</updated><id>http://localhost:4000/graphs/Two%20approaches%20of%20embedding%20nodes:Shallow%20embedding%20and%20NN-based%20embedding</id><content type="html" xml:base="http://localhost:4000/graphs/Two-approaches-of-embedding-nodes-Shallow-embedding-and-NN-based-embedding/"><![CDATA[<hr />
-
-<h1 id="introduction">Introduction</h1>
-
-<p>앞선 글에서 설명했듯, Graph Representation <strong>Learning</strong>은 그래프의 요소(노드, 엣지, 서브그래프)를 저차원 벡터로 매핑하는 일이다. 많은 survey가 여러 요소 중에서도 <strong>node embedding</strong>에 초점을 맞추는 이유는 다음과 같다.</p>
-
-<ol>
-  <li>
-    <p><strong>Edge/Subgraph 임베딩이 node 임베딩의 후처리로 귀결</strong>되는 경우가 많다.</p>
-
-    <p>예를 들어</p>
-    <ul>
-      <li>엣지 $(v_i,v_j)\in E$에 대해 노드 임베딩 $\mathbf{z}_i,\mathbf{z}_j$가 주어지면 hadamard/mean/weighted-L1·L2 같은 이항 연산으로</li>
-    </ul>
-
-\[\mathbf{z}_{(i,j)}=\mathbf{z}_i\odot\mathbf{z}_j\]
-
-    <p>처럼 엣지 임베딩을 만든다.</p>
-
-    <ul>
-      <li>서브그래프 $\mathcal{G}[\mathcal{S}]$의 임베딩도 보통 $\mathcal{S}\subset\mathcal{V}$에 포함된 노드 임베딩을 집계(average/attention 등)해서 얻는다.</li>
-    </ul>
-
-\[\mathbf{z}_{\text{subgraph}}=\frac{1}{|\mathcal{S}|}\sum_{v_i\in\mathcal{S}}\mathbf{z}_i\]
-  </li>
-  <li>
-    <p>Edge/Subgraph 임베딩을 <strong>직접</strong> 학습하더라도 절차는 <strong>node 임베딩 학습과 본질적으로 유사</strong>하다.</p>
-    <ul>
-      <li>예를 들어 타깃 서브그래프의 모든 노드에 연결된 dummy 노드를 추가하고 그 노드의 임베딩을 학습 대상으로 두면 사실상 node embedding 학습과 거의 동일한 형태가 된다.</li>
-    </ul>
-  </li>
-</ol>
-
-<p>따라서 node embedding을 이해하면 edge/subgraph embedding도 같은 틀 안에서 상당 부분 설명된다. 이하에서는 <strong>인코더를 어떻게 정의하는지</strong>에 따라 node embedding을 <strong>shallow embedding</strong>과 <strong>NN-based embedding</strong>으로 비교해 정리한다. 본 글의 뼈대는 Jure Leskovec 외, <em>Representation Learning on Graphs</em> (2017)을 바탕으로 필자의 해석을 더해 재구성했다.</p>
-
-<hr />
-
-<h2 id="review--learning-framework">Review : Learning framework</h2>
-
-<p>“그래프에서 가까운 노드는 임베딩 공간에서도 가깝다”는 <strong>structural assumption</strong>(구조 가정) 아래, 다음 세 가지를 설계한다.</p>
-
-<ul>
-  <li>
-    <p>그래프 상의 유사도 $s_G$</p>
-
-\[s_G:\mathcal{V}\times\mathcal{V}\to\mathbb{R}^+,\qquad
-s_G(i,j)\in\{A_{ij},\ k\text{-hop},\ \text{랜덤워크 공출현확률},\ \text{Katz/RPR/Jaccard}\dots\}\]
-  </li>
-  <li>
-    <p>임베딩 공간의 디코더 $\mathrm{DEC}$</p>
-
-\[\mathrm{DEC}:\mathbb{R}^d\times\mathbb{R}^d\to\mathbb{R},\quad
-\text{예: }\ \mathbf{z}_i^\top\mathbf{z}_j,\ -\lVert\mathbf{z}_i-\mathbf{z}_j\rVert_2^2,\ \sigma(\mathbf{z}_i^\top\mathbf{z}_j)\]
-  </li>
-  <li>
-    <p>인코더 $\mathrm{ENC}$와 loss function(learning objective)</p>
-
-\[\mathbf{z}_i=\mathrm{ENC}(v_i),\qquad
-\mathcal{L}=\sum_{(i,j)\in\mathcal{D}}\ell\!\Big(\mathrm{DEC}(\mathbf{z}_i,\mathbf{z}_j),\ s_G(i,j)\Big)\]
-  </li>
-</ul>
-
-<p>여기서 <strong>구조 가정</strong>은 “무엇을 가깝게 유지할지”에 대한 inductive bias, 즉 <strong>네트워크 구조에 관한 모델의 prior</strong>다. $s_G$를 어떻게 정의할지(무엇을 ‘유사’로 볼지), $\mathrm{DEC}$를 어떻게 둘지(임베딩에서 유사를 어떻게 수치화할지), $\mathrm{ENC}$를 어떻게 설계할지(그 유사를 재현하도록 표현을 만들지)에 이 가정이 명시적·암묵적으로 들어 있다.</p>
-
-<hr />
-
-<h1 id="two-approaches-of-embedding-nodes">Two approaches of embedding nodes</h1>
-
-<p>같은 $\mathrm{ENC}$–$s_G$–$\mathrm{DEC}$ 프레임 안에서 접근을 나눌 수 있다.</p>
-
-<ul>
-  <li>
-    <table>
-      <tbody>
-        <tr>
-          <td><strong>Shallow</strong> : 미리 정한 $s_G$에 맞춰 <strong>노드별 임베딩 자체</strong>를 <strong>직접</strong> 최적화한다. 따라서 파라미터 수는 대략 $ O(</td>
-          <td>V</td>
-          <td>d)$이다.</td>
-        </tr>
-      </tbody>
-    </table>
-  </li>
-  <li><strong>NN(GNN)-based</strong>: <strong>유사도를 만들어내는 연산 자체</strong>(메시지 패싱/오토인코더 등)를 학습해 임베딩을 <strong>간접</strong>적으로 만든다. 파라미터는 <strong>노드 간 공유</strong>된다.</li>
-</ul>
-
-<p>즉, <strong>학습이 일어나는 층위</strong>가 다르다.</p>
-
-<hr />
-
-<h2 id="1-shallow-embedding">1. Shallow embedding</h2>
-
-<p>Shallow는 노드 ID를 임베딩 행렬의 열로 직접 매핑한다.</p>
-
-\[Z\in\mathbb{R}^{d\times|\mathcal{V}|},\qquad \mathrm{ENC}(v_i)=Z_{\cdot i}=\mathbf{z}_i\]
-
-<p>인코더가 단순하므로 “무엇을 보존할지”에 대한 선택이 거의 전적으로 $s_G$와 $\mathrm{DEC}$에 담긴다.</p>
-
-<h3 id="1-1-factorization-based-approaches">1-1. Factorization-based approaches</h3>
-
-<ul>
-  <li>
-    <p><strong>무엇을 보존할지($s_G$ 설정)</strong></p>
-
-\[S=A\ \text{(adjacency)},\qquad S=A^k\ (k\text{-hop}),\qquad S=\text{Katz},\ \text{RPR},\ \text{Jaccard}\ \text{등}\]
-
-    <p>$S$가 커뮤니티·근접성·전파 도달성 등 어떤 관계를 대표하는지에 따라 임베딩이 강조하는 구조가 달라진다.</p>
-  </li>
-  <li>
-    <p><strong>임베딩에서 어떻게 읽을지(Decoder)</strong></p>
-
-\[\mathrm{DEC}(\mathbf{z}_i,\mathbf{z}_j)=\mathbf{z}_i^\top\mathbf{z}_j\quad \text{또는}\quad -\lVert\mathbf{z}_i-\mathbf{z}_j\rVert_2^2\]
-
-    <p>내적 기반은 계산이 단순하고 행렬분해로 자연스럽게 연결된다.</p>
-  </li>
-  <li>
-    <p><strong>loss function(learning objective)</strong></p>
-
-\[\min_Z\ \lVert S-Z^\top Z\rVert_F^2\]
-
-    <p><strong>Laplacian Eigenmaps</strong>는</p>
-
-\[\sum_{i,j}W_{ij}\lVert\mathbf{z}_i-\mathbf{z}_j\rVert_2^2
-=2\,\mathrm{tr}(ZLZ^\top)\]
-
-    <p>을 최소화해 인접 노드가 가깝도록 한다(정규화/제약 포함). 이 목적은 “엣지가 강하면 임베딩 거리를 줄여라”라는 규칙을 직접적으로 구현한다.</p>
-  </li>
-</ul>
-
-<h3 id="1-2-random-walk-based-approaches">1-2. Random walk-based approaches</h3>
-
-<ul>
-  <li>
-    <p><strong>무엇을 보존할지($s_G$ 설정)</strong></p>
-
-    <p>랜덤 워크로 생성한 시퀀스에서 <strong>공출현 강도/확률</strong>을 노드 유사도로 본다(윈도우 공존, PPMI 등). BFS/DFS 성향을 조절해 국소/원거리 문맥을 강조할 수 있다.</p>
-  </li>
-  <li>
-    <p><strong>임베딩에서 어떻게 읽을지(Decoder)</strong></p>
-
-\[\mathrm{DEC}(\mathbf{z}_i,\mathbf{z}_j)=\mathbf{z}_i^\top\mathbf{z}_j\]
-
-    <p>로짓을 $\sigma(\cdot)$로 확률화해 “같이 등장할수록 내적이 커지게” 학습한다.</p>
-  </li>
-  <li>
-    <p><strong>loss function(learning objective)</strong></p>
-
-\[\max_Z\sum_{(i,j)\in\mathcal{D}}\log\sigma(\mathbf{z}_i^\top\mathbf{z}_j)
-+\!\!\sum_{(i,j')\in\mathcal{D}^-}\!\!\log\sigma(-\mathbf{z}_i^\top\mathbf{z}_{j'})\]
-
-    <p><strong>DeepWalk</strong>는 unbiased walk, <strong>node2vec</strong>은 하이퍼파라미터 $p,q$로 탐색 편향을 조절한다.</p>
-  </li>
-</ul>
-
-<blockquote>
-  <p>즉, Shallow는 $s_G$의 정의가 곧 <strong>보존하려는 구조의 선언</strong>이고, $\mathrm{DEC}$는 이를 근사하는 간단한 함수(대개 inner product)다.</p>
-</blockquote>
-
-<hr />
-
-<h2 id="2-nn-based-embedding">2. NN-based embedding</h2>
-
-<p>Shallow가 node-id만 입력으로 받아 바로 embedding을 lookup하는 것과 달리, NN-based는 <strong>노드 특징 $\mathbf{x}_i$와 이웃 $\mathcal{N}(i)$를 입력으로 받아 처리하는 네트워크</strong>를 학습한다.</p>
-
-<p>파라미터가 <strong>노드 간 공유</strong>되어 효율성이 높아지며, 특히 neighborhood aggregation 방법은 node의 총 개수에 관계 없이, 주변 node의 정보를 단계적으로 가져와 학습하므로, 아예 새로운 그래프에 대해서도 학습한 모델을 적용할 수 있다. ( <em>inductive하다</em> )</p>
-
-<h3 id="2-1-neighborhood-autoencoder-dngr-sdne">2-1. Neighborhood Autoencoder (DNGR, SDNE)</h3>
-
-<table>
-  <tbody>
-    <tr>
-      <td>노드 i마다, 노드의 이웃 분포를 나타내는 벡터 $\mathbf{s}_i\in\mathbb{R}^{</td>
-      <td>\mathcal{V}</td>
-      <td>}$를 만든 뒤 오토인코더로 복원한다.</td>
-    </tr>
-  </tbody>
-</table>
-
-<p>즉, learning objective는 아래와 같다.</p>
-
-\[\min_{\theta,\phi}\ \sum_i \left\lVert\mathbf{s}_i - \mathrm{DEC}_\phi(\mathrm{ENC}_\theta(\mathbf{s}_i))\right\rVert_2^2\]
-
-<p><strong>SDNE</strong>는 여기에 Laplacian 정규화 항을 더해 인접 근접성을 강화한다.</p>
-
-\[\sum_{(i,j)}W_{ij}\lVert\mathbf{z}_i-\mathbf{z}_j\rVert_2^2\]
-
-<ul>
-  <li>
-    <p>$\mathbf{s}_i$를 <strong>어떻게 만들었는지</strong>가 곧 구조 가정이며, SDNE의 Lap 항은 구조 가정을 loss에서 명시적으로 추가한다.</p>
-  </li>
-  <li>
-    <table>
-      <tbody>
-        <tr>
-          <td>Shallow와 달리 <strong>파라미터가 공유</strong>되나 여전히 입력 차원이</td>
-          <td>V</td>
-          <td>에 고정되어 매우 큰 그래프에 적용하기 어렵고, 새로운 그래프에 대해서도 적용이 어렵다. ( <em>transductive하다</em> )</td>
-        </tr>
-      </tbody>
-    </table>
-  </li>
-</ul>
-
-<h3 id="2-2-neighborhood-aggregation-gcngraphsagegat">2-2. Neighborhood Aggregation (GCN/GraphSAGE/GAT)</h3>
-
-<p><em>Message Passing</em>으로 이웃 표현을 aggregate해 자신의 표현과 결합하는 연산을 여러 층 반복한다.</p>
-
-<blockquote>
-
-  <p>참고로, <strong>Message Passing</strong>은 “Neural message passing for quantum chemistry.”논문에서 처음 GNN의 framework를 통합적으로 설명하기 위해 제시한 개념으로, 이후 많은 논문들에서 해당 개념을 차용하여 GNN을 설명하기 시작하였다. 
-딥마인드의 Petar Veličković는 최신의 ‘beyond message passing’으로 여겨졌던 GNN 기법도 본질적으로 message passing framework으로 모두 설명할 수 있다고  <a href="https://web.stanford.edu/class/cs224w/">“Message passing all the way up” </a> 에서 주장하였다.</p>
-
-</blockquote>
-
-<p>연산은 아래와 같다.</p>
-
-\[\mathbf{h}_i^{(0)}=\mathbf{x}_i,\quad
-\mathbf{h}_i^{(k)}=\mathrm{COMBINE}^{(k)}\!\Big(\mathbf{h}_i^{(k-1)},\ \mathrm{AGG}^{(k)}\{\mathbf{h}_j^{(k-1)}:j\in\mathcal{N}(i)\}\Big),\quad
-\mathbf{z}_i=\mathbf{h}_i^{(K)}\]
-
-<ul>
-  <li>위 encoder 연산의 예는 아래와 같다.
-    <ul>
-      <li><strong>GCN</strong>에서는 정규화된 연산이 핵심이다.
-\(\mathbf{H}^{(\ell+1)}=\sigma\!\big(\hat{D}^{-1/2}\hat{A}\hat{D}^{-1/2}\mathbf{H}^{(\ell)}W^{(\ell)}\big),\qquad \hat{A}=A+I\)
-이 식 자체가 “인접하면 가깝다”는 가정을 <strong>encoder의 spectral filter</strong>로 구현한다.</li>
-      <li><strong>GraphSAGE</strong>는 aggregator를 선택해 structural bias을 조절한다.
-\(\mathbf{h}_i^{(k)}=\sigma\!\Big(W^{(k)}\big[\mathbf{h}_i^{(k-1)}\ \|\ \mathrm{AGG}(\{\mathbf{h}_j^{(k-1)}\}_{j\in\mathcal{N}(i)})\big]\Big)\)</li>
-      <li><strong>GAT</strong>는 이웃 중요도를 attention coefficient로 가중한다.</li>
-    </ul>
-  </li>
-  <li><strong>loss function(learning objective)</strong><br />
-GNN은 구조 가정을 $\mathrm{ENC}$가 담당하므로, $\mathrm{DEC}$와 손실은 태스크에 맞춰 유연하게 고른다.
-    <ul>
-      <li>링크 예측 : $\mathrm{DEC}(\mathbf{z}_i,\mathbf{z}_j)=\sigma(\mathbf{z}_i^\top\mathbf{z}_j)$, 네거티브 샘플링</li>
-      <li>노드 분류 : $\hat{\mathbf{y}}_i=\mathrm{softmax}(W\mathbf{z}_i)$, cross-enthropy</li>
-      <li>그래프/서브그래프 관련 supervised task: $\mathrm{READOUT}$으로 집계 후 태스크별 $\mathrm{DEC}$ 사용</li>
-    </ul>
-  </li>
-</ul>
-
-<p>이 방법은 가장 진보한, 현재에도 활발히 연구되고 있는 graph representation 방식으로, 흔히 GNN을 이야기하면 보통 neighborhood aggregation을 바탕으로 한 이 message passing을 상정한다.</p>
-
-<ul>
-  <li><strong>파라미터 공유</strong>로 모델 크기가 그래프 크기와 관계 없이 효율적으로 작게 유지된다.</li>
-  <li><strong>노드 feature/edge weight</strong> 등 그래프 관련 meta information을 자연스럽게 활용한다.</li>
-  <li><strong>Inductive</strong>한 특징을 가져 새 노드·새 그래프에도 적용이 수월하다.</li>
-</ul>
-
-<hr />
-
-<h2 id="마무리하며">마무리하며</h2>
-
-<ul>
-  <li>
-    <p>그래프 표현 학습의 본질은<br />
-<strong>(1) 무엇을 유사로 볼지($s_G$)</strong>, <strong>(2) 임베딩에서 그 유사를 어떻게 읽어낼지($\mathrm{DEC}$)</strong>, <strong>(3) 그 유사를 재현하도록 어떤 연산을 학습할지($\mathrm{ENC}$)</strong>를 일관된 관점에서 설계하는 일이다.</p>
-
-    <ul>
-      <li><strong>Shallow</strong>는 “유사도를 정의하고 → 그에 맞춰 임베딩 열을 직접 optimize”한다.</li>
-      <li><strong>Neighborhood Autoencoder/SDNE</strong>는 $s_G$의 근사치인 $\mathbf{s}_i$를 정의해 보존하되, 파라미터를 공유하여 더 효율적으로 학습한다</li>
-      <li><strong>Neighborhood Aggregation(GNN)</strong>은 “무엇을 보존할지”가 <strong>message passing network</strong>에 녹아 있으며, 태스크에 따라 $\mathrm{DEC}$/손실을 유연하게 붙일 수 있다.</li>
-    </ul>
-  </li>
-</ul>
-
-<p>구체적 방법론과 수식 유도는 후속 글에서 더 다룰 예정이다.</p>]]></content><author><name>DaRe_jin</name></author><category term="[&quot;Graphs&quot;]" /><category term="Graphs" /><category term="Representation learning" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">우연 속의 필연</title><link href="http://localhost:4000/thoughts/08.-%EC%9A%B0%EC%97%B0-%EC%86%8D%EC%9D%98-%ED%95%84%EC%97%B0/" rel="alternate" type="text/html" title="우연 속의 필연" /><published>2025-08-06T00:00:00+09:00</published><updated>2025-08-06T00:00:00+09:00</updated><id>http://localhost:4000/thoughts/08.%20%EC%9A%B0%EC%97%B0%20%EC%86%8D%EC%9D%98%20%ED%95%84%EC%97%B0</id><content type="html" xml:base="http://localhost:4000/thoughts/08.-%EC%9A%B0%EC%97%B0-%EC%86%8D%EC%9D%98-%ED%95%84%EC%97%B0/"><![CDATA[<hr />
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-08-12T23:15:51+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">DaRe_jin’s Blog</title><subtitle>내실 있는 낙관</subtitle><author><name>DaRe_jin</name></author><entry><title type="html">우연 속의 필연</title><link href="http://localhost:4000/thoughts/08.-%EC%9A%B0%EC%97%B0-%EC%86%8D%EC%9D%98-%ED%95%84%EC%97%B0/" rel="alternate" type="text/html" title="우연 속의 필연" /><published>2025-08-06T00:00:00+09:00</published><updated>2025-08-06T00:00:00+09:00</updated><id>http://localhost:4000/thoughts/08.%20%EC%9A%B0%EC%97%B0%20%EC%86%8D%EC%9D%98%20%ED%95%84%EC%97%B0</id><content type="html" xml:base="http://localhost:4000/thoughts/08.-%EC%9A%B0%EC%97%B0-%EC%86%8D%EC%9D%98-%ED%95%84%EC%97%B0/"><![CDATA[<hr />
 
 <p class="notice--info">원칙은 바뀔 수 있음이 원칙이다.</p>
 
@@ -1004,4 +739,67 @@ For every cell line × pathway, compute statistical separation between “in-pat
   <li>그렇다면, 내가 속한 조직은 Contrarian이 필요하며, 준비된 반박은 조직과 나를 위하는 일임.</li>
   <li>그렇지 않다면, 가만히 있는 것이 반이라도 갈 수 있는 방법임.</li>
   <li>그러나, 조직의 방향에 동의가 되지 않음에도 가만히 있어야 반을 갈 수 있는 조직에서 목표를 이루는 것은 불가능함.</li>
-</ul>]]></content><author><name>DaRe_jin</name></author><category term="[&quot;Bridges&quot;]" /><category term="에세이" /></entry></feed>
+</ul>]]></content><author><name>DaRe_jin</name></author><category term="[&quot;Bridges&quot;]" /><category term="에세이" /></entry><entry><title type="html">희소함의 역할</title><link href="http://localhost:4000/thoughts/05.-%ED%9D%AC%EC%86%8C%ED%95%A8%EC%9D%98-%EC%97%AD%ED%95%A0-copy/" rel="alternate" type="text/html" title="희소함의 역할" /><published>2025-05-09T00:00:00+09:00</published><updated>2025-05-12T00:00:00+09:00</updated><id>http://localhost:4000/thoughts/05.%20%ED%9D%AC%EC%86%8C%ED%95%A8%EC%9D%98%20%EC%97%AD%ED%95%A0%20copy</id><content type="html" xml:base="http://localhost:4000/thoughts/05.-%ED%9D%AC%EC%86%8C%ED%95%A8%EC%9D%98-%EC%97%AD%ED%95%A0-copy/"><![CDATA[<hr />
+
+<p class="notice--info">원칙은 바뀔 수 있음이 원칙이다.</p>
+
+<h1 id="introduction">Introduction</h1>
+
+<p>사람은 익숙하지 않은 것에서 흥미를 느낀다.</p>
+
+<p>따라서 타인이 나를 주목하게 만드는 일은 그리 어렵지 않다. 다수와 다른 무언가를 하면 된다.</p>
+
+<ul>
+  <li>
+    <p>모두가 말할 때 말을 하지 않는 것, 그리고 아무도 말하지 못할 때 목소리를 내는 것.</p>
+  </li>
+  <li>
+    <p>중요하지 않아 보이는 일에 사력을 다하는 것, 그리고 모두가 목매는 일을 가벼이 넘겨버리는 것.</p>
+  </li>
+  <li>
+    <p>정해진 출근 시간보다 항상 일찍 출근하는 것. 발표에서 아무도 갖지 않은 의문을 유려히 제시하는 것. 확고한 입맛과 취향이 있는 것.</p>
+  </li>
+</ul>
+
+<p>희소함은 ‘나’라는 존재를 타인에게 어필하는 좋은 도구이다. 이 새로움에 일관적으로 나의 색이 드러날 때, ‘나’는 ‘관종’이 아닌 ‘특별한 사람’으로 인지된다. 타인이 나에게 귀를 기울인다.</p>
+
+<p>내가 타인과 다름을 인지할 때, 나의 특별함이 주는 자기만족의 크기는 꽤나 크다. 또한 일반적으로 타인이 하지 않는 일은 하기 어려운 일이기에 희소함은 성취감을 불러일으키기도 한다.</p>
+
+<p>그러나, 희소함이 내 행동의 내적 동기가 될 수 있는가?</p>
+
+<p><br /></p>
+
+<h1 id="rationale">Rationale</h1>
+
+<blockquote>
+  <p>Rationale : a set of reasons or a logical basis for a course of action or a particular belief.</p>
+</blockquote>
+
+<p>좋은 논문의 서론에서 저자는 ‘이 연구가 왜 novel한지’와 더불어, ‘이 연구가 왜 합당한지’를 이야기한다.</p>
+
+<p>아무도 해보지 않았음은 곧, 검증되지 않았음을 의미하기도 한다. 특히 published된 연구가 없음은, ‘아무도 해보지 않았음’이 아니라 ‘해본 모두가 실패했음’의 가능성도 내재한다.</p>
+
+<p>나의 시도가 기존의 시도들에 비해 뚜렷하게 갖는 이점, 혹은 이점을 기대할만한 논리적 근거가 존재하여 스스로가 설득되었을 때 연구자는 확신을 갖고 어떤 어려움도 밀고 나갈 수 있다. 예상과 다른 결과를 마주했을 때 동력을 잃지 않고 문제를 분석할 수 있다.</p>
+
+<p>실패 가능성이 높은 새로운 연구일수록, rationale을 찾는 시도는 불가결하다.</p>
+
+<p><br /></p>
+
+<h1 id="희소함의-역할">희소함의 역할</h1>
+
+<p>연구와 삶의 다른 점은, 타인과의 감정적 상호작용이 관여한다는 것이다. 이는 희소함에 대하여 아래와 같은 고민거리를 더한다.</p>
+
+<ul>
+  <li>
+    <p>첫 번째로, 내가 제시한 새로운 가설이 검증의 과정을 거치기도 전에 타인에게 관철될 수 있다. 제안하는 사람의 사람됨, 표현 방식, 명성, 지위 등이 주는 인상은, 비판적 검토 없이 ‘어련히 저 사람의 주장이 맞겠지. 내가 모르는 무언가가 있겠지.’라는 생각을 하게 만든다. 신뢰받는 사람일수록, 집단의 다수는 그 사람이 던진 낯선 주장을 무서울 정도로 수용적으로 받아들인다. 영향력 있는 사람의 근거 없는 주장은 그래서 더 위험하다.</p>
+  </li>
+  <li>
+    <p>두 번째로, 다름은 빠르게 관철될 수 있는 만큼, 역설적으로 너무 쉽게 틀림으로 변질한다. ‘잘은 모르겠지만 맞겠거니’의 방식으로 쌓아올린 믿음은 아슬아슬하게 쌓은 높은 탑과 같아 약간의 균열만으로 쉽게 무너진다. 함께 사는 세상에서 타인에게 인정받지 못함이 주는 아픔은 크다. 더욱이 나의 희소한 행동이 타인을 의식하여 만들어졌다면, 집단에서 인정받지 못하는 소외감과 외로움은 나의 희소함을 던져버리고 다수 속에 들어가고자 하는 회귀 본능을 불러 일으킨다. 타인으로부터 정의된 동력은 타인이 달라질 때 너무 쉽게 그 의미를 상실한다.</p>
+  </li>
+</ul>
+
+<p>희소함은 더욱 눈에 띄고 매력적으로 나를 포장하지만, 포장에 관계 없이 그 속을 들여다보는 일은 언젠가 이루어진다. 그 과정에서 타인에게 흔들리지 않는 단단한 동력은 포장이 아닌 무게가 만든다.</p>
+
+<p>삶의 순간들에서도, 나의 rationale을 찾고자 한다.</p>
+
+<p>희소함이라는 도구는 사용하는 것이지, 휘둘리는 것이 아니다.</p>]]></content><author><name>DaRe_jin</name></author><category term="[&quot;Thoughts&quot;]" /><category term="에세이" /></entry></feed>
