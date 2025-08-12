@@ -697,7 +697,7 @@ Shallow embedding과 달리 <strong>파라미터가 노드 간 공유</strong>�
 
 <p><br /></p>
 
-<p><strong>GNN은 구조에 대한 연산(structural assumption)을 $\mathrm{ENC}$가 담당하므로, $\mathrm{DEC}$와  Loss function(learning objective) 은 태스크에 맞춰 유연하게 설정할 수 있다.</strong></p>
+<p><strong>GNN은 구조에 대한 연산(structural assumption)을 $\mathrm{ENC}$가 담당하므로, $\mathrm{DEC}$와  loss function(learning objective) 은 태스크에 맞춰 유연하게 설정할 수 있다.</strong></p>
 <ul>
   <li>링크 예측 : $\mathrm{DEC}(\mathbf{z}_i,\mathbf{z}_j)=\sigma(\mathbf{z}_i^\top\mathbf{z}_j)$, negative sampling</li>
   <li>node 분류 : $\hat{\mathbf{y}}_i=\mathrm{softmax}(W\mathbf{z}_i)$, cross-enthropy</li>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-08-13T04:09:20+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">DaRe_jin’s Blog</title><subtitle>내실 있는 낙관</subtitle><author><name>DaRe_jin</name></author><entry><title type="html">Two Node Embedding Approaches - Shallow and NN-based</title><link href="http://localhost:4000/graphs/Two-Node-Embedding-Approaches/" rel="alternate" type="text/html" title="Two Node Embedding Approaches - Shallow and NN-based" /><published>2025-08-11T00:00:00+09:00</published><updated>2025-08-11T00:00:00+09:00</updated><id>http://localhost:4000/graphs/Two%20Node%20Embedding%20Approaches</id><content type="html" xml:base="http://localhost:4000/graphs/Two-Node-Embedding-Approaches/"><![CDATA[<hr />
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-08-13T04:10:21+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">DaRe_jin’s Blog</title><subtitle>내실 있는 낙관</subtitle><author><name>DaRe_jin</name></author><entry><title type="html">Two Node Embedding Approaches - Shallow and NN-based</title><link href="http://localhost:4000/graphs/Two-Node-Embedding-Approaches/" rel="alternate" type="text/html" title="Two Node Embedding Approaches - Shallow and NN-based" /><published>2025-08-11T00:00:00+09:00</published><updated>2025-08-11T00:00:00+09:00</updated><id>http://localhost:4000/graphs/Two%20Node%20Embedding%20Approaches</id><content type="html" xml:base="http://localhost:4000/graphs/Two-Node-Embedding-Approaches/"><![CDATA[<hr />
 
 <h1 id="introduction">Introduction</h1>
 
@@ -227,7 +227,7 @@ Shallow embedding과 달리 <strong>파라미터가 노드 간 공유</strong>�
 
 <p><br /></p>
 
-<p><strong>GNN은 구조에 대한 연산(structural assumption)을 $\mathrm{ENC}$가 담당하므로, $\mathrm{DEC}$와  Loss function(learning objective) 은 태스크에 맞춰 유연하게 설정할 수 있다.</strong></p>
+<p><strong>GNN은 구조에 대한 연산(structural assumption)을 $\mathrm{ENC}$가 담당하므로, $\mathrm{DEC}$와  loss function(learning objective) 은 태스크에 맞춰 유연하게 설정할 수 있다.</strong></p>
 <ul>
   <li>링크 예측 : $\mathrm{DEC}(\mathbf{z}_i,\mathbf{z}_j)=\sigma(\mathbf{z}_i^\top\mathbf{z}_j)$, negative sampling</li>
   <li>node 분류 : $\hat{\mathbf{y}}_i=\mathrm{softmax}(W\mathbf{z}_i)$, cross-enthropy</li>
