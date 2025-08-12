@@ -235,7 +235,7 @@ $$
 
 <br>
 
-**GNN은 구조에 대한 연산(structural assumption)을 $\mathrm{ENC}$가 담당하므로, $\mathrm{DEC}$와  Loss function(learning objective) 은 태스크에 맞춰 유연하게 설정할 수 있다.**
+**GNN은 구조에 대한 연산(structural assumption)을 $\mathrm{ENC}$가 담당하므로, $\mathrm{DEC}$와  loss function(learning objective) 은 태스크에 맞춰 유연하게 설정할 수 있다.**
  - 링크 예측 : $\mathrm{DEC}(\mathbf{z}_i,\mathbf{z}_j)=\sigma(\mathbf{z}_i^\top\mathbf{z}_j)$, negative sampling
  - node 분류 : $\hat{\mathbf{y}}_i=\mathrm{softmax}(W\mathbf{z}_i)$, cross-enthropy
  - 그래프/subgraph 관련 supervised task: $\mathrm{READOUT}$으로 node embedding을 post processing한 후 태스크별 $\mathrm{DEC}$ 사용
