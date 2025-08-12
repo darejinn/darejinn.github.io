@@ -5,8 +5,8 @@ last_modified_at: 2025-07-30
 category:
   - Graphs
 tags:
-  - Multimodal AI
-  - Contrastive Learning
+  - Graphs
+  - Representation learning
 toc: true
 toc_sticky: true
 comments: true
