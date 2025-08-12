@@ -666,7 +666,7 @@ S = \text{Katz}, \ \text{RPR}, \ \text{Jaccard} \ \text{등}\]
 \right\rVert_2^2\]
 
 <p><br />
-Shallow embedding과 달리 <strong>파라미터가 노드 간 공유</strong>되어 연산이 효율적이다. 하지만 입력 차원이 $|\mathcal{V}|$에 고정되어 있어 대규모 그래프 적용이 어려우며, 새로운 그래프에 대한 적용도 제한적이다. (<strong>transductive</strong>)</p>
+Shallow embedding과 달리 <strong>파라미터가 노드 간 공유</strong>되어 연산이 효율적이다. 하지만 입력 차원이 $|\mathcal{V}|$에 고정되어 있어 대규모 그래프 적용이 어려우며, 새로운 그래프에 대한 적용도 제한적이다. ( <strong>transductive</strong> )</p>
 
 <h3 id="2-2-neighborhood-aggregation-gcngraphsagegat"><em>2-2. Neighborhood Aggregation (GCN/GraphSAGE/GAT)</em></h3>
 
@@ -710,8 +710,7 @@ Shallow embedding과 달리 <strong>파라미터가 노드 간 공유</strong>�
 
 <p>이 방법은 가장 진보한, 현재에도 활발히 연구되고 있는 graph representation 방식으로, 흔히 GNN을 이야기하면 보통 neighborhood aggregation을 바탕으로 한 이 message passing을 상정한다.</p>
 
-<p><strong>파라미터 공유</strong>로 모델 크기가 그래프 크기와 관계 없이 효율적으로 작게 유지된다. <strong>Node feature/edge weight</strong> 등 그래프 관련 meta information을 자연스럽게 활용할 수 있으며, 처음 보는 그래프에도 적용이 수월하다.
-( <em>inductive하다</em> )</p>
+<p><strong>파라미터 공유</strong>로 모델 크기가 그래프 크기와 관계 없이 효율적으로 작게 유지된다. <strong>Node feature/edge weight</strong> 등 그래프 관련 meta information을 자연스럽게 활용할 수 있으며, 처음 보는 그래프에도 적용이 수월하다. ( <strong>inductive</strong> )</p>
 
 <hr />
 

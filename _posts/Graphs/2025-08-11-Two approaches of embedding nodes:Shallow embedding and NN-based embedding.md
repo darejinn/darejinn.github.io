@@ -203,7 +203,7 @@ $$
 $$
 
 <br>
-Shallow embedding과 달리 **파라미터가 노드 간 공유**되어 연산이 효율적이다. 하지만 입력 차원이 $|\mathcal{V}|$에 고정되어 있어 대규모 그래프 적용이 어려우며, 새로운 그래프에 대한 적용도 제한적이다. (**transductive**)
+Shallow embedding과 달리 **파라미터가 노드 간 공유**되어 연산이 효율적이다. 하지만 입력 차원이 $|\mathcal{V}|$에 고정되어 있어 대규모 그래프 적용이 어려우며, 새로운 그래프에 대한 적용도 제한적이다. ( **transductive** )
   
 
 ### *2-2. Neighborhood Aggregation (GCN/GraphSAGE/GAT)*
@@ -246,8 +246,7 @@ $$
 
 이 방법은 가장 진보한, 현재에도 활발히 연구되고 있는 graph representation 방식으로, 흔히 GNN을 이야기하면 보통 neighborhood aggregation을 바탕으로 한 이 message passing을 상정한다.
 
-**파라미터 공유**로 모델 크기가 그래프 크기와 관계 없이 효율적으로 작게 유지된다. **Node feature/edge weight** 등 그래프 관련 meta information을 자연스럽게 활용할 수 있으며, 처음 보는 그래프에도 적용이 수월하다.
-( *inductive하다* )
+**파라미터 공유**로 모델 크기가 그래프 크기와 관계 없이 효율적으로 작게 유지된다. **Node feature/edge weight** 등 그래프 관련 meta information을 자연스럽게 활용할 수 있으며, 처음 보는 그래프에도 적용이 수월하다. ( **inductive** )
 
 ---
 

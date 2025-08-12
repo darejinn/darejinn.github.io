@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-08-13T03:46:56+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">DaRe_jin’s Blog</title><subtitle>내실 있는 낙관</subtitle><author><name>DaRe_jin</name></author><entry><title type="html">Two approaches of embedding nodes - Shallow / NN-based</title><link href="http://localhost:4000/graphs/Two-approaches-of-embedding-nodes-Shallow-embedding-and-NN-based-embedding/" rel="alternate" type="text/html" title="Two approaches of embedding nodes - Shallow / NN-based" /><published>2025-08-11T00:00:00+09:00</published><updated>2025-08-11T00:00:00+09:00</updated><id>http://localhost:4000/graphs/Two%20approaches%20of%20embedding%20nodes:Shallow%20embedding%20and%20NN-based%20embedding</id><content type="html" xml:base="http://localhost:4000/graphs/Two-approaches-of-embedding-nodes-Shallow-embedding-and-NN-based-embedding/"><![CDATA[<hr />
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-08-13T03:49:42+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">DaRe_jin’s Blog</title><subtitle>내실 있는 낙관</subtitle><author><name>DaRe_jin</name></author><entry><title type="html">Two approaches of embedding nodes - Shallow / NN-based</title><link href="http://localhost:4000/graphs/Two-approaches-of-embedding-nodes-Shallow-embedding-and-NN-based-embedding/" rel="alternate" type="text/html" title="Two approaches of embedding nodes - Shallow / NN-based" /><published>2025-08-11T00:00:00+09:00</published><updated>2025-08-11T00:00:00+09:00</updated><id>http://localhost:4000/graphs/Two%20approaches%20of%20embedding%20nodes:Shallow%20embedding%20and%20NN-based%20embedding</id><content type="html" xml:base="http://localhost:4000/graphs/Two-approaches-of-embedding-nodes-Shallow-embedding-and-NN-based-embedding/"><![CDATA[<hr />
 
 <h1 id="introduction">Introduction</h1>
 
@@ -196,7 +196,7 @@ S = \text{Katz}, \ \text{RPR}, \ \text{Jaccard} \ \text{등}\]
 \right\rVert_2^2\]
 
 <p><br />
-Shallow embedding과 달리 <strong>파라미터가 노드 간 공유</strong>되어 연산이 효율적이다. 하지만 입력 차원이 $|\mathcal{V}|$에 고정되어 있어 대규모 그래프 적용이 어려우며, 새로운 그래프에 대한 적용도 제한적이다. (<strong>transductive</strong>)</p>
+Shallow embedding과 달리 <strong>파라미터가 노드 간 공유</strong>되어 연산이 효율적이다. 하지만 입력 차원이 $|\mathcal{V}|$에 고정되어 있어 대규모 그래프 적용이 어려우며, 새로운 그래프에 대한 적용도 제한적이다. ( <strong>transductive</strong> )</p>
 
 <h3 id="2-2-neighborhood-aggregation-gcngraphsagegat"><em>2-2. Neighborhood Aggregation (GCN/GraphSAGE/GAT)</em></h3>
 
@@ -240,8 +240,7 @@ Shallow embedding과 달리 <strong>파라미터가 노드 간 공유</strong>�
 
 <p>이 방법은 가장 진보한, 현재에도 활발히 연구되고 있는 graph representation 방식으로, 흔히 GNN을 이야기하면 보통 neighborhood aggregation을 바탕으로 한 이 message passing을 상정한다.</p>
 
-<p><strong>파라미터 공유</strong>로 모델 크기가 그래프 크기와 관계 없이 효율적으로 작게 유지된다. <strong>Node feature/edge weight</strong> 등 그래프 관련 meta information을 자연스럽게 활용할 수 있으며, 처음 보는 그래프에도 적용이 수월하다.
-( <em>inductive하다</em> )</p>
+<p><strong>파라미터 공유</strong>로 모델 크기가 그래프 크기와 관계 없이 효율적으로 작게 유지된다. <strong>Node feature/edge weight</strong> 등 그래프 관련 meta information을 자연스럽게 활용할 수 있으며, 처음 보는 그래프에도 적용이 수월하다. ( <strong>inductive</strong> )</p>
 
 <hr />
 
