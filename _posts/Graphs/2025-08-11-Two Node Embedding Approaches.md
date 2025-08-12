@@ -174,7 +174,7 @@ Encoder 구조가 단순하기 때문에, 무엇을 보존할지에 대한 선�
   - **DeepWalk**의 경우 : **Hierarchical softmax**를 사용하여, 이진 트리 구조로 정규화 항 계산을 가속한다.
   - **Node2vec**의 경우: **Negative sampling** 사용하여, 전체 노드 집합 대신 무작위로 선택한 소수의 negative sample로 분모를 근사한다.
 
-- 가장 대표적인 random walk basedembedding method를 다루었는데, Deepwalk와 node2vec 외에도 LINE, HARP 등의 다양한 방법이 있다. 이 역시 다음에 자세히 다루겠다.
+- 가장 대표적인 random walk based embedding method를 다루었는데, Deepwalk와 node2vec 외에도 LINE, HARP 등의 다양한 방법이 있다. 
 
 
 ---
