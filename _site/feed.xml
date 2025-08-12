@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-08-13T04:07:05+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">DaRe_jin’s Blog</title><subtitle>내실 있는 낙관</subtitle><author><name>DaRe_jin</name></author><entry><title type="html">Two Node Embedding Approaches - Shallow and NN-based</title><link href="http://localhost:4000/graphs/Two-Node-Embedding-Approaches/" rel="alternate" type="text/html" title="Two Node Embedding Approaches - Shallow and NN-based" /><published>2025-08-11T00:00:00+09:00</published><updated>2025-08-11T00:00:00+09:00</updated><id>http://localhost:4000/graphs/Two%20Node%20Embedding%20Approaches</id><content type="html" xml:base="http://localhost:4000/graphs/Two-Node-Embedding-Approaches/"><![CDATA[<hr />
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-08-13T04:07:48+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">DaRe_jin’s Blog</title><subtitle>내실 있는 낙관</subtitle><author><name>DaRe_jin</name></author><entry><title type="html">Two Node Embedding Approaches - Shallow and NN-based</title><link href="http://localhost:4000/graphs/Two-Node-Embedding-Approaches/" rel="alternate" type="text/html" title="Two Node Embedding Approaches - Shallow and NN-based" /><published>2025-08-11T00:00:00+09:00</published><updated>2025-08-11T00:00:00+09:00</updated><id>http://localhost:4000/graphs/Two%20Node%20Embedding%20Approaches</id><content type="html" xml:base="http://localhost:4000/graphs/Two-Node-Embedding-Approaches/"><![CDATA[<hr />
 
 <h1 id="introduction">Introduction</h1>
 
@@ -169,7 +169,7 @@ S = \text{Katz}, \ \text{RPR}, \ \text{Jaccard} \ \text{등}\]
     </ul>
   </li>
   <li>
-    <p>가장 대표적인 random walk basedembedding method를 다루었는데, Deepwalk와 node2vec 외에도 LINE, HARP 등의 다양한 방법이 있다. 이 역시 다음에 자세히 다루겠다.</p>
+    <p>가장 대표적인 random walk based embedding method를 다루었는데, Deepwalk와 node2vec 외에도 LINE, HARP 등의 다양한 방법이 있다.</p>
   </li>
 </ul>
 
