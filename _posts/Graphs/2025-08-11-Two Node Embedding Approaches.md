@@ -84,19 +84,19 @@ $s_G$를 어떻게 정의할지(무엇을 ‘유사’로 볼지), $\mathrm{DEC}
 위와 같은 $\mathrm{ENC}$–$s_G$–$\mathrm{DEC}$ 프레임워크 안에서, **학습이 일어나는 층위**에 따라 접근을 두 가지로 나눌 수 있다.
 
 - **Shallow** : 미리 정한 $s_G$에 맞춰 **node별 embedding 자체**를 **직접** 최적화한다.
-- **NN(GNN)-based**: **유사도를 만들어내는 연산 자체**(메시지 패싱/오토encoder 등)를 학습해 embedding을 **간접**적으로 만든다. 파라미터는 **node 간 공유**된다.
+- **NN(GNN)-based**: **유사도를 만들어내는 연산**(autoencoder, message passing)를 학습해 embedding을 **간접**적으로 만든다. 파라미터는 **node 간 공유**된다.
 
 ---
 
 ## *1. Shallow embedding*
 
-Shallow embedding은 **node ID**를 임베딩 행렬의 열(column)에 직접 매핑하는 방식이다.
+Shallow embedding은 **node ID를 임베딩 행렬의 열(column)에 직접 매핑**하는 방식이다.
 
 $$
 Z \in \mathbb{R}^{d \times |\mathcal{V}|}, \qquad \mathrm{ENC}(v_i) = Z_{\cdot i} = \mathbf{z}_i
 $$
 
-Encoder 구조가 단순하기 때문에, **"무엇을 보존할지"**에 대한 선택이 거의 전적으로 **그래프 상의 유사도 정의** $s_G$와 **Decoder** 설계에 담긴다.
+Encoder 구조가 단순하기 때문에, 무엇을 보존할지에 대한 선택이 거의 전적으로 **그래프 상의 유사도 정의 $s_G$와 Decoder** 설계에 담긴다.
 
 ---
 
