@@ -162,7 +162,7 @@ Encoder 구조가 단순하기 때문에, 무엇을 보존할지에 대한 선�
 
 - **Loss function (learning objective)**  
 
-  위 확률 근사를 위해 다음 **교차 엔트로피 손실**을 최소화한다.
+  위 확률 근사를 위해 다음 **cross enthropy loss**을 최소화한다.
 
   $$
   \mathcal{L} = \sum_{(v_i, v_j) \in D} - \log \left( \mathrm{DEC}(\mathbf{z}_i, \mathbf{z}_j) \right)
