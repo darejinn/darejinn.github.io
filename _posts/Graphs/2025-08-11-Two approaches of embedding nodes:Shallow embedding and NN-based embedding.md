@@ -71,7 +71,7 @@ comments: true
   \mathcal{L}=\sum_{(i,j)\in\mathcal{D}}\ell\!\Big(\mathrm{DEC}(\mathbf{z}_i,\mathbf{z}_j),\ s_G(i,j)\Big)
   $$
 
-여기서 **구조 가정**은 '무엇을 가깝게 유지할지'에 대한 inductive bias, 즉 **네트워크 구조에 관한 모델의 prior**다. 
+여기서 **구조 가정은 '무엇을 가깝게 유지할지'에 대한 inductive bias,** 즉 **네트워크 구조에 관한 모델의 prior**다. 
 
 $s_G$를 어떻게 정의할지(무엇을 ‘유사’로 볼지), $\mathrm{DEC}$를 어떻게 둘지(embedding에서 유사를 어떻게 수치화할지), $\mathrm{ENC}$를 어떻게 설계할지(그 유사를 재현하도록 표현을 만들지)에 이 가정이 명시적·암묵적으로 들어 있다.
 
