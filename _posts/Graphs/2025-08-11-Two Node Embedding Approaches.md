@@ -54,7 +54,7 @@ comments: true
 
   $$
   s_G:\mathcal{V}\times\mathcal{V}\to\mathbb{R}^+,\qquad
-  s_G(i,j)\in\{A_{ij},\ k\text{-hop},\ \text{랜덤워크 공출현확률}
+  s_G(i,j)\in\{A_{ij},\ k\text{-hop},\ \text{랜덤워크 공출현확률}\}
   $$
 - **Embedding 공간의 decoder $\mathrm{DEC}$**
   
