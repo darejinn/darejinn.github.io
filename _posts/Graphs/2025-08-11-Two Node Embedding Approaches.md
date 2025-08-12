@@ -24,15 +24,13 @@ comments: true
 1. **Edge/subgraph embedding이 node embedding의 후처리로 귀결**되는 경우가 많다.  
    
    예를 들어 
-   - edge $(v_i,v_j)\in E$에 대해 node embedding $\mathbf{z}_i,\mathbf{z}_j$가 주어지면 hadamard/mean/weighted-L1·L2 같은 이항 연산으로
+   - edge $(v_i,v_j)\in E$에 대해 node embedding $\mathbf{z}_i,\mathbf{z}_j$가 주어지면 hadamard/mean/weighted-L1·L2 같은 이항 연산으로 아래처럼 edge embedding을 만든다.
 
    $$
    \mathbf{z}_{(i,j)}=\mathbf{z}_i\odot\mathbf{z}_j
-   $$
+   $$ 
 
-   처럼 edge embedding을 만든다.  
-
-   - subgraph $\mathcal{G}[\mathcal{S}]$의 embedding도 보통 $\mathcal{S}\subset\mathcal{V}$에 포함된 node embedding을 집계(average/attention 등)해서 얻는다.
+   - subgraph $\mathcal{G}[\mathcal{S}]$의 embedding도 보통 $\mathcal{S}\subset\mathcal{V}$에 포함된 node embedding을 집계(average/attention 등)해서 아래와 같이 얻는다.
   
    $$
    \mathbf{z}_{\text{subgraph}}=\frac{1}{|\mathcal{S}|}\sum_{v_i\in\mathcal{S}}\mathbf{z}_i

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-08-13T04:03:16+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">DaRe_jin’s Blog</title><subtitle>내실 있는 낙관</subtitle><author><name>DaRe_jin</name></author><entry><title type="html">Two Node Embedding Approaches - Shallow and NN-based</title><link href="http://localhost:4000/graphs/Two-Node-Embedding-Approaches/" rel="alternate" type="text/html" title="Two Node Embedding Approaches - Shallow and NN-based" /><published>2025-08-11T00:00:00+09:00</published><updated>2025-08-11T00:00:00+09:00</updated><id>http://localhost:4000/graphs/Two%20Node%20Embedding%20Approaches</id><content type="html" xml:base="http://localhost:4000/graphs/Two-Node-Embedding-Approaches/"><![CDATA[<hr />
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-08-13T04:05:21+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">DaRe_jin’s Blog</title><subtitle>내실 있는 낙관</subtitle><author><name>DaRe_jin</name></author><entry><title type="html">Two Node Embedding Approaches - Shallow and NN-based</title><link href="http://localhost:4000/graphs/Two-Node-Embedding-Approaches/" rel="alternate" type="text/html" title="Two Node Embedding Approaches - Shallow and NN-based" /><published>2025-08-11T00:00:00+09:00</published><updated>2025-08-11T00:00:00+09:00</updated><id>http://localhost:4000/graphs/Two%20Node%20Embedding%20Approaches</id><content type="html" xml:base="http://localhost:4000/graphs/Two-Node-Embedding-Approaches/"><![CDATA[<hr />
 
 <h1 id="introduction">Introduction</h1>
 
@@ -10,15 +10,13 @@
 
     <p>예를 들어</p>
     <ul>
-      <li>edge $(v_i,v_j)\in E$에 대해 node embedding $\mathbf{z}_i,\mathbf{z}_j$가 주어지면 hadamard/mean/weighted-L1·L2 같은 이항 연산으로</li>
+      <li>edge $(v_i,v_j)\in E$에 대해 node embedding $\mathbf{z}_i,\mathbf{z}_j$가 주어지면 hadamard/mean/weighted-L1·L2 같은 이항 연산으로 아래처럼 edge embedding을 만든다.</li>
     </ul>
 
 \[\mathbf{z}_{(i,j)}=\mathbf{z}_i\odot\mathbf{z}_j\]
 
-    <p>처럼 edge embedding을 만든다.</p>
-
     <ul>
-      <li>subgraph $\mathcal{G}[\mathcal{S}]$의 embedding도 보통 $\mathcal{S}\subset\mathcal{V}$에 포함된 node embedding을 집계(average/attention 등)해서 얻는다.</li>
+      <li>subgraph $\mathcal{G}[\mathcal{S}]$의 embedding도 보통 $\mathcal{S}\subset\mathcal{V}$에 포함된 node embedding을 집계(average/attention 등)해서 아래와 같이 얻는다.</li>
     </ul>
 
 \[\mathbf{z}_{\text{subgraph}}=\frac{1}{|\mathcal{S}|}\sum_{v_i\in\mathcal{S}}\mathbf{z}_i\]
