@@ -507,7 +507,7 @@
 
 <h2 id="review--learning-framework"><em>Review : Learning framework</em></h2>
 
-<p><em>‘그래프에서 가까운 node는 embedding 공간에서도 가깝다’</em>는 <strong>structural assumption</strong>(구조 가정) 아래, 다음 세 가지를 설계한다.</p>
+<p><em>‘그래프에서 가까운 node는 embedding 공간에서도 가깝다’</em>는 <strong>structural assumption</strong> 아래, 다음 세 가지를 설계한다.</p>
 
 <ul>
   <li>
@@ -530,7 +530,7 @@ s_G(i,j)\in\{A_{ij},\ k\text{-hop},\ \text{랜덤워크 공출현확률}\]
 \[\mathbf{z}_i=\mathrm{ENC}(v_i),\qquad
   \mathcal{L}=\sum_{(i,j)\in\mathcal{D}}\ell\!\Big(\mathrm{DEC}(\mathbf{z}_i,\mathbf{z}_j),\ s_G(i,j)\Big)\]
 
-<p>여기서 <strong>구조 가정은 ‘무엇을 가깝게 유지할지’에 대한 inductive bias,</strong> 즉 <strong>네트워크 구조에 관한 모델의 prior</strong>다.</p>
+<p>여기서 <strong>structural assumption은 ‘무엇을 가깝게 유지할지’에 대한 inductive bias,</strong> 즉 <strong>네트워크 구조에 관한 모델의 prior</strong>다.</p>
 
 <p>$s_G$를 어떻게 정의할지(무엇을 ‘유사’로 볼지), $\mathrm{DEC}$를 어떻게 둘지(embedding에서 유사를 어떻게 수치화할지), $\mathrm{ENC}$를 어떻게 설계할지(그 유사를 재현하도록 표현을 만들지)에 이 가정이 명시적·암묵적으로 들어 있다.</p>
 
@@ -699,7 +699,7 @@ Shallow embedding과 달리 <strong>파라미터가 노드 간 공유</strong>�
 
 <p><br /></p>
 
-<p><strong>GNN은 구조 가정을 $\mathrm{ENC}$가 담당하므로, $\mathrm{DEC}$와  Loss function(learning objective) 은 태스크에 맞춰 유연하게 고른다.</strong></p>
+<p><strong>GNN은 구조에 대한 연산(structural assumption)을 $\mathrm{ENC}$가 담당하므로, $\mathrm{DEC}$와  Loss function(learning objective) 은 태스크에 맞춰 유연하게 설정할 수 있다.</strong></p>
 <ul>
   <li>링크 예측 : $\mathrm{DEC}(\mathbf{z}_i,\mathbf{z}_j)=\sigma(\mathbf{z}_i^\top\mathbf{z}_j)$, negative sampling</li>
   <li>node 분류 : $\hat{\mathbf{y}}_i=\mathrm{softmax}(W\mathbf{z}_i)$, cross-enthropy</li>
@@ -719,7 +719,7 @@ Shallow embedding과 달리 <strong>파라미터가 노드 간 공유</strong>�
 <ul>
   <li>
     <p>Graph representation learning의 framework는,
-<strong>(1) 무엇을 유사로 볼지($s_G$)</strong>, <strong>(2) embedding에서 그 유사를 어떻게 읽어낼지($\mathrm{DEC}$)</strong>, <strong>(3) 그 유사를 재현하도록 어떤 연산을 학습할지($\mathrm{ENC}$)</strong> 를 설정(<strong>구조 가정</strong>) 하는 것이 핵심이다.</p>
+<strong>(1) 무엇을 유사로 볼지($s_G$)</strong>, <strong>(2) embedding에서 그 유사를 어떻게 읽어낼지($\mathrm{DEC}$)</strong>, <strong>(3) 그 유사를 재현하도록 어떤 연산을 학습할지($\mathrm{ENC}$)</strong> 를 설정(<strong>structural assumption</strong>) 하는 것이 핵심이다.</p>
 
     <ul>
       <li><strong>Shallow</strong>는 <strong>(1)</strong> 유사도를 정의하고(S 혹은 공출현확률) 그에 맞춰 <strong>(2)</strong> embedding 열의 내적이 비슷하도록 <strong>(3)</strong> embedding 열을 각 node id마다 따로따로 lookup한다.</li>

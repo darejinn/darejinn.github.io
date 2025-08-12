@@ -49,7 +49,7 @@ comments: true
 
 ## *Review : Learning framework*
 
-*'그래프에서 가까운 node는 embedding 공간에서도 가깝다'*는 **structural assumption**(구조 가정) 아래, 다음 세 가지를 설계한다.
+*'그래프에서 가까운 node는 embedding 공간에서도 가깝다'*는 **structural assumption** 아래, 다음 세 가지를 설계한다.
 
 
 - **그래프 상의 유사도 $s_G$**
@@ -71,7 +71,7 @@ comments: true
   \mathcal{L}=\sum_{(i,j)\in\mathcal{D}}\ell\!\Big(\mathrm{DEC}(\mathbf{z}_i,\mathbf{z}_j),\ s_G(i,j)\Big)
   $$
 
-여기서 **구조 가정은 '무엇을 가깝게 유지할지'에 대한 inductive bias,** 즉 **네트워크 구조에 관한 모델의 prior**다. 
+여기서 **structural assumption은 '무엇을 가깝게 유지할지'에 대한 inductive bias,** 즉 **네트워크 구조에 관한 모델의 prior**다. 
 
 $s_G$를 어떻게 정의할지(무엇을 ‘유사’로 볼지), $\mathrm{DEC}$를 어떻게 둘지(embedding에서 유사를 어떻게 수치화할지), $\mathrm{ENC}$를 어떻게 설계할지(그 유사를 재현하도록 표현을 만들지)에 이 가정이 명시적·암묵적으로 들어 있다.
 
@@ -237,7 +237,7 @@ $$
 
 <br>
 
-**GNN은 구조 가정을 $\mathrm{ENC}$가 담당하므로, $\mathrm{DEC}$와  Loss function(learning objective) 은 태스크에 맞춰 유연하게 고른다.**
+**GNN은 구조에 대한 연산(structural assumption)을 $\mathrm{ENC}$가 담당하므로, $\mathrm{DEC}$와  Loss function(learning objective) 은 태스크에 맞춰 유연하게 설정할 수 있다.**
  - 링크 예측 : $\mathrm{DEC}(\mathbf{z}_i,\mathbf{z}_j)=\sigma(\mathbf{z}_i^\top\mathbf{z}_j)$, negative sampling
  - node 분류 : $\hat{\mathbf{y}}_i=\mathrm{softmax}(W\mathbf{z}_i)$, cross-enthropy
  - 그래프/subgraph 관련 supervised task: $\mathrm{READOUT}$으로 node embedding을 post processing한 후 태스크별 $\mathrm{DEC}$ 사용
@@ -253,7 +253,7 @@ $$
 ## 마무리하며
 
 - Graph representation learning의 framework는,
-  **(1) 무엇을 유사로 볼지($s_G$)**, **(2) embedding에서 그 유사를 어떻게 읽어낼지($\mathrm{DEC}$)**, **(3) 그 유사를 재현하도록 어떤 연산을 학습할지($\mathrm{ENC}$)** 를 설정(**구조 가정**) 하는 것이 핵심이다.
+  **(1) 무엇을 유사로 볼지($s_G$)**, **(2) embedding에서 그 유사를 어떻게 읽어낼지($\mathrm{DEC}$)**, **(3) 그 유사를 재현하도록 어떤 연산을 학습할지($\mathrm{ENC}$)** 를 설정(**structural assumption**) 하는 것이 핵심이다.
 
   - **Shallow**는 **(1)** 유사도를 정의하고(S 혹은 공출현확률) 그에 맞춰 **(2)** embedding 열의 내적이 비슷하도록 **(3)** embedding 열을 각 node id마다 따로따로 lookup한다.
   - **Neighborhood Autoencoder**는 **(1)** node마다 이웃 node의 정보를 나타내는 $\mathbf{s}_i$를 정의해, **(3)** 오토인코더를 이용해 **(2)** $\mathbf{s}_i$를 복원하도록 효율적으로 학습한다.
