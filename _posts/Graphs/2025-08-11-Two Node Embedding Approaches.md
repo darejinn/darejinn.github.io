@@ -19,7 +19,7 @@ comments: true
 
 # Introduction
 
-<a href="https://darejinn.github.io/graphs/Representation-Learning-on-Graphs/">앞선 글</a> 에서 설명했듯, Graph Representation Learning은 그래프의 요소(node, edge, subgraph)를 저차원 벡터로 매핑하는 method이다. 많은 survey가 여러 요소 중에서도 **node embedding**에 초점을 맞추는 이유는 다음과 같다.
+<a href="https://darejinn.github.io/graphs/Representation-Learning-on-Graphs/">앞선 글</a> 에서 설명했듯, Graph Representation Learning은 그래프의 요소(node, edge, subgraph)를 저차원 벡터로 매핑하는 method이다. 많은 survey가 여러 요소 중에서도 **node embedding**에 초점을 맞추는 이유는 다음과 같다.
 
 1. **Edge/subgraph embedding이 node embedding의 후처리로 귀결**되는 경우가 많다.  
    
