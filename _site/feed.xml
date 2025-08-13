@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-08-13T17:51:02+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">DaRe_jin’s Blog</title><subtitle>내실 있는 낙관</subtitle><author><name>DaRe_jin</name></author><entry><title type="html">[Experience] A 서비스를 런칭하며</title><link href="http://localhost:4000/projects/AI_Report/" rel="alternate" type="text/html" title="[Experience] A 서비스를 런칭하며" /><published>2025-08-13T00:00:00+09:00</published><updated>2025-08-13T00:00:00+09:00</updated><id>http://localhost:4000/projects/AI_Report</id><content type="html" xml:base="http://localhost:4000/projects/AI_Report/"><![CDATA[<hr />
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-08-13T17:54:43+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">DaRe_jin’s Blog</title><subtitle>내실 있는 낙관</subtitle><author><name>DaRe_jin</name></author><entry><title type="html">[Experience] A 서비스를 런칭하며</title><link href="http://localhost:4000/projects/AI_Report/" rel="alternate" type="text/html" title="[Experience] A 서비스를 런칭하며" /><published>2025-08-13T00:00:00+09:00</published><updated>2025-08-13T00:00:00+09:00</updated><id>http://localhost:4000/projects/AI_Report</id><content type="html" xml:base="http://localhost:4000/projects/AI_Report/"><![CDATA[<hr />
 
 <p class="notice--info">A 서비스를 기획하고, 개발하고, 런칭한 과정에서 배우고 느낀 것에 대한 기록입니다.</p>
 
@@ -38,7 +38,7 @@
 
 <h1 id="2-product-market-fit">2. Product-Market Fit</h1>
 
-<p>구현한 서비스를 간략히 소개하자면, LLM을 이용하여 입력에 맞는 아웃풋을 제공하는 것이었다.</p>
+<p>구현한 서비스를 간략히 소개하자면, 배경지식을 바탕으로 DB를 만들고, LLM을 이용하여 적절한 내용을 끌어와, 입력에 맞는 아웃풋을 제공하는 것이었다.</p>
 
 <p>클레이튼 크리스텐슨의 ‘Jobs-to-be-Done’ 프레임워크에 따르면, 고객은 제품의 기능 자체가 아니라 그것이 해결하는 ‘일(Job)’을 위해 구매한다고 한다. 여기서 중요한 것은 이 ‘일’이 단순한 기능적 니즈를 넘어 감정적, 사회적 욕구까지 포괄한다는 점이다.</p>
 
