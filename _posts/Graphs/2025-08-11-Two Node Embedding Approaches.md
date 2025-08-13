@@ -259,3 +259,11 @@ $$
 
 
 구체적 방법론과 수식 유도는 후속 글에서 더 다룰 예정이다.
+
+
+### 첨언
+
+1. 두 approach로 node embedding method를 나누어 설명하였지만, 두 approach는 배타적이지 않으며 해당하지 않는 예외도 존재한다. 가령 random walk 기반 sampling을 한 뒤 neural network를 학습시키는 방법도 있다. 또한 message passing의 fundamental한 한계를 지적하며 아예 새로운 framework를 제안하는 연구들도 있다. <a href="https://arxiv.org/pdf/2501.18739">*(ex. 랜덤워크를 통해 얻어낸 pattetn을 transformer에 넣는 방법을 제안한 최신 논문이다*)</a> 
+2. <a href="https://arxiv.org/abs/1709.05584">"*Representation Learning on Graphs*" (2017) </a>의 내용을 주로 참고한 이유는, 교신저자께서 graph machine learning의 대가이신, CS224W의 레즈코벡 교수님이시며, 특정 태스크(community detection, link prediction)나 메소드에 치중하지 않고 traditional method부터 GNN까지의 전반적인 개념을 한 프레임워크로 설명하시었기 때문이다. (*서울대학교 컴퓨터공학부 김선 교수님께서도 그래프 마이닝 강의 중, 해당 survey 논문을 교본으로 사용하셨다.*)
+3. 본 글에서는 시간축에 따라 변화하는 dynamic graph는 다루지 않았다.
+4. 학습이 일어나는 순방향 framework에 초점을 맞추었지만, 사실 최적화 방법도 매우 다양하다. 가령 라플라시안 행렬 분해는 목적함수를 최소화하는 문제를 일반화된 고윳값 문제의 해를 찾는 방법으로 해결한다. 신경망 기반 GRL은 일반적으로 gradient descent로 loss를 줄이는 방향으로 parameter를 update한다.
