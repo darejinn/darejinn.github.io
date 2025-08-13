@@ -244,7 +244,7 @@ $$
 
 이 방법은 가장 진보한, 현재에도 활발히 연구되고 있는 graph representation 방식으로, 흔히 GNN을 이야기하면 보통 neighborhood aggregation을 바탕으로 한 이 message passing을 상정한다.
 
-**파라미터 공유**로 모델 크기가 그래프 크기와 관계 없이 효율적으로 작게 유지된다. **Node feature/edge weight** 등 그래프 관련 meta information을 자연스럽게 활용할 수 있으며, 처음 보는 그래프에도 적용이 수월하다. ( **inductive** )
+Neighborhood Autoencoder 방법과 마찬가지로 **파라미터 공유**가 이루어지며, 순차적으로 주변 정보를 aggregate하므로 모델 크기가 '그래프 크기와 관계 없이' 효율적으로 작게 유지된다. **Node feature/edge weight** 등 그래프 관련 meta information을 자연스럽게 활용할 수 있으며, 처음 보는 그래프에도 적용이 수월하다. ( **inductive** )
 
 ---
 
