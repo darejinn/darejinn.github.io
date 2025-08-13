@@ -19,18 +19,18 @@ comments: true
 
 # Introduction
 
-<a href="https://darejinn.github.io/graphs/Representation-Learning-on-Graphs/">앞선 글</a> 에서 설명했듯, Graph Representation Learning은 그래프의 요소(node, edge, subgraph)를 저차원 벡터로 매핑하는 method이다. 많은 survey가 여러 요소 중에서도 **node embedding**에 초점을 맞추는 이유는 다음과 같다.
+<a href="https://darejinn.github.io/graphs/Representation-Learning-on-Graphs/">앞선 글</a> 에서 설명했듯, Graph Representation Learning은 그래프의 요소(node, edge, subgraph)를 저차원 벡터로 매핑하는 method이다. 많은 survey가 여러 요소 중에서도 **node embedding**에 초점을 맞추는 이유는 다음과 같다.
 
-1. **Edge/subgraph embedding이 node embedding의 후처리로 귀결**되는 경우가 많다.  
+1. **Edge/subgraph embedding이 node embedding의 후처리로 귀결**되는 경우가 많다.  
    
    예를 들어 
-   - edge $(v_i,v_j)\in E$에 대해 node embedding $\mathbf{z}_i,\mathbf{z}_j$가 주어지면 hadamard/mean/weighted-L1·L2 같은 이항 연산으로 아래처럼 edge embedding을 만든다.
+   - edge $(v_i,v_j)\in E$에 대해 node embedding $\mathbf{z}_i,\mathbf{z}_j$가 주어지면 hadamard/mean/weighted-L1·L2 같은 이항 연산으로 아래처럼 edge embedding을 만든다.
 
    $$
    \mathbf{z}_{(i,j)}=\mathbf{z}_i\odot\mathbf{z}_j
    $$ 
 
-   - subgraph $\mathcal{G}[\mathcal{S}]$의 embedding도 보통 $\mathcal{S}\subset\mathcal{V}$에 포함된 node embedding을 집계(average/attention 등)해서 아래와 같이 얻는다.
+   - subgraph $\mathcal{G}[\mathcal{S}]$의 embedding도 보통 $\mathcal{S}\subset\mathcal{V}$에 포함된 node embedding을 집계(average/attention 등)해서 아래와 같이 얻는다.
   
    $$
    \mathbf{z}_{\text{subgraph}}=\frac{1}{|\mathcal{S}|}\sum_{v_i\in\mathcal{S}}\mathbf{z}_i
@@ -38,16 +38,16 @@ comments: true
 
 
 
-2. Edge/Subgraph embedding을 직접 학습하더라도 절차는 **node embedding 학습과 본질적으로 유사**하다.  
-   - 예를 들어 타깃 subgraph의 모든 node에 연결된 dummy node를 추가하고 그 node의 embedding을 학습 대상으로 두면 사실상 node embedding 학습과 거의 동일한 형태가 된다.
+2. Edge/Subgraph embedding을 직접 학습하더라도 절차는 **node embedding 학습과 본질적으로 유사**하다.  
+   - 예를 들어 타깃 subgraph의 모든 node에 연결된 dummy node를 추가하고 그 node의 embedding을 학습 대상으로 두면 사실상 node embedding 학습과 거의 동일한 형태가 된다.
 
-따라서 node embedding을 이해하면 edge/subgraph embedding도 같은 틀 안에서 상당 부분 설명된다. 이하에서는 **encoder를 어떻게 정의하는지**에 따라 node embedding을 **shallow embedding**과 **NN-based embedding**으로 비교해 정리한다. 본 글은 <a href="https://arxiv.org/abs/1709.05584">"*Representation Learning on Graphs*" (2017) </a>에서 제시한 개념을 바탕으로 필자의 해석을 더해 작성하였다.
+따라서 node embedding을 이해하면 edge/subgraph embedding도 같은 틀 안에서 상당 부분 설명된다. 이하에서는 **encoder를 어떻게 정의하는지**에 따라 node embedding을 **shallow embedding**과 **NN-based embedding**으로 비교해 정리한다. 본 글은 <a href="https://arxiv.org/abs/1709.05584">"*Representation Learning on Graphs*" (2017) </a>에서 제시한 개념을 바탕으로 필자의 해석을 더해 작성하였다.
 
 ---
 
 ## *Review : Learning framework*
 
-*'그래프에서 가까운 node는 embedding 공간에서도 가깝다'*는 **structural assumption** 아래, 다음 세 가지를 설계한다.
+*'그래프에서 가까운 node는 embedding 공간에서도 가깝다'*는 **structural assumption** 아래, 다음 세 가지를 설계한다.
 
 
 - **그래프 상의 유사도 $s_G$**
@@ -56,13 +56,13 @@ comments: true
   s_G:\mathcal{V}\times\mathcal{V}\to\mathbb{R}^+,\qquad
   s_G(i,j)\in\{A_{ij},\ k\text{-hop},\ \text{랜덤워크 공출현확률}\}
   $$
-- **Embedding 공간의 decoder $\mathrm{DEC}$**
+- **Embedding 공간의 decoder $\mathrm{DEC}$**
   
   $$
   \mathrm{DEC}:\mathbb{R}^d\times\mathbb{R}^d\to\mathbb{R},\quad
   \text{예: }\ \mathbf{z}_i^\top\mathbf{z}_j,\ -\lVert\mathbf{z}_i-\mathbf{z}_j\rVert_2^2,\ \sigma(\mathbf{z}_i^\top\mathbf{z}_j)
   $$
- - **Encoder $\mathrm{ENC}$와 loss function(learning objective)**
+ - **Encoder $\mathrm{ENC}$와 loss function(learning objective)**
   
   $$
   \mathbf{z}_i=\mathrm{ENC}(v_i),\qquad
@@ -71,7 +71,7 @@ comments: true
 
 여기서 **structural assumption은 '무엇을 가깝게 유지할지'에 대한 inductive bias,** 즉 **네트워크 구조에 관한 모델의 prior**다. 
 
-$s_G$를 어떻게 정의할지(무엇을 ‘유사’로 볼지), $\mathrm{DEC}$를 어떻게 둘지(embedding에서 유사를 어떻게 수치화할지), $\mathrm{ENC}$를 어떻게 설계할지(그 유사를 재현하도록 표현을 만들지)에 이 가정이 명시적·암묵적으로 들어 있다.
+$s_G$를 어떻게 정의할지(무엇을 ‘유사’로 볼지), $\mathrm{DEC}$를 어떻게 둘지(embedding에서 유사를 어떻게 수치화할지), $\mathrm{ENC}$를 어떻게 설계할지(그 유사를 재현하도록 표현을 만들지)에 이 가정이 명시적·암묵적으로 들어 있다.
 
 ---
 <br>
@@ -81,8 +81,8 @@ $s_G$를 어떻게 정의할지(무엇을 ‘유사’로 볼지), $\mathrm{DEC}
 ---
 위와 같은 $\mathrm{ENC}$–$s_G$–$\mathrm{DEC}$ 프레임워크 안에서, **학습이 일어나는 층위**에 따라 접근을 두 가지로 나눌 수 있다.
 
-- **Shallow** : 미리 정한 $s_G$에 맞춰 **node별 embedding 자체**를 **직접** 최적화한다.
-- **NN(GNN)-based**: **유사도를 만들어내는 연산**(autoencoder, message passing)를 학습해 embedding을 **간접**적으로 만든다. 파라미터는 **node 간 공유**된다.
+- **Shallow** : 미리 정한 $s_G$에 맞춰 **node별 embedding 자체**를 **직접** 최적화한다.
+- **NN(GNN)-based**: **유사도를 만들어내는 연산**(autoencoder, message passing)를 학습해 embedding을 **간접**적으로 만든다. 파라미터는 **node 간 공유**된다.
 
 ---
 
@@ -183,7 +183,7 @@ Encoder 구조가 단순하기 때문에, 무엇을 보존할지에 대한 선�
 
 ## *2. NN-based embedding*
 
-Shallow가 node-id만 입력으로 받아 바로 embedding을 lookup하는 것과 달리, NN-based는 **node 특징 $\mathbf{x}_i$와 이웃 $\mathcal{N}(i)$를 입력으로 받아 처리하는 네트워크**를 학습한다. 
+Shallow가 node-id만 입력으로 받아 바로 embedding을 lookup하는 것과 달리, NN-based는 **node 특징 $\mathbf{x}_i$와 이웃 $\mathcal{N}(i)$를 입력으로 받아 처리하는 네트워크**를 학습한다. 
 
 ### *2-1. Neighborhood Autoencoder (DNGR, SDNE)*
 
@@ -237,21 +237,21 @@ $$
 
 **GNN은 구조에 대한 연산(structural assumption)을 $\mathrm{ENC}$가 담당하므로, $\mathrm{DEC}$와  loss function(learning objective) 은 태스크에 맞춰 유연하게 설정할 수 있다.**
  - 링크 예측 : $\mathrm{DEC}(\mathbf{z}_i,\mathbf{z}_j)=\sigma(\mathbf{z}_i^\top\mathbf{z}_j)$, negative sampling
- - node 분류 : $\hat{\mathbf{y}}_i=\mathrm{softmax}(W\mathbf{z}_i)$, cross-enthropy
- - 그래프/subgraph 관련 supervised task: $\mathrm{READOUT}$으로 node embedding을 post processing한 후 태스크별 $\mathrm{DEC}$ 사용
+ - node 분류 : $\hat{\mathbf{y}}_i=\mathrm{softmax}(W\mathbf{z}_i)$, cross-enthropy
+ - 그래프/subgraph 관련 supervised task: $\mathrm{READOUT}$으로 node embedding을 post processing한 후 태스크별 $\mathrm{DEC}$ 사용
   
 <br>
 
 이 방법은 가장 진보한, 현재에도 활발히 연구되고 있는 graph representation 방식으로, 흔히 GNN을 이야기하면 보통 neighborhood aggregation을 바탕으로 한 이 message passing을 상정한다.
 
-Neighborhood Autoencoder 방법과 마찬가지로 **파라미터 공유**가 이루어지며, 순차적으로 주변 정보를 aggregate하므로 모델 크기가 '그래프 크기와 관계 없이' 효율적으로 작게 유지된다. **Node feature/edge weight** 등 그래프 관련 meta information을 자연스럽게 활용할 수 있으며, 처음 보는 그래프에도 적용이 수월하다. ( **inductive** )
+Neighborhood Autoencoder 방법과 마찬가지로 **파라미터 공유**가 이루어지며, 순차적으로 주변 정보를 aggregate하므로 모델 크기가 '그래프 크기와 관계 없이' 효율적으로 작게 유지된다. **Node feature/edge weight** 등 그래프 관련 meta information을 자연스럽게 활용할 수 있으며, 처음 보는 그래프에도 적용이 수월하다. ( **inductive** )
 
 ---
 
 ## 마무리하며
 
 - Graph representation learning의 framework는,
-  **(1) 무엇을 유사로 볼지($s_G$)**, **(2) embedding에서 그 유사를 어떻게 읽어낼지($\mathrm{DEC}$)**, **(3) 그 유사를 재현하도록 어떤 연산을 학습할지($\mathrm{ENC}$)** 를 설정(**structural assumption**) 하는 것이 핵심이다.
+  **(1) 무엇을 유사로 볼지($s_G$)**, **(2) embedding에서 그 유사를 어떻게 읽어낼지($\mathrm{DEC}$)**, **(3) 그 유사를 재현하도록 어떤 연산을 학습할지($\mathrm{ENC}$)** 를 설정(**structural assumption**) 하는 것이 핵심이다.
 
   - **Shallow**는 **(1)** 유사도를 정의하고(S 혹은 공출현확률) 그에 맞춰 **(2)** embedding 열의 내적이 비슷하도록 **(3)** embedding 열을 각 node id마다 따로따로 lookup한다.
   - **Neighborhood Autoencoder**는 **(1)** node마다 이웃 node의 정보를 나타내는 $\mathbf{s}_i$를 정의해, **(3)** 오토인코더를 이용해 **(2)** $\mathbf{s}_i$를 복원하도록 효율적으로 학습한다.

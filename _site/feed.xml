@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-08-13T20:18:41+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">DaRe_jin’s Blog</title><subtitle>내실 있는 낙관</subtitle><author><name>DaRe_jin</name></author><entry><title type="html">[Experience] A 서비스를 런칭하며</title><link href="http://localhost:4000/projects/AI_Report/" rel="alternate" type="text/html" title="[Experience] A 서비스를 런칭하며" /><published>2025-08-13T00:00:00+09:00</published><updated>2025-08-13T00:00:00+09:00</updated><id>http://localhost:4000/projects/AI_Report</id><content type="html" xml:base="http://localhost:4000/projects/AI_Report/"><![CDATA[<hr />
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-08-13T22:59:15+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">DaRe_jin’s Blog</title><subtitle>내실 있는 낙관</subtitle><author><name>DaRe_jin</name></author><entry><title type="html">[Experience] A 서비스를 런칭하며</title><link href="http://localhost:4000/projects/AI_Report/" rel="alternate" type="text/html" title="[Experience] A 서비스를 런칭하며" /><published>2025-08-13T00:00:00+09:00</published><updated>2025-08-13T00:00:00+09:00</updated><id>http://localhost:4000/projects/AI_Report</id><content type="html" xml:base="http://localhost:4000/projects/AI_Report/"><![CDATA[<hr />
 
 <p class="notice--info">A 서비스를 기획하고, 개발하고, 런칭한 과정에서 배우고 느낀 것에 대한 기록입니다.</p>
 
@@ -96,40 +96,40 @@
 
 <h1 id="introduction">Introduction</h1>
 
-<p><a href="https://darejinn.github.io/graphs/Representation-Learning-on-Graphs/">앞선 글</a> 에서 설명했듯, Graph Representation Learning은 그래프의 요소(node, edge, subgraph)를 저차원 벡터로 매핑하는 method이다. 많은 survey가 여러 요소 중에서도 <strong>node embedding</strong>에 초점을 맞추는 이유는 다음과 같다.</p>
+<p><a href="https://darejinn.github.io/graphs/Representation-Learning-on-Graphs/">앞선 글</a> 에서 설명했듯, Graph Representation Learning은 그래프의 요소(node, edge, subgraph)를 저차원 벡터로 매핑하는 method이다. 많은 survey가 여러 요소 중에서도 <strong>node embedding</strong>에 초점을 맞추는 이유는 다음과 같다.</p>
 
 <ol>
   <li>
-    <p><strong>Edge/subgraph embedding이 node embedding의 후처리로 귀결</strong>되는 경우가 많다.</p>
+    <p><strong>Edge/subgraph embedding이 node embedding의 후처리로 귀결</strong>되는 경우가 많다.</p>
 
     <p>예를 들어</p>
     <ul>
-      <li>edge $(v_i,v_j)\in E$에 대해 node embedding $\mathbf{z}_i,\mathbf{z}_j$가 주어지면 hadamard/mean/weighted-L1·L2 같은 이항 연산으로 아래처럼 edge embedding을 만든다.</li>
+      <li>edge $(v_i,v_j)\in E$에 대해 node embedding $\mathbf{z}_i,\mathbf{z}_j$가 주어지면 hadamard/mean/weighted-L1·L2 같은 이항 연산으로 아래처럼 edge embedding을 만든다.</li>
     </ul>
 
 \[\mathbf{z}_{(i,j)}=\mathbf{z}_i\odot\mathbf{z}_j\]
 
     <ul>
-      <li>subgraph $\mathcal{G}[\mathcal{S}]$의 embedding도 보통 $\mathcal{S}\subset\mathcal{V}$에 포함된 node embedding을 집계(average/attention 등)해서 아래와 같이 얻는다.</li>
+      <li>subgraph $\mathcal{G}[\mathcal{S}]$의 embedding도 보통 $\mathcal{S}\subset\mathcal{V}$에 포함된 node embedding을 집계(average/attention 등)해서 아래와 같이 얻는다.</li>
     </ul>
 
 \[\mathbf{z}_{\text{subgraph}}=\frac{1}{|\mathcal{S}|}\sum_{v_i\in\mathcal{S}}\mathbf{z}_i\]
   </li>
   <li>
-    <p>Edge/Subgraph embedding을 직접 학습하더라도 절차는 <strong>node embedding 학습과 본질적으로 유사</strong>하다.</p>
+    <p>Edge/Subgraph embedding을 직접 학습하더라도 절차는 <strong>node embedding 학습과 본질적으로 유사</strong>하다.</p>
     <ul>
-      <li>예를 들어 타깃 subgraph의 모든 node에 연결된 dummy node를 추가하고 그 node의 embedding을 학습 대상으로 두면 사실상 node embedding 학습과 거의 동일한 형태가 된다.</li>
+      <li>예를 들어 타깃 subgraph의 모든 node에 연결된 dummy node를 추가하고 그 node의 embedding을 학습 대상으로 두면 사실상 node embedding 학습과 거의 동일한 형태가 된다.</li>
     </ul>
   </li>
 </ol>
 
-<p>따라서 node embedding을 이해하면 edge/subgraph embedding도 같은 틀 안에서 상당 부분 설명된다. 이하에서는 <strong>encoder를 어떻게 정의하는지</strong>에 따라 node embedding을 <strong>shallow embedding</strong>과 <strong>NN-based embedding</strong>으로 비교해 정리한다. 본 글은 <a href="https://arxiv.org/abs/1709.05584">“<em>Representation Learning on Graphs</em>” (2017) </a>에서 제시한 개념을 바탕으로 필자의 해석을 더해 작성하였다.</p>
+<p>따라서 node embedding을 이해하면 edge/subgraph embedding도 같은 틀 안에서 상당 부분 설명된다. 이하에서는 <strong>encoder를 어떻게 정의하는지</strong>에 따라 node embedding을 <strong>shallow embedding</strong>과 <strong>NN-based embedding</strong>으로 비교해 정리한다. 본 글은 <a href="https://arxiv.org/abs/1709.05584">“<em>Representation Learning on Graphs</em>” (2017) </a>에서 제시한 개념을 바탕으로 필자의 해석을 더해 작성하였다.</p>
 
 <hr />
 
 <h2 id="review--learning-framework"><em>Review : Learning framework</em></h2>
 
-<p><em>‘그래프에서 가까운 node는 embedding 공간에서도 가깝다’</em>는 <strong>structural assumption</strong> 아래, 다음 세 가지를 설계한다.</p>
+<p><em>‘그래프에서 가까운 node는 embedding 공간에서도 가깝다’</em>는 <strong>structural assumption</strong> 아래, 다음 세 가지를 설계한다.</p>
 
 <ul>
   <li>
@@ -139,13 +139,13 @@
 s_G(i,j)\in\{A_{ij},\ k\text{-hop},\ \text{랜덤워크 공출현확률}\}\]
   </li>
   <li>
-    <p><strong>Embedding 공간의 decoder $\mathrm{DEC}$</strong></p>
+    <p><strong>Embedding 공간의 decoder $\mathrm{DEC}$</strong></p>
 
 \[\mathrm{DEC}:\mathbb{R}^d\times\mathbb{R}^d\to\mathbb{R},\quad
 \text{예: }\ \mathbf{z}_i^\top\mathbf{z}_j,\ -\lVert\mathbf{z}_i-\mathbf{z}_j\rVert_2^2,\ \sigma(\mathbf{z}_i^\top\mathbf{z}_j)\]
   </li>
   <li>
-    <p><strong>Encoder $\mathrm{ENC}$와 loss function(learning objective)</strong></p>
+    <p><strong>Encoder $\mathrm{ENC}$와 loss function(learning objective)</strong></p>
   </li>
 </ul>
 
@@ -154,7 +154,7 @@ s_G(i,j)\in\{A_{ij},\ k\text{-hop},\ \text{랜덤워크 공출현확률}\}\]
 
 <p>여기서 <strong>structural assumption은 ‘무엇을 가깝게 유지할지’에 대한 inductive bias,</strong> 즉 <strong>네트워크 구조에 관한 모델의 prior</strong>다.</p>
 
-<p>$s_G$를 어떻게 정의할지(무엇을 ‘유사’로 볼지), $\mathrm{DEC}$를 어떻게 둘지(embedding에서 유사를 어떻게 수치화할지), $\mathrm{ENC}$를 어떻게 설계할지(그 유사를 재현하도록 표현을 만들지)에 이 가정이 명시적·암묵적으로 들어 있다.</p>
+<p>$s_G$를 어떻게 정의할지(무엇을 ‘유사’로 볼지), $\mathrm{DEC}$를 어떻게 둘지(embedding에서 유사를 어떻게 수치화할지), $\mathrm{ENC}$를 어떻게 설계할지(그 유사를 재현하도록 표현을 만들지)에 이 가정이 명시적·암묵적으로 들어 있다.</p>
 
 <hr />
 <p><br />
@@ -165,8 +165,8 @@ s_G(i,j)\in\{A_{ij},\ k\text{-hop},\ \text{랜덤워크 공출현확률}\}\]
 <p>위와 같은 $\mathrm{ENC}$–$s_G$–$\mathrm{DEC}$ 프레임워크 안에서, <strong>학습이 일어나는 층위</strong>에 따라 접근을 두 가지로 나눌 수 있다.</p>
 
 <ul>
-  <li><strong>Shallow</strong> : 미리 정한 $s_G$에 맞춰 <strong>node별 embedding 자체</strong>를 <strong>직접</strong> 최적화한다.</li>
-  <li><strong>NN(GNN)-based</strong>: <strong>유사도를 만들어내는 연산</strong>(autoencoder, message passing)를 학습해 embedding을 <strong>간접</strong>적으로 만든다. 파라미터는 <strong>node 간 공유</strong>된다.</li>
+  <li><strong>Shallow</strong> : 미리 정한 $s_G$에 맞춰 <strong>node별 embedding 자체</strong>를 <strong>직접</strong> 최적화한다.</li>
+  <li><strong>NN(GNN)-based</strong>: <strong>유사도를 만들어내는 연산</strong>(autoencoder, message passing)를 학습해 embedding을 <strong>간접</strong>적으로 만든다. 파라미터는 <strong>node 간 공유</strong>된다.</li>
 </ul>
 
 <hr />
@@ -272,7 +272,7 @@ S = \text{Katz}, \ \text{RPR}, \ \text{Jaccard} \ \text{등}\]
 
 <h2 id="2-nn-based-embedding"><em>2. NN-based embedding</em></h2>
 
-<p>Shallow가 node-id만 입력으로 받아 바로 embedding을 lookup하는 것과 달리, NN-based는 <strong>node 특징 $\mathbf{x}_i$와 이웃 $\mathcal{N}(i)$를 입력으로 받아 처리하는 네트워크</strong>를 학습한다.</p>
+<p>Shallow가 node-id만 입력으로 받아 바로 embedding을 lookup하는 것과 달리, NN-based는 <strong>node 특징 $\mathbf{x}_i$와 이웃 $\mathcal{N}(i)$를 입력으로 받아 처리하는 네트워크</strong>를 학습한다.</p>
 
 <h3 id="2-1-neighborhood-autoencoder-dngr-sdne"><em>2-1. Neighborhood Autoencoder (DNGR, SDNE)</em></h3>
 
@@ -324,15 +324,15 @@ Shallow embedding과 달리 <strong>파라미터가 노드 간 공유</strong>�
 <p><strong>GNN은 구조에 대한 연산(structural assumption)을 $\mathrm{ENC}$가 담당하므로, $\mathrm{DEC}$와  loss function(learning objective) 은 태스크에 맞춰 유연하게 설정할 수 있다.</strong></p>
 <ul>
   <li>링크 예측 : $\mathrm{DEC}(\mathbf{z}_i,\mathbf{z}_j)=\sigma(\mathbf{z}_i^\top\mathbf{z}_j)$, negative sampling</li>
-  <li>node 분류 : $\hat{\mathbf{y}}_i=\mathrm{softmax}(W\mathbf{z}_i)$, cross-enthropy</li>
-  <li>그래프/subgraph 관련 supervised task: $\mathrm{READOUT}$으로 node embedding을 post processing한 후 태스크별 $\mathrm{DEC}$ 사용</li>
+  <li>node 분류 : $\hat{\mathbf{y}}_i=\mathrm{softmax}(W\mathbf{z}_i)$, cross-enthropy</li>
+  <li>그래프/subgraph 관련 supervised task: $\mathrm{READOUT}$으로 node embedding을 post processing한 후 태스크별 $\mathrm{DEC}$ 사용</li>
 </ul>
 
 <p><br /></p>
 
 <p>이 방법은 가장 진보한, 현재에도 활발히 연구되고 있는 graph representation 방식으로, 흔히 GNN을 이야기하면 보통 neighborhood aggregation을 바탕으로 한 이 message passing을 상정한다.</p>
 
-<p>Neighborhood Autoencoder 방법과 마찬가지로 <strong>파라미터 공유</strong>가 이루어지며, 순차적으로 주변 정보를 aggregate하므로 모델 크기가 ‘그래프 크기와 관계 없이’ 효율적으로 작게 유지된다. <strong>Node feature/edge weight</strong> 등 그래프 관련 meta information을 자연스럽게 활용할 수 있으며, 처음 보는 그래프에도 적용이 수월하다. ( <strong>inductive</strong> )</p>
+<p>Neighborhood Autoencoder 방법과 마찬가지로 <strong>파라미터 공유</strong>가 이루어지며, 순차적으로 주변 정보를 aggregate하므로 모델 크기가 ‘그래프 크기와 관계 없이’ 효율적으로 작게 유지된다. <strong>Node feature/edge weight</strong> 등 그래프 관련 meta information을 자연스럽게 활용할 수 있으며, 처음 보는 그래프에도 적용이 수월하다. ( <strong>inductive</strong> )</p>
 
 <hr />
 
@@ -341,7 +341,7 @@ Shallow embedding과 달리 <strong>파라미터가 노드 간 공유</strong>�
 <ul>
   <li>
     <p>Graph representation learning의 framework는,
-<strong>(1) 무엇을 유사로 볼지($s_G$)</strong>, <strong>(2) embedding에서 그 유사를 어떻게 읽어낼지($\mathrm{DEC}$)</strong>, <strong>(3) 그 유사를 재현하도록 어떤 연산을 학습할지($\mathrm{ENC}$)</strong> 를 설정(<strong>structural assumption</strong>) 하는 것이 핵심이다.</p>
+<strong>(1) 무엇을 유사로 볼지($s_G$)</strong>, <strong>(2) embedding에서 그 유사를 어떻게 읽어낼지($\mathrm{DEC}$)</strong>, <strong>(3) 그 유사를 재현하도록 어떤 연산을 학습할지($\mathrm{ENC}$)</strong> 를 설정(<strong>structural assumption</strong>) 하는 것이 핵심이다.</p>
 
     <ul>
       <li><strong>Shallow</strong>는 <strong>(1)</strong> 유사도를 정의하고(S 혹은 공출현확률) 그에 맞춰 <strong>(2)</strong> embedding 열의 내적이 비슷하도록 <strong>(3)</strong> embedding 열을 각 node id마다 따로따로 lookup한다.</li>
