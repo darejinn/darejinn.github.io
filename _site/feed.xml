@@ -1,4 +1,93 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-08-13T13:11:59+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">DaRe_jin’s Blog</title><subtitle>내실 있는 낙관</subtitle><author><name>DaRe_jin</name></author><entry><title type="html">Two Node Embedding Approaches - Shallow and NN-based</title><link href="http://localhost:4000/graphs/Two-Node-Embedding-Approaches/" rel="alternate" type="text/html" title="Two Node Embedding Approaches - Shallow and NN-based" /><published>2025-08-11T00:00:00+09:00</published><updated>2025-08-11T00:00:00+09:00</updated><id>http://localhost:4000/graphs/Two%20Node%20Embedding%20Approaches</id><content type="html" xml:base="http://localhost:4000/graphs/Two-Node-Embedding-Approaches/"><![CDATA[<hr />
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-08-13T17:44:31+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">DaRe_jin’s Blog</title><subtitle>내실 있는 낙관</subtitle><author><name>DaRe_jin</name></author><entry><title type="html">[Experience] A 서비스를 런칭하며</title><link href="http://localhost:4000/projects/AI_Report/" rel="alternate" type="text/html" title="[Experience] A 서비스를 런칭하며" /><published>2025-08-13T00:00:00+09:00</published><updated>2025-08-13T00:00:00+09:00</updated><id>http://localhost:4000/projects/AI_Report</id><content type="html" xml:base="http://localhost:4000/projects/AI_Report/"><![CDATA[<hr />
+
+<p class="notice--info">A 서비스를 기획하고, 개발하고, 런칭한 과정에서 배우고 느낀 것에 대한 기록입니다.</p>
+
+<h1 id="introduction">Introduction</h1>
+<p>2024년 한 해 동안 서비스의 아이데이션, 구체화, 개발, 사업화까지의 전 단계를 깊숙히 경험하였다.
+새로움의 연속이었고 많이 배우고 바뀌었다.
+회고하기에 적당한 시기인 듯하여 한해를 돌아보며 작성한다.</p>
+
+<p>글의 요지를 불분명히 하거나 이해충돌을 일으킬 여지가 있는 세부적인 내용은 작성하지 않았다.</p>
+
+<h1 id="1-teamwork--어떻게-협력하는가">1. Teamwork : 어떻게 협력하는가</h1>
+
+<p>프로젝트를 하며 느낀, 1+1이 2를 초과하는 데에 필요한 중요한 두 가지 요소이다.</p>
+
+<h2 id="11-목적의식의-alignment"><em>1.1 목적의식의 Alignment</em></h2>
+
+<p>‘왜 하는가’에 대한 공유된, 명확한 합의가 필요함을 알았다. 나와 팀원이 추구하는 가치가 다를 때, 문제 상황에서 각자의 중요한 가치에 따른 가장 좋은 해결책이 달라지며 가치판단이 관여하는 문제는 논리적인 설득이나 합의가 어렵다. 모든 구성원이 같은 방향을 바라보아야 팀워크가 효율적이다.</p>
+
+<h2 id="12-공고한-신뢰"><em>1.2 공고한 신뢰</em></h2>
+
+<p>신뢰라 함은, 능력에 대한 신뢰와 사람됨에 대한 신뢰를 모두 포함한다.</p>
+
+<ul>
+  <li>
+    <p>나의 능력에 대한 상대의 신뢰는 책임감을 부여하며 상대의 능력에 대한 나의 신뢰는 안정감을 유발한다.</p>
+  </li>
+  <li>
+    <p>서로의 사람됨에 대한 신뢰는, 곧 나의 실수나 의견 제시가 비난받지 않을 것이라는 심리적 안정감(Psychological Safety)로 이어져 각자의 능력을 온전히 발휘할 수 있게 만든다.</p>
+  </li>
+</ul>
+
+<p>관련하여 <a href="https://www.leadingsapiens.com/project-aristotle/">구글의 Project Aristotle 연구</a>가 흥미로워 링크를 첨부한다.</p>
+
+<hr />
+
+<h1 id="2-product-market-fit">2. Product-Market Fit</h1>
+
+<p>구현한 서비스를 간략히 소개하자면, LLM을 이용하여 입력에 맞는 아웃풋을 제공하는 것이었다.</p>
+
+<p>클레이튼 크리스텐슨의 ‘Jobs-to-be-Done’ 프레임워크에 따르면, 고객은 제품의 기능 자체가 아니라 그것이 해결하는 ‘일(Job)’을 위해 구매한다고 한다. 여기서 중요한 것은 이 ‘일’이 단순한 기능적 니즈를 넘어 감정적, 사회적 욕구까지 포괄한다는 점이다.</p>
+
+<p>Product의 상업적 가치는 판매자가 아닌 구매자가 결정하며, 따라서 ‘실제로 어떤지’보다 ‘어떻게 느껴지는지’가 중요하다.</p>
+
+<h2 id="21-세심함"><em>2.1 세심함</em></h2>
+
+<p>사용자의 감정적 니즈를 정확히 파악하고 해결하는 능력이 차별화 요소로 작용하더라.</p>
+
+<p>더 성능 좋은 모델로, 더 깊이 있는 아웃풋을 제공하는 것보다, 오히려 세심하고 작은 요소들에서 사람들은 임펙트를 느낀다. 한눈에 들어오는 UI, 사용자의 입장을 고려한 가이드, 읽기 쉬운 수식의 렌더링 등이다. 반면 성능이 좋더라도 이러한 작은 부분들이 채워지지 않을 때 신뢰도는 크게 하락한다.</p>
+
+<h2 id="22-human-in-loop"><em>2.2 Human in loop</em></h2>
+
+<p>역설적이게도, 자동화와 AI가 발달할수록 ‘인간다움’의 가치는 더욱 부각된다고 생각한다. 공장에서 찍어내는 물건이 많아질수록 장인의 수제품의 가치는 높아진다. 가공식품이 다양화되지만 파인다이닝에 대한 수요는 여전하다.</p>
+
+<p>AI를 이용한 output을 상품화하는 과정에서, AI의 hallucination와 blackbox model에 대한 불신이 꽤나 깊숙히 있음을 느꼈다.</p>
+
+<p>‘쉽고 빠른 것, 남들과 똑같은 것’에 대한 거부감과 사람의 진정성에 대한 신뢰를 마주하며, AI가 사람을 대체하는 세상은 역시 두려워할 필요가 없겠다고 생각했다.</p>
+
+<hr />
+
+<h1 id="3-나는-어떠한-가치를-창출할-것인가">3. 나는 어떠한 가치를 창출할 것인가</h1>
+
+<h2 id="31-판매가-잘-되는-상품이-좋은-상품인가"><em>3.1 판매가 잘 되는 상품이 좋은 상품인가?</em></h2>
+
+<p>단기 판매는 주의를 모으는 기술로도 충분히 달성된다. 강렬한 광고, 소비자의 포모(Fear of Missing Out)를 이용하는 것, 심리적인 가격 정책 등을 활용하면 유입은 늘지만 지속가능성은 부재하다. 경쟁사도 같은 전략을 사용하면 결국 전체적인 고객 획득 비용만 상승할 뿐이다.</p>
+
+<p>그러면 유입된 고객이 유지되는, 장기적인 판매가 이루어지는 상품은 좋은 상품인가? 확실히 ‘사업적으로 좋은’ 상품에는 가깝지만 충분조건은 아니다.</p>
+
+<p>“잘 팔리는가?”에 앞서 “무엇을 세상에 더하는가?”에 대한 명확한 답이 필요하다.</p>
+
+<h2 id="32-파이를-넓히는-일"><em>3.2 파이를 넓히는 일</em></h2>
+
+<p>서비스업의 상당수는 제로섬 게임의 성격을 띠고 있다고 생각한다. 기존 시장의 파이를 재분배하는 것에 그침을 의미한다.</p>
+
+<p>진정한 비즈니스에서의 성공은 기존 시장에서 파이를 나눠 가지는 것이 아니라, 새로운 가치를 창출하여 전체 파이를 키우는 데서 나온다고 생각한다. 이는 단순히 경쟁 회사로부터 고객을 빼앗아오는 차원을 넘어서, 이전에 존재하지 않았던 해결책을 제시하거나 잠재되어 있던 니즈를 현실화하여 경쟁 자체를 무의미하게 만드는 것을 의미한다.</p>
+
+<p>돌이켜 보면 이 일을 시작한 이유도, 이 분야에서의 새로운 시도; 없는 가치를 창출하는 일이라는 생각이 들었기 때문이다. 내가 개발하는 것의 가치를 고민하는 과정은 스스로가 중요하게 여기는 가치를 고민하는 것에서부터 시작했기에 마냥 즐겁지만은 않았다. 초기의 믿음이 흔들리는 순간들도 몇 번 마주했다.
+그러나 고민의 과정에서 한층 성장했음은 확실히 이야기할 수 있다.</p>
+
+<h2 id="33-그래서-나는-어떤-사람이-되고자-하는가"><em>3.3 그래서 나는 어떤 사람이 되고자 하는가</em></h2>
+
+<p>아래와 같은 자질을 계속 가꾸고 싶다.</p>
+
+<ul>
+  <li>적절한 질문을 던지고 올바른 사람들과 협력할 수 있는 호기심과 열린 자세</li>
+  <li>나의 모름과 한계를 마주할 수 있는 인간적 성숙함</li>
+  <li>‘할 수 있는 것’에 휘둘리지 않고 ‘해야 하는 것’을 명확히 그러나 유연하게 아는 것</li>
+</ul>
+
+<p>지속 가능한 동력은 나에게서 비롯한다.</p>]]></content><author><name>DaRe_jin</name></author><category term="[&quot;Projects&quot;]" /><category term="Business" /><category term="AI" /></entry><entry><title type="html">Two Node Embedding Approaches - Shallow and NN-based</title><link href="http://localhost:4000/graphs/Two-Node-Embedding-Approaches/" rel="alternate" type="text/html" title="Two Node Embedding Approaches - Shallow and NN-based" /><published>2025-08-11T00:00:00+09:00</published><updated>2025-08-11T00:00:00+09:00</updated><id>http://localhost:4000/graphs/Two%20Node%20Embedding%20Approaches</id><content type="html" xml:base="http://localhost:4000/graphs/Two-Node-Embedding-Approaches/"><![CDATA[<hr />
 
 <h1 id="introduction">Introduction</h1>
 
@@ -949,62 +1038,4 @@ For every cell line × pathway, compute statistical separation between “in-pat
 
 <p>나의 치열한 고민은, 함께를 이야기하는 순간부터 타인을 위하는 일이 되기도 하는구나.</p>
 
-<p>재미와 사랑이 양립하는 시간들로 한정적인 삶의 순간들을 한껏 채우고 싶다.</p>]]></content><author><name>DaRe_jin</name></author><category term="[&quot;Thoughts&quot;]" /><category term="에세이" /></entry><entry><title type="html">Contrarian을 응원하며</title><link href="http://localhost:4000/bridges/Contrarian%EC%9D%84-%EC%9D%91%EC%9B%90%ED%95%98%EB%A9%B0/" rel="alternate" type="text/html" title="Contrarian을 응원하며" /><published>2025-05-09T00:00:00+09:00</published><updated>2025-05-09T00:00:00+09:00</updated><id>http://localhost:4000/bridges/Contrarian%EC%9D%84%20%EC%9D%91%EC%9B%90%ED%95%98%EB%A9%B0</id><content type="html" xml:base="http://localhost:4000/bridges/Contrarian%EC%9D%84-%EC%9D%91%EC%9B%90%ED%95%98%EB%A9%B0/"><![CDATA[<hr />
-
-<p class="notice--info">‘가만히 있지 않는다는 것’글에 대한 I의 답글입니다.</p>
-
-<h3 id="1">1.</h3>
-<ul>
-  <li>동물의 제 1 목표는 생존임.</li>
-  <li>인간은 체력, 방어력, 감각능력 등 신체 능력은 다른 개체에 비해 열등한 동물임.</li>
-  <li>인간은 다른 개체 대비 우월한 사회적 협력과 조직화 능력을 보유하고 있음.</li>
-  <li>이로 인해 인간은 불리한 신체 조건에도 불구하고 생태계를 지배하는 유일한 종이 되었음.</li>
-  <li>즉, 인간에게 조직은 개인보다 목표 달성을 위한 우월한 구조임.</li>
-</ul>
-
-<h3 id="2">2.</h3>
-<ul>
-  <li>현대 사회에서 생존이라는 본능은 다양한 사회적 목표로 분화됨.</li>
-  <li>좋은 조직은 나의 목표와 조직의 목표의 방향이 일치하는 조직임.</li>
-  <li>이 경우, 조직을 위하는 것이 곧 나를 위하는 것이 됨.</li>
-  <li>그렇지 못한 조직은 개인과 조직에게 모두 들어가지 않는 것이 최선, 빨리 나오는 것이 차선임.</li>
-</ul>
-
-<h3 id="3">3.</h3>
-<ul>
-  <li>관성은 운동 상태의 변화를 거부하는 저항의 성질임.</li>
-  <li>조직이 방향을 갖고 움직이기 시작하면 해당 방향을 유지하려는 관성이 형성됨.</li>
-  <li>따라서 조직의 방향을 바꾸려면 관성이라는 저항을 이겨내야 함.</li>
-</ul>
-
-<h3 id="4">4.</h3>
-<ul>
-  <li>관성을 줄이는 방법은 질량을 줄이는 것임.</li>
-  <li>즉, 기존의 방향에 대한 판단을 유보하거나, 옳다고 믿던 구성원의 수를 줄여야 함.</li>
-  <li>따라서 그들에 대한 설득의 과정이 필요할 것임.</li>
-</ul>
-
-<h3 id="5">5.</h3>
-<ul>
-  <li>방향 전환에 대한 설득을 위해서는 조직의 목표가 무엇인지 재정립이 필요함.</li>
-  <li>그리고 방향 전환이 조직의 목표를 달성할 수 있는 더 우월한 방법임을 설명할 수 있어야 함.</li>
-  <li>즉, 목표 달성 차원에서 기존 방향이 열등한 이유를 설명할 수 있거나, 더 나은 대안을 제시할 수 있어야 함.</li>
-  <li>위 2가지가 이루어지지 않은 반박은 무의미하고 해로움.</li>
-</ul>
-
-<h3 id="6">6.</h3>
-<ul>
-  <li>조직에게 무의미하고 해로운 영향은 조직의 목표 달성 확률을 떨어뜨림.</li>
-  <li>이는, 나의 목표 달성 확률을 낮추는 일임.</li>
-  <li>그러나, 위 2가지가 이루어진 반대의 의견은 조직의 목표 달성 확률을 매우 높임.</li>
-  <li>이는, 나의 목표 달성 확률을 높이는 일임.</li>
-</ul>
-
-<h3 id="7">7.</h3>
-<ul>
-  <li>나는 이루고 싶은 목표가 있는가? 나는 조직의 필요성을 인지하고 있는가? 나는 좋은 조직에 속해 있는가?</li>
-  <li>그렇다면, 내가 속한 조직은 위와 같은 선순환이 가능한 조직일 것임.</li>
-  <li>그렇다면, 내가 속한 조직은 Contrarian이 필요하며, 준비된 반박은 조직과 나를 위하는 일임.</li>
-  <li>그렇지 않다면, 가만히 있는 것이 반이라도 갈 수 있는 방법임.</li>
-  <li>그러나, 조직의 방향에 동의가 되지 않음에도 가만히 있어야 반을 갈 수 있는 조직에서 목표를 이루는 것은 불가능함.</li>
-</ul>]]></content><author><name>DaRe_jin</name></author><category term="[&quot;Bridges&quot;]" /><category term="에세이" /></entry></feed>
+<p>재미와 사랑이 양립하는 시간들로 한정적인 삶의 순간들을 한껏 채우고 싶다.</p>]]></content><author><name>DaRe_jin</name></author><category term="[&quot;Thoughts&quot;]" /><category term="에세이" /></entry></feed>
