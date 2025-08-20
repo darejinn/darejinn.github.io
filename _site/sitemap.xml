@@ -1,128 +1,532 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url>
-<loc>http://localhost:4000/thoughts/01.-%EC%82%AC%EB%9E%8C%EB%8B%A4%EC%9B%80/</loc>
-<lastmod>2025-04-29T00:00:00+09:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/finance/%EC%A3%BC%EC%8B%9D%EC%9D%84-%EB%8C%80%ED%95%98%EB%8A%94-%EB%A7%88%EC%9D%8C%EA%B0%80%EC%A7%90/</loc>
-<lastmod>2025-07-31T00:00:00+09:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/projects/KAIST_WURF_INTRO/</loc>
-<lastmod>2025-01-13T00:00:00+09:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/thoughts/02.-%ED%83%80%EC%9D%B8%EC%97%90-%EA%B4%80%ED%95%98%EC%97%AC/</loc>
-<lastmod>2025-02-22T00:00:00+09:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/thoughts/03.-%EA%B0%80%EB%A7%8C%ED%9E%88-%EC%9E%88%EC%A7%80-%EC%95%8A%EB%8A%94%EB%8B%A4%EB%8A%94-%EA%B2%83/</loc>
-<lastmod>2025-03-23T00:00:00+09:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/thoughts/04.-%EB%AA%85%EB%B6%84%EA%B3%BC-%EC%8B%A4%EB%A6%AC/</loc>
-<lastmod>2025-03-24T00:00:00+09:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/papers/Solving-Challenges-in-Multi-modal-contrastive-learning/</loc>
-<lastmod>2025-04-19T00:00:00+09:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/bridges/Contrarian%EC%9D%84-%EC%9D%91%EC%9B%90%ED%95%98%EB%A9%B0/</loc>
-<lastmod>2025-05-09T00:00:00+09:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/thoughts/05.-%ED%9D%AC%EC%86%8C%ED%95%A8%EC%9D%98-%EC%97%AD%ED%95%A0-copy/</loc>
-<lastmod>2025-05-12T00:00:00+09:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/thoughts/06.-%EC%9E%AC%EB%AF%B8%EC%99%80-%EC%82%AC%EB%9E%91%EC%9D%B4-%EC%96%91%EB%A6%BD%ED%95%A0-%EB%95%8C/</loc>
-<lastmod>2025-06-03T00:00:00+09:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/projects/Soothing/</loc>
-<lastmod>2025-06-12T00:00:00+09:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/projects/MOUM/</loc>
-<lastmod>2025-06-13T00:00:00+09:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/graphs/Representation-Learning-on-Graphs/</loc>
-<lastmod>2025-07-30T00:00:00+09:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/finance/%EB%A7%A4%EC%88%98%EB%A7%A4%EB%8F%84%EA%B7%9C%EC%B9%99/</loc>
-<lastmod>2025-07-31T00:00:00+09:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/finance/%ED%88%AC%EC%9E%90%EC%9D%98-%EB%AA%A9%EC%A0%81/</loc>
-<lastmod>2025-08-02T00:00:00+09:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/thoughts/07.-%EB%AF%BF%EC%9D%8C%EC%9D%98-%EC%98%81%EC%97%AD/</loc>
-<lastmod>2025-08-03T00:00:00+09:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/thoughts/08.-%EC%9A%B0%EC%97%B0-%EC%86%8D%EC%9D%98-%ED%95%84%EC%97%B0/</loc>
-<lastmod>2025-08-06T00:00:00+09:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/graphs/Two-Node-Embedding-Approaches/</loc>
-<lastmod>2025-08-11T00:00:00+09:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/projects/AI_Report/</loc>
-<lastmod>2025-08-13T00:00:00+09:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/categories/Papers/</loc>
-</url>
-<url>
-<loc>http://localhost:4000/categories/Bioinformatics/</loc>
-</url>
-<url>
-<loc>http://localhost:4000/categories/Bridges/</loc>
-</url>
-<url>
-<loc>http://localhost:4000/categories/Finance/</loc>
-</url>
-<url>
-<loc>http://localhost:4000/categories/Graphs/</loc>
-</url>
-<url>
-<loc>http://localhost:4000/categories/KAIST_WURF/</loc>
-</url>
-<url>
-<loc>http://localhost:4000/categories/Projects/</loc>
-</url>
-<url>
-<loc>http://localhost:4000/categories/Thoughts/</loc>
-</url>
-<url>
-<loc>http://localhost:4000/about/</loc>
-</url>
-<url>
-<loc>http://localhost:4000/categories/</loc>
-</url>
-<url>
-<loc>http://localhost:4000/</loc>
-</url>
-<url>
-<loc>http://localhost:4000/tags/</loc>
-</url>
-<url>
-<loc>http://localhost:4000/page2/</loc>
-</url>
-<url>
-<loc>http://localhost:4000/page3/</loc>
-</url>
-<url>
-<loc>http://localhost:4000/page4/</loc>
-</url>
-<url>
-<loc>http://localhost:4000/google6dd9f38f264894e0.html</loc>
-<lastmod>2025-07-28T01:57:11+09:00</lastmod>
-</url>
-</urlset>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
+        xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    
+    <!-- Posts -->
+    
+    <url>
+        <loc>http://localhost:4000/projects/AI_Report/</loc>
+        
+        <lastmod>2025-08-13T00:00:00+09:00</lastmod>
+        
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/graphs/Two-Node-Embedding-Approaches/</loc>
+        
+        <lastmod>2025-08-11T00:00:00+09:00</lastmod>
+        
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/thoughts/08.-%EC%9A%B0%EC%97%B0-%EC%86%8D%EC%9D%98-%ED%95%84%EC%97%B0/</loc>
+        
+        <lastmod>2025-08-06T00:00:00+09:00</lastmod>
+        
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/thoughts/07.-%EB%AF%BF%EC%9D%8C%EC%9D%98-%EC%98%81%EC%97%AD/</loc>
+        
+        <lastmod>2025-08-03T00:00:00+09:00</lastmod>
+        
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/finance/%ED%88%AC%EC%9E%90%EC%9D%98-%EB%AA%A9%EC%A0%81/</loc>
+        
+        <lastmod>2025-08-02T00:00:00+09:00</lastmod>
+        
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/finance/%EB%A7%A4%EC%88%98%EB%A7%A4%EB%8F%84%EA%B7%9C%EC%B9%99/</loc>
+        
+        <lastmod>2025-07-31T00:00:00+09:00</lastmod>
+        
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/graphs/Representation-Learning-on-Graphs/</loc>
+        
+        <lastmod>2025-07-30T00:00:00+09:00</lastmod>
+        
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/projects/MOUM/</loc>
+        
+        <lastmod>2025-06-13T00:00:00+09:00</lastmod>
+        
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/projects/Soothing/</loc>
+        
+        <lastmod>2025-06-12T00:00:00+09:00</lastmod>
+        
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/thoughts/06.-%EC%9E%AC%EB%AF%B8%EC%99%80-%EC%82%AC%EB%9E%91%EC%9D%B4-%EC%96%91%EB%A6%BD%ED%95%A0-%EB%95%8C/</loc>
+        
+        <lastmod>2025-06-03T00:00:00+09:00</lastmod>
+        
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/thoughts/05.-%ED%9D%AC%EC%86%8C%ED%95%A8%EC%9D%98-%EC%97%AD%ED%95%A0-copy/</loc>
+        
+        <lastmod>2025-05-12T00:00:00+09:00</lastmod>
+        
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/bridges/Contrarian%EC%9D%84-%EC%9D%91%EC%9B%90%ED%95%98%EB%A9%B0/</loc>
+        
+        <lastmod>2025-05-09T00:00:00+09:00</lastmod>
+        
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/papers/Solving-Challenges-in-Multi-modal-contrastive-learning/</loc>
+        
+        <lastmod>2025-04-19T00:00:00+09:00</lastmod>
+        
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/thoughts/04.-%EB%AA%85%EB%B6%84%EA%B3%BC-%EC%8B%A4%EB%A6%AC/</loc>
+        
+        <lastmod>2025-03-24T00:00:00+09:00</lastmod>
+        
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/thoughts/03.-%EA%B0%80%EB%A7%8C%ED%9E%88-%EC%9E%88%EC%A7%80-%EC%95%8A%EB%8A%94%EB%8B%A4%EB%8A%94-%EA%B2%83/</loc>
+        
+        <lastmod>2025-03-23T00:00:00+09:00</lastmod>
+        
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/thoughts/02.-%ED%83%80%EC%9D%B8%EC%97%90-%EA%B4%80%ED%95%98%EC%97%AC/</loc>
+        
+        <lastmod>2025-02-22T00:00:00+09:00</lastmod>
+        
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/projects/KAIST_WURF_INTRO/</loc>
+        
+        <lastmod>2025-01-13T00:00:00+09:00</lastmod>
+        
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/finance/%EC%A3%BC%EC%8B%9D%EC%9D%84-%EB%8C%80%ED%95%98%EB%8A%94-%EB%A7%88%EC%9D%8C%EA%B0%80%EC%A7%90/</loc>
+        
+        <lastmod>2025-07-31T00:00:00+09:00</lastmod>
+        
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/thoughts/01.-%EC%82%AC%EB%9E%8C%EB%8B%A4%EC%9B%80/</loc>
+        
+        <lastmod>2025-04-29T00:00:00+09:00</lastmod>
+        
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    
+    <!-- Pages -->
+    
+    
+    <url>
+        <loc>http://localhost:4000/categories/Papers/</loc>
+        
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    
+    
+    <url>
+        <loc>http://localhost:4000/404.html</loc>
+        
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    
+    
+    <url>
+        <loc>http://localhost:4000/categories/Bioinformatics/</loc>
+        
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    
+    
+    <url>
+        <loc>http://localhost:4000/categories/Bridges/</loc>
+        
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    
+    
+    <url>
+        <loc>http://localhost:4000/categories/Finance/</loc>
+        
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    
+    
+    <url>
+        <loc>http://localhost:4000/categories/Graphs/</loc>
+        
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    
+    
+    <url>
+        <loc>http://localhost:4000/categories/KAIST_WURF/</loc>
+        
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    
+    
+    <url>
+        <loc>http://localhost:4000/categories/Projects/</loc>
+        
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    
+    
+    <url>
+        <loc>http://localhost:4000/categories/Thoughts/</loc>
+        
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    
+    
+    <url>
+        <loc>http://localhost:4000/about/</loc>
+        
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    
+    
+    <url>
+        <loc>http://localhost:4000/categories/</loc>
+        
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    
+    
+    <url>
+        <loc>http://localhost:4000/</loc>
+        
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    
+    
+    <url>
+        <loc>http://localhost:4000/assets/js/lunr/lunr-en.js</loc>
+        
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    
+    
+    <url>
+        <loc>http://localhost:4000/assets/js/lunr/lunr-gr.js</loc>
+        
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    
+    
+    <url>
+        <loc>http://localhost:4000/assets/js/lunr/lunr-store.js</loc>
+        
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    
+    
+    <url>
+        <loc>http://localhost:4000/assets/css/main.css</loc>
+        
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    
+    
+    <url>
+        <loc>http://localhost:4000/sitemap.xml</loc>
+        
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    
+    
+    <url>
+        <loc>http://localhost:4000/tags/</loc>
+        
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    
+    
+    <url>
+        <loc>http://localhost:4000/page2/</loc>
+        
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    
+    
+    <url>
+        <loc>http://localhost:4000/page3/</loc>
+        
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    
+    
+    <url>
+        <loc>http://localhost:4000/page4/</loc>
+        
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    
+    
+    <url>
+        <loc>http://localhost:4000/feed.xml</loc>
+        
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    
+    
+    <!-- Category Pages -->
+    
+    <url>
+        <loc>http://localhost:4000/categories/thoughts/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/categories/finance/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/categories/projects/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/categories/papers/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/categories/bridges/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/categories/graphs/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    
+    
+    <!-- Tag Pages -->
+    
+    <url>
+        <loc>http://localhost:4000/tags/에세이/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/tags/일지/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/tags/multimodal-ai/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/tags/contrastive-learning/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/tags/cognition/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/tags/multi-omics/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/tags/graphs/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/tags/representation-learning/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/tags/business/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/tags/ai/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    
+    
+    <!-- Main Pages -->
+    <url>
+        <loc>http://localhost:4000/</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/about/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/categories/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.4</priority>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/tags/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.4</priority>
+    </url>
+    
+    <!-- Pagination Pages -->
+    
+    
+    
+    <url>
+        <loc>http://localhost:4000/page2/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/page3/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/page4/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    
+    
+    
+</urlset> 

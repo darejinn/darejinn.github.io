@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-08-14T02:18:12+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">DaRe_jin’s Blog</title><subtitle>내실 있는 낙관</subtitle><author><name>DaRe_jin</name></author><entry><title type="html">[Experience] A 서비스를 런칭하며</title><link href="http://localhost:4000/projects/AI_Report/" rel="alternate" type="text/html" title="[Experience] A 서비스를 런칭하며" /><published>2025-08-13T00:00:00+09:00</published><updated>2025-08-13T00:00:00+09:00</updated><id>http://localhost:4000/projects/AI_Report</id><content type="html" xml:base="http://localhost:4000/projects/AI_Report/"><![CDATA[<hr />
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-08-20T13:34:04+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">DaRe_jin’s Blog</title><subtitle>내실 있는 낙관</subtitle><author><name>DaRe_jin</name></author><entry><title type="html">[Experience] A 서비스를 런칭하며</title><link href="http://localhost:4000/projects/AI_Report/" rel="alternate" type="text/html" title="[Experience] A 서비스를 런칭하며" /><published>2025-08-13T00:00:00+09:00</published><updated>2025-08-13T00:00:00+09:00</updated><id>http://localhost:4000/projects/AI_Report</id><content type="html" xml:base="http://localhost:4000/projects/AI_Report/"><![CDATA[<hr />
 
 <p class="notice--info">A 서비스를 기획하고, 개발하고, 런칭한 과정에서 배우고 느낀 것에 대한 기록입니다.</p>
 
@@ -20,7 +20,7 @@
 
 <h2 id="11-목적의식의-alignment"><em>1.1 목적의식의 Alignment</em></h2>
 
-<p>‘왜 하는가’에 대한 공유된, 명확한 합의가 필요함을 알았다. 나와 팀원이 추구하는 가치가 다를 때, 문제 상황에서 각자의 중요한 가치에 따른 가장 좋은 해결책이 달라지며 가치판단이 관여하는 문제는 논리적인 설득이나 합의가 어렵다. 모든 구성원이 같은 방향을 바라보아야 팀워크가 효율적이다.</p>
+<p>‘왜 하는가’에 대한 공유된, 명확한 합의가 필요함을 알았다. 나와 팀원이 추구하는 가치가 다를 때, 문제 상황에서 각자의 중요한 가치에 따른 가장 좋은 해결책이 달라진다. 가치판단이 관여하는 문제는 논리적인 설득이나 합의가 어렵다. 모든 구성원이 같은 방향을 바라보아야 팀워크가 효율적이다.</p>
 
 <h2 id="12-공고한-신뢰"><em>1.2 공고한 신뢰</em></h2>
 
@@ -28,7 +28,7 @@
 
 <ul>
   <li>
-    <p>나의 능력에 대한 상대의 신뢰는 책임감을 부여하며 상대의 능력에 대한 나의 신뢰는 안정감을 유발한다.</p>
+    <p>나의 능력에 대한 상대의 신뢰는 책임감을, 상대의 능력에 대한 나의 신뢰는 안정감을 만든다.</p>
   </li>
   <li>
     <p>서로의 사람됨에 대한 신뢰는, 곧 나의 실수나 의견 제시가 비난받지 않을 것이라는 심리적 안정감(Psychological Safety)로 이어져 각자의 능력을 온전히 발휘할 수 있게 만든다.</p>
@@ -47,13 +47,13 @@
 
 <h2 id="21-세심함"><em>2.1 세심함</em></h2>
 
-<p>사용자의 감정적 니즈를 정확히 파악하고 해결하는 능력이 차별화 요소로 작용하더라.</p>
+<p>사용자의 감정적 니즈를 정확히 파악하고 그 부분에서 차별화 요소를 주는 게 필요하더라.</p>
 
 <p>더 성능 좋은 모델로, 더 깊이 있는 아웃풋을 제공하는 것보다, 오히려 세심하고 작은 요소들에서 사람들은 임펙트를 느낀다. 한눈에 들어오는 UI, 사용자의 입장을 고려한 가이드, 읽기 쉬운 수식의 렌더링 등이다. 반면 성능이 좋더라도 이러한 작은 부분들이 채워지지 않을 때 소비자가 느끼는 서비스의 품질은 크게 하락한다.</p>
 
 <h2 id="22-human-in-loop"><em>2.2 Human in loop</em></h2>
 
-<p>역설적이게도, 자동화와 AI가 발달할수록 ‘인간다움’의 가치는 더욱 부각된다고 생각한다. 공장에서 찍어내는 물건이 많아질수록 장인의 수제품의 가치는 높아진다. 가공식품이 다양화되지만 파인다이닝에 대한 수요는 여전하다.</p>
+<p>자동화와 AI가 발달할수록 ‘인간다움’의 가치는 더욱 부각된다고 생각한다. 공장에서 찍어내는 물건이 많아질수록 장인의 수제품의 가치는 높아진다. 가공식품이 다양화되지만 파인다이닝에 대한 수요는 여전하다.</p>
 
 <p>AI를 이용한 output을 상품화하는 과정에서, AI의 hallucination와 blackbox model에 대한 불신이 꽤나 깊숙히 있음을 느꼈다.</p>
 
@@ -369,15 +369,9 @@ Shallow embedding과 달리 <strong>파라미터가 노드 간 공유</strong>�
 <p>세상은 대체로 모호하다.</p>
 
 <ul>
-  <li>
-    <p>정책은 정의로움과 부당함의 속성을 동시에 가진다.</p>
-  </li>
-  <li>
-    <p>객체는 상태의 중첩에 놓여 있으며 입자성과 파동성을 동시에 가진다.</p>
-  </li>
-  <li>
-    <p>가설 검증에서 채택되는 가설은 언제나 오류를 범할 확률을 동반한다.</p>
-  </li>
+  <li>정책은 정의로움과 부당함의 속성을 동시에 가진다.</li>
+  <li>객체는 상태의 중첩에 놓여 있으며 온전히 입자이지도, 온전히 파동이지도 않다.</li>
+  <li>가설 검증에서 채택되는 가설은 언제나 오류를 범할 확률을 동반한다.</li>
 </ul>
 
 <p>세상은 흑과 백이 아닌 ‘덜 회색’과 ‘더 회색’에 가깝고, 벌어지는 일들은 예외 없는 인과가 아닌 상관성과 확률에 기반한다.</p>
@@ -388,7 +382,7 @@ Shallow embedding과 달리 <strong>파라미터가 노드 간 공유</strong>�
 
 <h1 id="불확실함을-인정하며-불안하지-않을-수-있는가">불확실함을 인정하며 불안하지 않을 수 있는가</h1>
 <hr />
-<p>하지만 우리는 대체로 완전무결함을 추구한다. 0과 1의 명확한 구분에서 안정감을 느끼며 확실한 미래를 예측하고 싶어한다. 끊임없이 선택해야 하는 인간의 조건을 고려할 때 이는 자연스러운 속성이다.</p>
+<p>하지만 우리는 대체로 완전무결함을 추구한다. 0과 1의 명확한 구분에서 안정감을 느끼며 확실한 미래를 예측하고 싶어한다. 끊임없이 선택해야 하는 삶의 과정을 고려할 때 자연스러운 속성이다.</p>
 
 <p>그러나 불확실함을 부정하며 완전무결함을 추구하는 것은 종종 부작용을 낳는다. 부정하는 과정에서 무시한 - 주로 크기가 작은 - 속성들이 사실은 중요했거나, 시간이 지남에 따라 중요해지기도 하기 때문이다.</p>
 
@@ -443,13 +437,13 @@ Shallow embedding과 달리 <strong>파라미터가 노드 간 공유</strong>�
 
 <p>노력이 어떤 순간에 내게 돌아올 것이라는 믿음은, 결과의 불확실함에 흔들리지 않고 최선을 다할 수 있게 만든다.</p>
 
-<p>하고 있는 일이 옳고 선하다는 믿음은, 누군가의 비난에 상처받지 않고 당당할 수 있는 힘을 주며</p>
+<p>하고 있는 일이 옳고 선하다는 믿음은, 누군가의 비난에 상처받지 않을 수 있는 힘을 주며</p>
 
 <p>타인의 선의와 사랑에 대한 믿음은, 함께 사는 세상에서 행복의 근원에 가깝다고 생각한다.</p>
 
 <p><br />
 <br />
-‘그냥’이라는 이유는 비논리적이지만 역설적으로 그러해서 반박불가하며 강력하다.</p>]]></content><author><name>DaRe_jin</name></author><category term="[&quot;Thoughts&quot;]" /><category term="에세이" /></entry><entry><title type="html">투자의 목적</title><link href="http://localhost:4000/finance/%ED%88%AC%EC%9E%90%EC%9D%98-%EB%AA%A9%EC%A0%81/" rel="alternate" type="text/html" title="투자의 목적" /><published>2025-08-02T00:00:00+09:00</published><updated>2025-08-02T00:00:00+09:00</updated><id>http://localhost:4000/finance/%ED%88%AC%EC%9E%90%EC%9D%98%20%EB%AA%A9%EC%A0%81</id><content type="html" xml:base="http://localhost:4000/finance/%ED%88%AC%EC%9E%90%EC%9D%98-%EB%AA%A9%EC%A0%81/"><![CDATA[<hr />
+‘그냥’이라는 이유는 비논리적이지만 역설적으로 그러해서 반박불가하며 강력하다.s</p>]]></content><author><name>DaRe_jin</name></author><category term="[&quot;Thoughts&quot;]" /><category term="에세이" /></entry><entry><title type="html">투자의 목적</title><link href="http://localhost:4000/finance/%ED%88%AC%EC%9E%90%EC%9D%98-%EB%AA%A9%EC%A0%81/" rel="alternate" type="text/html" title="투자의 목적" /><published>2025-08-02T00:00:00+09:00</published><updated>2025-08-02T00:00:00+09:00</updated><id>http://localhost:4000/finance/%ED%88%AC%EC%9E%90%EC%9D%98%20%EB%AA%A9%EC%A0%81</id><content type="html" xml:base="http://localhost:4000/finance/%ED%88%AC%EC%9E%90%EC%9D%98-%EB%AA%A9%EC%A0%81/"><![CDATA[<hr />
 
 <p class="notice--info">원칙은 바뀔 수 있음이 원칙이다.</p>
 

@@ -1,0 +1,93 @@
+---
+layout: null
+---
+
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
+        xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    
+    <!-- Posts -->
+    {% for post in site.posts %}
+    <url>
+        <loc>{{ site.url }}{{ post.url }}</loc>
+        {% if post.last_modified_at %}
+        <lastmod>{{ post.last_modified_at | date_to_xmlschema }}</lastmod>
+        {% elsif post.date %}
+        <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
+        {% endif %}
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    {% endfor %}
+    
+    <!-- Pages -->
+    {% for page in site.pages %}
+    {% if page.layout != null and page.layout != 'feed' and page.layout != 'sitemap' %}
+    <url>
+        <loc>{{ site.url }}{{ page.url }}</loc>
+        {% if page.last_modified_at %}
+        <lastmod>{{ page.last_modified_at | date_to_xmlschema }}</lastmod>
+        {% endif %}
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    {% endif %}
+    {% endfor %}
+    
+    <!-- Category Pages -->
+    {% for category in site.categories %}
+    <url>
+        <loc>{{ site.url }}/categories/{{ category[0] | slugify }}/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    {% endfor %}
+    
+    <!-- Tag Pages -->
+    {% for tag in site.tags %}
+    <url>
+        <loc>{{ site.url }}/tags/{{ tag[0] | slugify }}/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    {% endfor %}
+    
+    <!-- Main Pages -->
+    <url>
+        <loc>{{ site.url }}/</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+    
+    <url>
+        <loc>{{ site.url }}/about/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>{{ site.url }}/categories/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.4</priority>
+    </url>
+    
+    <url>
+        <loc>{{ site.url }}/tags/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.4</priority>
+    </url>
+    
+    <!-- Pagination Pages -->
+    {% if site.posts.size > site.paginate %}
+    {% assign total_pages = site.posts.size | divided_by: site.paginate | plus: 1 %}
+    {% for page_num in (2..total_pages) %}
+    <url>
+        <loc>{{ site.url }}/page{{ page_num }}/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    {% endfor %}
+    {% endif %}
+    
+</urlset> 

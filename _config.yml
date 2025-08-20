@@ -21,6 +21,9 @@ title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "DaRe_jin"
 description              : "내실 있는 낙관"
+# Production URL
+# url                      : "https://darejinn.github.io"
+# Local development URL (comment out in production)
 url                      : "https://darejinn.github.io"
 baseurl                  : ""
 repository               : "darejinn/darejinn.github.io"
@@ -213,7 +216,6 @@ timezone: Asia/Seoul # https://en.wikipedia.org/wiki/List_of_tz_database_time_zo
 # Plugins (previously gems:)
 plugins:
   - jekyll-paginate
-  - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
   - jekyll-include-cache
@@ -221,7 +223,6 @@ plugins:
 # mimic GitHub Pages with --safe
 whitelist:
   - jekyll-paginate
-  - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
   - jekyll-include-cache
@@ -280,6 +281,7 @@ defaults:
       sidebar:  
         nav: "side"
 
+
  # _pages
   - scope:
       path: ""
@@ -294,4 +296,8 @@ defaults:
       mathjax: true
       sidebar:  
         nav: "side"
+
+
+# Sitemap Configuration
+# Custom sitemap.xml template is used instead of jekyll-sitemap plugin
 
