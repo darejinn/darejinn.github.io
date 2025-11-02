@@ -4,6 +4,15 @@
     <!-- Posts -->
     
     <url>
+        <loc>http://localhost:4000/projects/Soothing/</loc>
+        
+        <lastmod>2025-11-02T00:00:00+09:00</lastmod>
+        
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
         <loc>http://localhost:4000/thoughts/09.-%EC%84%AC%EC%84%B8%ED%95%9C-%EC%86%94%EC%A7%81%ED%95%A8/</loc>
         
         <lastmod>2025-09-21T00:00:00+09:00</lastmod>
@@ -97,15 +106,6 @@
         <loc>http://localhost:4000/projects/MOUM/</loc>
         
         <lastmod>2025-06-13T00:00:00+09:00</lastmod>
-        
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    
-    <url>
-        <loc>http://localhost:4000/projects/Soothing/</loc>
-        
-        <lastmod>2025-06-12T00:00:00+09:00</lastmod>
         
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
@@ -478,12 +478,6 @@
     </url>
     
     <url>
-        <loc>http://localhost:4000/tags/cognition/</loc>
-        <changefreq>monthly</changefreq>
-        <priority>0.3</priority>
-    </url>
-    
-    <url>
         <loc>http://localhost:4000/tags/multi-omics/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.3</priority>
@@ -509,6 +503,12 @@
     
     <url>
         <loc>http://localhost:4000/tags/ai/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/tags/cognition/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.3</priority>
     </url>
