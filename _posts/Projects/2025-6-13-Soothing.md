@@ -30,7 +30,7 @@ This project was completed as Team Soothing. (2023 - 2025)
   <br><em>  </em>
 </p>
 
-우리는 살아가면서 종종 '잊기 위한 노력([Intentional Forgetting](https://www.mdpi.com/2075-4426/11/4/241))'을 한다. 이렇게 의식적으로 생각하지 않기 위해 노력하는 과정(No-Think)에서 해마의 활성이 저하된 상태가 잠시 유지된다([Amnesic shadow](https://www.nature.com/articles/ncomms11003)). 그 기간 중 사람에게 보여진 물체(cue)와 연상된 [일화 기억(target)이 약화되며](https://psycnet.apa.org/fulltext/2020-59521-001.html), 심지어 해당 물체가 사람이 의식적으로 인지하지 못할 정도로 잠깐 보여져도([Subliminally](https://www.nature.com/articles/s41467-022-34091-1))기억이 약화될 수 있음이 보고되었다.
+우리는 살아가면서 종종 '잊기 위한 노력([Intentional Forgetting](https://www.mdpi.com/2075-4426/11/4/241))'을 한다. 이렇게 의식적으로 생각하지 않기 위해 노력하는 과정(No-Think)에서 해마의 활성이 저하된 상태가 잠시 유지된다([Amnesic shadow](https://www.nature.com/articles/ncomms11003)). 그 기간 중 사람에게 보여진 물체(cue)와 연관된 [일화 기억(target)이 약화되며](https://psycnet.apa.org/fulltext/2020-59521-001.html), 심지어 해당 물체가 사람이 의식적으로 인지하지 못할 정도로 잠깐 보여져도([Subliminally](https://www.nature.com/articles/s41467-022-34091-1))기억이 약화될 수 있음이 보고되었다.
 
 지금까지의 연구들에서, 이 No-think 과정은 피실험자에게 직접 '*지금부터 떠올리지 않기 위해 노력하세요*' 라는 지시를 하며 이루어졌다. 
 
