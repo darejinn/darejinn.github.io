@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-11-02T12:16:23+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">DaRe_jin’s Blog</title><subtitle>내실 있는 낙관</subtitle><author><name>DaRe_jin</name></author><entry><title type="html">[Research] Game-based Shadow-induced Forgetting</title><link href="http://localhost:4000/projects/Soothing/" rel="alternate" type="text/html" title="[Research] Game-based Shadow-induced Forgetting" /><published>2025-11-02T00:00:00+09:00</published><updated>2025-11-02T00:00:00+09:00</updated><id>http://localhost:4000/projects/Soothing</id><content type="html" xml:base="http://localhost:4000/projects/Soothing/"><![CDATA[<hr />
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-11-02T12:21:54+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">DaRe_jin’s Blog</title><subtitle>내실 있는 낙관</subtitle><author><name>DaRe_jin</name></author><entry><title type="html">[Research] Game-based Shadow-induced Forgetting</title><link href="http://localhost:4000/projects/Soothing/" rel="alternate" type="text/html" title="[Research] Game-based Shadow-induced Forgetting" /><published>2025-11-02T00:00:00+09:00</published><updated>2025-11-02T00:00:00+09:00</updated><id>http://localhost:4000/projects/Soothing</id><content type="html" xml:base="http://localhost:4000/projects/Soothing/"><![CDATA[<hr />
 
 <p class="notice--info">This project was completed as Team Soothing. (2023 - 2025)</p>
 
@@ -49,7 +49,7 @@
 <p><br />
 시행착오의 연속이었다.</p>
 
-<p>기존 논문 ‘method’란에 적힌 실험방법을 팀원들과 분석하고 토론하며 실험을 설계했다. 실험 참가자를 모집하는 팜플렛을 학교 곳곳에 붙였다. 몇개월 간 실험하며 얻은 수십명의 데이터를 분석하는 와중 이게 정말 신뢰할 수 있는 엄밀한 해석인지 의구심이 들었다. 교수님께 찾아가 우리의 목적과 연구방법을 설득드리고 조언을 구했다. 무수히 많은 잘못된 점들을 지적받았다. IRB를 신청하고, SAP를 쓰고, 다시 실험 설계부터 시작했다. 지원받은 금액을 탈탈 털어 EEG 측정 기기와 노트북을 사고, 실험장소를 빌렸다. 학교 수업을 마치면 실험장소로 가 피실험자분들을 안내하고 데이터를 모았다. 발화를 해석하는 명확한 기준을 만들기 위해 자연어처리를 공부했다. 새벽까지 팀원들과 상의하는 것은 루틴이었다.</p>
+<p>기존 논문 ‘method’란에 적힌 실험방법을 팀원들과 분석하고 토론하며 실험을 설계했다. 몇개월 간 실험하며 얻은 수십명의 데이터를 분석하는 와중 이게 정말 신뢰할 수 있는 엄밀한 해석인지 의구심이 들었다. 교수님께 찾아가 우리의 목적과 연구방법을 설득드리고 조언을 구했다. 무수히 많은 잘못된 점들을 지적받았다. IRB를 신청하고, SAP를 쓰고, 다시 실험 설계부터 시작했다. 지원받은 투자금으로 EEG 측정 기기와 노트북을 사고, 실험장소를 빌렸다. 학교 수업을 마치면 실험장소로 가 피실험자분들을 안내하고 데이터를 모았다. 발화를 해석하는 명확한 기준을 만들기 위해 자연어처리를 공부했다. 새벽까지 팀원들과 상의하는 것은 루틴이었다.</p>
 
 <p>2년이 넘는 기간동안 연구를 하며, 아래와 같은 것들을 배웠다.</p>
 
