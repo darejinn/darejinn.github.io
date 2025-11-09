@@ -1,4 +1,92 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-11-04T13:51:29+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">DaRe_jin’s Blog</title><subtitle>내실 있는 낙관</subtitle><author><name>DaRe_jin</name></author><entry><title type="html">[Research] Game-based Shadow-induced Forgetting</title><link href="http://localhost:4000/projects/Soothing/" rel="alternate" type="text/html" title="[Research] Game-based Shadow-induced Forgetting" /><published>2025-11-02T00:00:00+09:00</published><updated>2025-11-02T00:00:00+09:00</updated><id>http://localhost:4000/projects/Soothing</id><content type="html" xml:base="http://localhost:4000/projects/Soothing/"><![CDATA[<hr />
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-11-09T17:20:02+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">DaRe_jin’s Blog</title><subtitle>내실 있는 낙관</subtitle><author><name>DaRe_jin</name></author><entry><title type="html">사람다움(2)</title><link href="http://localhost:4000/thoughts/10.-%EC%82%AC%EB%9E%8C%EB%8B%A4%EC%9B%80(2)/" rel="alternate" type="text/html" title="사람다움(2)" /><published>2025-11-09T00:00:00+09:00</published><updated>2025-11-09T00:00:00+09:00</updated><id>http://localhost:4000/thoughts/10.%20%EC%82%AC%EB%9E%8C%EB%8B%A4%EC%9B%80(2)</id><content type="html" xml:base="http://localhost:4000/thoughts/10.-%EC%82%AC%EB%9E%8C%EB%8B%A4%EC%9B%80(2)/"><![CDATA[<hr />
+
+<p class="notice--info">인공지능이 대체할 수 없는 사람다움에 관한 두번째 글입니다.</p>
+
+<h1 id="introduction">Introduction</h1>
+
+<blockquote>
+  <p>사회적 실재(reality)는 설득의 산물이다.<br />
+— 피터 L. 버거, <em>실재의 사회적 구성</em></p>
+</blockquote>
+
+<p>설득이란, ‘사람의 믿음, 태도, 의도, 동기 부여, 행동에 영향을 주는 것’을 의미한다.</p>
+
+<p>인간관계든, 제품과 서비스를 판매하는 일이든, 비즈니스이든, 우리는 새로운 가치를 타인에게 설득하거나, 나의 무언가가 당신의 가치에 부합함을 설득하며 살아간다.</p>
+
+<p>과학도 다르지 않다.<br />
+하나의 시대는 고유한 사고의 질서(헤게모니)를 공유하고, 새로운 지식은 그 질서를 설득하는 과정을 거쳐 형성된다.</p>
+
+<p>이 글은 그 과정 속에서 드러나는 <strong>사람다움</strong>에 관한 이야기다.</p>
+
+<p><br /></p>
+
+<hr />
+
+<h1 id="1-인격적-지식">1. 인격적 지식</h1>
+<p><br /></p>
+
+<p>당신의 분야를 애정하는 교수님의 강의를 주의깊게 들으면, 수업 전반에 흐르는 교수님의 시각이 느껴진다. 단순한 정보의 나열이 아니라, 무엇이 중요하고, 어떤 방식으로 연결는지에 대한 수업의 서사(narrative)가 보인다.</p>
+
+<p>신장을 전공하신 교수님은, 과민반응을 신장의 관점에서 풀어내신다. B-cell을 전공하시는 교수님은 면역의 유연성에, T-cell을 전공하시는 교수님은 면역의 정확성에 감탄하신다. 서사의 정교함과 일관성이 갖는 설득력은 듣는 이가 빠져들게 만든다.</p>
+
+<p><br /></p>
+
+<p>방대한 사람의 표현을 광범위하게 학습하는 언어모델에서는 수많은 개인의 인격적 지식이 ‘데이터’라는 이름으로 모여져 학습된다. 여러 층위로 합쳐진 일관적이지 않은 서사 - 가령 코딩의 방식, 말의 어투, 합의되지 않은 관점들에 대해 모델은 당연스레 혼란하다. 더 많고 다양한 데이터를 학습할수록, 모델은 상향 ‘평준화’된다.(<em>데이터의 질에 따라 상향이 아닐 수도 있다.</em>) 신념이 보존되지 않은 지식은, 관념의 파편의 총합에 불과하다.</p>
+
+<p>모델을 학습하고 사용하는 사람은 그 위에 서사를 부여할 수 있다. 
+사람은 데이터를 선별하고 보상함수를 설계한다. 사용자의 피드백을 통해 에이전트는 가치를 학습한다. 프롬프트는 파편적인 관념들을 연결하여 방향성을 만든다.</p>
+
+<p>설득의 내용 속에서 드러나는 사람다움이다.</p>
+
+<p><br /></p>
+
+<hr />
+
+<h1 id="2-ethos">2. Ethos</h1>
+<p><br />
+수사학의 세 가지 요소에는 <strong>Ethos</strong>, <strong>Pathos</strong>, <strong>Logos</strong>가 있다.</p>
+
+<p>Logos는 논리이고, Pathos는 감정이다. Ethos는 화자의 진정성을 의미한다.<br />
+아리스토텔레스는 이 세 가지 중에서도 Ethos를 가장 중요한 설득의 요소로 보았다.<br />
+진정성 없는 말은 아무리 논리적이어도 마음에 남지 않는다.</p>
+
+<blockquote>
+  <p>Ethos : the set of beliefs, ideas, etc. about the social behaviour and relationships of a person or group (<a href="https://dictionary.cambridge.org/ko/%EC%82%AC%EC%A0%84/%EC%98%81%EC%96%B4/ethos">cambridge dictionary</a>)</p>
+</blockquote>
+
+<p>개인이 내면화한 기질을 의미하는 ethos는 ‘화자가 얼마나 신뢰성 있는 사람인가’를 판단하는 척도가 된다.</p>
+
+<p><br />
+인공지능은 logos와 pathos를 향상할 때 압도적으로 탁월하다. 논리를 정교하게 구성하고, 감정의 패턴을 학습하여 재현한다. 자료를 수집하고, 정리하고, 제안에 맞게 가공하는 일은 더이상 사람의 일이 아니다. 자기강화적인 과정로 개선과정이 자동화된다면 이러한 지능의 비용은, -샘알트먼의 표현을 빌리자면-전기를 사용하는 비용에 가깝게 수렴할 것이다.</p>
+
+<p>그러나 Ethos, 즉 내면의 일관성과 축적된 태도에서 비롯된 진정성은 데이터로 학습되지 않는다.</p>
+
+<hr />
+
+<p>이 점을 잘 보여주는 사례가 바로 컨설팅 회사인 맥킨지(McKinsey)다. 맥킨지는 한 세기 가까이 ‘조언의 신뢰’를 상징해왔다. 회사는 AI를 대체자가 혹은 경쟁자가 아닌 <a href="https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai#">innovation catalysit</a>로 정의하며, 적극적으로 워크플로우를 재설계하고 있다. 누구나 gpt를 사용할 수 있는 시대에, 그들의 조언이 여전히 가치를 갖는 이유는 회사가 세상과 관계 맺는 방식, 즉 오랜 시간 축적된 <em>Ethos</em> 때문이다.</p>
+
+<p>무엇을 묻고, 무엇을 취하고, 무엇을 버릴지에 대한 기준은 기업의 철학으로 만들어진다. 회사는 그 철학으로 사람을 설득한다.</p>
+
+<p>설득의 과정 속에서 드러나는 사람다움이다.</p>
+
+<p><br /></p>
+
+<hr />
+
+<h1 id="outro">Outro</h1>
+
+<p>방향을 정하는 일,<br />
+가치의 우선순위를 세우는 일,<br />
+그리고 그것을 타인에게 설득력 있게 전달하는 일 —<br />
+이 모든 과정에는 사람이 관여한다.</p>
+
+<blockquote>
+  <p>설득 : 모호함의 자원을 예술적으로 사용하는 것<br />
+— 케네스 버크</p>
+</blockquote>
+
+<p>설득의 중심에는 여전히 사람이 있다. 결국 중요한 것은 옳음이 아니라,
+모호함 속에서 각자의 옳음을 찾아가려는 태도일지도 모른다.</p>]]></content><author><name>DaRe_jin</name></author><category term="[&quot;Thoughts&quot;]" /><category term="에세이" /></entry><entry><title type="html">[Research] Game-based Shadow-induced Forgetting</title><link href="http://localhost:4000/projects/Soothing/" rel="alternate" type="text/html" title="[Research] Game-based Shadow-induced Forgetting" /><published>2025-11-02T00:00:00+09:00</published><updated>2025-11-02T00:00:00+09:00</updated><id>http://localhost:4000/projects/Soothing</id><content type="html" xml:base="http://localhost:4000/projects/Soothing/"><![CDATA[<hr />
 
 <p class="notice--info">This project was completed as Team Soothing. (2023 - 2025)</p>
 
@@ -156,34 +244,7 @@
 
 <p>다만 나를 내보이는 과정에서, 혹 타인의 결핍에 손을 대어 그를 상처 입히지는 않을지, 완급 조절에 섬세할 필요가 있다. 배려의 영역이다.</p>
 
-<p><a href="https://dictionary.apa.org/unconditional-positive-regard">“무조건적 긍정적 존중(unconditional positive regard)”</a>은 사랑과 연민의 다른 이름이라고 생각한다.</p>]]></content><author><name>DaRe_jin</name></author><category term="[&quot;Thoughts&quot;]" /><category term="에세이" /></entry><entry><title type="html">장기 흐름</title><link href="http://localhost:4000/finance/%EC%9E%A5%EA%B8%B0-%ED%9D%90%EB%A6%84/" rel="alternate" type="text/html" title="장기 흐름" /><published>2025-08-21T00:00:00+09:00</published><updated>2025-08-21T00:00:00+09:00</updated><id>http://localhost:4000/finance/%EC%9E%A5%EA%B8%B0%20%ED%9D%90%EB%A6%84</id><content type="html" xml:base="http://localhost:4000/finance/%EC%9E%A5%EA%B8%B0-%ED%9D%90%EB%A6%84/"><![CDATA[<hr />
-
-<p class="notice--info">원칙은 바뀔 수 있음이 원칙이다.</p>
-
-<h1 id="introduction">Introduction</h1>
-
-<p>단기적인 오르내림은 운의 비중이 크지만, 장기적인 흐름은 신념을 가진 권력자들로 인해 만들어진다.</p>
-
-<p>다수가 가진 감정, 다수가 하는 행동을 파고들었을 때 합리적인 이유가 없다면</p>
-
-<p>다수의 눈을 가리는, 이유를 가진 권력자가 있을 가능성이 높다.</p>
-
-<hr />
-<p><br /></p>
-
-<h1 id="가령">가령,</h1>
-
-<p>‘Make America great again’이라는 신념을 가진 트럼프 대통령의 권력을 미루어 보아, 아래를 짐작할 수 있다.</p>
-
-<ul>
-  <li>집권기간동안 미국의 주식시장은 우상향할 것이다. 다만 금리를 낮추기 위해 잠깐의 조정이 올 수 있다.</li>
-  <li>미국과 중국의 패권경쟁에 관여하는, 세계무대에서 중요한 산업(우주 진출 등이 있겠다)은 수혜를 입을 것이다.</li>
-  <li>비트코인(미국의 비축자산)과 이더리움(플랫폼 코인의 압도적인 점유율)의 강세는 예견된 수순이다.</li>
-</ul>
-
-<p>이러한 큰 흐름 속에서 수익을 얻는 것이 목적인 하위 권력자는 단기적인 가격 변동을 주도하여 다수의 여론을 만들고 차익을 얻는다.</p>
-
-<p>주식은 기업과 산업의 가치를 아는 소수가 이익을 실현하는 도구이다.</p>]]></content><author><name>DaRe_jin</name></author><category term="[&quot;Finance&quot;]" /><category term="에세이" /></entry><entry><title type="html">격을 갖춤</title><link href="http://localhost:4000/bridges/%EA%B2%A9%EC%9D%84-%EA%B0%96%EC%B6%A4/" rel="alternate" type="text/html" title="격을 갖춤" /><published>2025-08-21T00:00:00+09:00</published><updated>2025-08-21T00:00:00+09:00</updated><id>http://localhost:4000/bridges/%EA%B2%A9%EC%9D%84%20%EA%B0%96%EC%B6%A4</id><content type="html" xml:base="http://localhost:4000/bridges/%EA%B2%A9%EC%9D%84-%EA%B0%96%EC%B6%A4/"><![CDATA[<hr />
+<p><a href="https://dictionary.apa.org/unconditional-positive-regard">“무조건적 긍정적 존중(unconditional positive regard)”</a>은 사랑과 연민의 다른 이름이라고 생각한다.</p>]]></content><author><name>DaRe_jin</name></author><category term="[&quot;Thoughts&quot;]" /><category term="에세이" /></entry><entry><title type="html">격을 갖춤</title><link href="http://localhost:4000/bridges/%EA%B2%A9%EC%9D%84-%EA%B0%96%EC%B6%A4/" rel="alternate" type="text/html" title="격을 갖춤" /><published>2025-08-21T00:00:00+09:00</published><updated>2025-08-21T00:00:00+09:00</updated><id>http://localhost:4000/bridges/%EA%B2%A9%EC%9D%84%20%EA%B0%96%EC%B6%A4</id><content type="html" xml:base="http://localhost:4000/bridges/%EA%B2%A9%EC%9D%84-%EA%B0%96%EC%B6%A4/"><![CDATA[<hr />
 
 <p class="notice--info">S와 이야기를 하던 중 공유 받은 S의 생각입니다.</p>
 
@@ -230,7 +291,34 @@
 
 <p>인격을 갖추게 된다면 진짜로 어쩔 수 없는 일을 구분해낼 수 있을까?</p>
 
-<p>아니면 인격을 갖추게 된다면 이러한 일을 구분해야 할 부담을 받아들여, 굳이 구분할 필요가 없음을 알게 될까?</p>]]></content><author><name>DaRe_jin</name></author><category term="[&quot;Bridges&quot;]" /><category term="에세이" /></entry><entry><title type="html">[Experience] A 서비스를 런칭하며</title><link href="http://localhost:4000/projects/AI_Report/" rel="alternate" type="text/html" title="[Experience] A 서비스를 런칭하며" /><published>2025-08-13T00:00:00+09:00</published><updated>2025-08-13T00:00:00+09:00</updated><id>http://localhost:4000/projects/AI_Report</id><content type="html" xml:base="http://localhost:4000/projects/AI_Report/"><![CDATA[<hr />
+<p>아니면 인격을 갖추게 된다면 이러한 일을 구분해야 할 부담을 받아들여, 굳이 구분할 필요가 없음을 알게 될까?</p>]]></content><author><name>DaRe_jin</name></author><category term="[&quot;Bridges&quot;]" /><category term="에세이" /></entry><entry><title type="html">장기 흐름</title><link href="http://localhost:4000/finance/%EC%9E%A5%EA%B8%B0-%ED%9D%90%EB%A6%84/" rel="alternate" type="text/html" title="장기 흐름" /><published>2025-08-21T00:00:00+09:00</published><updated>2025-08-21T00:00:00+09:00</updated><id>http://localhost:4000/finance/%EC%9E%A5%EA%B8%B0%20%ED%9D%90%EB%A6%84</id><content type="html" xml:base="http://localhost:4000/finance/%EC%9E%A5%EA%B8%B0-%ED%9D%90%EB%A6%84/"><![CDATA[<hr />
+
+<p class="notice--info">원칙은 바뀔 수 있음이 원칙이다.</p>
+
+<h1 id="introduction">Introduction</h1>
+
+<p>단기적인 오르내림은 운의 비중이 크지만, 장기적인 흐름은 신념을 가진 권력자들로 인해 만들어진다.</p>
+
+<p>다수가 가진 감정, 다수가 하는 행동을 파고들었을 때 합리적인 이유가 없다면</p>
+
+<p>다수의 눈을 가리는, 이유를 가진 권력자가 있을 가능성이 높다.</p>
+
+<hr />
+<p><br /></p>
+
+<h1 id="가령">가령,</h1>
+
+<p>‘Make America great again’이라는 신념을 가진 트럼프 대통령의 권력을 미루어 보아, 아래를 짐작할 수 있다.</p>
+
+<ul>
+  <li>집권기간동안 미국의 주식시장은 우상향할 것이다. 다만 금리를 낮추기 위해 잠깐의 조정이 올 수 있다.</li>
+  <li>미국과 중국의 패권경쟁에 관여하는, 세계무대에서 중요한 산업(우주 진출 등이 있겠다)은 수혜를 입을 것이다.</li>
+  <li>비트코인(미국의 비축자산)과 이더리움(플랫폼 코인의 압도적인 점유율)의 강세는 예견된 수순이다.</li>
+</ul>
+
+<p>이러한 큰 흐름 속에서 수익을 얻는 것이 목적인 하위 권력자는 단기적인 가격 변동을 주도하여 다수의 여론을 만들고 차익을 얻는다.</p>
+
+<p>주식은 기업과 산업의 가치를 아는 소수가 이익을 실현하는 도구이다.</p>]]></content><author><name>DaRe_jin</name></author><category term="[&quot;Finance&quot;]" /><category term="에세이" /></entry><entry><title type="html">[Experience] A 서비스를 런칭하며</title><link href="http://localhost:4000/projects/AI_Report/" rel="alternate" type="text/html" title="[Experience] A 서비스를 런칭하며" /><published>2025-08-13T00:00:00+09:00</published><updated>2025-08-13T00:00:00+09:00</updated><id>http://localhost:4000/projects/AI_Report</id><content type="html" xml:base="http://localhost:4000/projects/AI_Report/"><![CDATA[<hr />
 
 <p class="notice--info">A 서비스를 기획하고, 개발하고, 런칭한 과정에서 배우고 느낀 것에 대한 기록입니다.</p>
 
@@ -734,67 +822,4 @@ Shallow embedding과 달리 <strong>파라미터가 노드 간 공유</strong>�
       <li>차트의 오르내림에 감정을 소모하지 않고 정한 규칙에 따라 매수, 매도한다.</li>
     </ul>
   </li>
-</ol>]]></content><author><name>DaRe_jin</name></author><category term="[&quot;Finance&quot;]" /><category term="에세이" /></entry><entry><title type="html">매수 매도 규칙</title><link href="http://localhost:4000/finance/%EB%A7%A4%EC%88%98%EB%A7%A4%EB%8F%84%EA%B7%9C%EC%B9%99/" rel="alternate" type="text/html" title="매수 매도 규칙" /><published>2025-07-31T00:00:00+09:00</published><updated>2025-07-31T00:00:00+09:00</updated><id>http://localhost:4000/finance/%EB%A7%A4%EC%88%98%EB%A7%A4%EB%8F%84%EA%B7%9C%EC%B9%99</id><content type="html" xml:base="http://localhost:4000/finance/%EB%A7%A4%EC%88%98%EB%A7%A4%EB%8F%84%EA%B7%9C%EC%B9%99/"><![CDATA[<hr />
-
-<p class="notice--info">원칙은 바뀔 수 있음이 원칙이다.</p>
-
-<h1 id="introduction">Introduction</h1>
-
-<p>성장하는 자본주의 시스템에서 통화량의 상승과 통화가치의 하락은 자연스러운 수순이다. 따라서 현금을 갖고 있기보다 현물 자산으로 바꾸어 갖고 있는 것이 현명한데, 기업의 가치를 반영하는 주식에 투자하는 방식은 그 중 하나이다.</p>
-
-<p>그러나 파는 사람과 사는 사람이 항상 같이 존재하는 주식시장에서, 누군가가 수익을 얻는다면 동시에 누군가는 손실을 입기 마련이고, 기업 가치에 대한 정보의 열위에 있는 일반투자자는 후자에 속할 확률이 높다. 특히 이익을 확정짓고 싶어하고 손실을 기피하는 사람의 심리는 예측 가능하기에 감정적인 일반투자자는 더욱 세력의 이익실현에 휘둘리기 쉽다. 매수와 매도의 기준이 명확해야 하는 이유이다.</p>
-
-<p>조금 더 개인적인 이야기를 해보자면, 나에게는 지금 순간의 나의 행복이 꽤 중요한 가치이다. 차트의 단기적 오르내림에 나의 행복도가 흔들리지 않기 위해서는 ‘내가 맞게 투자하고 있다.’는 믿음이 있어야 하더라. 믿음의 영역에 정답은 없고 죽기 전까지 주식이 떨어지기만 하더라도 언젠간 오른다는 믿음이 있다면 행복하기야 하겠지만… 그래도 이왕이면 믿는대로 이루어지면 더 좋으니 시장의 원리를 바탕으로 나의 매수, 매도 규칙을 정하고자 한다.
-<br />
-<br /></p>
-
-<h1 id="1-매수">1. 매수</h1>
-<hr />
-<ul>
-  <li>대상
-    <ol>
-      <li>내가 관심이 있고, 장기적인 상승의 근거가 명확한 분야의 회사</li>
-      <li>단기적인 이벤트로 주가 상승이 예측되는 회사 (다만 높은 비중으로 투자하지는 말자)
-        <ul>
-          <li>임상 승인</li>
-          <li>관세 / 정책의 변화</li>
-          <li>단기적이고 비합리적인 하락 (다시 오를 것이 확실할 때)</li>
-        </ul>
-      </li>
-    </ol>
-  </li>
-  <li>
-    <p>방식</p>
-
-    <p>상승 추세의 눌림목일 때 구매, 혹은 높은 밸류의 회사가 낮은 주가에서 횡보/반등할 때 구매</p>
-    <ol>
-      <li>상승 추세는 binary wave 7개 지표로 기계적으로 판단</li>
-      <li>최근 급격한 상승이 이미 이루어졌다면, 관심을 갖되 당장 매입하지는 말자</li>
-    </ol>
-  </li>
-</ul>
-
-<p><br /></p>
-<h1 id="2매도">2.매도</h1>
-<hr />
-<ul>
-  <li>대상
-    <ol>
-      <li>상승추세가 깨진 경우 : 초기에 생각한 기업의 본질적인 가치가 훼손되는 일이 있는지 살핀다.</li>
-      <li>급격한 상승으로 조정이 예상될 때 혹은 너무 매력적인 다른 종목이 생겼을 때</li>
-    </ol>
-  </li>
-  <li>방식
-    <ol>
-      <li>기업의 가치가 완전히 훼손되는 급격한 일이 일어났다면 전량매도, 그것이 아니라면 분할매도한다.</li>
-    </ol>
-  </li>
-</ul>
-
-<p><br /></p>
-<h1 id="3분배">3.분배</h1>
-<hr />
-<ul>
-  <li>현금은 10% 보유 (언젠간 현금 대신 코인을 보유하는 날이 올 것 같다)</li>
-  <li>안정적인 기업 / 도전적인 기업에 분산투자하고자 한다. 투자에 조금 더 경험과 확신이 생기면, 가치가 확실한 기업에 집중투자하는 방식으로 바꾸어나가야겠다.</li>
-</ul>]]></content><author><name>DaRe_jin</name></author><category term="[&quot;Finance&quot;]" /><category term="에세이" /></entry></feed>
+</ol>]]></content><author><name>DaRe_jin</name></author><category term="[&quot;Finance&quot;]" /><category term="에세이" /></entry></feed>

@@ -4,6 +4,15 @@
     <!-- Posts -->
     
     <url>
+        <loc>http://localhost:4000/thoughts/10.-%EC%82%AC%EB%9E%8C%EB%8B%A4%EC%9B%80(2)/</loc>
+        
+        <lastmod>2025-11-09T00:00:00+09:00</lastmod>
+        
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
         <loc>http://localhost:4000/projects/Soothing/</loc>
         
         <lastmod>2025-11-02T00:00:00+09:00</lastmod>
