@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-11-09T17:20:02+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">DaRe_jin’s Blog</title><subtitle>내실 있는 낙관</subtitle><author><name>DaRe_jin</name></author><entry><title type="html">사람다움(2)</title><link href="http://localhost:4000/thoughts/10.-%EC%82%AC%EB%9E%8C%EB%8B%A4%EC%9B%80(2)/" rel="alternate" type="text/html" title="사람다움(2)" /><published>2025-11-09T00:00:00+09:00</published><updated>2025-11-09T00:00:00+09:00</updated><id>http://localhost:4000/thoughts/10.%20%EC%82%AC%EB%9E%8C%EB%8B%A4%EC%9B%80(2)</id><content type="html" xml:base="http://localhost:4000/thoughts/10.-%EC%82%AC%EB%9E%8C%EB%8B%A4%EC%9B%80(2)/"><![CDATA[<hr />
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-11-09T17:31:42+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">DaRe_jin’s Blog</title><subtitle>내실 있는 낙관</subtitle><author><name>DaRe_jin</name></author><entry><title type="html">사람다움(2)</title><link href="http://localhost:4000/thoughts/10.-%EC%82%AC%EB%9E%8C%EB%8B%A4%EC%9B%80(2)/" rel="alternate" type="text/html" title="사람다움(2)" /><published>2025-11-09T00:00:00+09:00</published><updated>2025-11-09T00:00:00+09:00</updated><id>http://localhost:4000/thoughts/10.%20%EC%82%AC%EB%9E%8C%EB%8B%A4%EC%9B%80(2)</id><content type="html" xml:base="http://localhost:4000/thoughts/10.-%EC%82%AC%EB%9E%8C%EB%8B%A4%EC%9B%80(2)/"><![CDATA[<hr />
 
 <p class="notice--info">인공지능이 대체할 수 없는 사람다움에 관한 두번째 글입니다.</p>
 
@@ -75,18 +75,16 @@
 
 <h1 id="outro">Outro</h1>
 
-<p>방향을 정하는 일,<br />
-가치의 우선순위를 세우는 일,<br />
-그리고 그것을 타인에게 설득력 있게 전달하는 일 —<br />
-이 모든 과정에는 사람이 관여한다.</p>
-
 <blockquote>
   <p>설득 : 모호함의 자원을 예술적으로 사용하는 것<br />
 — 케네스 버크</p>
 </blockquote>
 
-<p>설득의 중심에는 여전히 사람이 있다. 결국 중요한 것은 옳음이 아니라,
-모호함 속에서 각자의 옳음을 찾아가려는 태도일지도 모른다.</p>]]></content><author><name>DaRe_jin</name></author><category term="[&quot;Thoughts&quot;]" /><category term="에세이" /></entry><entry><title type="html">[Research] Game-based Shadow-induced Forgetting</title><link href="http://localhost:4000/projects/Soothing/" rel="alternate" type="text/html" title="[Research] Game-based Shadow-induced Forgetting" /><published>2025-11-02T00:00:00+09:00</published><updated>2025-11-02T00:00:00+09:00</updated><id>http://localhost:4000/projects/Soothing</id><content type="html" xml:base="http://localhost:4000/projects/Soothing/"><![CDATA[<hr />
+<p>방향을 정하는 일,<br />
+가치의 우선순위를 세우는 일,<br />
+그리고 그것을 타인에게 설득력 있게 전달하는 일</p>
+
+<p>– 설득의 중심에는 여전히 사람이 있다.</p>]]></content><author><name>DaRe_jin</name></author><category term="[&quot;Thoughts&quot;]" /><category term="에세이" /></entry><entry><title type="html">[Research] Game-based Shadow-induced Forgetting</title><link href="http://localhost:4000/projects/Soothing/" rel="alternate" type="text/html" title="[Research] Game-based Shadow-induced Forgetting" /><published>2025-11-02T00:00:00+09:00</published><updated>2025-11-02T00:00:00+09:00</updated><id>http://localhost:4000/projects/Soothing</id><content type="html" xml:base="http://localhost:4000/projects/Soothing/"><![CDATA[<hr />
 
 <p class="notice--info">This project was completed as Team Soothing. (2023 - 2025)</p>
 
