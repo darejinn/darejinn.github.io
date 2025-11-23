@@ -8,6 +8,7 @@ tags:
   - Hi-C
 toc_sticky: true
 comments: true
+published : false
 ---
 
 ---
@@ -20,4 +21,14 @@ comments: true
 비록 매주 반복되는 시험과 본과생으로서 공부해야 할 의무가 생겼지만,
 연구실에서 가졌던 질문들에 대해 느리더라도 꾸준히 나의 답을 내어보고자 한다.
 
-이 글에서 다룰 것은, 
+이 글에서는 Hi-C contact map 분석 방법의 불일치성(inconsistency)에 대한 질문을 다룬다.
+
+# Community Inconsistency
+참고문헌 : 
+[1] (Exploring 3D community inconsistency in human chromosome contact networks)[https://iopscience.iop.org/article/10.1088/2632-072X/acef9d/pdf]
+[2] 
+
+Therefore, depending on algorithm design, different community detection
+methods focusing on slightly different connectivity features may have differing views on the ideal node groupings. In fact, even the same community detection method may yield different results if usingastochasticalgorithm.Thisambiguityisfundamentaltocommunitydetectionandsharedby
+most complex networks whenever interactions span all scales in the network. This is known as
+community inconsistency. T
