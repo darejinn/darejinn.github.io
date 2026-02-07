@@ -94,4 +94,4 @@ This project was completed as Team Soothing. (2023 - 2025)
 정직하되 설득력 있고, 엄밀하되 결단력 있는 연구를 다음의 나는 조금 더 성숙하게 할 수 있게 되길 소망한다.
 
 
-[Preprint Link](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5178790)
+[Paper Link](https://games.jmir.org/2025/1/e76946)
