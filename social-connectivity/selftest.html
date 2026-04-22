@@ -26,10 +26,10 @@
   <section class="hero">
     <div class="kicker">UCLA-3 · BERKMAN-SNI · DE JONG · DUNBAR</div>
     <h2>자가척도 4종 →<br>Holt-Lunstad 3축으로 환산</h2>
-    <p>각 도구는 검증된 표준 척도이며, 응답 즉시 점수와 3축 환산값이 계산됩니다.
-       하단의 통합 결과는 발표의 Layer 3(카톡 분석) 점수와 같은 좌표계에서 직접 비교됩니다 —
-       <strong>두 측정이 같은 방향을 가리키면 진단이 견고합니다.</strong>
-       데이터는 브라우저 밖으로 전송되지 않습니다.</p>
+    <p>네 가지 검증된 자가척도를 한 자리에서 응답하면 점수와 3축 환산값이 즉시 계산되고,
+       하단 결과는 Layer 3(카톡 분석) 점수와 같은 좌표계에서 직접 비교됩니다 —
+       <strong>두 측정이 같은 방향을 가리키면 진단이 견고해집니다.</strong>
+       모든 응답은 브라우저 안에서만 처리됩니다.</p>
   </section>
 
   <div class="scale-grid">
@@ -40,8 +40,24 @@
       <div class="title">UCLA 외로움 3문항</div>
       <div class="desc">Hughes 2004 단축형. 6점 이상 = 외로움군 (Steptoe 2013 PNAS).</div>
 
+      <!-- 세 문항이 서로 다른 외로움의 결을 측정한다는 것을 시각적으로 보여주는 인트로 -->
+      <div style="background: var(--bg-soft); border-left: 3px solid var(--indigo); padding: 14px 18px; margin-bottom: 20px; font-size: 13px; line-height: 1.7;">
+        <div style="font-size: 11px; font-weight: 700; letter-spacing: 1.5px; color: var(--indigo); margin-bottom: 6px;">왜 비슷해 보이는 세 문항인가?</div>
+        세 문항은 외로움의 <strong>서로 다른 결</strong>을 측정합니다 — 같은 6점이라도 어느 문항이 높은가에 따라 처방이 달라집니다.
+        <div style="margin-top: 8px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; font-size: 12px;">
+          <div><span style="color: var(--indigo); font-weight: 700;">Q1 — 양</span><br>옆에 있을 사람의 절대 수</div>
+          <div><span style="color: var(--indigo); font-weight: 700;">Q2 — 사회적 위치</span><br>그룹 안에 끼어 있는가</div>
+          <div><span style="color: var(--indigo); font-weight: 700;">Q3 — 정서 깊이</span><br>속을 나눌 수 있는가</div>
+        </div>
+      </div>
+
       <div class="q" data-scale="ucla" data-q="q1">
+        <div style="font-size: 10px; font-weight: 700; letter-spacing: 1.5px; color: var(--indigo); margin-bottom: 4px;">Q1 · 양적 결핍 (LACK COMPANIONSHIP)</div>
         <div class="label">1. 함께 있을 사람이 부족하다고 느끼는 일이 얼마나 자주 있습니까?</div>
+        <div style="font-size: 12px; color: var(--muted); margin: -4px 0 10px; line-height: 1.6;">
+          → 같이 밥 먹고, 영화 보고, 주말을 보낼 누군가가 <strong>물리적으로 옆에 있는가</strong>.<br>
+          <span style="color: var(--ink);">예시:</span> 자취하는 신입생 / 이사 직후 / 혼자 출장 중. "혼자 있는 시간이 너무 많다"는 감각.
+        </div>
         <div class="options">
           <button class="option" data-v="1"><span class="num">1</span>거의 없다</button>
           <button class="option" data-v="2"><span class="num">2</span>때때로</button>
@@ -50,7 +66,12 @@
       </div>
 
       <div class="q" data-scale="ucla" data-q="q2">
+        <div style="font-size: 10px; font-weight: 700; letter-spacing: 1.5px; color: var(--indigo); margin-bottom: 4px;">Q2 · 관계적 배제감 (LEFT OUT)</div>
         <div class="label">2. 소외되었다고 느끼는 일이 얼마나 자주 있습니까?</div>
+        <div style="font-size: 12px; color: var(--muted); margin: -4px 0 10px; line-height: 1.6;">
+          → 사람은 주변에 있는데 <strong>그 무리에 내가 안 들어가는가</strong>. 타인이 있어서 오히려 느껴지는 외로움.<br>
+          <span style="color: var(--ink);">예시:</span> 단톡방에서 나만 안 읽힘 / 동기들끼리 약속 / 회식 자리에서 겉돎. "끼리끼리인데 나는 빠진다"는 감각.
+        </div>
         <div class="options">
           <button class="option" data-v="1"><span class="num">1</span>거의 없다</button>
           <button class="option" data-v="2"><span class="num">2</span>때때로</button>
@@ -59,12 +80,26 @@
       </div>
 
       <div class="q" data-scale="ucla" data-q="q3">
+        <div style="font-size: 10px; font-weight: 700; letter-spacing: 1.5px; color: var(--indigo); margin-bottom: 4px;">Q3 · 정서적 단절 (ISOLATED FROM OTHERS)</div>
         <div class="label">3. 다른 사람들로부터 고립되었다고 느끼는 일이 얼마나 자주 있습니까?</div>
+        <div style="font-size: 12px; color: var(--muted); margin: -4px 0 10px; line-height: 1.6;">
+          → 물리적으로 옆에 있고 무리에 속해도 <strong>속을 통하지 않는가</strong>. "이해받지 못한다"는 실존적 단절.<br>
+          <span style="color: var(--ink);">예시:</span> SNS 친구는 많은데 진짜 속 얘기 못 하는 직장인 / 가족과 함께 살지만 대화는 사무적 — 발표 주제 <strong>"가면 고립"</strong>의 핵심 신호.
+        </div>
         <div class="options">
           <button class="option" data-v="1"><span class="num">1</span>거의 없다</button>
           <button class="option" data-v="2"><span class="num">2</span>때때로</button>
           <button class="option" data-v="3"><span class="num">3</span>자주</button>
         </div>
+      </div>
+
+      <!-- 패턴 예시 — 같은 6점도 의미가 다르다 -->
+      <div style="background: var(--bg-soft); padding: 14px 18px; margin-top: 16px; font-size: 12px; line-height: 1.8; color: var(--muted);">
+        <div style="font-size: 10px; font-weight: 700; letter-spacing: 1.5px; color: var(--ink); margin-bottom: 6px;">같은 6점도 패턴이 다르면 진단이 다르다</div>
+        <span style="color: var(--ink); font-weight: 600;">3 · 1 · 2</span> = 양적 결핍형 (혼자 사는 신입생)<br>
+        <span style="color: var(--ink); font-weight: 600;">1 · 3 · 2</span> = 사회적 배제형 (편입생, 그룹 진입 실패)<br>
+        <span style="color: var(--ink); font-weight: 600;">1 · 2 · 3</span> = 정서 단절형 (가면 고립 — 본 발표의 진단 패턴)<br>
+        <span style="color: var(--ink); font-weight: 600;">2 · 2 · 2</span> = 전반적 저하형 (단일 결핍이 아닌 광범위한 연결성 약화)
       </div>
 
       <div class="result" id="result-ucla" style="display:none;">
@@ -127,11 +162,34 @@
     </div>
 
 
-    <!-- ── 3. De Jong Gierveld 6-item (NEW) ── -->
+    <!-- ── 3. De Jong Gierveld 6-item ── -->
     <div class="scale">
       <h3>TOOL 3 · DE JONG · QUALITY 축</h3>
-      <div class="title">De Jong Gierveld · 정서 vs 사회 외로움 분리</title>
-      <div class="desc">DJG 2006. <strong>Emotional 높음·Social 낮음</strong> = 발표의 "친구는 많지만 진짜 친한 사람 없음"형.</div>
+      <div class="title">De Jong Gierveld · 외로움을 두 종류로 분리</div>
+      <div class="desc">UCLA-3가 "외로운가?"를 측정한다면, De Jong은 <strong>"어떤 종류의 외로움인가?"</strong>를 본다.</div>
+
+      <!-- 인트로: 두 종류 외로움이 왜 다른지 -->
+      <div style="background: var(--bg-soft); border-left: 3px solid var(--indigo); padding: 14px 18px; margin-bottom: 20px; font-size: 13px; line-height: 1.7;">
+        <div style="font-size: 11px; font-weight: 700; letter-spacing: 1.5px; color: var(--indigo); margin-bottom: 6px;">왜 정서 / 사회로 나누는가?</div>
+        외로움은 한 덩어리가 아니다. <strong>혼자 있어서 외로운 것</strong>(사회적 외로움)과 <strong>누군가 옆에 있어도 마음이 안 통해 외로운 것</strong>(정서적 외로움)은 처방이 정반대다.
+        <div style="margin-top: 10px; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; font-size: 12px;">
+          <div style="padding: 10px 12px; background: var(--bg);">
+            <div style="font-weight: 700; color: var(--red); margin-bottom: 4px;">정서 외로움 (Q1–Q3)</div>
+            "한 사람이라도 진짜 속을 나눌 수 있는 친구가 있는가" → 깊이의 문제. 처방은 <strong>새 사람이 아니라 기존 사람과 깊어지기</strong>.
+          </div>
+          <div style="padding: 10px 12px; background: var(--bg);">
+            <div style="font-weight: 700; color: var(--indigo-dark); margin-bottom: 4px;">사회 외로움 (Q4–Q6)</div>
+            "내가 속한 무리·네트워크가 충분한가" → 양과 다양성의 문제. 처방은 <strong>새 그룹·정기 모임에 진입</strong>.
+          </div>
+        </div>
+        <div style="margin-top: 10px; font-size: 12px; color: var(--muted);">
+          정서만 높음 → "친구는 많은데 진짜 친한 사람이 없음" 패턴 (가면 고립의 핵심) ·
+          사회만 높음 → "한 명과는 깊은데 무리가 없음" ·
+          둘 다 높음 → 전반적 외로움
+        </div>
+      </div>
+
+      <div style="font-size: 11px; font-weight: 700; letter-spacing: 1.5px; color: var(--red); margin: 14px 0 4px;">정서 외로움 — Q1·Q2·Q3</div>
 
       <div class="q" data-scale="djg" data-q="q1">
         <div class="label">1. 일상의 문제를 항상 이야기 나눌 사람이 있다</div>
@@ -159,6 +217,8 @@
           <button class="option" data-v="0"><span class="num">아니오</span>아니다</button>
         </div>
       </div>
+
+      <div style="font-size: 11px; font-weight: 700; letter-spacing: 1.5px; color: var(--indigo-dark); margin: 18px 0 4px;">사회 외로움 — Q4·Q5·Q6</div>
 
       <div class="q" data-scale="djg" data-q="q4">
         <div class="label">4. 문제가 있을 때 의지할 사람이 많다</div>
@@ -200,29 +260,53 @@
 
     <!-- ── 4. Dunbar Layer Inventory (refined w/ functional check) ── -->
     <div class="scale">
-      <h3>TOOL 4 · DUNBAR L1 · QUALITY 축</h3>
-      <div class="title">Dunbar Layer 5 — 명목 vs 기능적</div>
-      <div class="desc">단순 카운트가 아니라 <strong>3개 검증 질문</strong>을 통과한 "기능적 L1"만 카운트합니다.</div>
+      <h3>TOOL 4 · DUNBAR L5 · QUALITY 축</h3>
+      <div class="title">Dunbar 절친 5명 — 머릿속 인원 vs 실제 작동하는 인원</div>
+      <div class="desc">"가깝다"고 답하는 사람과 "실제로 도움이 되는" 사람의 차이를 측정한다.</div>
+
+      <!-- 인트로: Dunbar 모델 + 명목/기능 차이 -->
+      <div style="background: var(--bg-soft); border-left: 3px solid var(--indigo); padding: 14px 18px; margin-bottom: 20px; font-size: 13px; line-height: 1.7;">
+        <div style="font-size: 11px; font-weight: 700; letter-spacing: 1.5px; color: var(--indigo); margin-bottom: 6px;">Dunbar Layer 5가 뭔가?</div>
+        진화인류학자 Robin Dunbar는 인간 두뇌가 친밀감을 유지할 수 있는 인원이 <strong>5 / 15 / 50 / 150명</strong>의 동심원 구조라는 걸 보였다.
+        가장 안쪽 원이 <strong>Layer 5 — "절친"</strong>으로, 위기 때 진짜로 의지할 수 있는 사람이다.
+        <div style="margin-top: 10px;"><strong>그런데 문제는</strong>: "친한 사람 5명을 떠올려 보세요"라고 하면 대부분 술술 답한다. 그러나 그 5명 중 실제로 <strong>지난 2주에 1:1 대화를 한 사람</strong>은 절반 이하인 경우가 많다. 머릿속 명단(명목)과 작동하는 관계(기능)가 다르다는 뜻이다.</div>
+        <div style="margin-top: 10px; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; font-size: 12px;">
+          <div style="padding: 10px 12px; background: var(--bg);">
+            <div style="font-weight: 700; color: var(--muted); margin-bottom: 4px;">명목 (Nominal)</div>
+            "친하다"고 떠올릴 수 있는 사람. 회상은 쉽지만 실제 관계의 활성도와는 다를 수 있다.
+          </div>
+          <div style="padding: 10px 12px; background: var(--bg);">
+            <div style="font-weight: 700; color: var(--red); margin-bottom: 4px;">기능 (Functional)</div>
+            지금 이 순간 진짜로 작동하는 절친. 아래 3가지를 모두 통과해야 인정.
+          </div>
+        </div>
+        <div style="margin-top: 10px; font-size: 12px; color: var(--muted);">
+          명목 ≫ 기능인 패턴(예: 명목 5명 / 기능 1명)이 카톡 분석의 "L4·L5 깊은 대화 부족"과 동일한 신호 — 두 측정이 같은 결론을 가리키면 진단이 견고해진다.
+        </div>
+      </div>
 
       <div class="q" data-scale="dunbar" data-q="L5_nominal">
-        <div class="label">Layer 5 명목 — 절친·가족이라고 떠올릴 수 있는 사람의 수 (이상 5명)</div>
-        <input type="number" class="num-input" min="0" max="20" placeholder="명 수 입력" data-v="">
+        <div class="label">① 명목 — "절친"이라고 떠올릴 수 있는 사람은 몇 명입니까?</div>
+        <div style="font-size: 12px; color: var(--muted); margin: -4px 0 10px;">가족·연인 포함, 그냥 "친하다"고 답할 수 있는 인원이면 됨. Dunbar 평균은 5명.</div>
+        <input type="number" class="num-input" min="0" max="20" placeholder="예: 4" data-v="">
       </div>
 
       <div class="q" data-scale="dunbar" data-q="L5_functional">
-        <div class="label">Layer 5 기능적 — 위 사람 중, 다음 <strong>3가지를 모두 충족</strong>하는 인원
-          <div style="margin-top:8px; padding:10px 12px; background:var(--bg-soft); border-left:3px solid var(--red); font-size:12px; color:var(--muted); line-height:1.6;">
-            (1) 지난 2주 내 1:1 대화 (그룹방 아님)<br>
-            (2) 그 대화에 의견·감정 깊이가 있었음<br>
-            (3) 새벽 3시에 전화해도 되는 사이
-          </div>
+        <div class="label">② 기능적 — 위 사람 중, 다음 <strong>3가지를 모두 충족</strong>하는 사람은 몇 명?</div>
+        <div style="margin: 4px 0 10px; padding:12px 14px; background:var(--bg-soft); border-left:3px solid var(--red); font-size:12px; color:var(--ink); line-height:1.7;">
+          <strong>(1) 최근성</strong> — 지난 2주 안에 1:1로 대화한 적이 있다 (그룹 단톡 X)<br>
+          <strong>(2) 깊이</strong> — 그 대화에 단순 약속·잡담이 아닌 의견·감정·고민이 있었다<br>
+          <strong>(3) 가용성</strong> — 새벽 3시에 위급한 일로 전화해도 되는 사이라고 확신한다
         </div>
-        <input type="number" class="num-input" min="0" max="20" placeholder="명 수 입력" data-v="">
+        <input type="number" class="num-input" min="0" max="20" placeholder="예: 2" data-v="">
+        <div style="font-size: 11px; color: var(--muted); margin-top: 6px;">
+          ② ≤ ① 이어야 함. ②가 0–1명이면 "L5 기능적 공백" — 본 발표의 핵심 진단 패턴.
+        </div>
       </div>
 
       <div class="q" data-scale="dunbar" data-q="L15">
-        <div class="label">Layer 15 — 한 달에 한 번 이상 개인적 대화가 있는 친구 (이상 15명)</div>
-        <input type="number" class="num-input" min="0" max="100" placeholder="명 수 입력" data-v="">
+        <div class="label">③ Layer 15 — 한 달에 한 번 이상 개인적 대화가 있는 친구 (참고용, 점수에는 미반영)</div>
+        <input type="number" class="num-input" min="0" max="100" placeholder="예: 8" data-v="">
       </div>
 
       <div class="result" id="result-dunbar" style="display:none;">
@@ -238,11 +322,30 @@
   </div>
 
 
-  <!-- ── Final summary (dark) — 3축 환산 + Layer 3 비교 ── -->
-  <section class="summary" id="summary" style="display:none;">
-    <h3>3-AXIS CONVERSION · L1 vs L3 (발표 Slide 11 동형)</h3>
-    <div class="big" id="summary-headline">—</div>
-    <div class="desc" id="summary-desc">네 척도가 모두 응답되면 3축 환산 + Layer 3 비교가 표시됩니다.</div>
+  <!-- ── 진행률 + Final summary (dark) — 3축 환산 + Layer 3 비교 ── -->
+  <section class="summary" id="summary">
+    <!-- 진행률 표시 — 사용자가 결과를 어떻게 얻는지 명확히 -->
+    <div style="background: #1F1F2E; padding: 16px 20px; margin-bottom: 18px; border-left: 3px solid #4F46E5; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
+      <div>
+        <div style="font-size: 10px; color: #8B85F0; font-weight: 700; letter-spacing: 1.5px; margin-bottom: 6px;">응답 진행률</div>
+        <div style="font-size: 16px; color: #FFFFFF; font-weight: 600;">
+          <span id="progress-count">0</span> / 4 척도 완료
+        </div>
+        <div style="font-size: 12px; color: #A1A1AA; margin-top: 6px;" id="progress-detail">
+          UCLA-3 · Berkman-SNI · De Jong · Dunbar 모두 응답하면 아래에 결과가 즉시 표시됩니다.
+        </div>
+      </div>
+      <div style="display: flex; gap: 6px;">
+        <span class="prog-pill" id="prog-ucla" style="padding: 6px 12px; font-size: 11px; font-weight: 700; background: #2F2F40; color: #71717A; border-radius: 4px;">UCLA-3</span>
+        <span class="prog-pill" id="prog-sni" style="padding: 6px 12px; font-size: 11px; font-weight: 700; background: #2F2F40; color: #71717A; border-radius: 4px;">SNI</span>
+        <span class="prog-pill" id="prog-djg" style="padding: 6px 12px; font-size: 11px; font-weight: 700; background: #2F2F40; color: #71717A; border-radius: 4px;">DJG</span>
+        <span class="prog-pill" id="prog-dunbar" style="padding: 6px 12px; font-size: 11px; font-weight: 700; background: #2F2F40; color: #71717A; border-radius: 4px;">Dunbar</span>
+      </div>
+    </div>
+
+    <h3>3-AXIS CONVERSION · L1 자가척도 vs L3 카톡</h3>
+    <div class="big" id="summary-headline">응답을 시작하면 결과가 여기에 표시됩니다</div>
+    <div class="desc" id="summary-desc">네 척도가 모두 응답되면 3축 환산값이 자동 계산되고, Layer 3(카톡 분석) 점수와 같은 좌표계에서 비교됩니다.</div>
 
     <!-- 3-axis grid -->
     <div style="margin-top: 28px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px;">

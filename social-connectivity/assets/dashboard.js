@@ -1,10 +1,11 @@
 // Layer 3 대시보드 — analysis_code 파이프라인을 브라우저로 포팅
 //
-// 지원 입력:
-//   1) CSV (analysis_code 산출물): relationship,timestamp,sender,is_me,text,text_length[,level]
-//      - 01_parse_kakaotalk.py 의 messages.csv
-//      - 02_level_classifier.py 의 messages_labeled.csv (level 컬럼 있으면 그대로 사용)
-//   2) TXT (카톡 원본 내보내기): 모바일·PC 양 포맷 자동 감지
+// 지원 입력 (CSV 자동 감지):
+//   A) 카톡 PC 내보내기 CSV — 헤더: Date,User,Message
+//      카카오톡 PC → 채팅방 → 대화 내보내기 → CSV로 받은 원본 그대로
+//   B) analysis_code 산출물 CSV — 헤더: relationship,timestamp,sender,is_me,text,text_length[,level]
+//      01_parse_kakaotalk.py 의 messages.csv / 02_level_classifier.py 의 messages_labeled.csv
+//   C) TXT (모바일·PC 카톡 텍스트 내보내기)
 //
 // 처리 단계 (analysis_code 1:1 대응):
 //   파싱 → L1~L5 분류 (level 없을 때만) → 관계별 metrics → 3축 점수
@@ -203,27 +204,86 @@
     return rows;
   }
 
-  function csvToRecords(rows) {
+  // CSV 헤더 정규화 (BOM·공백 제거)
+  function normalizeHeader(rows) {
     if (rows.length < 2) throw new Error("CSV에 데이터 행이 없습니다.");
-    // BOM strip
-    const header = rows[0].map(function (h, i) {
-      let s = h.trim();
+    return rows[0].map(function (h, i) {
+      let s = (h || "").trim();
       if (i === 0 && s.charCodeAt(0) === 0xFEFF) s = s.slice(1);
       return s;
     });
+  }
+
+  // 카톡 시스템 메시지 (분석에서 제외) — 초대·퇴장·사진·이모티콘 등
+  const KAKAO_SYSTEM = /^(.+님이\s.+님(?:과\s.+님)*을?를?\s초대했습니다|.+님이\s나갔습니다|.+님이\s들어왔습니다|.+님을\s내보냈습니다|.+님이\s방장이\s되었습니다|채팅방\s관리자가\s메시지를\s가렸습니다)/;
+  const MEDIA_PLACEHOLDER = /^(사진(\s\d+장)?|동영상|이모티콘|음성메시지|파일:|(<지도>)?|<삭제된\s메시지입니다>)$/;
+
+  function isKakaoSystemMsg(user, message) {
+    if (!message || !message.trim()) return true;
+    const m = message.trim();
+    if (MEDIA_PLACEHOLDER.test(m)) return true;
+    if (KAKAO_SYSTEM.test(m)) return true;
+    return false;
+  }
+
+  // 파일명에서 관계 이름 추출: KakaoTalk_Chat_자리_2026-04-21-22-21-04.csv → "자리"
+  function relNameFromFile(filename) {
+    let base = filename.replace(/\.[^.]+$/, "");
+    base = base.replace(/^KakaoTalk[_\-\s]*Chat[_\-\s]*/i, "");
+    base = base.replace(/^KakaoTalk[_\-\s]*/i, "");
+    base = base.replace(/[_\-\s]*\d{4}[\-_]\d{1,2}[\-_]\d{1,2}.*$/, "");
+    return base.trim() || "단일대화";
+  }
+
+  // ── A) 카톡 PC 내보내기 CSV: Date,User,Message ──
+  function csvKakaoExportToRecords(rows, header, filename, myName) {
+    const idx = { date: header.indexOf("Date"), user: header.indexOf("User"), message: header.indexOf("Message") };
+    if (idx.date < 0 || idx.user < 0 || idx.message < 0) {
+      throw new Error("카톡 내보내기 CSV 헤더가 Date,User,Message 형식이 아닙니다.");
+    }
+    if (!myName || !myName.trim()) {
+      throw new Error("본인 이름이 입력되지 않았습니다 (CSV의 User 컬럼과 정확히 일치해야 합니다).");
+    }
+    const me = myName.trim();
+    const rel = relNameFromFile(filename);
+    const out = [];
+
+    for (let r = 1; r < rows.length; r++) {
+      const row = rows[r];
+      if (!row || (row.length === 1 && row[0] === "")) continue;
+      const dateRaw = (row[idx.date] || "").trim();
+      const user = (row[idx.user] || "").trim();
+      const message = row[idx.message] || "";
+      if (!dateRaw || !user) continue;
+      if (isKakaoSystemMsg(user, message)) continue;
+      const ts = new Date(dateRaw.replace(" ", "T"));
+      if (isNaN(ts.getTime())) continue;
+      out.push({
+        relationship: rel,
+        ts: ts,
+        sender: user,
+        is_me: (user === me),
+        text: message,
+        level: null,
+      });
+    }
+    return out;
+  }
+
+  // ── B) analysis_code 산출물 CSV ──
+  function csvPipelineToRecords(rows, header) {
     const required = ["relationship", "timestamp", "sender", "is_me", "text"];
     const missing = required.filter(function (c) { return header.indexOf(c) < 0; });
     if (missing.length) {
-      throw new Error("필수 컬럼 누락: " + missing.join(", ") +
-        " (필요 컬럼: " + required.join(", ") + " [, level])");
+      throw new Error("CSV 컬럼이 인식되지 않습니다. 카톡 PC 내보내기(Date,User,Message) 또는 " +
+        "analysis_code 산출물(" + required.join(",") + ")이어야 합니다. 누락: " + missing.join(", "));
     }
     const idx = {};
     header.forEach(function (h, i) { idx[h] = i; });
-
     const out = [];
     for (let r = 1; r < rows.length; r++) {
       const row = rows[r];
-      if (row.length === 1 && row[0] === "") continue; // empty
+      if (!row || (row.length === 1 && row[0] === "")) continue;
       const ts = new Date(row[idx.timestamp]);
       if (isNaN(ts.getTime())) continue;
       const isMeRaw = String(row[idx.is_me]).toLowerCase().trim();
@@ -239,6 +299,33 @@
       });
     }
     return out;
+  }
+
+  // 자동 감지 dispatch
+  function csvToRecords(rows, filename, myName) {
+    const header = normalizeHeader(rows);
+    const isKakaoExport = header.length === 3 &&
+      header[0] === "Date" && header[1] === "User" && header[2] === "Message";
+    if (isKakaoExport) return csvKakaoExportToRecords(rows, header, filename, myName);
+    return csvPipelineToRecords(rows, header);
+  }
+
+  // CSV에서 가장 자주 등장하는 발신자 — myName 추측용
+  function detectTopSenders(rows, header) {
+    const userIdx = header.indexOf("User");
+    if (userIdx < 0) return [];
+    const counts = {};
+    for (let r = 1; r < rows.length; r++) {
+      const row = rows[r];
+      if (!row || row.length === 1 && row[0] === "") continue;
+      const u = (row[userIdx] || "").trim();
+      if (!u) continue;
+      const message = row[header.indexOf("Message")] || "";
+      if (isKakaoSystemMsg(u, message)) continue;
+      counts[u] = (counts[u] || 0) + 1;
+    }
+    return Object.keys(counts).sort(function (a, b) { return counts[b] - counts[a]; })
+      .map(function (u) { return { name: u, count: counts[u] }; });
   }
 
   // ===== TXT parser (카카오톡 원본) =====
@@ -585,14 +672,14 @@
     modeCsvBtn.classList.toggle("active", m === "csv");
     modeTxtBtn.classList.toggle("active", m === "txt");
     if (m === "csv") {
-      headlineEl.textContent = "📊 messages.csv 또는 messages_labeled.csv를 올려 시작하세요";
-      helpEl.innerHTML = "<strong>컬럼:</strong> relationship, timestamp, sender, is_me, text, text_length [, level]<br>" +
-        "analysis_code/01_parse_kakaotalk.py · 02_level_classifier.py 산출물 그대로 호환 · " +
-        "여러 관계가 한 파일에 섞여 있어도 자동으로 분리해 분석합니다.";
+      headlineEl.textContent = "📊 카톡 CSV 파일을 여기로 끌어다 놓거나 클릭해서 선택";
+      helpEl.innerHTML = "<strong>받는 방법:</strong> 카카오톡 PC → 채팅방 우측 상단 메뉴 → 대화 내보내기 → <strong>CSV 형식</strong><br>" +
+        "받은 파일(예: <code style='font-size:11px;'>KakaoTalk_Chat_자리_2026-04-21-22-21-04.csv</code>)을 그대로 올리면 됨. " +
+        "업로드 직후 <strong>본인 이름</strong>을 한 번만 입력합니다.";
       fileInput.accept = ".csv";
     } else {
       headlineEl.textContent = "📎 카톡 .txt 대화 내보내기를 올려 시작하세요";
-      helpEl.innerHTML = "카카오톡 채팅방 → 우측 상단 메뉴 → 설정 → \"대화 내용 내보내기\" (텍스트만)<br>" +
+      helpEl.innerHTML = "카카오톡 모바일 → 채팅방 메뉴 → 대화 내용 내보내기 → <strong>텍스트만</strong><br>" +
         "받은 .txt 파일을 여기로 드래그하거나 클릭해서 선택. 파일명이 관계 이름으로 사용됩니다.";
       fileInput.accept = ".txt";
     }
@@ -611,7 +698,7 @@
     e.preventDefault();
     showDashboard();
     renderAll(DEMO_DATA);
-    e.target.textContent = "← 예시를 보는 중 (CSV/TXT 올리면 내 데이터로 바뀝니다)";
+    e.target.textContent = "← 예시 데이터를 보는 중 · 위 영역에 내 카톡 CSV를 올리면 내 데이터로 바뀝니다";
   });
 
   // File input
@@ -630,6 +717,22 @@
     if (e.dataTransfer.files && e.dataTransfer.files[0]) processFile(e.dataTransfer.files[0]);
   });
 
+  // 발신자 목록 UI를 띄워서 "본인" 선택하게 함 (카톡 CSV 전용)
+  function askMyName(topSenders, suggestedName) {
+    return new Promise(function (resolve) {
+      const list = topSenders.slice(0, 10).map(function (s) { return s.name; });
+      const defaultName = suggestedName && list.indexOf(suggestedName) >= 0 ? suggestedName : list[0];
+      const hint = list.length
+        ? "감지된 발신자: " + list.slice(0, 5).join(" · ") + (list.length > 5 ? " 외" : "")
+        : "";
+      const name = window.prompt(
+        "본인 이름을 정확히 입력하세요 (대화 내 표기와 일치해야 함)\n" + hint,
+        defaultName || ""
+      );
+      resolve(name ? name.trim() : null);
+    });
+  }
+
   function processFile(file) {
     statusEl.style.color = "var(--muted)";
     statusEl.textContent = "파일 읽는 중... (" + file.name + ")";
@@ -641,35 +744,60 @@
         let records;
         if (isCsv) {
           const rows = parseCSV(ev.target.result);
-          records = csvToRecords(rows);
-          if (records.length === 0) throw new Error("CSV 파싱 후 0개 메시지. timestamp 형식을 확인해주세요.");
+          const header = normalizeHeader(rows);
+          const isKakaoExport = header.length === 3 &&
+            header[0] === "Date" && header[1] === "User" && header[2] === "Message";
+
+          if (isKakaoExport) {
+            // 카톡 PC 내보내기 → 본인 이름 필요
+            const senders = detectTopSenders(rows, header);
+            if (senders.length === 0) throw new Error("발신자 데이터를 찾지 못했습니다.");
+            askMyName(senders, "조윤진").then(function (myName) {
+              if (!myName) { statusEl.textContent = "취소됨"; statusEl.style.color = "var(--muted)"; return; }
+              try {
+                records = csvKakaoExportToRecords(rows, header, file.name, myName);
+                if (records.length === 0) throw new Error("CSV 파싱 후 유효 메시지 0개.");
+                finishProcessing(records, file.name + " · 카톡 CSV · " + myName);
+              } catch (err) { fail(err); }
+            });
+            return;
+          }
+          // analysis_code 산출물
+          records = csvPipelineToRecords(rows, header);
+          if (records.length === 0) throw new Error("CSV 파싱 후 유효 메시지 0개. timestamp 형식을 확인해주세요.");
+          finishProcessing(records, file.name + " · 파이프라인 CSV");
         } else {
-          // TXT mode — ask for myName via prompt (simple UX)
+          // TXT mode
           const myName = window.prompt(
-            "카톡 .txt에서 본인 닉네임을 정확히 입력하세요 (대소문자·공백·특수문자 일치 필수)",
+            "카톡 .txt에서 본인 닉네임을 정확히 입력하세요 (대소문자·공백 일치 필수)",
             "조윤진"
           );
           if (!myName) { statusEl.textContent = "취소됨"; return; }
           records = parseTxt(ev.target.result, file.name, myName);
           if (records.length === 0) throw new Error("메시지를 하나도 찾지 못했습니다. 카톡 \"대화 내보내기\" 형식인지 확인해주세요.");
+          finishProcessing(records, file.name + " · TXT · " + myName);
         }
-        const data = buildDashboardData(records, file.name + " (" + (isCsv ? "CSV" : "TXT") + ")");
+      } catch (err) { fail(err); }
+    };
+    reader.onerror = function () { fail(new Error("파일 읽기 실패")); };
+    reader.readAsText(file, "UTF-8");
+
+    function finishProcessing(records, sourceLabel) {
+      try {
+        const data = buildDashboardData(records, sourceLabel);
         showDashboard();
         renderAll(data);
         statusEl.innerHTML = "✓ 분석 완료 · " + data.messages.toLocaleString() +
           "개 메시지 · " + data.relationshipCount +
           " · 파일은 브라우저 밖으로 나가지 않았습니다";
         statusEl.style.color = "var(--indigo)";
-      } catch (err) {
-        statusEl.textContent = "✗ 분석 실패: " + err.message;
-        statusEl.style.color = "var(--red)";
-      }
-    };
-    reader.onerror = function () {
-      statusEl.textContent = "✗ 파일 읽기 실패";
+      } catch (err) { fail(err); }
+    }
+
+    function fail(err) {
+      statusEl.textContent = "✗ 분석 실패: " + err.message;
       statusEl.style.color = "var(--red)";
-    };
-    reader.readAsText(file, "UTF-8");
+    }
   }
 
   // Initial state

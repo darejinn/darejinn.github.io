@@ -115,10 +115,10 @@
   function interpDJG(s) {
     const e = s.emotional, soc = s.social, t = s.total;
     let typeText;
-    if (e >= 2 && soc <= 1) typeText = "★ 정서 우세형 — 발표의 \"가면 고립\" 가장 가능성 높은 유형";
-    else if (e <= 1 && soc >= 2) typeText = "사회 우세형 — 한 사람과는 깊지만 무리가 없음";
-    else if (e >= 2 && soc >= 2) typeText = "전반적 외로움 — 두 차원 모두 결손";
-    else typeText = "건강한 상태 — 두 차원 모두 충분";
+    if (e >= 2 && soc <= 1) typeText = "★ 정서 우세형 — \"친구는 많은데 진짜 친한 사람이 없음\" 패턴 (가면 고립의 핵심 신호)";
+    else if (e <= 1 && soc >= 2) typeText = "사회 우세형 — 한 사람과는 깊지만 무리가 부족함";
+    else if (e >= 2 && soc >= 2) typeText = "전반적 외로움 — 정서·사회 두 차원 모두 결손";
+    else typeText = "건강한 상태 — 두 차원 모두 충분함";
     return {
       text: "Emotional " + e + "/3 · Social " + soc + "/3 · Total " + t + "/6 — " + typeText,
       warn: e >= 2 || t >= 3,
@@ -130,8 +130,8 @@
     let text;
     if (d.functional >= 5) text = "L5 충족 (기능적 " + d.functional + "명) · 절친 구조 건강";
     else if (d.functional >= 3) text = "L5 부분 충족 (기능적 " + d.functional + "명) · 명목과 갭 " + gap + "명";
-    else if (d.functional >= 1) text = "L5 결손 신호 (기능적 " + d.functional + "명, 명목 " + d.nominal + "명) · 갭 " + gap + " — 발표의 \"기능적 공백\" 패턴";
-    else text = "L5 심각한 공백 (기능적 0명) · 명목 " + d.nominal + "명 → 갭 " + gap;
+    else if (d.functional >= 1) text = "L5 결손 (기능적 " + d.functional + "명 · 명목 " + d.nominal + "명) · 갭 " + gap + " — \"머릿속 절친\"과 \"실제 작동하는 절친\"의 차이가 큼";
+    else text = "L5 심각한 공백 (기능적 0명 · 명목 " + d.nominal + "명) → 갭 " + gap;
     return { text: text, warn: d.functional < 3 };
   }
 
@@ -174,14 +174,48 @@
   }
 
   function renderSummary(ucla, sni, djg, dunbar) {
-    const allDone = ucla !== null && sni !== null && djg !== null && dunbar !== null;
-    const summary = document.getElementById("summary");
+    // ── 진행률 pill 갱신 (항상) ──
+    const states = { ucla: ucla !== null, sni: sni !== null, djg: djg !== null, dunbar: dunbar !== null };
+    const done = Object.values(states).filter(Boolean).length;
+    document.getElementById("progress-count").textContent = done;
+
+    Object.keys(states).forEach(function (key) {
+      const pill = document.getElementById("prog-" + key);
+      if (!pill) return;
+      if (states[key]) {
+        pill.style.background = "#4F46E5";
+        pill.style.color = "#FFFFFF";
+      } else {
+        pill.style.background = "#2F2F40";
+        pill.style.color = "#71717A";
+      }
+    });
+
+    const allDone = done === 4;
+    const detail = document.getElementById("progress-detail");
+    const headline = document.getElementById("summary-headline");
+    const desc = document.getElementById("summary-desc");
 
     if (!allDone) {
-      summary.style.display = "none";
+      // 부분 응답 — 무엇을 더 채워야 하는지 안내
+      const remaining = [];
+      if (!states.ucla) remaining.push("UCLA-3 (3문항)");
+      if (!states.sni) remaining.push("Berkman-SNI (4문항)");
+      if (!states.djg) remaining.push("De Jong (6문항)");
+      if (!states.dunbar) remaining.push("Dunbar (② 기능적 인원)");
+      detail.textContent = "남은 항목: " + remaining.join(" · ");
+      headline.textContent = done === 0
+        ? "응답을 시작하면 결과가 여기에 표시됩니다"
+        : "결과 산출까지 " + (4 - done) + "개 척도 남음";
+      desc.textContent = "모두 응답되면 즉시 3축 환산값과 Layer 3 비교가 표시됩니다 — 별도의 \"제출\" 버튼은 없습니다.";
+
+      // 결과 영역 placeholder 유지
+      document.getElementById("axis-s-l1").textContent = "—";
+      document.getElementById("axis-f-l1").textContent = "—";
+      document.getElementById("axis-q-l1").textContent = "—";
       return;
     }
-    summary.style.display = "block";
+    detail.textContent = "✓ 모든 응답 완료 · 결과는 아래.";
 
     const ax = compute3Axis(ucla, sni, djg, dunbar);
 
@@ -203,7 +237,6 @@
     const sameLowest = l1Axes[0][0] === l3Axes[0][0];
 
     const conv = document.getElementById("convergence");
-    const headline = document.getElementById("summary-headline");
 
     if (sameLowest && l1Axes[0][0] === "Quality") {
       conv.innerHTML = "✓ <strong style='color:#F87171;'>Quality 축이 두 측정에서 모두 가장 낮음</strong> — \"가면 고립\" 진단이 견고합니다 (자가척도와 행동 데이터가 독립적으로 같은 결론). " +
