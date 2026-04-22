@@ -238,18 +238,24 @@
 
     const conv = document.getElementById("convergence");
 
+    const headline = document.getElementById("summary-headline");
+    const axisKor = { Structural: "네트워크 크기", Functional: "일상 작동", Quality: "관계의 깊이" };
+
     if (sameLowest && l1Axes[0][0] === "Quality") {
-      conv.innerHTML = "✓ <strong style='color:#F87171;'>Quality 축이 두 측정에서 모두 가장 낮음</strong> — \"가면 고립\" 진단이 견고합니다 (자가척도와 행동 데이터가 독립적으로 같은 결론). " +
-        "Layer 1 = " + ax.quality.toFixed(1) + ", Layer 3 = " + L3.quality.toFixed(1);
-      headline.textContent = "두 측정 모두 Quality 함몰";
+      conv.innerHTML = "✓ <strong style='color:#F87171;'>관계의 깊이(Quality)가 두 점수에서 모두 가장 낮습니다.</strong> " +
+        "내가 직접 답한 자가척도(" + ax.quality.toFixed(1) + ")와 카톡에서 자동으로 추출한 점수(" + L3.quality.toFixed(1) +
+        ")가 서로 다른 방법인데도 같은 결론을 가리킵니다 — \"친구는 많은데 진짜 친한 사람은 없는\" 패턴이 견고합니다.";
+      headline.textContent = "두 점수 모두 \"관계의 깊이\"가 가장 낮음";
     } else if (sameLowest) {
-      conv.innerHTML = "두 측정 모두 <strong>" + l1Axes[0][0] + "</strong> 축이 가장 낮음 — 진단 일치. " +
-        "Layer 1 = " + l1Axes[0][1].toFixed(1) + ", Layer 3 = " + l3Axes[0][1].toFixed(1);
-      headline.textContent = "두 측정 일치 — " + l1Axes[0][0] + " 약점";
+      conv.innerHTML = "두 점수 모두 <strong>" + axisKor[l1Axes[0][0]] + "</strong> 축이 가장 낮습니다. " +
+        "자가척도 " + l1Axes[0][1].toFixed(1) + " · 카톡 분석 " + l3Axes[0][1].toFixed(1) +
+        " — 서로 다른 방법으로 같은 결론에 도달했으니 약점 진단이 견고합니다.";
+      headline.textContent = "두 점수 일치 — \"" + axisKor[l1Axes[0][0]] + "\"가 약점";
     } else {
-      conv.innerHTML = "Layer 1은 <strong>" + l1Axes[0][0] + "</strong> 축이 가장 낮고, Layer 3는 <strong>" + l3Axes[0][0] + "</strong> 축이 가장 낮음. " +
-        "두 결과가 일치하지 않을 때는 자기 보고의 왜곡 가능성을 의심하고 행동 데이터(Layer 3)를 우선합니다.";
-      headline.textContent = "두 측정 불일치 — 재해석 필요";
+      conv.innerHTML = "내 자가척도에서는 <strong>" + axisKor[l1Axes[0][0]] + "</strong>가, " +
+        "카톡 분석에서는 <strong>" + axisKor[l3Axes[0][0]] + "</strong>가 가장 낮게 나왔습니다. " +
+        "두 결과가 다를 때는 자기 보고의 왜곡 가능성을 의심하고 행동 기록(카톡)을 우선해 해석합니다.";
+      headline.textContent = "두 점수가 다른 곳을 가리킴 — 다시 보기";
     }
 
     headline.classList.toggle("red", l1Axes[0][1] < 5);
@@ -258,25 +264,24 @@
     const lowestAxis = l1Axes[0][0];
     let rx = "";
     if (lowestAxis === "Quality") {
-      rx = "<strong>Rx-3 · Dunbar 5 부활</strong> — 명목상 절친 5명 중 \"기능적 0명\"이 핵심 문제. " +
-           "이번 주 안에 가장 친한 친구 1명에게 먼저 1:1 메시지로 연락하기. " +
-           "다음 달까지 1:1 약속(통화 30분 또는 식사 1회) 잡기.";
+      rx = "<strong>관계의 깊이부터 채우기</strong> — 머릿속 절친 명단과 실제 작동하는 사람의 차이가 핵심입니다. " +
+           "이번 주 안에 가장 친한 친구 한 명에게 먼저 1:1 메시지를 보내고, 다음 달까지 1:1 약속(통화 30분 또는 식사 1회)을 잡아보세요.";
     } else if (lowestAxis === "Structural") {
-      rx = "<strong>Rx-2 · 정기 그룹 추가</strong> — 청년에서는 Berkman 영역 1(혼인) 제외 시 " +
-           "정기 그룹 참여(SEI 같은 동아리)로 보정 가능. 주 1회 정해진 그룹 활동을 일정에 고정.";
+      rx = "<strong>정기 모임 하나 만들기</strong> — 사회적 네트워크의 양이 부족합니다. 주 1회 정해진 그룹 활동(동아리·운동·스터디)을 일정에 고정해보세요. " +
+           "20대는 결혼 영역이 비어 있는 만큼 다른 영역(친구·정기 그룹·자원봉사)으로 보정해야 합니다.";
     } else {
-      rx = "<strong>Rx-1 · \"응\" 대신 한 문장 더</strong> — Functional 축은 응답 속도와 상호성이 핵심. " +
-           "단답을 줄이고 의견·감정이 담긴 한 문장을 덧붙이는 습관부터 시작.";
+      rx = "<strong>응답 한 문장 더 붙이기</strong> — 일상 작동(응답 속도·상호성)이 약합니다. \"응\" 같은 단답을 줄이고, " +
+           "의견이나 감정이 담긴 한 문장을 덧붙이는 습관부터 시작해보세요.";
     }
     document.getElementById("next-step").innerHTML = rx;
 
-    // Update notes with actual computed inputs
+    // ── 카드 하단 노트: 자연어로, 어떤 입력이 어떤 점수가 됐는지 ──
     document.getElementById("axis-s-note").textContent =
-      "SNI " + sni.total + "/4, 청년 보정 " + sni.youth + "/3 → × 3.33 = " + ax.structural.toFixed(1);
+      "Berkman-SNI " + sni.total + "/4점 (20대 보정 " + sni.youth + "/3점) → 10점 만점에 " + ax.structural.toFixed(1) + "점.";
     document.getElementById("axis-f-note").textContent =
-      "UCLA-3 = " + ucla + ", DJG-T = " + djg.total + " → " + ax.functional.toFixed(1);
+      "UCLA 외로움 " + ucla + "/9점, De Jong 합계 " + djg.total + "/6점 → 10점 만점에 " + ax.functional.toFixed(1) + "점.";
     document.getElementById("axis-q-note").textContent =
-      "DJG-E = " + djg.emotional + ", Dunbar L1 기능 = " + dunbar.functional + " → " + ax.quality.toFixed(1);
+      "정서 외로움 " + djg.emotional + "/3점, 진짜 작동하는 절친 " + dunbar.functional + "명 → 10점 만점에 " + ax.quality.toFixed(1) + "점.";
   }
 
   function computeAll() {

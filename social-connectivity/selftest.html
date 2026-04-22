@@ -343,63 +343,90 @@
       </div>
     </div>
 
-    <h3>3-AXIS CONVERSION · L1 자가척도 vs L3 카톡</h3>
+    <h3>내 자가척도 점수 vs 카톡 분석 점수</h3>
     <div class="big" id="summary-headline">응답을 시작하면 결과가 여기에 표시됩니다</div>
-    <div class="desc" id="summary-desc">네 척도가 모두 응답되면 3축 환산값이 자동 계산되고, Layer 3(카톡 분석) 점수와 같은 좌표계에서 비교됩니다.</div>
+    <div class="desc" id="summary-desc">네 척도를 모두 응답하면, 같은 10점 만점의 3축 좌표에 카톡 분석 점수와 함께 표시됩니다. 두 점수가 같은 축에서 낮으면 그 축의 약점이 견고한 진단입니다.</div>
 
-    <!-- 3-axis grid -->
+    <!-- 3-axis grid: 의미 → 점수 두 개 → 측정 내용 -->
     <div style="margin-top: 28px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px;">
-      <div style="background: #1F1F2E; padding: 18px; border-top: 3px solid #312E81;">
-        <div style="font-size: 10px; color: #8B85F0; letter-spacing: 1.5px; font-weight: 700;">STRUCTURAL</div>
-        <div style="margin-top: 10px; display: flex; align-items: baseline; gap: 8px;">
-          <span style="font-size: 28px; font-weight: 700;" id="axis-s-l1">—</span>
-          <span style="font-size: 12px; color: #71717A;">L1</span>
-          <span style="font-size: 14px; color: #71717A; margin: 0 4px;">→</span>
-          <span style="font-size: 16px; font-weight: 600; color: #A1A1AA;" id="axis-s-l3">L3 7.7</span>
+
+      <!-- STRUCTURAL -->
+      <div style="background: #1F1F2E; padding: 20px; border-top: 3px solid #312E81;">
+        <div style="font-size: 10px; color: #8B85F0; letter-spacing: 1.5px; font-weight: 700;">STRUCTURAL · 네트워크 크기</div>
+        <div style="font-size: 13px; color: #FFFFFF; margin-top: 6px; line-height: 1.5;">주변에 사람이 얼마나 많은가</div>
+
+        <div style="margin-top: 16px; display: flex; gap: 14px;">
+          <div style="flex: 1;">
+            <div style="font-size: 10px; color: #71717A; letter-spacing: 1px; font-weight: 700;">내 자가척도</div>
+            <div style="font-size: 26px; font-weight: 700; color: #FFFFFF; margin-top: 2px;" id="axis-s-l1">—</div>
+          </div>
+          <div style="flex: 1; border-left: 1px solid #3F3F4F; padding-left: 14px;">
+            <div style="font-size: 10px; color: #71717A; letter-spacing: 1px; font-weight: 700;">카톡 분석</div>
+            <div style="font-size: 26px; font-weight: 700; color: #A1A1AA; margin-top: 2px;" id="axis-s-l3">7.7</div>
+          </div>
         </div>
-        <div style="font-size: 11px; color: #A1A1AA; margin-top: 6px;" id="axis-s-note">Berkman-SNI × 2.5 (청년 보정 × 3.33)</div>
+
+        <div style="font-size: 11px; color: #A1A1AA; margin-top: 14px; line-height: 1.6;" id="axis-s-note">결혼·친구·종교·자원봉사 4개 영역 중 몇 개에 속해 있는지로 측정합니다.</div>
       </div>
-      <div style="background: #1F1F2E; padding: 18px; border-top: 3px solid #4F46E5;">
-        <div style="font-size: 10px; color: #8B85F0; letter-spacing: 1.5px; font-weight: 700;">FUNCTIONAL</div>
-        <div style="margin-top: 10px; display: flex; align-items: baseline; gap: 8px;">
-          <span style="font-size: 28px; font-weight: 700;" id="axis-f-l1">—</span>
-          <span style="font-size: 12px; color: #71717A;">L1</span>
-          <span style="font-size: 14px; color: #71717A; margin: 0 4px;">→</span>
-          <span style="font-size: 16px; font-weight: 600; color: #A1A1AA;" id="axis-f-l3">L3 7.5</span>
+
+      <!-- FUNCTIONAL -->
+      <div style="background: #1F1F2E; padding: 20px; border-top: 3px solid #4F46E5;">
+        <div style="font-size: 10px; color: #8B85F0; letter-spacing: 1.5px; font-weight: 700;">FUNCTIONAL · 일상 작동</div>
+        <div style="font-size: 13px; color: #FFFFFF; margin-top: 6px; line-height: 1.5;">평소에 외롭지 않고 도움을 주고받는가</div>
+
+        <div style="margin-top: 16px; display: flex; gap: 14px;">
+          <div style="flex: 1;">
+            <div style="font-size: 10px; color: #71717A; letter-spacing: 1px; font-weight: 700;">내 자가척도</div>
+            <div style="font-size: 26px; font-weight: 700; color: #FFFFFF; margin-top: 2px;" id="axis-f-l1">—</div>
+          </div>
+          <div style="flex: 1; border-left: 1px solid #3F3F4F; padding-left: 14px;">
+            <div style="font-size: 10px; color: #71717A; letter-spacing: 1px; font-weight: 700;">카톡 분석</div>
+            <div style="font-size: 26px; font-weight: 700; color: #A1A1AA; margin-top: 2px;" id="axis-f-l3">7.5</div>
+          </div>
         </div>
-        <div style="font-size: 11px; color: #A1A1AA; margin-top: 6px;" id="axis-f-note">UCLA-3 정규화 + DJG 결합</div>
+
+        <div style="font-size: 11px; color: #A1A1AA; margin-top: 14px; line-height: 1.6;" id="axis-f-note">UCLA 외로움 3문항과 De Jong 6문항으로 평가합니다.</div>
       </div>
-      <div style="background: #1F1F2E; padding: 18px; border-top: 3px solid #DC2626;">
-        <div style="font-size: 10px; color: #F87171; letter-spacing: 1.5px; font-weight: 700;">QUALITY ★</div>
-        <div style="margin-top: 10px; display: flex; align-items: baseline; gap: 8px;">
-          <span style="font-size: 28px; font-weight: 700; color: #F87171;" id="axis-q-l1">—</span>
-          <span style="font-size: 12px; color: #71717A;">L1</span>
-          <span style="font-size: 14px; color: #71717A; margin: 0 4px;">→</span>
-          <span style="font-size: 16px; font-weight: 600; color: #F87171;" id="axis-q-l3">L3 4.6</span>
+
+      <!-- QUALITY -->
+      <div style="background: #1F1F2E; padding: 20px; border-top: 3px solid #DC2626;">
+        <div style="font-size: 10px; color: #F87171; letter-spacing: 1.5px; font-weight: 700;">QUALITY · 관계의 깊이 ★</div>
+        <div style="font-size: 13px; color: #FFFFFF; margin-top: 6px; line-height: 1.5;">진짜 속을 나눌 사람이 있는가</div>
+
+        <div style="margin-top: 16px; display: flex; gap: 14px;">
+          <div style="flex: 1;">
+            <div style="font-size: 10px; color: #71717A; letter-spacing: 1px; font-weight: 700;">내 자가척도</div>
+            <div style="font-size: 26px; font-weight: 700; color: #F87171; margin-top: 2px;" id="axis-q-l1">—</div>
+          </div>
+          <div style="flex: 1; border-left: 1px solid #3F3F4F; padding-left: 14px;">
+            <div style="font-size: 10px; color: #71717A; letter-spacing: 1px; font-weight: 700;">카톡 분석</div>
+            <div style="font-size: 26px; font-weight: 700; color: #F87171; margin-top: 2px;" id="axis-q-l3">4.6</div>
+          </div>
         </div>
-        <div style="font-size: 11px; color: #A1A1AA; margin-top: 6px;" id="axis-q-note">DJG-E + Dunbar L1 기능 결합</div>
+
+        <div style="font-size: 11px; color: #A1A1AA; margin-top: 14px; line-height: 1.6;" id="axis-q-note">정서 외로움(De Jong)과 진짜 작동하는 절친 수(Dunbar 기능)로 평가합니다.</div>
       </div>
     </div>
 
     <!-- Convergence verdict -->
     <div style="margin-top: 24px; padding: 18px; background: #1F1F2E; border-left: 3px solid #F87171;">
-      <div style="font-size: 11px; color: #F87171; font-weight: 700; letter-spacing: 1.5px; margin-bottom: 8px;">교차 검증 — 두 측정이 같은 방향을 가리키는가?</div>
+      <div style="font-size: 11px; color: #F87171; font-weight: 700; letter-spacing: 1.5px; margin-bottom: 8px;">두 점수가 같은 곳을 가리키는가?</div>
       <div style="font-size: 14px; color: #D4D4D8; line-height: 1.7;" id="convergence">
-        네 척도를 모두 응답하면 여기에 Layer 1과 Layer 3의 일치도가 표시됩니다.
+        네 척도를 모두 응답하면 자가척도 결과와 카톡 분석 결과가 어디서 일치하고 어디서 갈리는지 표시됩니다.
       </div>
     </div>
 
     <!-- Next step -->
     <div style="margin-top: 16px; padding: 18px; background: #1F1F2E; border-left: 3px solid #4F46E5;">
-      <div style="font-size: 11px; color: #8B85F0; font-weight: 700; letter-spacing: 1.5px; margin-bottom: 8px;">다음 단계 — 가장 함몰된 축에 맞춘 처방</div>
+      <div style="font-size: 11px; color: #8B85F0; font-weight: 700; letter-spacing: 1.5px; margin-bottom: 8px;">가장 약한 축 하나에 집중한다면</div>
       <div style="font-size: 13px; color: #D4D4D8; line-height: 1.7;" id="next-step">
-        —
+        결과가 나오면 가장 낮은 축에 맞춘 구체적인 첫걸음이 여기에 표시됩니다.
       </div>
     </div>
   </section>
 
   <div class="takeaway" style="margin-top: 32px;">
-    Layer 3(카톡 31,122개 분석)도 같은 좌표계에서 직접 비교됩니다 —
+    내 카톡 데이터로도 같은 3축 점수를 직접 만들어 볼 수 있습니다 —
     <a href="dashboard.html" style="color: var(--indigo);">대시보드 열기 →</a>
   </div>
 </main>
