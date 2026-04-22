@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Layer 1 · 자가진단 — 사회적 연결성</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <div>
+      <div class="kicker">LAYER 1 · SELF-TEST</div>
+      <h1>자가진단 3종</h1>
+    </div>
+    <nav>
+      <a href="index.html">홈</a>
+      <a href="selftest.html" class="active">자가진단</a>
+      <a href="dashboard.html">대시보드</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section class="hero">
+    <div class="kicker">UCLA · BERKMAN-SNI · DUNBAR</div>
+    <h2>나의 사회적 연결성,<br>3가지 도구로 측정하기</h2>
+    <p>세 도구 모두 국제 의학문헌에서 사용되는 검증된 척도입니다.
+       각 문항을 솔직하게 답하시면 하단에 통합 결과가 자동 계산됩니다. 데이터는 브라우저 밖으로 전송되지 않습니다.</p>
+  </section>
+
+  <div class="scale-grid">
+
+    <!-- ── 1. UCLA Loneliness 3-item ── -->
+    <div class="scale">
+      <h3>TOOL 1 · UCLA LONELINESS 3-ITEM</h3>
+      <div class="title">UCLA 외로움 3문항</div>
+      <div class="desc">각 항목에 대해 "얼마나 자주 느끼는가"를 선택하세요. Hughes et al. 2004 단축형.</div>
+
+      <div class="q" data-scale="ucla" data-q="q1">
+        <div class="label">1. 함께 있을 사람이 없다고 느낀다</div>
+        <div class="options">
+          <button class="option" data-v="1"><span class="num">1</span>전혀 아니다</button>
+          <button class="option" data-v="2"><span class="num">2</span>가끔 그렇다</button>
+          <button class="option" data-v="3"><span class="num">3</span>자주 그렇다</button>
+        </div>
+      </div>
+
+      <div class="q" data-scale="ucla" data-q="q2">
+        <div class="label">2. 소외되었다고 느낀다</div>
+        <div class="options">
+          <button class="option" data-v="1"><span class="num">1</span>전혀 아니다</button>
+          <button class="option" data-v="2"><span class="num">2</span>가끔 그렇다</button>
+          <button class="option" data-v="3"><span class="num">3</span>자주 그렇다</button>
+        </div>
+      </div>
+
+      <div class="q" data-scale="ucla" data-q="q3">
+        <div class="label">3. 다른 사람들로부터 고립되어 있다고 느낀다</div>
+        <div class="options">
+          <button class="option" data-v="1"><span class="num">1</span>전혀 아니다</button>
+          <button class="option" data-v="2"><span class="num">2</span>가끔 그렇다</button>
+          <button class="option" data-v="3"><span class="num">3</span>자주 그렇다</button>
+        </div>
+      </div>
+
+      <div class="result" id="result-ucla" style="display:none;">
+        <div class="result-row">
+          <span class="result-label">총점 (3–9)</span>
+          <span class="result-score" id="ucla-score">—</span>
+        </div>
+        <div class="result-interp" id="ucla-interp"></div>
+      </div>
+      <div class="source">Hughes ME, Waite LJ, Hawkley LC, Cacioppo JT. (2004) Research on Aging 26(6):655–672</div>
+    </div>
+
+
+    <!-- ── 2. Berkman Social Network Index ── -->
+    <div class="scale">
+      <h3>TOOL 2 · BERKMAN-SNI</h3>
+      <div class="title">사회적 네트워크 지수</div>
+      <div class="desc">4개 영역에 해당하면 각 1점. 총 0–4점. Berkman &amp; Syme 1979.</div>
+
+      <div class="q" data-scale="sni" data-q="married">
+        <div class="label">1. 결혼했거나 안정된 파트너가 있다</div>
+        <div class="options">
+          <button class="option" data-v="1"><span class="num">예</span>해당</button>
+          <button class="option" data-v="0"><span class="num">아니오</span>해당 없음</button>
+        </div>
+      </div>
+
+      <div class="q" data-scale="sni" data-q="friends">
+        <div class="label">2. 가까운 친구나 가족을 월 1회 이상 만나거나 연락한다 (3명 이상)</div>
+        <div class="options">
+          <button class="option" data-v="1"><span class="num">예</span>해당</button>
+          <button class="option" data-v="0"><span class="num">아니오</span>해당 없음</button>
+        </div>
+      </div>
+
+      <div class="q" data-scale="sni" data-q="religious">
+        <div class="label">3. 종교 모임에 정기적으로 참여한다</div>
+        <div class="options">
+          <button class="option" data-v="1"><span class="num">예</span>해당</button>
+          <button class="option" data-v="0"><span class="num">아니오</span>해당 없음</button>
+        </div>
+      </div>
+
+      <div class="q" data-scale="sni" data-q="groups">
+        <div class="label">4. 동호회 · 단체 · 자원봉사 등에 정기적으로 참여한다</div>
+        <div class="options">
+          <button class="option" data-v="1"><span class="num">예</span>해당</button>
+          <button class="option" data-v="0"><span class="num">아니오</span>해당 없음</button>
+        </div>
+      </div>
+
+      <div class="result" id="result-sni" style="display:none;">
+        <div class="result-row">
+          <span class="result-label">총점 (0–4)</span>
+          <span class="result-score" id="sni-score">—</span>
+        </div>
+        <div class="result-interp" id="sni-interp"></div>
+      </div>
+      <div class="source">Berkman LF, Syme SL. (1979) Am J Epidemiol 109(2):186–204</div>
+    </div>
+
+
+    <!-- ── 3. Dunbar Layer Count ── -->
+    <div class="scale">
+      <h3>TOOL 3 · DUNBAR 카운트</h3>
+      <div class="title">Dunbar 레이어별 인원</div>
+      <div class="desc">각 레이어에 해당하는 사람의 수를 솔직히 세어 적으세요. 이상치는 Dunbar 2018.</div>
+
+      <div class="q" data-scale="dunbar" data-q="L5">
+        <div class="label">Layer 5 · 절친 · 가족 (이상 5명) — 힘들 때 가장 먼저 떠오르는, 주 수회 정서적 교류</div>
+        <input type="number" class="num-input" min="0" max="50" placeholder="명 수 입력" data-v="">
+      </div>
+
+      <div class="q" data-scale="dunbar" data-q="L15">
+        <div class="label">Layer 15 · 좋은 친구 (이상 15명) — 주 1회 정도 연락하고 만남</div>
+        <input type="number" class="num-input" min="0" max="100" placeholder="명 수 입력" data-v="">
+      </div>
+
+      <div class="q" data-scale="dunbar" data-q="L50">
+        <div class="label">Layer 50 · 친구 (이상 50명) — 한두 달 내 연락 가능, 만나면 반갑다</div>
+        <input type="number" class="num-input" min="0" max="500" placeholder="명 수 입력" data-v="">
+      </div>
+
+      <div class="result" id="result-dunbar" style="display:none;">
+        <div class="result-row">
+          <span class="result-label">Layer 5 충족률</span>
+          <span class="result-score" id="dunbar-score">—</span>
+        </div>
+        <div class="result-interp" id="dunbar-interp"></div>
+      </div>
+      <div class="source">Dunbar RIM. (2018) The anatomy of friendship. Trends Cogn Sci 22(1):32–51</div>
+    </div>
+
+  </div>
+
+
+  <!-- ── Final summary (dark) ── -->
+  <section class="summary" id="summary" style="display:none;">
+    <h3>INTEGRATED RESULT</h3>
+    <div class="big" id="summary-headline">—</div>
+    <div class="desc" id="summary-desc">세 도구가 같은 방향을 가리키면 신뢰도가 높아집니다.</div>
+
+    <div style="margin-top: 24px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;">
+      <div style="background: #1F1F2E; padding: 16px;">
+        <div style="font-size: 10px; color: #8B85F0; letter-spacing: 1.5px; font-weight: 700;">UCLA</div>
+        <div style="font-size: 22px; font-weight: 700; margin-top: 4px;" id="sum-ucla">—</div>
+        <div style="font-size: 11px; color: #A1A1AA; margin-top: 4px;" id="sum-ucla-label">—</div>
+      </div>
+      <div style="background: #1F1F2E; padding: 16px;">
+        <div style="font-size: 10px; color: #8B85F0; letter-spacing: 1.5px; font-weight: 700;">BERKMAN-SNI</div>
+        <div style="font-size: 22px; font-weight: 700; margin-top: 4px;" id="sum-sni">—</div>
+        <div style="font-size: 11px; color: #A1A1AA; margin-top: 4px;" id="sum-sni-label">—</div>
+      </div>
+      <div style="background: #1F1F2E; padding: 16px;">
+        <div style="font-size: 10px; color: #8B85F0; letter-spacing: 1.5px; font-weight: 700;">DUNBAR 5</div>
+        <div style="font-size: 22px; font-weight: 700; margin-top: 4px;" id="sum-dunbar">—</div>
+        <div style="font-size: 11px; color: #A1A1AA; margin-top: 4px;" id="sum-dunbar-label">—</div>
+      </div>
+    </div>
+
+    <div style="margin-top: 24px; padding: 16px; background: #1F1F2E; border-left: 3px solid #F87171;">
+      <div style="font-size: 12px; color: #F87171; font-weight: 700; margin-bottom: 6px;">다음 단계</div>
+      <div style="font-size: 13px; color: #D4D4D8; line-height: 1.7;" id="next-step">
+        세 결과를 모두 입력하면 여기에 개인화된 가이드가 표시됩니다.
+      </div>
+    </div>
+  </section>
+
+  <div class="takeaway" style="margin-top: 32px;">
+    발표에서 다룬 Layer 3(카톡 기반 3축 대시보드)도 함께 보세요 —
+    <a href="dashboard.html" style="color: var(--indigo);">대시보드 열기 →</a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>조윤진 · 연세대학교 의과대학 · 2026년 4월</div>
+    <div><a href="https://darejinn.github.io/social-connectivity" target="_blank" rel="noopener">블로그 홈</a></div>
+  </div>
+</footer>
+
+<script src="assets/selftest.js"></script>
+</body>
+</html>
