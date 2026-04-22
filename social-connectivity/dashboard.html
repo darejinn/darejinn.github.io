@@ -27,29 +27,56 @@
   <section class="hero">
     <div class="kicker">3 AXES × 6 METRICS · INTERACTIVE</div>
     <h2>내 카톡으로 직접 만드는<br>사회적 연결성 대시보드</h2>
-    <p>발표와 똑같은 분석 파이프라인을 브라우저에서 실행합니다. 카톡 대화 내보내기 txt를 올리면
-       Holt-Lunstad 3축 (Structural · Functional · Quality)으로 점수화되어 6개 차트로 표시됩니다.
+    <p>발표와 똑같은 분석 파이프라인을 브라우저에서 실행합니다. 카톡 .txt(원본) 또는
+       <strong>analysis_code 파이프라인의 messages.csv / messages_labeled.csv</strong>를 올리면
+       L1–L5 분류와 Holt-Lunstad 3축 점수가 산출되어 6개 차트로 표시됩니다.
        <strong>파일은 브라우저 밖으로 전송되지 않습니다.</strong></p>
   </section>
 
+  <!-- ── Format toggle ── -->
+  <div class="mode-toggle" role="tablist" aria-label="입력 형식">
+    <button id="mode-csv" class="active" type="button">CSV (analysis_code 파이프라인)</button>
+    <button id="mode-txt" type="button">TXT (카톡 원본 내보내기)</button>
+  </div>
+
   <!-- ── Upload zone (main CTA) ── -->
   <label class="upload-zone" id="dropzone" for="file-input">
-    <h4>📎 카톡 대화 내보내기 txt를 올려 시작하세요</h4>
-    <p>
-      카카오톡 채팅방 &gt; 우측 상단 메뉴 &gt; 설정 &gt; "대화 내용 내보내기" (텍스트만)<br>
-      받은 .txt 파일을 여기로 드래그하거나 클릭해서 선택
+    <h4 id="upload-headline">📊 messages.csv 또는 messages_labeled.csv를 올려 시작하세요</h4>
+    <p id="upload-help">
+      <strong>컬럼:</strong> relationship, timestamp, sender, is_me, text, text_length [, level]<br>
+      analysis_code/01_parse_kakaotalk.py · 02_level_classifier.py 산출물 그대로 호환 ·
+      여러 관계가 한 파일에 섞여 있어도 자동으로 분리해 분석합니다.
     </p>
-    <input type="file" id="file-input" accept=".txt,.csv">
+    <input type="file" id="file-input" accept=".csv,.txt">
   </label>
   <div id="upload-status" style="text-align: center; font-size: 13px; color: var(--muted); margin: 12px 0 24px;">
     <a href="#" id="show-demo" style="color: var(--indigo);">또는 발표자 본인 데이터 예시로 먼저 둘러보기 →</a>
   </div>
 
   <!-- ── Meta info ── -->
-  <div id="meta-info" style="font-size: 12px; color: var(--muted); margin-bottom: 20px; padding: 12px 16px; background: var(--bg-soft); display: none;">
+  <div id="meta-info" style="font-size: 12px; color: var(--muted); margin-bottom: 12px; padding: 12px 16px; background: var(--bg-soft); display: none;">
     <strong id="meta-source">발표 본인 데이터</strong> ·
     <span id="meta-messages">31,122</span>개 메시지 ·
-    <span id="meta-period">2023.4 – 2026.4 · 3년</span>
+    <span id="meta-period">2023.4 – 2026.4 · 3년</span> ·
+    <span id="meta-relationships">3개 관계</span>
+  </div>
+
+  <!-- ── Per-relationship summary table (CSV mode) ── -->
+  <div id="rel-table-wrap" style="display: none; margin-bottom: 20px; overflow-x: auto;">
+    <table id="rel-table" style="width: 100%; border-collapse: collapse; font-size: 12px;">
+      <thead>
+        <tr style="background: var(--bg-soft); text-align: left; border-bottom: 1px solid var(--line-strong);">
+          <th style="padding: 8px 10px; font-weight: 700; color: var(--ink);">관계</th>
+          <th style="padding: 8px 10px; font-weight: 600; color: var(--muted); text-align: right;">메시지</th>
+          <th style="padding: 8px 10px; font-weight: 600; color: var(--muted); text-align: right;">상호성</th>
+          <th style="padding: 8px 10px; font-weight: 600; color: var(--muted); text-align: right;">응답중앙(분)</th>
+          <th style="padding: 8px 10px; font-weight: 600; color: var(--muted); text-align: right;">L4+L5 (%)</th>
+          <th style="padding: 8px 10px; font-weight: 600; color: var(--muted); text-align: right;">심야 (%)</th>
+          <th style="padding: 8px 10px; font-weight: 600; color: var(--muted); text-align: right;">SCI</th>
+        </tr>
+      </thead>
+      <tbody id="rel-tbody"></tbody>
+    </table>
   </div>
 
   <!-- ── Dashboard grid (hidden until data loaded) ── -->
@@ -63,19 +90,19 @@
       <canvas id="chart-depth"></canvas>
     </div>
     <div class="dash-card">
-      <div class="title">주간 함께 식사 (회)</div>
-      <canvas id="chart-meals"></canvas>
+      <div class="title">Level 분포 (L1~L5)</div>
+      <canvas id="chart-levels"></canvas>
     </div>
     <div class="dash-card">
-      <div class="title">Dunbar 5 충족률 (%)</div>
-      <canvas id="chart-dunbar"></canvas>
+      <div class="title">관계별 SCI</div>
+      <canvas id="chart-rels"></canvas>
     </div>
     <div class="dash-card">
-      <div class="title">커뮤니케이션 방향</div>
-      <canvas id="chart-direction"></canvas>
+      <div class="title">상호성 (내 발신 비율)</div>
+      <canvas id="chart-recip"></canvas>
     </div>
     <div class="dash-card">
-      <div class="title">사회적 시간 (분/일)</div>
+      <div class="title">시간대 분포 (24h)</div>
       <canvas id="chart-time"></canvas>
     </div>
   </div>
@@ -86,17 +113,17 @@
 
   <!-- ── References section ── -->
   <section style="margin-top: 40px; padding: 24px; background: var(--bg-soft); border-left: 3px solid var(--indigo-dark); font-size: 12px; color: var(--muted); line-height: 1.8;">
-    <div style="font-size: 11px; color: var(--ink); font-weight: 700; letter-spacing: 2px; margin-bottom: 12px;">참조값 출처</div>
-    <div><strong>3축 참조:</strong> Holt-Lunstad et al. 2015 Persp Psychol Sci (3.4M 명 메타)</div>
-    <div><strong>L4+L5 깊은 대화 20%:</strong> Mehl et al. 2010 Psychological Science — EAR 일반 성인 기준</div>
-    <div><strong>주간 함께 식사 권장 ≥8회:</strong> Dunbar 2017 Adaptive Human Behavior — 웰빙 최대 구간</div>
-    <div><strong>Dunbar 5 권장:</strong> Dunbar 2018 Trends Cogn Sci — 5명 절친 안정 관계</div>
-    <div><strong>본인 데이터:</strong> 2023.4 – 2026.4, 3개 카톡 채널 (가족톡·단톡 A·단톡 B), 총 31,122개 메시지 · L1–L5 규칙 기반 분류</div>
+    <div style="font-size: 11px; color: var(--ink); font-weight: 700; letter-spacing: 2px; margin-bottom: 12px;">분석 파이프라인 · 참조값 출처</div>
+    <div><strong>3축 프레임:</strong> Holt-Lunstad et al. 2015 Persp Psychol Sci (3.4M 명 메타)</div>
+    <div><strong>L4+L5 깊은 대화 30% 만점:</strong> Mehl et al. 2010 Psychological Science — substantive conversation 기준</div>
+    <div><strong>심야 비율 15% 이하 = 무감점:</strong> Hawkley &amp; Cacioppo — 심야 사회 행동 대리지표</div>
+    <div><strong>응답 5분 이하 만점:</strong> Reis &amp; Shaver — responsiveness 척도</div>
+    <div><strong>분석 파이프라인 코드:</strong> <a href="https://github.com/darejinn/social-connectivity-analysis" target="_blank" style="color: var(--indigo);">github.com/darejinn/social-connectivity-analysis</a> · 01_parse → 02_classify → 03_metrics → 04_score 모듈을 브라우저에서 그대로 재현</div>
   </section>
 
   <div class="takeaway" style="margin-top: 32px; background: var(--red-tint); border-left-color: var(--red);">
-    자가척도도 함께 해보세요 —
-    <a href="selftest.html" style="color: var(--red);">자가진단 3종 →</a>
+    자가척도(Layer 1) 4도구도 함께 비교해보세요 —
+    <a href="selftest.html" style="color: var(--red);">자가진단 4종 →</a>
   </div>
 </main>
 
