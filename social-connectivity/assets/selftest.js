@@ -97,30 +97,30 @@
 
   // ── Interpretation ──
   function interpUCLA(score) {
-    if (score <= 4) return { text: "정상 범위 · 외로움 위험 낮음", warn: false };
-    if (score <= 5) return { text: "경계선 — 일부 외로움 신호", warn: false };
-    if (score <= 7) return { text: "외로움군 (6–7점) — Steptoe 2013 사망률 위험 시작점", warn: true };
-    return { text: "심각한 외로움 (8–9점) — Holt-Lunstad HR 1.29 범주", warn: true };
+    if (score <= 4) return { text: "외로움 신호 거의 없음.", warn: false };
+    if (score <= 5) return { text: "경계선. 가끔 외로움이 느껴지는 정도.", warn: false };
+    if (score <= 7) return { text: "외로움이 잦음 (6–7점). Steptoe 2013에서 사망률 위험이 올라가기 시작하는 구간.", warn: true };
+    return { text: "외로움이 매우 잦음 (8–9점). Holt-Lunstad 메타분석 기준 사망 위험 약 1.29배 구간.", warn: true };
   }
 
   function interpSNI(s) {
     const t = s.total, y = s.youth;
-    const note = "청년 보정 (영역 1 제외, 최대 3): " + y + "/3";
-    if (t >= 3) return { text: "사회적 통합 · 사망률 위험 최소. " + note, warn: false };
-    if (t >= 2) return { text: "중간 네트워크 · 평균 위험. " + note, warn: false };
-    if (t >= 1) return { text: "낮은 네트워크 — 청년에서는 영역 1 손실 보정 필요. " + note, warn: t === 0 };
-    return { text: "사회적 고립 (0점) — 9년 사망률 2배 군. " + note, warn: true };
+    const note = "20대 보정 점수(영역 1 제외)는 " + y + "/3.";
+    if (t >= 3) return { text: "네트워크가 충분히 두텁다. " + note, warn: false };
+    if (t >= 2) return { text: "평균 정도. 한두 영역에 더 들어가면 더 안정적이다. " + note, warn: false };
+    if (t >= 1) return { text: "다소 좁은 편. 결혼 영역이 비는 20대는 친구·정기 그룹·자원봉사 중 하나로 보충하면 좋다. " + note, warn: t === 0 };
+    return { text: "사회적 고립 (0점). Berkman 1979에서 9년 사망률이 약 2배 높았던 군. " + note, warn: true };
   }
 
   function interpDJG(s) {
     const e = s.emotional, soc = s.social, t = s.total;
     let typeText;
-    if (e >= 2 && soc <= 1) typeText = "★ 정서 우세형 — \"친구는 많은데 진짜 친한 사람이 없음\" 패턴 (가면 고립의 핵심 신호)";
-    else if (e <= 1 && soc >= 2) typeText = "사회 우세형 — 한 사람과는 깊지만 무리가 부족함";
-    else if (e >= 2 && soc >= 2) typeText = "전반적 외로움 — 정서·사회 두 차원 모두 결손";
-    else typeText = "건강한 상태 — 두 차원 모두 충분함";
+    if (e >= 2 && soc <= 1) typeText = "★ 정서가 더 비어 있는 쪽. 친구는 있는데 속을 나눌 사람이 부족하다는 뜻 — 본 발표가 말하는 \"가면 고립\"에 해당.";
+    else if (e <= 1 && soc >= 2) typeText = "사회 쪽이 더 비어 있는 쪽. 가까운 한 사람은 있지만 무리가 부족하다.";
+    else if (e >= 2 && soc >= 2) typeText = "정서·사회 둘 다 비어 있다. 한 축씩 차근차근 채울 필요가 있다.";
+    else typeText = "두 축 모두 양호.";
     return {
-      text: "Emotional " + e + "/3 · Social " + soc + "/3 · Total " + t + "/6 — " + typeText,
+      text: "정서 " + e + "/3 · 사회 " + soc + "/3 · 합 " + t + "/6 — " + typeText,
       warn: e >= 2 || t >= 3,
     };
   }
@@ -128,10 +128,10 @@
   function interpDunbar(d) {
     const gap = d.gap;
     let text;
-    if (d.functional >= 5) text = "L5 충족 (기능적 " + d.functional + "명) · 절친 구조 건강";
-    else if (d.functional >= 3) text = "L5 부분 충족 (기능적 " + d.functional + "명) · 명목과 갭 " + gap + "명";
-    else if (d.functional >= 1) text = "L5 결손 (기능적 " + d.functional + "명 · 명목 " + d.nominal + "명) · 갭 " + gap + " — \"머릿속 절친\"과 \"실제 작동하는 절친\"의 차이가 큼";
-    else text = "L5 심각한 공백 (기능적 0명 · 명목 " + d.nominal + "명) → 갭 " + gap;
+    if (d.functional >= 5) text = "절친 5명이 실제로 작동 중 (" + d.functional + "명).";
+    else if (d.functional >= 3) text = "절친 " + d.functional + "명이 실제로 작동. 명목 명단과는 " + gap + "명 차이.";
+    else if (d.functional >= 1) text = "실제로 작동하는 절친은 " + d.functional + "명, 머릿속 명단은 " + d.nominal + "명 (차이 " + gap + "명). 이름은 떠오르는데 정작 연락은 안 되는 상태.";
+    else text = "실제로 작동하는 절친 0명. 머릿속에는 " + d.nominal + "명이지만 지난 2주간 1:1 연락은 없었다는 뜻.";
     return { text: text, warn: d.functional < 3 };
   }
 
@@ -237,25 +237,23 @@
     const sameLowest = l1Axes[0][0] === l3Axes[0][0];
 
     const conv = document.getElementById("convergence");
-
-    const headline = document.getElementById("summary-headline");
     const axisKor = { Structural: "네트워크 크기", Functional: "일상 작동", Quality: "관계의 깊이" };
 
     if (sameLowest && l1Axes[0][0] === "Quality") {
-      conv.innerHTML = "✓ <strong style='color:#F87171;'>관계의 깊이(Quality)가 두 점수에서 모두 가장 낮습니다.</strong> " +
-        "내가 직접 답한 자가척도(" + ax.quality.toFixed(1) + ")와 카톡에서 자동으로 추출한 점수(" + L3.quality.toFixed(1) +
-        ")가 서로 다른 방법인데도 같은 결론을 가리킵니다 — \"친구는 많은데 진짜 친한 사람은 없는\" 패턴이 견고합니다.";
-      headline.textContent = "두 점수 모두 \"관계의 깊이\"가 가장 낮음";
+      conv.innerHTML = "<strong style='color:#F87171;'>두 점수 모두에서 \"관계의 깊이\"가 가장 낮게 나왔다.</strong> " +
+        "직접 답한 자가척도(" + ax.quality.toFixed(1) + ")와 카톡에서 뽑은 점수(" + L3.quality.toFixed(1) +
+        ")가 같은 곳을 가리킨다. 방식이 전혀 다른 두 측정이 같은 결론을 내는 거라, 친구 수가 아니라 \"속을 나눌 사람\"이 모자라다는 진단을 그대로 받아들이면 된다.";
+      headline.textContent = "두 점수가 같은 약점을 가리킨다 — \"관계의 깊이\"";
     } else if (sameLowest) {
-      conv.innerHTML = "두 점수 모두 <strong>" + axisKor[l1Axes[0][0]] + "</strong> 축이 가장 낮습니다. " +
-        "자가척도 " + l1Axes[0][1].toFixed(1) + " · 카톡 분석 " + l3Axes[0][1].toFixed(1) +
-        " — 서로 다른 방법으로 같은 결론에 도달했으니 약점 진단이 견고합니다.";
-      headline.textContent = "두 점수 일치 — \"" + axisKor[l1Axes[0][0]] + "\"가 약점";
+      conv.innerHTML = "두 점수 모두 <strong>" + axisKor[l1Axes[0][0]] + "</strong> 쪽이 제일 낮다. " +
+        "자가척도 " + l1Axes[0][1].toFixed(1) + " · 카톡 " + l3Axes[0][1].toFixed(1) +
+        ". 방식이 다른 두 측정이 같은 답을 내고 있으니, 이 약점은 그대로 받아들여도 무리가 없다.";
+      headline.textContent = "두 점수가 같은 약점을 가리킨다 — \"" + axisKor[l1Axes[0][0]] + "\"";
     } else {
-      conv.innerHTML = "내 자가척도에서는 <strong>" + axisKor[l1Axes[0][0]] + "</strong>가, " +
-        "카톡 분석에서는 <strong>" + axisKor[l3Axes[0][0]] + "</strong>가 가장 낮게 나왔습니다. " +
-        "두 결과가 다를 때는 자기 보고의 왜곡 가능성을 의심하고 행동 기록(카톡)을 우선해 해석합니다.";
-      headline.textContent = "두 점수가 다른 곳을 가리킴 — 다시 보기";
+      conv.innerHTML = "자가척도에서는 <strong>" + axisKor[l1Axes[0][0]] + "</strong>가, " +
+        "카톡 분석에서는 <strong>" + axisKor[l3Axes[0][0]] + "</strong>가 가장 낮게 나왔다. " +
+        "둘이 다를 때는 자기 보고가 보정되기 쉬운 만큼, 행동 기록(카톡) 쪽을 약간 더 무겁게 본다.";
+      headline.textContent = "두 점수가 다른 곳을 가리킨다 — 다시 보기";
     }
 
     headline.classList.toggle("red", l1Axes[0][1] < 5);
@@ -264,24 +262,24 @@
     const lowestAxis = l1Axes[0][0];
     let rx = "";
     if (lowestAxis === "Quality") {
-      rx = "<strong>관계의 깊이부터 채우기</strong> — 머릿속 절친 명단과 실제 작동하는 사람의 차이가 핵심입니다. " +
-           "이번 주 안에 가장 친한 친구 한 명에게 먼저 1:1 메시지를 보내고, 다음 달까지 1:1 약속(통화 30분 또는 식사 1회)을 잡아보세요.";
+      rx = "<strong>관계의 깊이부터 채운다.</strong> 머릿속 절친 명단과 실제로 연락이 되는 사람 사이에 차이가 큰 게 문제다. " +
+           "이번 주 안에 가장 친한 친구 한 명에게 먼저 1:1로 메시지를 보내고, 다음 달까지 1:1 약속(통화 30분이든 밥 한 끼든)을 한 번 잡아본다.";
     } else if (lowestAxis === "Structural") {
-      rx = "<strong>정기 모임 하나 만들기</strong> — 사회적 네트워크의 양이 부족합니다. 주 1회 정해진 그룹 활동(동아리·운동·스터디)을 일정에 고정해보세요. " +
-           "20대는 결혼 영역이 비어 있는 만큼 다른 영역(친구·정기 그룹·자원봉사)으로 보정해야 합니다.";
+      rx = "<strong>정기 모임 하나를 일정에 박아 넣는다.</strong> 네트워크의 양 자체가 좁다. 주 1회 같은 시간에 가는 활동(동아리·운동·스터디 무엇이든) 하나를 고정해 본다. " +
+           "20대는 결혼 영역이 거의 비어 있기 때문에 친구·정기 그룹·자원봉사 중에서 보충해 주는 게 자연스럽다.";
     } else {
-      rx = "<strong>응답 한 문장 더 붙이기</strong> — 일상 작동(응답 속도·상호성)이 약합니다. \"응\" 같은 단답을 줄이고, " +
-           "의견이나 감정이 담긴 한 문장을 덧붙이는 습관부터 시작해보세요.";
+      rx = "<strong>응답에 한 문장만 더 붙여 본다.</strong> 응답 속도나 주고받음 같은 일상 작동이 약하다. \"응\", \"ㅇㅇ\" 같은 단답을 줄이고, " +
+           "의견이나 감정이 담긴 한 줄을 덧붙이는 것부터 시작한다.";
     }
     document.getElementById("next-step").innerHTML = rx;
 
     // ── 카드 하단 노트: 자연어로, 어떤 입력이 어떤 점수가 됐는지 ──
     document.getElementById("axis-s-note").textContent =
-      "Berkman-SNI " + sni.total + "/4점 (20대 보정 " + sni.youth + "/3점) → 10점 만점에 " + ax.structural.toFixed(1) + "점.";
+      "Berkman-SNI " + sni.total + "/4점 (20대 보정 " + sni.youth + "/3점)을 10점 만점으로 환산하면 " + ax.structural.toFixed(1) + "점.";
     document.getElementById("axis-f-note").textContent =
-      "UCLA 외로움 " + ucla + "/9점, De Jong 합계 " + djg.total + "/6점 → 10점 만점에 " + ax.functional.toFixed(1) + "점.";
+      "UCLA 외로움 " + ucla + "/9점과 De Jong 합계 " + djg.total + "/6점을 합쳐서 " + ax.functional.toFixed(1) + "점.";
     document.getElementById("axis-q-note").textContent =
-      "정서 외로움 " + djg.emotional + "/3점, 진짜 작동하는 절친 " + dunbar.functional + "명 → 10점 만점에 " + ax.quality.toFixed(1) + "점.";
+      "정서 외로움 " + djg.emotional + "/3점과 실제로 연락 되는 절친 " + dunbar.functional + "명을 합쳐서 " + ax.quality.toFixed(1) + "점.";
   }
 
   function computeAll() {
