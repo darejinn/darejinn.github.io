@@ -2,7 +2,7 @@
 {%- if site.url -%}
   {%- assign seo_url = site.url | append: site.baseurl -%}
 {%- endif -%}
-{%- assign seo_url = seo_url | default: site.github.url -%}
+{%- assign seo_url = seo_url | default: site.url -%}
 
 {% assign title_separator = site.title_separator | default: '-' | replace: '|', '&#124;' %}
 
