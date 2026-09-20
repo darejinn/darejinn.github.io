@@ -1,7 +1,6 @@
 ---
 title:  "[Research] Game-based Shadow-induced Forgetting" 
-excerpt: ""
-
+excerpt: "창업에서 시작해 연구로 끝난 2년간의 프로젝트. Intentional Forgetting과 amnesic shadow에 기반한 게임 치료제를 만들며 배운 태도와 사람에 관한 이야기."
 category:
   - Projects
 tag :

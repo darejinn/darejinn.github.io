@@ -1,5 +1,6 @@
 ---
 title: Oveview on Graph Representation Learning
+excerpt: "비유클리드 공간의 데이터를 다루는 그래프 표현학습 개관. GNN, random walk, message passing 등 흩어진 용어들이 어느 층위에서 어떻게 연결되는지 정리한다."
 date: 2025-07-30
 last_modified_at: 2025-07-30
 category:

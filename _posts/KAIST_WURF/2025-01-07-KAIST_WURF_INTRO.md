@@ -1,7 +1,6 @@
 ---
 title:  "[KAIST WURF]카이스트 SURF/WURF 소개" 
-excerpt: ""
-
+excerpt: "KAIST 의과학대학원 동계 인턴십 WURF 참여기. 관련 정보가 거의 없어 애먹었던 지원 배경과 신청 과정을, SURF·WURF를 준비하는 이들을 위해 정리한다."
 category:
   - Projects
 tag :

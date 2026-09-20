@@ -1,7 +1,6 @@
 ---
 title: "Contrarian을 응원하며" 
-excerpt: ""
-
+excerpt: "'가만히 있지 않는다는 것'에 대한 I의 답글. 생존과 조직, 그리고 조직 안에서 다른 목소리를 내는 사람에 대하여."
 category:
   - Bridges
 tag :

@@ -1,5 +1,6 @@
 ---
 title: Solving Challenges in Multi-modal Contrastive Learning
+excerpt: "CLIP loss 이후 멀티모달 대조학습이 남긴 문제들 — heterogeneity gap, granularity mismatch 등 — 과 이를 풀고자 제안된 세 가지 방법론을 아이디어 중심으로 정리한다."
 date: 2025-04-19
 last_modified_at: 2025-04-19
 category:
