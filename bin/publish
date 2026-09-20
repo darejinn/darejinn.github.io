@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# 초안을 _posts/<카테고리>/ 로 옮겨 발행합니다.
+#   사용법: bin/publish <_drafts/파일.md> <카테고리>
+set -euo pipefail
+cd "$(dirname "$0")/.."
+SRC="${1:-}"; CAT="${2:-}"
+[[ -f "$SRC" && -n "$CAT" ]] || { echo "사용법: bin/publish <_drafts/파일.md> <카테고리>" >&2; exit 1; }
+[[ -d "_posts/$CAT" ]] || { echo "없는 카테고리: $CAT" >&2; exit 1; }
+
+if grep -qE '^excerpt: *""' "$SRC"; then
+  echo "발행 중단: excerpt 가 비어 있습니다. 검색 색인에 필요하니 먼저 채워주세요." >&2
+  exit 1
+fi
+DEST="_posts/$CAT/$(basename "$SRC")"
+git mv "$SRC" "$DEST" 2>/dev/null || mv "$SRC" "$DEST"
+echo "발행: $DEST"

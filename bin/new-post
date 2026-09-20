@@ -1,0 +1,43 @@
+#!/usr/bin/env bash
+# 새 글 초안 만들기.
+#   사용법: bin/new-post <카테고리> "<제목>"
+#   예시:   bin/new-post Thoughts "기다림에 관하여"
+# _drafts/ 에 파일을 만듭니다. bin/serve --drafts 로 미리 보고,
+# 완성되면 bin/publish 로 _posts/ 로 옮기세요.
+set -euo pipefail
+cd "$(dirname "$0")/.."
+
+CAT="${1:-}"; TITLE="${2:-}"
+if [[ -z "$CAT" || -z "$TITLE" ]]; then
+  echo "사용법: bin/new-post <카테고리> \"<제목>\"" >&2
+  echo "카테고리: $(ls _posts | tr '\n' ' ')" >&2
+  exit 1
+fi
+[[ -d "_posts/$CAT" ]] || { echo "없는 카테고리: $CAT  (있는 것: $(ls _posts | tr '\n' ' '))" >&2; exit 1; }
+
+mkdir -p _drafts
+TODAY="$(date +%Y-%m-%d)"
+SLUG="$(echo "$TITLE" | tr ' ' '-')"
+FILE="_drafts/${TODAY}-${SLUG}.md"
+[[ -e "$FILE" ]] && { echo "이미 있습니다: $FILE" >&2; exit 1; }
+
+cat > "$FILE" <<YAML
+---
+title: "$TITLE"
+# ↓ 검색 결과에 노출되는 요약문입니다. 반드시 글마다 다르게, 한두 문장으로 채우세요.
+excerpt: ""
+category:
+  - $CAT
+tags:
+  -
+toc: true
+toc_sticky: true
+date: $TODAY
+last_modified_at: $TODAY
+comments: true
+---
+
+YAML
+echo "만들었습니다: $FILE"
+echo "  미리보기: bin/serve --drafts   →  http://127.0.0.1:4000"
+echo "  발행    : bin/publish \"$FILE\" $CAT"

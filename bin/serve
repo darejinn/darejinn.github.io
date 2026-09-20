@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# 로컬 미리보기 서버.  사용법: bin/serve        (초안 포함해서 보려면 bin/serve --drafts)
+set -euo pipefail
+export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+export GEM_HOME="$HOME/.gem/ruby/4.0.0"
+export PATH="$GEM_HOME/bin:$PATH"
+cd "$(dirname "$0")/.."
+echo "→ http://127.0.0.1:4000  (Ctrl+C 로 종료)"
+exec bundle exec jekyll serve --livereload --incremental "$@"
