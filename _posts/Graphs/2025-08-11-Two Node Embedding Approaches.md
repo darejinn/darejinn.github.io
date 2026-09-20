@@ -1,6 +1,7 @@
 ---
 title: Two Node Embedding Approaches - Shallow and NN-based
-excerpt: "그래프 표현학습이 왜 node embedding에 집중하는지에서 출발해, shallow embedding과 신경망 기반 embedding 두 접근을 비교한다."
+description: "그래프 표현학습이 왜 node embedding에 집중하는지에서 출발해, shallow embedding과 신경망 기반 embedding 두 접근을 비교한다."
+excerpt: ""
 
 date: 2025-08-11
 last_modified_at: 2025-08-11
