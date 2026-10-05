@@ -8,9 +8,11 @@ tags:
   - Biological Representation Learning
 toc_sticky: true
 comments: true
+excerpt: ""
+
 ---
 
-## INTRO : 생물학 데이터의 두 가지 한계
+## INTRODUCTION
 
 생물학 데이터로 표현학습(representation learning)을 할 때는 자연어나 이미지와는 다른 두 가지 원리적 한계에 부딪힌다.
 
