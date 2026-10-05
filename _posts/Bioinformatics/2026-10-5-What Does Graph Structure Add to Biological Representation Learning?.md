@@ -32,7 +32,7 @@ excerpt: ""
 
 그래프는 개체와 관계를 명료화하고, 정보가 전달되는 경로와 여러 개체가 공유하는 계산 규칙을 구조화함으로써 이러한 가정을 부여한다. Battaglia 등(2018)의 정리를 빌리면, graph network가 부과하는 구조적 가정은 크게 네 가지이다.
 
-{% include figure image_path="/assets/image/graph_inductive_biases_cells.png" alt="조직의 세포를 그래프로 표현하고 이웃의 메시지를 모아 노드를 갱신하는 과정으로 나타낸 네 가지 귀납적 편향: 분해 가능성, 국소성, 순열 불변성, 함수 재사용" %}
+{% include figure image_path="/assets/image/graph_inductive_biases_cells.png" alt="" %}
 
 **첫째, 세계는 개체로 분해될 수 있다 (decomposability).** 그래프는 입력 자체를 (u, V, E)라는 분해된 자료구조로 받는다(*u는 전역 속성, V는 노드 집합, E는 엣지 집합*). 아키텍처가 강제하는 이 형식은, 세계가 그 내부가 아무리 복잡하더라도 이산적인 단위들과 그 사이의 관계로 분해된다는 존재론적 가정을 담고 있다. 이 가정에서는, 현상을 개체의 속성과 개체 사이의 관계로 표현하는 것이 과제 해결에 유용함을 전제한다.
 
