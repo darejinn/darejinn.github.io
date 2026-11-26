@@ -34,7 +34,7 @@ future                   : true # true, false (default)
 breadcrumbs              : true # true, false (default)
 words_per_minute         : 200
 comments:
-  provider               : "utterances" # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
+  provider               : "giscus" # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
   disqus:
     shortname            : "darejinn-github-io" # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
@@ -47,6 +47,16 @@ comments:
   utterances:
     theme                : "github-light" # (default), "github-dark"
     issue_term           : "pathname" # (default)
+  # giscus: GitHub Discussions 기반 댓글. https://giscus.app 에서 값을 다시 뽑을 수 있습니다.
+  # repo_id / category_id 는 GitHub GraphQL 에서 조회한 실제 값입니다.
+  giscus:
+    repo_id              : "R_kgDONlrhRA"
+    category_name        : "Announcements"
+    category_id          : "DIC_kwDONlrhRM4DL_7y"
+    discussion_term      : "pathname" # pathname (default), url, title, og:title
+    reactions_enabled    : "1"
+    theme                : "light"
+    lang                 : "ko"
   staticman:
     branch               : # "master"
     endpoint             : # "https://{your Staticman v3 API}/v3/entry/github/"

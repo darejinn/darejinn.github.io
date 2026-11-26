@@ -1,23 +1,20 @@
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        TeX: {
-          equationNumbers: {
-            autoNumber: "AMS"
-          }
-        },
-        tex2jax: {
-        inlineMath: [ ['$', '$'] ],
-        displayMath: [ ['$$', '$$'] ],
-        processEscapes: true,
-      }
-    });
-    MathJax.Hub.Register.MessageHook("Math Processing Error",function (message) {
-          alert("Math Processing Error: "+message[1]);
-        });
-    MathJax.Hub.Register.MessageHook("TeX Jax - parse error",function (message) {
-          alert("Math Processing Error: "+message[1]);
-        });
-    </script>
-    <script type="text/javascript" async
-      src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
-    </script>
+{%- comment -%}
+MathJax 3 설정 + 로더.
+v3 는 설정 객체(window.MathJax)가 라이브러리보다 먼저 선언돼야 하므로 순서를 바꾸지 마세요.
+(이전에는 head.html 의 v3 로더, scripts.html 의 v2 로더, 그리고 여기의 v2 설정이
+ 동시에 동작해 콘솔 오류가 났습니다.)
+{%- endcomment -%}
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      tags: 'ams'
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
